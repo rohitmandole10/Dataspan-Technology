@@ -1,41 +1,52 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+// Recipient email
+$to = "info@dataspantechnologies.com";
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+// Sanitize inputs
+$first_name  = htmlspecialchars($_POST['first_name'] ?? '');
+$last_name   = htmlspecialchars($_POST['last_name'] ?? '');
+$company     = htmlspecialchars($_POST['company_name'] ?? '');
+$email       = filter_var($_POST['work_email'] ?? '', FILTER_SANITIZE_EMAIL);
+$country     = htmlspecialchars($_POST['country'] ?? '');
+$phone       = htmlspecialchars($_POST['phone_number'] ?? '');
+$message     = htmlspecialchars($_POST['message'] ?? '');
+$consent     = isset($_POST['marketing_consent']) ? 'Yes' : 'No';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+// Validate required fields
+if (!$first_name || !$last_name || !$company || !$email || !$phone) {
+    http_response_code(400);
+    echo "Please fill all required fields.";
+    exit;
+}
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+// Email subject
+$subject = "New Contact Form Submission - Dataspan Technologies";
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+// Email body
+$body = "
+You have received a new contact form submission:
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+Name: $first_name $last_name
+Company: $company
+Email: $email
+Country: $country
+Phone: $phone
+Marketing Consent: $consent
 
-  echo $contact->send();
+Message:
+$message
+";
+
+// Email headers
+$headers = "From: Dataspan Website <no-reply@dataspantechnologies.com>\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8";
+
+// Send email
+if (mail($to, $subject, $body, $headers)) {
+    echo "OK";
+} else {
+    http_response_code(500);
+    echo "Failed to send email.";
+}
 ?>

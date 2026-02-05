@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>DATASPAN Technologies</title>
+    <title>Dataspan Technologies Technologies</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!-- Favicons -->
     <link href="assets/img/brand.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=optional"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
@@ -32,43 +32,58 @@
     <style>
         body {
             margin: 0;
-            background: #ffffff;
-            color: #212529;
+            background: var(--background-color);
+            color: var(--default-color);
             overflow-x: hidden;
         }
 
         .global-reach-section {
-            min-height: 100vh;
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* padding: 100px 8%; */
-            background: #ffffff;
-            /* border:5px solid red */
+            position: relative;
+            padding-bottom: 0;
+            margin-bottom: -60px;
+        }
+
+        .global-reach-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(13, 131, 253, 0.03) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .main-content {
             text-align: center;
-            margin-bottom: -130px;
+            margin-bottom: -100px;
             max-width: 500px;
             width: 50%;
-            margin-top:100px
+            margin-top: 100px;
+            position: relative;
+            z-index: 1;
         }
 
         .main-content h1 {
             font-size: 1.75rem;
             font-weight: 900;
-            color: #2d465e;
-            /* margin-bottom: 40px; */
-            line-height: 1.1;
+            color: var(--heading-color);
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .main-content p {
             font-size: 0.9rem;
-            color: #212529;
-            line-height: 1.6;
-            /* margin-bottom: 50px; */
+            color: var(--default-color);
+            line-height: 1.8;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -76,23 +91,40 @@
 
         .know-more-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #8A5CF6 0%, #6B46C1 100%);
-            color: white;
-            padding:7px 18px;
-            border-radius:30px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #036ffd 100%);
+            color: var(--contrast-color);
+            padding: 10px 24px;
+            border-radius: 30px;
             font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(138, 92, 246, 0.2);
+            box-shadow: 0 4px 20px rgba(13, 131, 253, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .know-more-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .know-more-btn:hover::before {
+            left: 100%;
         }
 
         .know-more-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(138, 92, 246, 0.4);
-            color: white;
+            box-shadow: 0 8px 30px rgba(13, 131, 253, 0.5);
+            color: var(--contrast-color);
             text-decoration: none;
         }
 
@@ -101,7 +133,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1rem;
             max-width: 1600px;
             margin: 0 auto;
             width: 100%;
@@ -112,93 +144,127 @@
         .stats-column {
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 1.5rem;
             flex: 0 0 auto;
-            width: 160px;
+            width: 140px;
             align-items: center;
-            margin-bottom: 300px;
+            margin-bottom: 200px;
         }
 
         .stats-column .left {
-            margin-left: 170px;
-            margin-top: 30px;
+            margin-left: 120px;
+            margin-top: 20px;
         }
 
         .stats-column .right {
-            margin-left: -170px;
-            margin-top: 30px;
+            margin-left: -120px;
+            margin-top: 20px;
         }
 
         .stat-card {
-            background: #F0E8FF;
-            width: 160px;
-            height: 160px;
+            background: linear-gradient(135deg, #E6F2FF 0%, #CCE5FF 100%);
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
-            transition: all 0.3s ease;
+            padding: 18px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 30px rgba(13, 131, 253, 0.15);
             flex-shrink: 0;
             opacity: 0;
             transform: scale(0.3) translateZ(-300px) rotateY(20deg);
             transform-style: preserve-3d;
             z-index: 1;
             will-change: transform, opacity;
+            border: 3px solid rgba(13, 131, 253, 0.1);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), #036ffd);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        .stat-card:hover::before {
+            opacity: 0.1;
         }
 
         .stat-card.green {
-            background: #E8FFEC;
+            background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.15);
+            border-color: rgba(0, 188, 212, 0.1);
+        }
+
+        .stat-card.green::before {
+            background: linear-gradient(135deg, #00BCD4, #0097A7);
         }
 
         .stat-card.animate-in {
             opacity: 1;
             transform: scale(1) translateZ(0) rotateY(0deg);
             transition: opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1),
-                        transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+                transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         @media (prefers-reduced-motion: reduce) {
             .stat-card {
                 transform: scale(0.8) translateZ(0) rotateY(0deg);
             }
-            
+
             .stat-card.animate-in {
                 transition: opacity 0.3s ease, transform 0.3s ease;
             }
         }
 
         .stat-card:hover {
-            transform: scale(1.08) translateZ(0);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+            transform: scale(1.1) translateZ(0);
+            box-shadow: 0 20px 50px rgba(13, 131, 253, 0.25);
+        }
+
+        .stat-card.green:hover {
+            box-shadow: 0 20px 50px rgba(0, 188, 212, 0.25);
         }
 
         .stat-number {
-            font-size:1.5rem;
+            font-size: 1.3rem;
             font-weight: 900;
-            color: #2d465e;
-            margin-bottom: 12px;
+            color: var(--heading-color);
+            margin-bottom: 10px;
             line-height: 1;
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .stat-text {
-            font-size: 0.85rem;
-            color: #2d465e;
-            font-weight: 500;
-            line-height: 1.3;
+            font-size: 0.75rem;
+            color: var(--default-color);
+            font-weight: 600;
+            line-height: 1.4;
         }
 
         #globeContainer {
             position: relative;
-            width: 550px;
-            height: 550px;
-            margin: 0 4rem;
+            width: 600px;
+            height: 600px;
+            margin: 0 2rem;
             flex-shrink: 0;
             z-index: 2;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
         }
 
         #globeViz {
@@ -215,119 +281,97 @@
             display: block;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1400px) {
+        /* Responsive Design - Progressive size reduction as screen gets smaller */
+        @media (max-width: 1600px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -55px;
+            }
+
+            .main-content {
+                max-width: 480px;
+                width: 50%;
+                margin-top: 90px;
+                margin-bottom: -50px;
+            }
+
+            .main-content h1 {
+                font-size: 1.7rem;
+            }
+
+            .main-content p {
+                font-size: 0.88rem;
+            }
+
             .globe-stats-container {
-                gap: 1.5rem;
+                gap: 0.9rem;
+                max-width: 1600px;
+            }
+
+            .stats-column {
+                width: 135px;
+                gap: 1.3rem;
+            }
+
+            .stats-column .left {
+                margin-left: 110px;
+            }
+
+            .stats-column .right {
+                margin-left: -110px;
+            }
+
+            .stat-card {
+                width: 135px;
+                height: 135px;
+                padding: 17px;
+            }
+
+            .stat-number {
+                font-size: 1.25rem;
+            }
+
+            .stat-text {
+                font-size: 0.73rem;
+            }
+
+            #globeContainer {
+                width: 480px;
+                height: 480px;
+                margin: 0 1.8rem;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -50px;
+            }
+
+            .main-content {
+                max-width: 460px;
+                width: 55%;
+                margin-top: 85px;
+                margin-bottom: -50px;
+            }
+
+            .main-content h1 {
+                font-size: 1.65rem;
+            }
+
+            .main-content p {
+                font-size: 0.87rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.8rem;
                 max-width: 1400px;
                 perspective: 900px;
             }
 
             .stats-column {
-                width: 160px;
-            }
-
-            .stat-card {
-                width: 160px;
-                height: 160px;
-                padding: 20px;
-                transform: scale(0.35) translateZ(-250px) rotateY(20deg);
-            }
-
-            .stat-card.animate-in {
-                transform: scale(1) translateZ(0) rotateY(0deg);
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .stat-text {
-                font-size: 0.8rem;
-            }
-
-            #globeContainer {
-                width: 450px;
-                height: 450px;
-                margin: 0 3rem;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .global-reach-section {
-                padding: 80px 6%;
-            }
-
-            .globe-stats-container {
-                gap: 1rem;
-                max-width: 1200px;
-                perspective: 800px;
-            }
-
-            .stats-column {
-                width: 160px;
-                gap: 2.5rem;
-            }
-
-            .stats-column .left {
-                margin-left: 120px;
-            }
-
-            .stats-column .right {
-                margin-left: -120px;
-            }
-
-            .stat-card {
-                width: 160px;
-                height: 160px;
-                padding: 20px;
-                transform: scale(0.4) translateZ(-200px) rotateY(15deg);
-            }
-
-            .stat-card.animate-in {
-                transform: scale(1) translateZ(0) rotateY(0deg);
-            }
-
-            .stat-number {
-                font-size: 1.8rem;
-            }
-
-            .stat-text {
-                font-size: 0.75rem;
-            }
-
-            #globeContainer {
-                width: 400px;
-                height: 400px;
-                margin: 0 2.5rem;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .global-reach-section {
-                padding: 70px 5%;
-            }
-
-            .main-content {
-                margin-bottom: 70px;
-            }
-
-            .main-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .main-content p {
-                font-size: 1rem;
-            }
-
-            .globe-stats-container {
-                gap: 0.8rem;
-                perspective: 700px;
-            }
-
-            .stats-column {
-                width: 150px;
-                gap: 2rem;
+                width: 130px;
+                gap: 1.2rem;
             }
 
             .stats-column .left {
@@ -339,133 +383,10 @@
             }
 
             .stat-card {
-                width: 150px;
-                height: 150px;
-                padding: 18px;
-                transform: scale(0.4) translateZ(-180px) rotateY(15deg);
-            }
-
-            .stat-card.animate-in {
-                transform: scale(1) translateZ(0) rotateY(0deg);
-            }
-
-            .stat-number {
-                font-size: 1.6rem;
-            }
-
-            .stat-text {
-                font-size: 0.7rem;
-            }
-
-            #globeContainer {
-                width: 350px;
-                height: 350px;
-                margin: 0 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .global-reach-section {
-                padding: 60px 4%;
-            }
-
-            .main-content {
-                margin-bottom: 60px;
-            }
-
-            .main-content h1 {
-                font-size: 2.25rem;
-                margin-bottom: 30px;
-            }
-
-            .main-content p {
-                font-size: 0.95rem;
-                margin-bottom: 40px;
-            }
-
-            .know-more-btn {
-                padding: 12px 28px;
-                font-size: 0.95rem;
-            }
-
-            .globe-stats-container {
-                flex-direction: column;
-                gap: 3rem;
-                max-width: 100%;
-                perspective: 600px;
-            }
-
-            .stats-column {
-                flex-direction: row;
-                justify-content: center;
-                gap: 2rem;
-                max-width: 100%;
-                width: auto;
-            }
-
-            .stats-column .left,
-            .stats-column .right {
-                margin-left: 0;
-                margin-top: 0;
-            }
-
-            .stat-card {
-                width: 140px;
-                height: 140px;
-                padding: 16px;
-                transform: scale(0.5) translateZ(-150px) rotateY(10deg);
-            }
-
-            .stat-card.animate-in {
-                transform: scale(1) translateZ(0) rotateY(0deg);
-            }
-
-            .stat-number {
-                font-size: 1.4rem;
-                margin-bottom: 8px;
-            }
-
-            .stat-text {
-                font-size: 0.65rem;
-            }
-
-            #globeContainer {
-                width: 280px;
-                height: 280px;
-                margin: 0;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .global-reach-section {
-                padding: 50px 3%;
-            }
-
-            .main-content h1 {
-                font-size: 2rem;
-            }
-
-            .main-content p {
-                font-size: 0.9rem;
-            }
-
-            .stats-column {
-                flex-direction: column;
-                gap: 1.5rem;
-                align-items: center;
-            }
-
-            .stats-column .left,
-            .stats-column .right {
-                margin-left: 0;
-                margin-top: 0;
-            }
-
-            .stat-card {
                 width: 130px;
                 height: 130px;
-                padding: 14px;
-                transform: scale(0.5) translateZ(-120px) rotateY(10deg);
+                padding: 16px;
+                transform: scale(0.35) translateZ(-250px) rotateY(20deg);
             }
 
             .stat-card.animate-in {
@@ -477,48 +398,62 @@
             }
 
             .stat-text {
-                font-size: 0.6rem;
+                font-size: 0.7rem;
             }
 
             #globeContainer {
-                width: 250px;
-                height: 250px;
+                width: 480px;
+                height: 480px;
+                margin: 0 1.6rem;
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 1200px) {
             .global-reach-section {
-                padding: 40px 2%;
+                padding: 80px 6% 0;
+                padding-bottom: 0;
+                margin-bottom: -45px;
+            }
+
+            .main-content {
+                max-width: 440px;
+                width: 60%;
+                margin-top: 80px;
+                margin-bottom: -50px;
             }
 
             .main-content h1 {
-                font-size: 1.75rem;
+                font-size: 1.6rem;
             }
 
             .main-content p {
                 font-size: 0.85rem;
             }
 
-            .know-more-btn {
-                padding: 12px 26px;
-                font-size: 0.9rem;
-            }
-
             .globe-stats-container {
-                perspective: 500px;
+                gap: 0.6rem;
+                max-width: 1200px;
+                perspective: 800px;
             }
 
-            .stats-column .left,
+            .stats-column {
+                width: 120px;
+                gap: 1.1rem;
+            }
+
+            .stats-column .left {
+                margin-left: 85px;
+            }
+
             .stats-column .right {
-                margin-left: 0;
-                margin-top: 0;
+                margin-left: -85px;
             }
 
             .stat-card {
                 width: 120px;
                 height: 120px;
-                padding: 12px;
-                transform: scale(0.5) translateZ(-100px) rotateY(10deg);
+                padding: 15px;
+                transform: scale(0.4) translateZ(-200px) rotateY(15deg);
             }
 
             .stat-card.animate-in {
@@ -526,8 +461,681 @@
             }
 
             .stat-number {
-                font-size: 1rem;
+                font-size: 1.15rem;
+            }
+
+            .stat-text {
+                font-size: 0.68rem;
+            }
+
+            #globeContainer {
+                width: 520px;
+                height: 520px;
+                margin: 0 1.3rem;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -40px;
+            }
+
+            .main-content {
+                max-width: 420px;
+                width: 65%;
+                margin-top: 75px;
+                margin-bottom: -70px;
+            }
+
+            .main-content h1 {
+                font-size: 1.55rem;
+            }
+
+            .main-content p {
+                font-size: 0.84rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.55rem;
+            }
+
+            .stats-column {
+                width: 115px;
+                gap: 1rem;
+            }
+
+            .stats-column .left {
+                margin-left: 75px;
+            }
+
+            .stats-column .right {
+                margin-left: -75px;
+            }
+
+            .stat-card {
+                width: 115px;
+                height: 115px;
+                padding: 14px;
+            }
+
+            .stat-number {
+                font-size: 1.1rem;
+            }
+
+            .stat-text {
+                font-size: 0.66rem;
+            }
+
+            #globeContainer {
+                width: 420px;
+                height: 420px;
+                margin: 0 1.2rem;
+            }
+        }
+
+        /* Medium screens (md) - 768px to 991px - Keep same structure */
+        @media (max-width: 991px) {
+            .global-reach-section {
+                padding: 70px 5% 0;
+                padding-bottom: 0;
+                margin-bottom: -35px;
+            }
+
+            .main-content {
+                max-width: 400px;
+                width: 70%;
+                margin-top: 70px;
+                margin-bottom: -60px;
+            }
+
+            .main-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .main-content p {
+                font-size: 0.88rem;
+            }
+
+            .know-more-btn {
+                padding: 10px 22px;
+                font-size: 0.95rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.5rem;
+                perspective: 700px;
+            }
+
+            .stats-column {
+                width: 115px;
+                gap: 1rem;
+            }
+
+            .stats-column .left {
+                margin-left: 65px;
+            }
+
+            .stats-column .right {
+                margin-left: -65px;
+            }
+
+            .stat-card {
+                width: 115px;
+                height: 115px;
+                padding: 14px;
+                transform: scale(0.4) translateZ(-180px) rotateY(15deg);
+            }
+
+            .stat-card.animate-in {
+                transform: scale(1) translateZ(0) rotateY(0deg);
+            }
+
+            .stat-number {
+                font-size: 1.1rem;
+            }
+
+            .stat-text {
+                font-size: 0.74rem;
+            }
+
+            #globeContainer {
+                width: 480px;
+                height: 480px;
+                margin: 0 1.1rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -30px;
+            }
+
+            .main-content {
+                max-width: 380px;
+                width: 75%;
+                margin-top: 65px;
+                margin-bottom: -55px;
+            }
+
+            .main-content h1 {
+                font-size: 1.45rem;
+            }
+
+            .main-content p {
+                font-size: 0.86rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.45rem;
+            }
+
+            .stats-column {
+                width: 110px;
+                gap: 0.95rem;
+            }
+
+            .stats-column .left {
+                margin-left: 60px;
+            }
+
+            .stats-column .right {
+                margin-left: -60px;
+            }
+
+            .stat-card {
+                width: 110px;
+                height: 110px;
+                padding: 13px;
+            }
+
+            .stat-number {
+                font-size: 1.05rem;
+            }
+
+            .stat-text {
+                font-size: 0.72rem;
+            }
+
+            #globeContainer {
+                width: 360px;
+                height: 360px;
+                margin: 0 1rem;
+            }
+        }
+
+        /* Small screens (sm) - below 768px - Keep same structure */
+        @media (max-width: 767px) {
+            .global-reach-section {
+                padding: 60px 4% 0;
+                padding-bottom: 0;
+                margin-bottom: -25px;
+            }
+
+            .main-content {
+                max-width: 100%;
+                width: 90%;
+                margin-top: 60px;
+                margin-bottom: -55px;
+                padding: 0 15px;
+            }
+
+            .main-content h1 {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+
+            .main-content p {
+                font-size: 0.85rem;
+                margin-bottom: 20px;
+            }
+
+            .know-more-btn {
+                padding: 10px 24px;
+                font-size: 0.9rem;
+            }
+
+            /* Keep same structure for sm screens */
+            .globe-stats-container {
+                gap: 0.4rem;
+                max-width: 100%;
+                perspective: 600px;
+            }
+
+            .stats-column {
+                width: 105px;
+                gap: 0.9rem;
+            }
+
+            .stats-column .left {
+                margin-left: 50px;
+            }
+
+            .stats-column .right {
+                margin-left: -50px;
+            }
+
+            .stat-card {
+                width: 105px;
+                height: 105px;
+                padding: 12px;
+                transform: scale(0.4) translateZ(-150px) rotateY(15deg);
+            }
+
+            .stat-card.animate-in {
+                transform: scale(1) translateZ(0) rotateY(0deg);
+            }
+
+            .stat-number {
+                font-size: 1.05rem;
                 margin-bottom: 6px;
+            }
+
+            .stat-text {
+                font-size: 0.8rem;
+            }
+
+            #globeContainer {
+                width: 350px;
+                height: 350px;
+                margin: 0 0.8rem;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -50px;
+            }
+
+            .main-content {
+                width: 92%;
+                margin-top: 55px;
+                margin-bottom: -50px;
+            }
+
+            .main-content h1 {
+                font-size: 1.35rem;
+                margin-bottom: 14px;
+            }
+
+            .main-content p {
+                font-size: 0.83rem;
+                margin-bottom: 18px;
+            }
+
+            .globe-stats-container {
+                gap: 0.35rem;
+            }
+
+            .stats-column {
+                width: 100px;
+                gap: 0.85rem;
+            }
+
+            .stats-column .left {
+                margin-left: 45px;
+            }
+
+            .stats-column .right {
+                margin-left: -45px;
+            }
+
+            .stat-card {
+                width: 100px;
+                height: 100px;
+                padding: 11px;
+            }
+
+            .stat-number {
+                font-size: 1rem;
+            }
+
+            .stat-text {
+                font-size: 0.68rem;
+            }
+
+            #globeContainer {
+                width: 280px;
+                height: 280px;
+                margin: 0 0.7rem;
+            }
+        }
+
+        /* Extra small screens - below 576px - Keep same structure */
+        @media (max-width: 575px) {
+            .global-reach-section {
+                padding: 50px 3% 0;
+                padding-bottom: 0;
+                margin-bottom: -85px;
+            }
+
+            .main-content {
+                width: 95%;
+                margin-top: 50px;
+                margin-bottom: -45px;
+                padding: 0 10px;
+            }
+
+            .main-content h1 {
+                font-size: 1.3rem;
+                margin-bottom: 12px;
+            }
+
+            .main-content p {
+                font-size: 0.8rem;
+                margin-bottom: 16px;
+            }
+
+            .know-more-btn {
+                padding: 9px 22px;
+                font-size: 0.88rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.3rem;
+            }
+
+            .stats-column {
+                width: 95px;
+                gap: 0.75rem;
+            }
+
+            .stats-column .left {
+                margin-left: 38px;
+            }
+
+            .stats-column .right {
+                margin-left: -38px;
+            }
+
+            .stat-card {
+                width: 95px;
+                height: 95px;
+                padding: 10px;
+                transform: scale(0.4) translateZ(-120px) rotateY(15deg);
+            }
+
+            .stat-card.animate-in {
+                transform: scale(1) translateZ(0) rotateY(0deg);
+            }
+
+            .stat-number {
+                font-size: 0.98rem;
+                margin-bottom: 5px;
+            }
+
+            .stat-text {
+                font-size: 0.65rem;
+            }
+
+            #globeContainer {
+                width: 250px;
+                height: 250px;
+                margin: 0 0.5rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -82px;
+            }
+
+            .main-content {
+                width: 96%;
+                margin-top: 45px;
+                margin-bottom: -40px;
+            }
+
+            .main-content h1 {
+                font-size: 1.25rem;
+                margin-bottom: 11px;
+            }
+
+            .main-content p {
+                font-size: 0.78rem;
+                margin-bottom: 15px;
+            }
+
+            .globe-stats-container {
+                gap: 0.25rem;
+            }
+
+            .stats-column {
+                width: 92px;
+                gap: 0.7rem;
+            }
+
+            .stats-column .left {
+                margin-left: 35px;
+            }
+
+            .stats-column .right {
+                margin-left: -35px;
+            }
+
+            .stat-card {
+                width: 92px;
+                height: 92px;
+                padding: 9px;
+            }
+
+            .stat-number {
+                font-size: 0.95rem;
+            }
+
+            .stat-text {
+                font-size: 0.65rem;
+            }
+
+            #globeContainer {
+                width: 250px;
+                height: 25 0px;
+                margin: 0 0.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .global-reach-section {
+                padding: 40px 2% 0;
+                padding-bottom: 0;
+                margin-bottom: -80px;
+            }
+
+            .main-content {
+                width: 98%;
+                margin-top: 40px;
+                margin-bottom: -28px;
+                padding: 0 8px;
+            }
+
+            .main-content h1 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .main-content p {
+                font-size: 0.76rem;
+                margin-bottom: 14px;
+            }
+
+            .know-more-btn {
+                padding: 9px 20px;
+                font-size: 0.85rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.2rem;
+            }
+
+            .stats-column {
+                width: 88px;
+                gap: 0.65rem;
+            }
+
+            .stats-column .left {
+                margin-left: 28px;
+            }
+
+            .stats-column .right {
+                margin-left: -28px;
+            }
+
+            .stat-card {
+                width: 88px;
+                height: 88px;
+                padding: 8px;
+            }
+
+            .stat-number {
+                font-size: 0.92rem;
+            }
+
+            .stat-text {
+                font-size: 0.7rem;
+            }
+
+            #globeContainer {
+                width: 220px;
+                height: 220px;
+                margin: 0 0.3rem;
+            }
+        }
+
+        @media (max-width: 430px) {
+            #globeContainer {
+                width: 180px;
+                height: 180px;
+                margin: 0 0.3rem;
+            }
+
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -80px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -128px;
+            }
+
+            .main-content {
+                width: 100%;
+                margin-top: 35px;
+                margin-bottom: -35px;
+                padding: 0 5px;
+            }
+
+            .main-content h1 {
+                font-size: 1.15rem;
+                margin-bottom: 9px;
+            }
+
+            .main-content p {
+                font-size: 0.74rem;
+                margin-bottom: 13px;
+            }
+
+            .know-more-btn {
+                padding: 8px 18px;
+                font-size: 0.82rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.15rem;
+            }
+
+            .stats-column {
+                width: 85px;
+                gap: 0.6rem;
+            }
+
+            .stats-column .left {
+                margin-left: 25px;
+            }
+
+            .stats-column .right {
+                margin-left: -25px;
+            }
+
+            .stat-card {
+                width: 85px;
+                height: 85px;
+                padding: 7px;
+            }
+
+            .stat-number {
+                font-size: 0.88rem;
+            }
+
+            .stat-text {
+                font-size: 0.55 rem;
+            }
+
+            #globeContainer {
+                width: 150px;
+                height: 150px;
+                margin: 0 0.25rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .global-reach-section {
+                padding-bottom: 0;
+                margin-bottom: -135px;
+            }
+
+            .main-content {
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: -22px;
+                padding: 0 3px;
+            }
+
+            .main-content h1 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+
+            .main-content p {
+                font-size: 0.72rem;
+                margin-bottom: 12px;
+            }
+
+            .know-more-btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+
+            .globe-stats-container {
+                gap: 0.1rem;
+            }
+
+            .stats-column {
+                width: 80px;
+                gap: 0.55rem;
+            }
+
+            .stats-column .left {
+                margin-left: 22px;
+            }
+
+            .stats-column .right {
+                margin-left: -22px;
+            }
+
+            .stat-card {
+                width: 80px;
+                height: 80px;
+                padding: 6px;
+            }
+
+            .stat-number {
+                font-size: 0.85rem;
             }
 
             .stat-text {
@@ -535,10 +1143,105 @@
             }
 
             #globeContainer {
-                width: 220px;
-                height: 220px;
+                width: 140px;
+                height: 140px;
+                margin: 0 0.2rem;
             }
         }
+    
+    
+    
+    
+    
+    
+    
+    /* Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar {
+        padding: 10px 0;
+        width: 100%;
+        background: #ffffff !important;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-container {
+        padding: 0 20px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100%;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+      }
+
+      .nav-logo .logo-image {
+        max-height: 40px;
+        display: block;
+      }
+
+      .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        background: #0d83fd !important;
+        border: none !important;
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 0;
+        margin-left: auto;
+        box-shadow: 0 4px 12px rgba(13, 131, 253, 0.2);
+      }
+
+      .mobile-menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #ffffff !important;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .navbar {
+        padding: 8px 0;
+        width: 100%;
+      }
+
+      .nav-container {
+        padding: 0 15px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+
+      .nav-logo .logo-image {
+        max-height: 35px;
+      }
+
+      .mobile-menu-toggle {
+        width: 38px;
+        height: 38px;
+        gap: 4px;
+      }
+
+      .mobile-menu-toggle span {
+        width: 18px;
+      }
+    }
+
+    /* Row and Column Improvements */
     </style>
 
     <script src="https://unpkg.com/globe.gl"></script>
@@ -546,169 +1249,343 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
 </head>
 
-<body>
+<body class="clients-page">
+
   <nav class="navbar">
-        <div class="nav-container">
-            <!-- Logo -->
-            <div class="nav-logo">
-                <a href="index.html" class="logo">
-                    <img src="assets/img/brand3.png" alt="Dataspan Technologies Logo" class="logo-image" />
-                </a>
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="https://dataspantechnologies.com" class="logo">
+          <img src="https://image.dataspantechnologies.com/dataspan/brand3.png" alt="Dataspan Technologies Logo"
+            class="logo-image" />
+        </a>
+      </div>
+
+      <!-- Main Navigation -->
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="Aboutus.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
+            Services
+            <!-- <i class="fas fa-chevron-down"></i> -->
+          </a>
+          <!-- Mobile Services Menu -->
+          <div class="mobile-services-menu">
+            <div class="mobile-category-list">
+              <!-- AI & Automation -->
+              <div class="category-item mobile-category-item" data-target="mobile-ai">
+                <span class="category-link">AI & Automation</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-ai">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="AI/Ai_mechine_learning.html" class="mobile-subcategory-link">Ai mechine learning</a>
+                  <a href="AI/ocr.html" class="mobile-subcategory-link">OCR</a>
+                  <a href="AI/Scraper_&_Scripting.html" class="mobile-subcategory-link">Scraper & Scripting</a>
+                  <a href="AI/Navision_Integration_and_Automation.html" class="mobile-subcategory-link">Navision
+                    Integration & Automation</a>
+                  <a href="AI/ESL_Integration.html" class="mobile-subcategory-link">ESL Integration</a>
+                </div>
+              </div>
+
+              <!-- Development & Technology -->
+              <div class="category-item mobile-category-item" data-target="mobile-dev">
+                <span class="category-link">Development & Technology</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-dev">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Development and Technology/Shopify_Development_&_Services.html"
+                    class="mobile-subcategory-link">Shopify Development & Services</a>
+                  <a href="Development and Technology/Web_&_Mobile_Development.html" class="mobile-subcategory-link">Web
+                    & Mobile Development</a>
+                  <a href="Development and Technology/Software_Development_&_Consulting.html"
+                    class="mobile-subcategory-link">Software Development & Consulting</a>
+                  <a href="Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                    class="mobile-subcategory-link">eCommerce & Marketplace Integration</a>
+                </div>
+              </div>
+
+              <!-- Design & Branding -->
+              <div class="category-item mobile-category-item" data-target="mobile-design">
+                <span class="category-link">Design & Branding</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-design">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Design & Branding/UI/UX_Creative_Services.html" class="mobile-subcategory-link">UX Creative
+                    Services</a>
+                  <a href="Design & Branding/UI/Design_&_Branding.html" class="mobile-subcategory-link">Design &
+                    Branding</a>
+                </div>
+              </div>
+
+              <!-- Cloud & Infrastructure -->
+              <div class="category-item mobile-category-item" data-target="mobile-cloud">
+                <span class="category-link">Cloud & services</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-cloud">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Cloud & Services/Hosting_&_Cloud_Services.html" class="mobile-subcategory-link">Hosting &
+                    Cloud Services</a>
+                  <a href="Cloud & Services/Managed_Cloud_Services.html" class="mobile-subcategory-link">Managed Cloud
+                    Services</a>
+                  <a href="Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                    class="mobile-subcategory-link">Cloud Setup migration & Optimization</a>
+                  <a href="Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                    class="mobile-subcategory-link">Server Monitoring Backup & Security Management</a>
+                </div>
+              </div>
+
+              <!-- Data & Operations -->
+              <div class="category-item mobile-category-item" data-target="mobile-data">
+                <span class="category-link">Data & Operations</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-data">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Data & Ops/Reporting_&_Analytics.html" class="mobile-subcategory-link">Reporting &
+                    Analytics</a>
+                  <a href="Data & Ops/Back_Office_&_BPO_Solution.html" class="mobile-subcategory-link">Back Office & BPO
+                    Solution</a>
+                </div>
+              </div>
             </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="Clients.html" class="nav-link">Clients</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
 
-            <!-- Main Navigation -->
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html#hero" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Aboutus.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
-                        Services
-                        <!-- <i class="fas fa-chevron-down"></i> -->
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="Clients.html" class="nav-link">Clients</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact Us</a>
-                </li>
-            </ul>
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <!-- Mobile Menu Toggle Button -->
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <!-- Action Button 
+      <!-- Action Button 
             <div class="nav-action">
                 <button class="start-project-btn">Start Project</button>
             </div>-->
-        </div>
+    </div>
 
-        <!-- Services Dropdown Menu -->
-        <div class="dropdown-menu" id="services-dropdown">
-            <div class="dropdown-container">
-                <div class="dropdown-content">
-                    <!-- Service Categories -->
-                    <div class="service-categories">
-                        <div class="category-column">
-                            <div class="category-item active" data-submenu="ai-automation">
-                                <a href="service.html" class="category-link">AI & Automation</a>
-                            </div>
-                            <div class="category-item" data-submenu="development-technology">
-                                <a href="#" class="category-link">Development & Technology</a>
-                            </div>
-                            <div class="category-item" data-submenu="design-branding">
-                                <a href="#" class="category-link">Design & Branding</a>
-                            </div>
-                            <div class="category-item" data-submenu="cloud-infrastructure">
-                                <a href="#" class="category-link">Cloud & Infrastructure</a>
-                            </div>
-                            <div class="category-item" data-submenu="data-operations">
-                                <a href="#" class="category-link">Data & Operations</a>
-                            </div>
-                        </div>
+    <!-- Services Dropdown Menu -->
+    <div class="dropdown-menu" id="services-dropdown">
+      <div class="dropdown-container">
+        <div class="dropdown-content">
 
-                        <!-- AI & Automation Subcategories -->
-                        <div class="subcategory-column" id="ai-automation-submenu">
-                            <div class="subcategory-item">
-                                <a href="service.html" class="subcategory-link">AI & Machine Learning (ML)</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="ocr.html" class="subcategory-link">OCR (Optical Character Recognition)</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="scraper-scripting.html" class="subcategory-link">Scraper & Scripting</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="navision-integration-automation.html" class="subcategory-link">Navision Integration & Automation</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="esl-integration.html" class="subcategory-link">ESL (Electronic Shelf Labels) Integration</a>
-                            </div>
-                        </div>
-
-                        <!-- Development & Technology Subcategories -->
-                        <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Shopify Development & Services</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Web & Mobile Development</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Software Development & Consulting</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">E-Commerce & Marketplace Integration</a>
-                            </div>
-                        </div>
-
-                        <!-- Design & Branding Subcategories -->
-                        <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">UI/UX & Creative Services</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Design & Branding</a>
-                            </div>
-                        </div>
-
-                        <!-- Cloud & Infrastructure Subcategories -->
-                        <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Hosting & Cloud Services</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Managed Hosting Solutions</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Cloud Setup, Migration & Optimization</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Server Monitoring, Backup & Security Management</a>
-                            </div>
-                        </div>
-
-                        <!-- Data & Operations Subcategories -->
-                        <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Reporting & Analytics</a>
-                            </div>
-                            <div class="subcategory-item">
-                                <a href="#" class="subcategory-link">Back Office & BPO Solutions</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="service-categories">
+            <div class="category-column">
+              <div class="category-item active" data-submenu="ai-automation">
+                <a href="#" class="category-link">AI & Automation</a>
+              </div>
+              <div class="category-item" data-submenu="development-technology">
+                <a href="#" class="category-link">Development & Technology</a>
+              </div>
+              <div class="category-item" data-submenu="design-branding">
+                <a href="#" class="category-link">Design & Branding</a>
+              </div>
+              <div class="category-item" data-submenu="cloud-infrastructure">
+                <a href="#" class="category-link">Cloud & Infrastructure</a>
+              </div>
+              <div class="category-item" data-submenu="data-operations">
+                <a href="#" class="category-link">Data & Operations</a>
+              </div>
             </div>
+
+
+            <div class="subcategory-column" id="ai-automation-submenu">
+              <div class="subcategory-item">
+                <a href="AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning (ML)</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/ocr.html" class="subcategory-link">OCR (Optical Character Recognition)</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper & Scripting</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/Navision_Integration_and_Automation.html" class="subcategory-link">Navision Integration &
+                  Automation</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf Labels) Integration</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Development and Technology/Shopify_Development_&_Services.html"
+                  class="subcategory-link">Shopify Development & Services</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Development and Technology/Web_&_Mobile_Development.html" class="subcategory-link">Web & Mobile
+                  Development</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Development and Technology/Software_Development_&_Consulting.html"
+                  class="subcategory-link">Software Development & Consulting</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                  class="subcategory-link">E-Commerce & Marketplace Integration</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Design & Branding/UI/UX_Creative_Services.html" class="subcategory-link">UI/UX & Creative
+                  Services</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design & Branding</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Hosting_&_Cloud_Services.html" class="subcategory-link">Hosting & Cloud
+                  Services</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Managed_Cloud_Services.html" class="subcategory-link">Managed Hosting
+                  Solutions</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Cloud_Setup_migration_&_Optimization.html" class="subcategory-link">Cloud
+                  Setup, Migration & Optimization</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                  class="subcategory-link">Server Monitoring, Backup & Security Management</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting & Analytics</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back Office & BPO
+                  Solutions</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Promotional Graphics Section -->
+          <div class="promo-section">
+            <div class="tech-illustration">
+              <!-- Robot/Server Unit -->
+              <div class="robot-unit">
+                <div class="robot-head">
+                  <div class="robot-core"></div>
+                  <div class="circuit-board"></div>
+                </div>
+                <div class="code-screen">
+                  <div class="code-line"></div>
+                  <div class="code-line"></div>
+                  <div class="code-line"></div>
+                </div>
+              </div>
+
+              <!-- Human Figures -->
+              <div class="human-figures">
+                <div class="human-figure male">
+                  <div class="figure-body"></div>
+                  <div class="key blue-key"></div>
+                </div>
+                <div class="human-figure female">
+                  <div class="figure-body"></div>
+                  <div class="key green-key"></div>
+                </div>
+              </div>
+
+              <!-- Brain Icon -->
+              <div class="brain-icon">
+                <div class="brain-shape"></div>
+              </div>
+
+              <!-- Geometric Elements -->
+              <div class="geometric-elements">
+                <div class="cube-stack">
+                  <div class="cube"></div>
+                  <div class="cube"></div>
+                  <div class="cube"></div>
+                </div>
+                <div class="individual-cubes">
+                  <div class="cube"></div>
+                  <div class="cube"></div>
+                </div>
+                <div class="shield-icon"></div>
+                <div class="floating-keys">
+                  <div class="key blue-key"></div>
+                  <div class="key green-key"></div>
+                </div>
+              </div>
+
+              <!-- Smartphone -->
+              <div class="smartphone">
+                <div class="phone-body"></div>
+                <div class="network-signals">
+                  <div class="signal"></div>
+                  <div class="signal"></div>
+                  <div class="signal"></div>
+                </div>
+                <div class="data-flow">
+                  <div class="data-cube"></div>
+                  <div class="data-cube"></div>
+                  <div class="data-cube"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
-    <div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
+
+    
+  
+  
+
+    <main class="main">
+
         <section class="global-reach-section">
             <div class="main-content">
-                <h1>We Have A Global Reach</h1>
-                <p>DATASPAN's software and systems are spearheading transformation in the global technology industry,
-                    paving the way for next-generation solutions that promise a smarter, more efficient, and connected
-                    world.</p>
-                <a href="#contact" class="know-more-btn">Know More ></a>
+                <h1>Trusted by Businesses Worldwide</h1>
+                <p>We help companies improve operations, enhance performance, and build reliable systems that support
+                    lasting growth.</p>
+                <a href="Aboutus.html" class="know-more-btn">Know More ></a>
             </div>
 
             <div class="globe-stats-container">
                 <div class="stats-column">
                     <div class="stat-card ">
-                        <div class="stat-number">20MN+</div>
-                        <div class="stat-text">Projects Delivered Successfully</div>
+                        <div class="stat-number">15+ </div>
+                        <div class="stat-text">Years of Expertise </div>
                     </div>
                     <div class="stat-card green left">
-                        <div class="stat-number">14+</div>
-                        <div class="stat-text">Development Centers Globally</div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-text">Countries We Serve</div>
                     </div>
                 </div>
 
@@ -718,12 +1595,12 @@
 
                 <div class="stats-column">
                     <div class="stat-card green ">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-text">Years Focus On Technology</div>
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-text">Support Across Regions</div>
                     </div>
                     <div class="stat-card right">
-                        <div class="stat-number">13K+</div>
-                        <div class="stat-text">Software Experts Passionate About Innovation</div>
+                        <div class="stat-number">98%</div>
+                        <div class="stat-text">Client Retention Rate</div>
                     </div>
                 </div>
             </div>
@@ -753,7 +1630,8 @@
                       <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
                       <circle fill="white" cx="14" cy="14" r="4"></circle>
                     </svg>`;
-                        el.style.color = "#8A5CF6";
+                        // Use theme accent color
+                        el.style.color = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim() || '#0d83fd';
                         el.style.width = "20px";
                         el.className = 'myMarker';
                         el.setAttribute('data-tooltip', d.tooltip);
@@ -781,27 +1659,39 @@
                 // Resize globe to always match container
                 function resizeGlobe() {
                     const rect = globeContainer.getBoundingClientRect();
-                    globe.width(rect.width);
-                    globe.height(rect.height);
+                    const size = Math.min(rect.width, rect.height);
+                    globe.width(size);
+                    globe.height(size);
                 }
 
-                window.addEventListener('resize', resizeGlobe);
+                // Debounce resize for better performance
+                let resizeTimeout;
+                function debouncedResize() {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(resizeGlobe, 150);
+                }
+
+                window.addEventListener('resize', debouncedResize);
+                window.addEventListener('orientationchange', debouncedResize);
                 resizeGlobe(); // initial sizing
+
+                // Re-resize after a short delay to ensure proper sizing
+                setTimeout(resizeGlobe, 100);
 
                 // Scroll animation for stat cards
                 function animateCardsOnScroll() {
                     const statCards = document.querySelectorAll('.stat-card');
                     const globeSection = document.querySelector('.global-reach-section');
-                    
+
                     if (!globeSection || statCards.length === 0) return;
 
                     // Check if device prefers reduced motion
                     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                    
+
                     // Adjust threshold based on screen size for better mobile experience
                     const isMobile = window.innerWidth <= 768;
                     const threshold = isMobile ? 0.1 : 0.2;
-                    
+
                     const observerOptions = {
                         root: null,
                         rootMargin: isMobile ? '50px' : '0px',
@@ -833,10 +1723,10 @@
                 }
 
                 // Re-initialize animations on window resize to adjust for screen size changes
-                let resizeTimeout;
+                let animationResizeTimeout;
                 window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimeout);
-                    resizeTimeout = setTimeout(() => {
+                    clearTimeout(animationResizeTimeout);
+                    animationResizeTimeout = setTimeout(() => {
                         const statCards = document.querySelectorAll('.stat-card');
                         const hasAnimated = Array.from(statCards).some(card => card.classList.contains('animate-in'));
                         if (!hasAnimated) {
@@ -846,66 +1736,79 @@
                 });
             </script>
         </section>
-    </div>
+        </div>
 
-  <footer id="footer" class="footer section light-background" style="background-image: url('assets/img/image (11).jfif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    
+        <footer id="footer" class="footer section light-background">
+
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center ">
-            <img src="assets/img/footer-logo2.png" alt="">
+          <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
+            <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
           </a>
-          <div class="footer-contact pt-3">
-            <p>Shreeji Pride, CMEinfotech, Shreeji Pride, Second Floor, Opp.</p>
-            <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 97649 97022</span></p>
+          <div class="footer-contact pt-1">
+            <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
+            <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p> -->
+            <p>We work with businesses to simplify digital operations, <br>strengthen eCommerce performance, and build
+              smarter systems that support steady, measurable growth</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span></p>
             <p><strong>Email:</strong> <span>info@dataspantechnologies.com</span></p>
           </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+          <div class="social-links d-flex my-2">
+            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+
+            <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
+            <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
           </div>
         </div>
 
+
+
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Terms of Service</a></li>
+          <h4 class="footer-dropdown-toggle">
+            MENU
+            <i class="bi bi-chevron-down footer-chevron"></i>
+          </h4>
+          <ul class="footer-dropdown-content">
+            <li><a href="https://dataspantechnologies.com">Home</a></li>
+            <li><a href="Aboutus.html">About us</a></li>
+            <li><a href="Clients.html">Clients</a></li>
+            <!-- <li><a href="service.html">Services</a></li> -->
+            <!-- <li><a href="careers.html">Careers</a></li> -->
+            <!-- <li><a href="Clients.html">Case Studies</a></li> -->
+            <li><a href="contact.html">Contact Us</a></li>
+            <!-- <li><a href="#">Privacy Policy</a></li> -->
+            <!-- <li><a href="#">Terms of Service</a></li> -->
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Our Solutions</h4>
-          <ul>
-            <li><a href="#">AI & Automation Solutions</a></li>
-            <li><a href="#">Software & App Development</a></li>
-            <li><a href="#">Data Analytics & Visualization</a></li>
-            <li><a href="#">NLP & Language Models</a></li>
-            <li><a href="#">BPO & E-commerce Services</a></li>
-            <li><a href="">UI/UX Design & Prototyping</a></li>
-          </ul>
+          <h4 class="footer-dropdown-toggle">
+            NASHIK
+            <i class="bi bi-chevron-down footer-chevron"></i>
+          </h4>
+          <div class="footer-dropdown-content">
+            <div class="footer-contact">
+              <!-- <p><strong>Address:</strong></p> -->
+              <p>Shreeji Pride, Second Floor, Opp.</p>
+              <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
+            </div>
+          </div>
         </div>
 
         <div class="col-lg-3 col-md-3 footer-links">
-          <h4> Industries We Serve</h4>
-          <ul>
-            <li><a href="#">E-commerce & Retail</a></li>
-            <li><a href="#">Fintech & Banking</a></li>
-            <li><a href="#">Healthcare & MedTech</a></li>
-            <li><a href="#">Manufacturing & Supply Chain</a></li>
-            <li><a href="#">Education & EdTech</a></li>
-            <li><a href="">Real Estate & Smart Systems</a></li>
-          </ul>
+          <h4 class="footer-dropdown-toggle">
+            MALEGAON
+            <i class="bi bi-chevron-down footer-chevron"></i>
+          </h4>
+          <div class="footer-dropdown-content">
+            <div class="footer-contact">
+              <!-- <p><strong>Address:</strong></p> -->
+
+              <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon 423203</p>
+            </div>
+          </div>
         </div>
 
         <!-- <div class="col-lg-2 col-md-3 footer-links">
@@ -922,34 +1825,48 @@
       </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">DATASPAN Technologies</strong> <span>All Rights
-          Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a
-          href="https://themewagon.com">ThemeWagon</a> -->
+    <div class="container copyright text-center m-0 p-0">
+      <!-- Social Links for Mobile View -->
+      <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
+        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+
+        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
+        <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
       </div>
+      <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
+          Technologies</strong> <span>All Rights
+          Reserved</span></p>
     </div>
 
   </footer>
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short "></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+        <!-- Initialize AOS with smooth animation settings -->
+        <script>
+            AOS.init({
+                duration: 500, // Smooth animation duration (0.5s)
+                easing: 'ease-out-cubic', // Smooth cubic easing for fluid motion
+                once: true, // Animate only once
+                offset: 0, // Trigger immediately when element enters viewport
+                delay: 0 // Base delay (individual delays are set via data-aos-delay)
+            });
+        </script>
+
+
 
 </body>
 
