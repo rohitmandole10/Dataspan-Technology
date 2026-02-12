@@ -30,7 +30,17 @@
 
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
-   <style>
+    <style>
+        .ai-highlight-2 {
+            /* font-size: 1.75rem; */
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
         :root {
             --section-padding: clamp(40px, 8vw, 100px);
         }
@@ -172,7 +182,7 @@
         }
 
         .hero-title {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-weight: 800;
             font-size: clamp(2.2rem, 8vw, 4.5rem);
             font-family: var(--heading-font);
@@ -180,7 +190,8 @@
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             text-align: center;
             letter-spacing: -0.02em;
         }
@@ -233,18 +244,19 @@
 
         /* Hero section enhancements */
         .hero-content {
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             position: relative;
             z-index: 1;
             width: 80% !important;
             max-width: 80% !important;
             margin: 0 auto;
-            padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+            /* padding: clamp   (8px, 1.2vw, 15px) clamp(20px, 3vw, 40px); */
             box-sizing: border-box;
         }
 
         .hero-content p {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: clamp(1.1rem, 2vw, 1.25rem);
             font-family: var(--default-font);
             line-height: 1.6;
@@ -319,7 +331,7 @@
         /* ==============================================  Key Metrices ================================================= */
         .stats-section {
             padding: clamp(2rem, 6vw, 5rem) 1rem;
-            background: #f8fafc;
+            background: #ffffff;
             text-align: center;
         }
 
@@ -339,10 +351,10 @@
 
 
         .stats-section .stats-title {
-            font-size: clamp(1.25rem, 3vw, 2rem);
-            font-weight: 600;
-            margin-bottom: 3rem;
-            line-height: 1.3;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            /* margin: 1rem 0; */
+
         }
 
 
@@ -363,6 +375,7 @@
         .services-cloud {
             padding: 60px 0;
             min-height: 100vh;
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
         }
 
         .services-cloud a,
@@ -385,8 +398,9 @@
 
         .services-cloud .site-heading h2 {
             display: block;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 700;
-            margin-bottom: 10px;
+            margin: 1rem 0;
             /* text-transform: uppercase; */
         }
 
@@ -461,7 +475,7 @@
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             border-radius: 50%;
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: 40px;
             height: 80px;
             line-height: 80px;
@@ -504,6 +518,24 @@
             margin-bottom: 30px;
         }
 
+        .services-cloud .our-offer-items.less-carousel {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .services-cloud .our-offer-items.less-carousel .equal-height {
+            display: flex;
+        }
+
+        .services-cloud .our-offer-items.less-carousel .equal-height .item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
         .we-offer-area.item-border-less .item .number {
             font-family: "Poppins", sans-serif;
             font-size: 50px;
@@ -525,7 +557,7 @@
         .we-offer-area.center-active .single-item:nth-child(2n) .item i,
         .we-offer-area.center-active .single-item:nth-child(2n) .item h4,
         .we-offer-area.center-active .single-item:nth-child(2n) .item p {
-            color: #ffffff;
+            color: var(--contrast-color);
         }
 
         .we-offer-area .item i {
@@ -577,15 +609,15 @@
         .we-offer-area .item:hover i,
         .we-offer-area .item:hover h4,
         .we-offer-area .item:hover p {
-            color: #ffffff !important;
+            color: var(--contrast-color) !important;
         }
 
         .we-offer-area.text-center .item:hover i::after {
-            border-color: #ffffff !important;
+            border-color: var(--contrast-color) !important;
         }
 
         .we-offer-area.text-center .item:hover i {
-            background-color: #ffffff !important;
+            background-color: var(--surface-color) !important;
             color: #0770f8 !important;
         }
 
@@ -594,7 +626,7 @@
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             border-radius: 50%;
-            color: #ffffff;
+            color: var(--contrast-color);
             display: inline-block;
             font-size: 60px;
             height: 100px;
@@ -784,6 +816,7 @@
 
         .why-choose-us {
             padding: 60px 0;
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
         }
 
         .why-choose-us .container {
@@ -795,7 +828,8 @@
         }
 
         .why-choose-us .section-title h2 {
-            font-size: 1.875rem;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
             text-align: center;
         }
 
@@ -829,12 +863,14 @@
         /* Card Overlay & Content */
         .card-overlay {
             padding: 20px;
+            color: white;
         }
 
         .card-content {
             transform: translateY(40px);
             opacity: 0;
             transition: all 0.3s ease;
+            color: white;
         }
 
         .card-title {
@@ -847,12 +883,14 @@
             font-size: 0.75rem;
             margin-bottom: 0.75rem;
             text-align: center;
+            color: white;
         }
 
         .card-description {
             font-size: 0.75rem;
             line-height: 1.5;
             text-align: center;
+            color: white;
         }
 
         /* Arrow Icon */
@@ -956,6 +994,13 @@
             }
         }
 
+        /* Center align cards container on screens above 1150px */
+        @media (min-width: 1151px) {
+            .cards-container {
+                justify-content: center !important;
+            }
+        }
+
         /* Responsive Sizes */
         @media (max-width: 1200px) {
             .card {
@@ -1006,6 +1051,7 @@
         /* ============================================ Case Studies ================================================= */
         .benefits-section {
             padding: 3rem 1rem;
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
         }
 
 
@@ -1017,7 +1063,7 @@
 
 
         .benefits-section .left-title small {
-            color: #3b82f6;
+            color: #00a2ff;
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -1040,7 +1086,7 @@
         .benefits-section .consult-btn {
             margin-top: 1.5rem;
             background: #3b82f6;
-            color: #fff;
+            color: var(--contrast-color);
             border-radius: 6px;
             padding: 10px 18px;
             border: none;
@@ -1065,20 +1111,33 @@
 
         .benefits-section .benefit-title {
             font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .benefits-section .benefit-item:hover .benefit-title {
+            color: #00b7ff;
         }
 
 
         .benefits-section .benefit-desc {
-            display: none;
-            margin-top: 6px;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 0;
             color: #475569;
             font-size: 0.95rem;
             max-width: 420px;
+            transform: translateY(-10px);
+            transition: none;
         }
 
 
-        .benefits-section .benefit-item.active .benefit-desc {
-            display: block;
+        .benefits-section .benefit-item:hover .benefit-desc {
+            opacity: 1;
+            max-height: 500px;
+            margin-top: 6px;
+            transform: translateY(0);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, margin-top 0.3s ease-in-out, max-height 0.3s ease-in-out;
         }
 
 
@@ -1127,7 +1186,7 @@
 
         .hero-section-last .btn-dark-rounded {
             background: #111827;
-            color: #fff;
+            color: var(--contrast-color);
             border-radius: 30px;
             padding: 10px 20px;
             border: none;
@@ -1276,25 +1335,25 @@
 
 <body class="services">
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <!-- Logo -->
-      <div class="nav-logo">
-        <a href="https://dataspantechnologies.com" class="logo">
-          <img src="https://image.dataspantechnologies.com/dataspan/brand3.png" alt="Dataspan Technologies Logo"
-            class="logo-image" />
-        </a>
-      </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="https://dataspantechnologies.com" class="logo">
+                    <img src="https://image.dataspantechnologies.com/dataspan/brand3.png"
+                        alt="Dataspan Technologies Logo" class="logo-image" />
+                </a>
+            </div>
 
-      <!-- Main Navigation -->
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="../Aboutus.html" class="nav-link">About Us</a>
-        </li>
-        <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
+            <!-- Main Navigation -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
                         Services
                         <!-- <i class="fas fa-chevron-down"></i> -->
                     </a>
@@ -1387,214 +1446,223 @@
                         </div>
                     </div>
                 </li>
-        <li class="nav-item">
-          <a href="../Clients.html" class="nav-link">Clients</a>
-        </li>
-        <li class="nav-item">
-          <a href="../gallery.html" class="nav-link">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a href="../contact.html" class="nav-link">Contact Us</a>
-        </li>
-      </ul>
+                <li class="nav-item">
+                    <a href="../Clients.html" class="nav-link">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
 
-      <!-- Mobile Menu Toggle Button -->
-      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-      <!-- Action Button 
+            <!-- Action Button 
             <div class="nav-action">
                 <button class="start-project-btn">Start Project</button>
             </div>-->
-    </div>
-
-    <!-- Services Dropdown Menu -->
-    <div class="dropdown-menu" id="services-dropdown">
-      <div class="dropdown-container">
-        <div class="dropdown-content">
-
-          <div class="service-categories">
-            <div class="category-column">
-              <div class="category-item active" data-submenu="ai-automation">
-                <a href="#" class="category-link">AI & Automation</a>
-              </div>
-              <div class="category-item" data-submenu="development-technology">
-                <a href="#" class="category-link">Development & Technology</a>
-              </div>
-              <div class="category-item" data-submenu="design-branding">
-                <a href="#" class="category-link">Design & Branding</a>
-              </div>
-              <div class="category-item" data-submenu="cloud-infrastructure">
-                <a href="#" class="category-link">Cloud & Infrastructure</a>
-              </div>
-              <div class="category-item" data-submenu="data-operations">
-                <a href="#" class="category-link">Data & Operations</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="ai-automation-submenu">
-              <div class="subcategory-item">
-                <a href="../AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning (ML)</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/ocr.html" class="subcategory-link">OCR (Optical Character Recognition)</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper & Scripting</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/Navision_Integration_and_Automation.html" class="subcategory-link">Navision Integration &
-                  Automation</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf Labels) Integration</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Shopify_Development_&_Services.html"
-                  class="subcategory-link">Shopify Development & Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Web_&_Mobile_Development.html" class="subcategory-link">Web & Mobile
-                  Development</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Software_Development_&_Consulting.html"
-                  class="subcategory-link">Software Development & Consulting</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
-                  class="subcategory-link">E-Commerce & Marketplace Integration</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Design & Branding/UI/UX_Creative_Services.html" class="subcategory-link">UI/UX & Creative
-                  Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design & Branding</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Hosting_&_Cloud_Services.html" class="subcategory-link">Hosting & Cloud
-                  Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Managed_Cloud_Services.html" class="subcategory-link">Managed Hosting
-                  Solutions</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html" class="subcategory-link">Cloud
-                  Setup, Migration & Optimization</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
-                  class="subcategory-link">Server Monitoring, Backup & Security Management</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting & Analytics</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back Office & BPO
-                  Solutions</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Promotional Graphics Section -->
-          <div class="promo-section">
-            <div class="tech-illustration">
-              <!-- Robot/Server Unit -->
-              <div class="robot-unit">
-                <div class="robot-head">
-                  <div class="robot-core"></div>
-                  <div class="circuit-board"></div>
-                </div>
-                <div class="code-screen">
-                  <div class="code-line"></div>
-                  <div class="code-line"></div>
-                  <div class="code-line"></div>
-                </div>
-              </div>
-
-              <!-- Human Figures -->
-              <div class="human-figures">
-                <div class="human-figure male">
-                  <div class="figure-body"></div>
-                  <div class="key blue-key"></div>
-                </div>
-                <div class="human-figure female">
-                  <div class="figure-body"></div>
-                  <div class="key green-key"></div>
-                </div>
-              </div>
-
-              <!-- Brain Icon -->
-              <div class="brain-icon">
-                <div class="brain-shape"></div>
-              </div>
-
-              <!-- Geometric Elements -->
-              <div class="geometric-elements">
-                <div class="cube-stack">
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                </div>
-                <div class="individual-cubes">
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                </div>
-                <div class="shield-icon"></div>
-                <div class="floating-keys">
-                  <div class="key blue-key"></div>
-                  <div class="key green-key"></div>
-                </div>
-              </div>
-
-              <!-- Smartphone -->
-              <div class="smartphone">
-                <div class="phone-body"></div>
-                <div class="network-signals">
-                  <div class="signal"></div>
-                  <div class="signal"></div>
-                  <div class="signal"></div>
-                </div>
-                <div class="data-flow">
-                  <div class="data-cube"></div>
-                  <div class="data-cube"></div>
-                  <div class="data-cube"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
+        <!-- Services Dropdown Menu -->
+        <div class="dropdown-menu" id="services-dropdown">
+            <div class="dropdown-container">
+                <div class="dropdown-content">
+
+                    <div class="service-categories">
+                        <div class="category-column">
+                            <div class="category-item active" data-submenu="ai-automation">
+                                <a href="#" class="category-link">AI & Automation</a>
+                            </div>
+                            <div class="category-item" data-submenu="development-technology">
+                                <a href="#" class="category-link">Development & Technology</a>
+                            </div>
+                            <div class="category-item" data-submenu="design-branding">
+                                <a href="#" class="category-link">Design & Branding</a>
+                            </div>
+                            <div class="category-item" data-submenu="cloud-infrastructure">
+                                <a href="#" class="category-link">Cloud & Infrastructure</a>
+                            </div>
+                            <div class="category-item" data-submenu="data-operations">
+                                <a href="#" class="category-link">Data & Operations</a>
+                            </div>
+                        </div>
 
 
-  
-  
-  
+                        <div class="subcategory-column" id="ai-automation-submenu">
+                            <div class="subcategory-item">
+                                <a href="../AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning
+                                    (ML)</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/ocr.html" class="subcategory-link">OCR (Optical Character
+                                    Recognition)</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper &
+                                    Scripting</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/Navision_Integration_and_Automation.html"
+                                    class="subcategory-link">Navision Integration &
+                                    Automation</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf
+                                    Labels) Integration</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Shopify_Development_&_Services.html"
+                                    class="subcategory-link">Shopify Development & Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Web_&_Mobile_Development.html"
+                                    class="subcategory-link">Web & Mobile
+                                    Development</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Software_Development_&_Consulting.html"
+                                    class="subcategory-link">Software Development & Consulting</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                                    class="subcategory-link">E-Commerce & Marketplace Integration</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Design & Branding/UI/UX_Creative_Services.html"
+                                    class="subcategory-link">UI/UX & Creative
+                                    Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design
+                                    & Branding</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Hosting_&_Cloud_Services.html"
+                                    class="subcategory-link">Hosting & Cloud
+                                    Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Managed_Cloud_Services.html"
+                                    class="subcategory-link">Managed Hosting
+                                    Solutions</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                                    class="subcategory-link">Cloud
+                                    Setup, Migration & Optimization</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                                    class="subcategory-link">Server Monitoring, Backup & Security Management</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting &
+                                    Analytics</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back
+                                    Office & BPO
+                                    Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promotional Graphics Section -->
+                    <div class="promo-section">
+                        <div class="tech-illustration">
+                            <!-- Robot/Server Unit -->
+                            <div class="robot-unit">
+                                <div class="robot-head">
+                                    <div class="robot-core"></div>
+                                    <div class="circuit-board"></div>
+                                </div>
+                                <div class="code-screen">
+                                    <div class="code-line"></div>
+                                    <div class="code-line"></div>
+                                    <div class="code-line"></div>
+                                </div>
+                            </div>
+
+                            <!-- Human Figures -->
+                            <div class="human-figures">
+                                <div class="human-figure male">
+                                    <div class="figure-body"></div>
+                                    <div class="key blue-key"></div>
+                                </div>
+                                <div class="human-figure female">
+                                    <div class="figure-body"></div>
+                                    <div class="key green-key"></div>
+                                </div>
+                            </div>
+
+                            <!-- Brain Icon -->
+                            <div class="brain-icon">
+                                <div class="brain-shape"></div>
+                            </div>
+
+                            <!-- Geometric Elements -->
+                            <div class="geometric-elements">
+                                <div class="cube-stack">
+                                    <div class="cube"></div>
+                                    <div class="cube"></div>
+                                    <div class="cube"></div>
+                                </div>
+                                <div class="individual-cubes">
+                                    <div class="cube"></div>
+                                    <div class="cube"></div>
+                                </div>
+                                <div class="shield-icon"></div>
+                                <div class="floating-keys">
+                                    <div class="key blue-key"></div>
+                                    <div class="key green-key"></div>
+                                </div>
+                            </div>
+
+                            <!-- Smartphone -->
+                            <div class="smartphone">
+                                <div class="phone-body"></div>
+                                <div class="network-signals">
+                                    <div class="signal"></div>
+                                    <div class="signal"></div>
+                                    <div class="signal"></div>
+                                </div>
+                                <div class="data-flow">
+                                    <div class="data-cube"></div>
+                                    <div class="data-cube"></div>
+                                    <div class="data-cube"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
 
     <div class="main">
         <!-- hero section -->
@@ -1605,7 +1673,7 @@
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><span>Web & Mobile Development</span></li>
+                    <li><span>Hosting & Cloud Services</span></li>
                 </ol>
             </div>
 
@@ -1617,10 +1685,10 @@
                         <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
 
                             <!-- Main Heading -->
-                            <h1 class="mb-4 hero-title">Scalable Managed Secure Cloud Services</h1>
+                            <h1 class="hero-title">Scalable Managed Secure Cloud Services</h1>
 
                             <!-- Description Paragraph -->
-                            <p class="mb-4 mb-md-5">We architect, migrate, and manage secure cloud solutions that
+                            <p class="mb-md-5">We architect, migrate, and manage secure cloud solutions that
                                 delivers speed, uptime, and cost control. From cloud migration to 24/7 monitoring and
                                 optimization, we help businesses scale reliably without operational risk or downtime and
                                 security compliance.</p>
@@ -1644,7 +1712,8 @@
             <h2 class="stats-title">
                 Measurable Gains From Cloud Services
             </h2>
-            <p>Optimized cloud architecture improves uptime, reduces costs, strengthens security, and scales performance
+            <p class="mb-4">Optimized cloud architecture improves uptime, reduces costs, strengthens security, and
+                scales performance
                 as demand grows.</p>
 
             <div class="container">
@@ -1685,9 +1754,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="site-heading text-center">
-                            <h2>Cloud Operations That Scale Businesses</h2>
-                            <h4>We manage, optimize, and secure cloud environments so your systems stay fast, stable,
-                                and cost-efficient.</h4>
+                            <h2><span class="ai-highlight-2">Cloud Operations </span>That Scale Businesses</h2>
+                            <h5>We manage, optimize, and secure cloud environments so your systems stay fast, stable,
+                                and cost-efficient.</h5>
                         </div>
                     </div>
                 </div>
@@ -1775,63 +1844,63 @@
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting AWS CloudWatch.png"
                                                         alt="AWS CloudWatch"></div>AWS CloudWatch
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Azure Monitor.png"
                                                         alt="Azure Monitor"></div>Azure Monitor
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Google Cloud Operations.png"
                                                         alt="Google Cloud Operations"></div>Google Cloud Operations
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Datadog.png"
                                                         alt="Datadog"></div>Datadog
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting New Relic.png"
                                                         alt="New Relic"></div>New Relic
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Google Workspace.png"
                                                         alt="Google Workspace"></div>Google Workspace
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Docker.png"
                                                         alt="Docker"></div>Docker
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Kubernetes.png"
                                                         alt="Kubernetes "></div>Kubernetes
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Terraform.png"
                                                         alt="Terraform"></div>Terraform
-                                            </div>→
+                                            </div>
                                         </div>
 
 
@@ -1841,63 +1910,63 @@
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting AWS CloudWatch.png"
                                                         alt="AWS CloudWatch"></div>AWS CloudWatch
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Azure Monitor.png"
                                                         alt="Azure Monitor"></div>Azure Monitor
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Google Cloud Operations.png"
                                                         alt="Google Cloud Operations"></div>Google Cloud Operations
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Datadog.png"
                                                         alt="Datadog"></div>Datadog
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting New Relic.png"
                                                         alt="New Relic"></div>New Relic
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Google Workspace.png"
                                                         alt="Google Workspace"></div>Google Workspace
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Docker.png"
                                                         alt="Docker"></div>Docker
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Kubernetes.png"
                                                         alt="Kubernetes "></div>Kubernetes
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Terraform.png"
                                                         alt="Terraform"></div>Terraform
-                                            </div>→
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1913,63 +1982,63 @@
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Grafana.png"
                                                         alt="Grafana"></div>Grafana
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Prometheus.png"
                                                         alt="Prometheus"></div>Prometheus
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Elastic Stack.png"
                                                         alt="Elastic Stack"></div>Elastic Stack
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Cloudflare.png"
                                                         alt="Cloudflare"></div>Cloudflare
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Okta.png"
                                                         alt="Okta"></div>Okta
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting ServiceNow.png"
                                                         alt="ServiceNow"></div>ServiceNow
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Jira.png"
                                                         alt="Jira"></div>Jira
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Slack.png"
                                                         alt="Slack"></div>Slack
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Microsoft 365.png"
                                                         alt="Microsoft 365"></div>Microsoft 365
-                                            </div>→
+                                            </div>
                                         </div>
 
 
@@ -1979,63 +2048,63 @@
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Grafana.png"
                                                         alt="Grafana"></div>Grafana
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Prometheus.png"
                                                         alt="Prometheus"></div>Prometheus
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Elastic Stack.png"
                                                         alt="Elastic Stack"></div>Elastic Stack
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Cloudflare.png"
                                                         alt="Cloudflare"></div>Cloudflare
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Okta.png"
                                                         alt="Okta"></div>Okta
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting ServiceNow.png"
                                                         alt="ServiceNow"></div>ServiceNow
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Jira.png"
                                                         alt="Jira"></div>Jira
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Slack.png"
                                                         alt="Slack"></div>Slack
-                                            </div>→
+                                            </div>
                                         </div>
                                         <div class="app-card">
                                             <div class="app-left">
                                                 <div class="app-icon"><img
                                                         src="https://image.dataspantechnologies.com/dataspan/Hosting Microsoft 365.png"
                                                         alt="Microsoft 365"></div>Microsoft 365
-                                            </div>→
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2179,7 +2248,7 @@
                         <div class="col-lg-7">
 
 
-                            <div class="benefit-item active" onclick="showBenefit(this)">
+                            <div class="benefit-item">
                                 <div class="benefit-number">01</div>
                                 <div>
                                     <div class="benefit-title">Operations-First Approach</div>
@@ -2190,7 +2259,7 @@
                             </div>
 
 
-                            <div class="benefit-item" onclick="showBenefit(this)">
+                            <div class="benefit-item">
                                 <div class="benefit-number">02</div>
                                 <div>
                                     <div class="benefit-title">Vendor-Neutral Expertise</div>
@@ -2200,7 +2269,7 @@
                             </div>
 
 
-                            <div class="benefit-item" onclick="showBenefit(this)">
+                            <div class="benefit-item">
                                 <div class="benefit-number">03</div>
                                 <div>
                                     <div class="benefit-title">Proactive Risk Management</div>
@@ -2211,7 +2280,7 @@
                             </div>
 
 
-                            <div class="benefit-item" onclick="showBenefit(this)">
+                            <div class="benefit-item">
                                 <div class="benefit-number">04</div>
                                 <div>
                                     <div class="benefit-title">Transparent Cost Control</div>
@@ -2314,78 +2383,82 @@
 
     <footer id="footer" class="footer section light-background">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
-            <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
-          </a>
-          <div class="footer-contact pt-1">
-            <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
+                        <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
+                    </a>
+                    <div class="footer-contact pt-1">
+                        <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
             <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p> -->
-            <p>We work with businesses to simplify digital operations, <br>strengthen eCommerce performance, and build
-              smarter systems that support steady, measurable growth</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span></p>
-            <p><strong>Email:</strong> <span>info@dataspantechnologies.com</span></p>
-          </div>
-          <div class="social-links d-flex my-2">
-            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+                        <p>We work with businesses to simplify digital operations, <br>strengthen eCommerce performance,
+                            and build
+                            smarter systems that support steady, measurable growth</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span></p>
+                        <p><strong>Email:</strong> <span>info@dataspantechnologies.com</span></p>
+                    </div>
+                    <div class="social-links d-flex my-2">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
 
-            <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
-            <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
-          </div>
-        </div>
+                        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://in.linkedin.com/company/dataspan-technologies"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i
+                                class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
 
 
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            MENU
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <ul class="footer-dropdown-content">
-            <li><a href="https://dataspantechnologies.com">Home</a></li>
-            <li><a href="../Aboutus.html">About us</a></li>
-            <li><a href="../Clients.html">Clients</a></li>
-            <!-- <li><a href="../service.html">Services</a></li> -->
-            <!-- <li><a href="../careers.html">Careers</a></li> -->
-            <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
-            <li><a href="../contact.html">Contact Us</a></li>
-            <!-- <li><a href="#">Privacy Policy</a></li> -->
-            <!-- <li><a href="#">Terms of Service</a></li> -->
-          </ul>
-        </div>
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        MENU
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <ul class="footer-dropdown-content">
+                        <li><a href="https://dataspantechnologies.com">Home</a></li>
+                        <li><a href="../Aboutus.html">About us</a></li>
+                        <li><a href="../Clients.html">Clients</a></li>
+                        <!-- <li><a href="../service.html">Services</a></li> -->
+                        <!-- <li><a href="../careers.html">Careers</a></li> -->
+                        <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Privacy Policy</a></li> -->
+                        <!-- <li><a href="#">Terms of Service</a></li> -->
+                    </ul>
+                </div>
 
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            NASHIK
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <div class="footer-dropdown-content">
-            <div class="footer-contact">
-              <!-- <p><strong>Address:</strong></p> -->
-              <p>Shreeji Pride, Second Floor, Opp.</p>
-              <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
-            </div>
-          </div>
-        </div>
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        NASHIK
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <div class="footer-dropdown-content">
+                        <div class="footer-contact">
+                            <!-- <p><strong>Address:</strong></p> -->
+                            <p>Shreeji Pride, Second Floor, Opp.</p>
+                            <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            MALEGAON
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <div class="footer-dropdown-content">
-            <div class="footer-contact">
-              <!-- <p><strong>Address:</strong></p> -->
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        MALEGAON
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <div class="footer-dropdown-content">
+                        <div class="footer-contact">
+                            <!-- <p><strong>Address:</strong></p> -->
 
-              <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon 423203</p>
-            </div>
-          </div>
-        </div>
+                            <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon 423203</p>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- <div class="col-lg-2 col-md-3 footer-links">
+                <!-- <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nobis illum</h4>
           <ul>
             <li><a href="#">Ipsam</a></li>
@@ -2396,24 +2469,24 @@
           </ul>
         </div> -->
 
-      </div>
-    </div>
+            </div>
+        </div>
 
-    <div class="container copyright text-center m-0 p-0">
-      <!-- Social Links for Mobile View -->
-      <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
-        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+        <div class="container copyright text-center m-0 p-0">
+            <!-- Social Links for Mobile View -->
+            <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
+                <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
 
-        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
-        <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
-      </div>
-      <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
-          Technologies</strong> <span>All Rights
-          Reserved</span></p>
-    </div>
+                <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
+                <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+            </div>
+            <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
+                    Technologies</strong> <span>All Rights
+                    Reserved</span></p>
+        </div>
 
-  </footer>
+    </footer>
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short "></i></a>
@@ -2465,13 +2538,6 @@
     </script>
 
     <!-- Case Studies -->
-    <script>
-        function showBenefit(element) {
-            const items = document.querySelectorAll('.benefit-item');
-            items.forEach(item => item.classList.remove('active'));
-            element.classList.add('active');
-        }
-    </script>
 </body>
 
 </html>
