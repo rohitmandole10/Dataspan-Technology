@@ -34,7 +34,10 @@
         .ai-highlight-2 {
             /* font-size: 1.75rem; */
             font-weight: 900;
-            color: var(--accent-color);
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             line-height: 1.2;
         }
 
@@ -259,7 +262,7 @@
             color: var(--heading-color);
             font-weight: 600;
         }
-
+       
         @media (max-width: 1199px) {
             .hero-breadcrumbs {
                 width: 85%;
@@ -285,7 +288,7 @@
         }
 
         .hero-title {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-weight: 800;
             font-size: clamp(2.2rem, 8vw, 4.5rem);
             font-family: var(--heading-font);
@@ -293,7 +296,8 @@
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             text-align: center;
             letter-spacing: -0.02em;
         }
@@ -346,24 +350,26 @@
 
         /* Hero section enhancements */
         .hero-content {
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             position: relative;
             z-index: 1;
             width: 80% !important;
             max-width: 80% !important;
             margin: 0 auto;
-            padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+            /* padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px); */
             box-sizing: border-box;
+            /* border: 2px solid red; */
         }
 
         .hero-content p {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: clamp(1.1rem, 2vw, 1.25rem);
             font-family: var(--default-font);
             line-height: 1.6;
             margin-bottom: 2.5rem;
             text-align: center;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0.9;
@@ -469,7 +475,7 @@
 
         /* Second section - Services Cards from CodePen */
         .second {
-            background-color: #f6f9fc;
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
             padding-top: 20px;
         }
 
@@ -478,16 +484,13 @@
             max-width: 1320px;
             margin: 0 auto;
             padding-bottom: 0px;
-            /* border: 2px solid red; */
+         /* border: 2px solid red;  */
         }
 
         .container-services {
             padding-inline: 2rem;
             height: 100%;
         }
-
-
-
 
         .section-title-services {
             width: 100%;
@@ -506,7 +509,7 @@
 
         a.tile {
             text-decoration: none !important;
-            color: white !important;
+            color: var(--contrast-color) !important;
         }
 
         @media only screen and (max-width: 1064px) {
@@ -554,273 +557,38 @@
             }
         }
 
-        /* Enhanced 4th section - Beautiful Modern Design */
-        .section4 {
-            margin: 0;
-            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 50%, #f8fafc 100%);
-            overflow: hidden;
-            padding: 40px 0;
-            position: relative;
-            /* border: 5px solid red; */
-        }
 
-        .section4 .section-title-container {
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section4 .section-title-container h2 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .section4 .section-title-container h2 .title-part1 {
-            color: #1e293b;
-        }
-
-        .section4 .section-title-container h2 .title-part2 {
-            color: #09bef5;
-            background: linear-gradient(135deg, #030561 0%, #09bef5 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section4::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(circle at 20% 30%, rgba(3, 5, 97, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(9, 190, 245, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(3, 5, 97, 0.03) 0%, transparent 70%);
-            animation: gradientShift 15s ease infinite;
-        }
-
-        @keyframes gradientShift {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.8;
-            }
-        }
-
-        .section4 .wrapper {
-            display: flex;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            height: 60vh;
-            min-height: 500px;
-            overflow: hidden;
-            padding: 0 5%;
-        }
-
-
-        /* Scrollable Features Container */
-        .section4 .features-container {
-            height: 100%;
-            width: 55%;
-            overflow-y: auto;
-            overflow-x: hidden;
-            padding: 60px 8% 60px 8%;
-            scroll-snap-type: y mandatory;
-            position: relative;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            -webkit-overflow-scrolling: touch;
-            background: linear-gradient(135deg, #e8f0f5 0%, #d1e0e8 50%, #c4d4dd 100%);
-            box-shadow:
-                0 25px 80px rgba(0, 0, 0, 0.12),
-                0 0 0 1px rgba(255, 255, 255, 0.5);
-        }
-
-        .section4 .features-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        .section4 .feature-item {
-            min-height: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            scroll-snap-align: center;
-            scroll-snap-stop: always;
-            opacity: 0.3;
-            transform: translateX(60px) scale(0.95);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            padding: 40px 0;
-            will-change: transform, opacity;
-            pointer-events: none;
-        }
-
-        .section4 .feature-item.active {
-            opacity: 1;
-            transform: translateX(0) scale(1) translateY(0);
-            pointer-events: auto;
-            z-index: 10;
-        }
-
-        .section4 .feature-item:not(.active) {
-            opacity: 0.25;
-        }
-
-        .section4 .feature-content {
-            flex: 1;
-            max-width: 70%;
-            position: relative;
-        }
-
-        .section4 .feature-content h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 12px;
-            line-height: 1.3;
-            transition: all 0.4s ease;
-        }
-
-        .section4 .feature-content p {
-            font-size: 1rem;
-            color: #475569;
-            line-height: 1.7;
-            font-weight: 400;
-            margin: 0;
-            transition: all 0.4s ease;
-        }
-
-        .section4 .feature-item.active .feature-content h3 {
-            color: #1e293b;
-        }
-
-        .section4 .feature-item:not(.active) .feature-content h3 {
-            color: #94a3b8;
-        }
-
-        .section4 .feature-item:not(.active) .feature-content p {
-            color: #94a3b8;
-        }
-
-        /* Fixed Number Display */
-        .section4 .number-box {
-            width: 45%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg,
-                    rgba(255, 255, 255, 0.4) 0%,
-                    rgba(248, 250, 252, 0.3) 50%,
-                    rgba(255, 255, 255, 0.2) 100%);
-            position: relative;
-            overflow: hidden;
-            perspective: 1000px;
-            transform-style: preserve-3d;
-            box-shadow:
-                0 25px 80px rgba(0, 0, 0, 0.12),
-                0 0 0 1px rgba(255, 255, 255, 0.5);
-        }
-
-        .section4 .number {
-            font-size: 10rem;
-            font-weight: 900;
-            line-height: 1;
-            background: linear-gradient(135deg, #030561 0%, #09bef5 50%, #227faa 100%);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            transform-origin: center center;
-            transform-style: preserve-3d;
-            display: inline-block;
-            will-change: transform, filter, opacity;
-            position: relative;
-            z-index: 1;
-            animation: gradientFlow 5s ease infinite;
-            filter: drop-shadow(0 0 40px rgba(9, 190, 245, 0.3));
-            transition: none;
-            perspective: 1000px;
-            backface-visibility: hidden;
-        }
-
-        @keyframes gradientFlow {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .section4 .number-box::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 220px;
-            height: 220px;
-            border: 2px solid rgba(9, 190, 245, 0.2);
-            border-radius: 50%;
-            animation: rotateRing 20s linear infinite;
-        }
-
-        @keyframes rotateRing {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
 
         /* Enhanced 5th section - Technologies */
         .section5 {
             background: #ffffff;
-            padding: var(--section-padding) 0 10px 0px;
+            /* padding: var(--section-padding) 0 10px 0px; */
+            /* border: 2px solid red; */
+            padding: 0px !important;
         }
 
         .technologies-section {
             max-width: 1200px;
+            /* border: 2px solid red; */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 50px 0 0 0;
         }
 
         .technologies-title {
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--heading-color);
             font-family: var(--heading-font);
             line-height: 1.2;
         }
 
         .tech-highlight {
-            background: color-mix(in srgb, var(--accent-color), transparent 90%);
-            padding: 4px 12px;
-            border-radius: 4px;
-            color: var(--heading-color);
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             display: inline-block;
         }
 
@@ -834,7 +602,7 @@
             font-family: var(--default-font);
             font-size: 1.125rem;
             line-height: 1.7;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -946,10 +714,10 @@
 
         .keras-logo::before {
             content: 'K';
-            color: white;
+            color: var(--contrast-color);
             font-weight: bold;
             font-size: 2.5rem;
-            font-family: Arial, sans-serif;
+            font-family: var(--default-font);
         }
 
         .tensorflow-logo {
@@ -992,10 +760,10 @@
 
         .r-logo::before {
             content: 'R';
-            color: white;
+            color: var(--contrast-color);
             font-weight: bold;
             font-size: 2.5rem;
-            font-family: Arial, sans-serif;
+            font-family: var(--default-font);
         }
 
         .python-logo {
@@ -1134,7 +902,7 @@
 
         .message.user .message-content {
             background: var(--accent-color);
-            color: #ffffff;
+            color: var(--contrast-color);
             border: none;
         }
 
@@ -1399,47 +1167,9 @@
             .hero-title {
                 font-size: 3rem;
             }
-
-            .section4 .section-title-container h2 {
-                font-size: 3rem;
-            }
-
-            .section4 .wrapper {
-                width: 95%;
-            }
-
-            .section4 .number {
-                font-size: 7rem;
-            }
         }
 
         @media(max-width: 900px) {
-            .section4 {
-                padding: 60px 0;
-            }
-
-            .section4 .section-title-container h2 {
-                font-size: 2.5rem;
-            }
-
-            .section4 .wrapper {
-                width: 95%;
-                height: 50vh;
-                max-height: 50vh;
-            }
-
-            .section4 .features-container {
-                padding: 40px 6%;
-            }
-
-            .section4 .feature-content h3 {
-                font-size: 1.3rem;
-            }
-
-            .section4 .number {
-                font-size: 8rem;
-            }
-
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -1458,56 +1188,6 @@
                 font-size: 2.5rem;
             }
 
-            .section4 {
-                padding: 50px 0;
-            }
-
-            .section4 .section-title-container {
-                margin-bottom: 40px;
-            }
-
-            .section4 .section-title-container h2 {
-                font-size: 2.2rem;
-            }
-
-            .section4 .wrapper {
-                width: 95%;
-                height: 50vh;
-                max-height: 50vh;
-                flex-direction: column;
-            }
-
-            .section4 .features-container {
-                width: 100%;
-                height: 60%;
-                max-height: 60%;
-                padding: 30px 6%;
-            }
-
-            .section4 .number-box {
-                width: 100%;
-                height: 40%;
-                max-height: 40%;
-                padding: 15px 0;
-            }
-
-            .section4 .feature-content h3 {
-                font-size: 1.2rem;
-            }
-
-            .section4 .feature-content p {
-                font-size: 0.95rem;
-            }
-
-            .section4 .number {
-                font-size: 6rem;
-            }
-
-            .section4 .number-box::after {
-                width: 200px;
-                height: 200px;
-            }
-
             .section5 h1 {
                 font-size: 2rem;
             }
@@ -1515,36 +1195,6 @@
             .section5 .btn {
                 padding: 12px 25px;
                 font-size: 1rem;
-            }
-        }
-
-        @media(max-width: 1200px) {
-            .section4 .wrapper {
-                padding: 0 20px;
-                height: auto;
-                max-height: none;
-                flex-direction: column;
-            }
-
-            .section4 .features-container {
-                width: 100%;
-                height: auto;
-                overflow: visible;
-                padding: 40px 20px;
-            }
-
-            .section4 .feature-item {
-                opacity: 1;
-                transform: none;
-                pointer-events: auto;
-                min-height: auto;
-                padding: 30px 0;
-            }
-
-            .section4 .number-box {
-                width: 100%;
-                height: 300px;
-                margin-top: 30px;
             }
         }
 
@@ -1561,51 +1211,6 @@
                 font-size: 2rem;
             }
 
-            .section4 {
-                padding: 40px 0;
-            }
-
-            .section4 .section-title-container {
-                margin-bottom: 30px;
-            }
-
-            .section4 .section-title-container h2 {
-                font-size: 1.8rem;
-            }
-
-            .section4 .wrapper {
-                width: 98%;
-                height: auto;
-                max-height: none;
-            }
-
-            .section4 .features-container {
-                padding: 25px 5%;
-            }
-
-            .section4 .feature-item {
-                padding: 25px 0;
-            }
-
-            .section4 .feature-content h3 {
-                font-size: 1.1rem;
-                margin-bottom: 10px;
-            }
-
-            .section4 .feature-content p {
-                font-size: 0.9rem;
-                line-height: 1.6;
-            }
-
-            .section4 .number {
-                font-size: 4rem;
-            }
-
-            .section4 .number-box::after {
-                width: 150px;
-                height: 150px;
-            }
-
             .section5 h1 {
                 font-size: 1.8rem;
             }
@@ -1617,7 +1222,7 @@
 
         /* How It Works Section Styles */
         .how-it-works-section {
-            background: var(--background-color);
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
             padding: var(--section-padding) 0;
         }
 
@@ -1628,7 +1233,7 @@
         }
 
         .how-it-works-header {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             text-align: center;
             /* border: 5px solid red; */
         }
@@ -1711,7 +1316,6 @@
             display: flex;
             gap: 60px;
             align-items: flex-start;
-            animation: fadeInUp 0.5s ease-out forwards;
         }
 
         /* Content Left */
@@ -1975,19 +1579,21 @@
    =============================== */
 
         .llm-hero {
-            background: #eef0ff;
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
+
             padding: var(--section-padding) 0;
         }
 
         .llm-container {
-            max-width: 1200px;
+            max-width: 1350px;
             margin: auto;
             padding: 0 24px;
 
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            grid-template-columns: 1.4fr 1.9fr;
             gap: 60px;
             align-items: center;
+            /* border: 2px solid blue; */
         }
 
         /* LEFT CONTENT */
@@ -2008,7 +1614,7 @@
         .llm-content p {
             font-size: clamp(1rem, 2vw, 1.125rem);
             line-height: 1.6;
-            color: #444;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
             max-width: 500px;
             margin-bottom: 36px;
             opacity: 0.9;
@@ -2031,17 +1637,18 @@
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
+            border: none;
         }
 
         /* Primary Button */
 
         .btn-primary {
-            background: #5b63ff;
+            background: #0f7efc;
             color: #ffffff;
         }
 
         .btn-primary:hover {
-            background: #434bff;
+            background: #021e42;
             transform: translateY(-2px);
             box-shadow: 0 12px 30px rgba(91, 99, 255, 0.35);
         }
@@ -2055,7 +1662,7 @@
 
         .btn-secondary:hover {
             background: #5b63ff;
-            color: #ffffff;
+            color: var(--contrast-color);
             transform: translateY(-2px);
             box-shadow: 0 10px 26px rgba(91, 99, 255, 0.3);
         }
@@ -2066,6 +1673,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            /* border: 2px solid red; */
         }
 
         .llm-image img {
@@ -2143,26 +1751,34 @@
             margin-bottom: 28px;
         }
 
-        .integration-link {
+        .integration-link { 
             font-size: 16px;
             font-weight: 600;
-            color: #5b63ff;
+            color: #092d4b;
             text-decoration: none;
             position: relative;
+            border: 1px solid #092d4b;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        .integration-link:hover{
+            /* background-color: #0d83fd; */
+            border:1px solid #0d83fd;
+            color: #0d83fd;
         }
 
-        .integration-link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 100%;
-            height: 2px;
-            background: #5b63ff;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
+            /* .integration-link::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                width: 100%;
+                height: 2px;
+                background: #5b63ff;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            } */
 
         .integration-link:hover::after {
             transform: scaleX(1);
@@ -2218,39 +1834,6 @@
         }
 
         @media (max-width: 992px) {
-            .section4 .wrapper {
-                padding: 0 20px;
-                height: auto;
-                max-height: none;
-                flex-direction: column;
-            }
-
-            .section4 .features-container {
-                width: 100%;
-                height: auto;
-                overflow: visible;
-                padding: 40px 20px;
-            }
-
-            .section4 .feature-item {
-                opacity: 1;
-                transform: none;
-                pointer-events: auto;
-                min-height: auto;
-                padding: 30px 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-
-            .section4 .number-box {
-                width: 100%;
-                height: 300px;
-                margin-top: 30px;
-            }
-
-            .section4 .number {
-                font-size: 6rem;
-            }
-
             .chat-interface-wrapper {
                 max-width: 100%;
             }
@@ -2294,17 +1877,10 @@
                 width: 100%;
             }
 
-            .section4 .number {
-                font-size: 4rem;
-            }
-
             .how-it-works-title {
                 font-size: 1.5rem;
             }
         }
-
-
-
 
 
         /* Navigation Improvements */
@@ -2445,10 +2021,7 @@
                Services / Tiles Section (.second)
                Restyled for better mobile card aesthetic
             */
-            .second {
-                background-color: #fceceb !important;
-                /* Lighter bg for contrast */
-            }
+         
 
             .products-tile-container {
                 gap: 20px;
@@ -2696,88 +2269,6 @@
             }
         }
     </style>
-      <!-- Enhanced 5th section - Technologies -->
-        <!-- Enhanced 5th section - Technologies (Dual View: Tabs for Desktop, Accordion for Mobile) -->
-        <style>
-            /* Visibility Toggles */
-            @media (min-width: 769px) {
-                .desktop-technologies {
-                    display: block !important;
-                }
-
-                .mobile-technologies {
-                    display: none !important;
-                }
-            }
-
-            @media (max-width: 768px) {
-                .desktop-technologies {
-                    display: none !important;
-                }
-
-                .mobile-technologies {
-                    display: block !important;
-                }
-            }
-
-            /* Accordion Styles (Mobile Only) */
-            .tech-accordion {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-
-            .tech-group {
-                border: 1px solid #e0e0e0;
-                border-radius: 12px;
-                background: #fff;
-                overflow: hidden;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-            }
-
-            .tech-group-header {
-                width: 100%;
-                padding: 18px 20px;
-                background: #f8f9fa;
-                border: none;
-                text-align: left;
-                font-size: 1rem;
-                font-weight: 700;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                cursor: pointer;
-                font-family: inherit;
-            }
-
-            .tech-group-header.active {
-                color: var(--accent-color);
-                background: #f0f7ff;
-            }
-
-            .tech-group-header i {
-                transition: transform 0.3s;
-                font-size: 0.8rem;
-            }
-
-            .tech-group-header.active i {
-                transform: rotate(180deg);
-            }
-
-            .tech-group-content {
-                display: none;
-                padding: 20px;
-                border-top: 1px solid #eee;
-            }
-
-            .tech-cards-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-        </style>
 </head>
 
 <body class="services">
@@ -3141,7 +2632,7 @@
 
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
-                                <a href="#contact" class="btn btn-primary">Start Your AI Project</a>
+                                <a href="../contact.html" class="btn btn-primary">Start Your AI Project</a>
                                 <!-- <a href="#contact" class="btn btn-outline-primary">Get Free Consultation</a> -->
                             </div>
                         </div>
@@ -3209,8 +2700,8 @@
         </section><!-- /Features Section -->
 
         <!-- second section -->
-        <section class="second">
-            <div class="row-services">
+        <section class="second ">
+            <div class="row-services ">
                 <div class="container-services">
                     <div class="section-title-services">
                         <h3 class="ai-stats-title"> AI Solutions Built For Real Impact</h3>
@@ -3287,22 +2778,101 @@
                         <div class="static-service-card">
                             <h3>Talk With Experts To Simplify Complex Intelligent Technology Projects
                             </h3>
-                            <a href="#contact" class="static-btn">contact Us</a>
+                            <a href="#contact" class="static-btn">Contact Us</a>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </section>
 
-      
+        <!-- Enhanced 5th section - Technologies -->
+        <!-- Enhanced 5th section - Technologies (Dual View: Tabs for Desktop, Accordion for Mobile) -->
+        <style>
+            /* Visibility Toggles */
+            @media (min-width: 769px) {
+                .desktop-technologies {
+                    display: block !important;
+                }
+
+                .mobile-technologies {
+                    display: none !important;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .desktop-technologies {
+                    display: none !important;
+                }
+
+                .mobile-technologies {
+                    display: block !important;
+                }
+            }
+
+            /* Accordion Styles (Mobile Only) */
+            .tech-accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .tech-group {
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                background: #fff;
+                overflow: hidden;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+            }
+
+            .tech-group-header {
+                width: 100%;
+                padding: 18px 20px;
+                background: #f8f9fa;
+                border: none;
+                text-align: left;
+                font-size: 1rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                font-family: inherit;
+            }
+
+            .tech-group-header.active {
+                color: var(--accent-color);
+                background: #f0f7ff;
+            }
+
+            .tech-group-header i {
+                transition: transform 0.3s;
+                font-size: 0.8rem;
+            }
+
+            .tech-group-header.active i {
+                transform: rotate(180deg);
+            }
+
+            .tech-group-content {
+                display: none;
+                padding: 20px;
+                border-top: 1px solid #eee;
+            }
+
+            .tech-cards-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        </style>
 
         <section class="section5">
             <div class="container">
                 <div class="technologies-section">
                     <h2 class="technologies-title">
-                        <span class="ai-highlight-2">Technologies</span> Powering Our <span class="ai-highlight-2">AI
+                        Technologies Powering Our <span class="ai-highlight-2">AI
                             Solutions</span>
                     </h2>
                     <p class="technologies-description">
@@ -3712,9 +3282,9 @@
                     <div class="capability-content active" id="Discover-content">
                         <div class="content-left">
                             <h3 class="content-title">Understand problems and opportunities</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We deeply understand your business goals, challenges, data
                                 landscape, and technical constraints to identify AI opportunities that deliver
                                 measurable value.</p>
@@ -3737,9 +3307,9 @@
                     <div class="capability-content" id="Design-content">
                         <div class="content-left">
                             <h3 class="content-title">Architect scalable AI solutions</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We architect the right AI approach, selecting models, data
                                 pipelines, and system designs optimized for accuracy, scalability, security, and
                                 long-term performance.
@@ -3762,9 +3332,9 @@
                     <div class="capability-content" id="Build-content">
                         <div class="content-left">
                             <h3 class="content-title">Develop robust intelligent models</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">Our engineers develop, train, and refine AI models using real
                                 data, ensuring accuracy, robustness, and readiness for real-world operational use.</p>
                             <ul class="content-features">
@@ -3785,9 +3355,9 @@
                     <div class="capability-content" id="Deploy-content">
                         <div class="content-left">
                             <h3 class="content-title">Integrate systems into production</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We integrate AI seamlessly into your applications, cloud
                                 infrastructure, and workflows, enabling smooth adoption without disrupting existing
                                 business operations.</p>
@@ -3809,9 +3379,9 @@
                     <div class="capability-content" id="Scale-content">
                         <div class="content-left">
                             <h3 class="content-title">Expand adoption with governance</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We extend AI solutions beyond pilots into enterprise-wide
                                 adoption, ensuring stability, compliance, and consistent performance as usage and data
                                 complexity increase.</p>
@@ -3846,8 +3416,8 @@
                         solutions ready for real business use.
                     </p>
 
-                    <a href="#" class="integration-link">
-                        Get AI Consultation / Build Your LLM Solution
+                    <a href="../contact.html" class="integration-link">
+                        Get AI Consultation 
                     </a>
                 </div>
 
@@ -3860,367 +3430,6 @@
 
             </div>
         </section>
-
-        <!-- 4th section  -->
-        <!-- <section class="section4">
-            <div class="section-title-container">
-                <h2><span class="title-part1">Why Choose </span><span class="title-part2">KriraAI</span></h2>
-            </div>
-            <div class="wrapper">
-                <div class="features-container">
-                    <div class="feature-item active">
-                        <div class="feature-content">
-                            <h3>Expertise</h3>
-                            <p>Our team comprises experienced AI professionals with expertise in machine learning, deep
-                                learning, computer vision, and natural language processing.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-content">
-                            <h3>Customized Solutions</h3>
-                            <p>We design AI solutions to meet your organization's specific needs and objectives,
-                                automating processes & enhancing user experience.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-content">
-                            <h3>Scalability</h3>
-                            <p>Our AI solutions grow with your business—whether early-stage startup or enterprise
-                                deployment.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-content">
-                            <h3>Innovation Focus</h3>
-                            <p>We push boundaries—new algorithms, frameworks & R&D to deliver cutting-edge AI.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-content">
-                            <h3>Ethical AI</h3>
-                            <p>Transparency, fairness & accountability are built into every AI solution we create.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-content">
-                            <h3>Collaborative Partnership</h3>
-                            <p>We align with your goals—working closely with your team at every milestone.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-content">
-                            <h3>Results-Driven Approach</h3>
-                            <p>We deliver measurable outcomes—efficiency, cost reduction & high user satisfaction.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="number-box">
-                    <div class="number">01</div>
-                </div>
-            </div>
-
-            
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-            <script>
-                gsap.registerPlugin(ScrollTrigger);
-
-                const featureItems = gsap.utils.toArray(".section4 .feature-item");
-                const numberEl = document.querySelector(".section4 .number");
-                const scrollContainer = document.querySelector(".section4 .features-container");
-                const numberBox = document.querySelector(".section4 .number-box");
-                const wrapper = document.querySelector(".section4 .wrapper");
-
-               
-                let activeFeatureIndex = -1;
-                let isScrolling = false;
-                let scrollTimeout = null;
-
-               
-                function centerFeatureItem(item, index) {
-                    if (!item || isScrolling) return;
-
-                    isScrolling = true;
-                    const itemOffsetTop = item.offsetTop;
-                    const containerHeight = scrollContainer.clientHeight;
-                    const itemHeight = item.offsetHeight;
-
-                    const targetScroll = Math.max(0, itemOffsetTop - (containerHeight / 2) + (itemHeight / 2));
-
-               
-                    if (activeFeatureIndex >= 0 && featureItems[activeFeatureIndex]) {
-                        featureItems[activeFeatureIndex].classList.remove('active');
-                        deactivateFeature(featureItems[activeFeatureIndex]);
-                    }
-
-                  
-                    activeFeatureIndex = index;
-                    item.classList.add('active');
-
-                    
-                    changeNumber(index);
-                    activateFeature(item);
-
-                    
-                    gsap.to(scrollContainer, {
-                        scrollTop: targetScroll,
-                        duration: 0.8,
-                        ease: "power3.out",
-                        onComplete: () => {
-                          
-                            clearTimeout(scrollTimeout);
-                            scrollTimeout = setTimeout(() => {
-                                isScrolling = false;
-                            }, 100);
-                        }
-                    });
-                }
-
-                
-                function handleScroll(e) {
-                  
-                    if (isScrolling) {
-                        e.preventDefault();
-                        return;
-                    }
-
-                    const deltaY = e.deltaY;
-                    const currentIndex = activeFeatureIndex >= 0 ? activeFeatureIndex : 0;
-                    const isAtTop = currentIndex === 0;
-                    const isAtBottom = currentIndex === featureItems.length - 1;
-
-                   
-                    const canScrollDown = deltaY > 0 && !isAtBottom;
-                    const canScrollUp = deltaY < 0 && !isAtTop;
-
-                    if (canScrollDown) {
-                       
-                        e.preventDefault();
-                        const nextItem = featureItems[currentIndex + 1];
-                        const nextIndex = currentIndex + 1;
-                        centerFeatureItem(nextItem, nextIndex);
-                    } else if (canScrollUp) {
-                  
-                        e.preventDefault();
-                        const prevItem = featureItems[currentIndex - 1];
-                        const prevIndex = currentIndex - 1;
-                        centerFeatureItem(prevItem, prevIndex);
-                    } else {
-                       
-                        return;
-                    }
-                }
-
-            
-                scrollContainer.addEventListener('wheel', handleScroll, { passive: false });
-
-                
-                if (numberBox) {
-                    numberBox.addEventListener('wheel', handleScroll, { passive: false });
-                }
-
-               
-                if (wrapper) {
-                    wrapper.addEventListener('wheel', handleScroll, { passive: false });
-                }
-
-               
-                featureItems.forEach((item, index) => {
-                    ScrollTrigger.create({
-                        trigger: item,
-                        scroller: ".section4 .features-container",
-                        start: "top 50%",
-                        end: "bottom 50%",
-                        scrub: false,
-                        onEnter: () => {
-                          
-                            if (!isScrolling && activeFeatureIndex !== index) {
-                               
-                                featureItems.forEach((f, i) => {
-                                    if (i !== index && f.classList.contains('active')) {
-                                        f.classList.remove('active');
-                                        deactivateFeature(f);
-                                    }
-                                });
-
-                                activeFeatureIndex = index;
-                                item.classList.add("active");
-                                changeNumber(index);
-                                activateFeature(item);
-                            }
-                        },
-                        onEnterBack: () => {
-                            
-                            if (!isScrolling && activeFeatureIndex !== index) {
-                               
-                                featureItems.forEach((f, i) => {
-                                    if (i !== index && f.classList.contains('active')) {
-                                        f.classList.remove('active');
-                                        deactivateFeature(f);
-                                    }
-                                });
-
-                                activeFeatureIndex = index;
-                                item.classList.add("active");
-                                changeNumber(index);
-                                activateFeature(item);
-                            }
-                        },
-                        onLeave: () => {
-                            if (activeFeatureIndex === index && !isScrolling) {
-                                item.classList.remove("active");
-                                deactivateFeature(item);
-                            }
-                        },
-                        onLeaveBack: () => {
-                            if (activeFeatureIndex === index && !isScrolling) {
-                                item.classList.remove("active");
-                                deactivateFeature(item);
-                            }
-                        }
-                    });
-                });
-
-                function activateFeature(item) {
-                   
-                    gsap.to(item, {
-                        opacity: 1,
-                        x: 0,
-                        scale: 1,
-                        y: 0,
-                        duration: 0.8,
-                        ease: "power3.out"
-                    });
-
-                    const h3 = item.querySelector('h3');
-                    const p = item.querySelector('p');
-
-                   
-                    if (h3) {
-                        gsap.fromTo(h3,
-                            { opacity: 0, y: 20, scale: 0.95 },
-                            {
-                                opacity: 1,
-                                y: 0,
-                                scale: 1,
-                                duration: 0.7,
-                                delay: 0.2,
-                                ease: "back.out(1.2)"
-                            }
-                        );
-                    }
-
-                  
-                    if (p) {
-                        gsap.fromTo(p,
-                            { opacity: 0, y: 15 },
-                            {
-                                opacity: 1,
-                                y: 0,
-                                duration: 0.7,
-                                delay: 0.3,
-                                ease: "power3.out"
-                            }
-                        );
-                    }
-                }
-
-                function deactivateFeature(item) {
-                  
-                    gsap.to(item, {
-                        opacity: 0.25,
-                        x: 60,
-                        scale: 0.95,
-                        duration: 0.6,
-                        ease: "power2.in"
-                    });
-                }
-
-                function changeNumber(index) {
-                    const newNum = String(index + 1).padStart(2, "0");
-                    const currentNum = numberEl.textContent.trim();
-
-                    if (currentNum === newNum) return;
-
-                    const currentIndex = parseInt(currentNum) || 1;
-                    const targetIndex = index + 1;
-                    const direction = targetIndex > currentIndex ? 1 : -1;
-
-                    
-                    const timeline = gsap.timeline();
-
-                    
-                    timeline.to(numberEl, {
-                        rotateX: 90 * direction,
-                        scale: 0.8,
-                        y: -30 * direction,
-                        opacity: 0,
-                        duration: 0.3,
-                        ease: "power2.in",
-                        filter: "drop-shadow(0 0 20px rgba(9, 190, 245, 0.5))",
-                        onComplete: () => {
-                           
-                            numberEl.textContent = newNum;
-                        }
-                    })
-                       
-                        .fromTo(numberEl, {
-                            rotateX: -90 * direction,
-                            scale: 0.8,
-                            y: 30 * direction,
-                            opacity: 0
-                        }, {
-                            rotateX: 0,
-                            scale: 1.15,
-                            y: 0,
-                            opacity: 1,
-                            duration: 0.4,
-                            ease: "back.out(1.7)",
-                            filter: "drop-shadow(0 0 50px rgba(9, 190, 245, 0.6))"
-                        })
-                      
-                        .to(numberEl, {
-                            scale: 1,
-                            duration: 0.3,
-                            ease: "power2.out",
-                            filter: "drop-shadow(0 0 40px rgba(9, 190, 245, 0.3))"
-                        });
-
-                  
-                    timeline.to(numberEl, {
-                        filter: "drop-shadow(0 0 60px rgba(9, 190, 245, 0.8))",
-                        duration: 0.2,
-                        yoyo: true,
-                        repeat: 1,
-                        ease: "power2.inOut"
-                    }, "-=0.1");
-                }
-
-               
-                if (featureItems.length > 0) {
-                    setTimeout(() => {
-                        activeFeatureIndex = 0;
-                        const firstItem = featureItems[0];
-                        firstItem.classList.add("active");
-                        changeNumber(0);
-                        activateFeature(firstItem);
-
-                      
-                        const itemOffsetTop = firstItem.offsetTop;
-                        const containerHeight = scrollContainer.clientHeight;
-                        const itemHeight = firstItem.offsetHeight;
-                        const targetScroll = Math.max(0, itemOffsetTop - (containerHeight / 2) + (itemHeight / 2));
-
-                        gsap.to(scrollContainer, {
-                            scrollTop: targetScroll,
-                            duration: 1,
-                            ease: "power3.out"
-                        });
-                    }, 200);
-                }
-            </script>
-        </section> -->
 
         <!-- Section 6 - Interactive Chat Interface (Unscrambl Style) -->
         <section class="section6">
@@ -4285,11 +3494,11 @@
                     </p>
 
                     <div class="llm-actions">
-                        <a href="#" class="btn-primary">
+                        <a href="../contact.html" class="btn-primary">
                             Let’s Connect
                         </a>
-                        <a href="#" class="btn-secondary">
-                            Schedule a Call </a>
+                        <!-- <a href="#" class="btn-secondary">
+                            Schedule a Call </a> -->
                     </div>
                 </div>
 
@@ -4311,7 +3520,7 @@
                         <p class="mb-4">Let AI revolutionize how your business thinks, adapts, and succeeds in the
                             digital era.</p>
                         <div class="cta-buttons justify-content-center">
-                            <a href="contact.html" class="btn btn-primary me-2 mb-2">Get Started Today</a>
+                            <a href="../contact.html" class="btn btn-primary me-2 mb-2">Get Started Today</a>
                             <!-- <a href="service.html" class="btn btn-outline-primary mb-2">Explore Our Services</a> -->
                         </div>
                     </div>
