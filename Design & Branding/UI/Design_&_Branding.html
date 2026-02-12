@@ -161,7 +161,7 @@
     }
 
     .hero-title {
-      color: #ffffff;
+      color: var(--contrast-color);
       font-weight: 800;
       font-size: clamp(2.2rem, 8vw, 4.5rem);
       font-family: var(--heading-font);
@@ -169,7 +169,8 @@
       margin-bottom: 1.5rem;
       position: relative;
       z-index: 1;
-      animation: fadeInUp 1s ease-out;
+      opacity: 1;
+      transform: translateY(0);
       text-align: center;
       letter-spacing: -0.02em;
     }
@@ -222,18 +223,19 @@
 
     /* Hero section enhancements */
     .hero-content {
-      animation: fadeInUp 1s ease-out;
+      opacity: 1;
+      transform: translateY(0);
       position: relative;
       z-index: 1;
       width: 80% !important;
       max-width: 80% !important;
       margin: 0 auto;
-      padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+      /* padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px); */
       box-sizing: border-box;
     }
 
     .hero-content p {
-      color: #ffffff;
+      color: var(--contrast-color);
       font-size: clamp(1.1rem, 2vw, 1.25rem);
       font-family: var(--default-font);
       line-height: 1.6;
@@ -307,9 +309,14 @@
 
     /* ===================================== Key Metrices ======================================= */
     .stats-section {
-      background: #f8f9fa;
-      padding: 60px 0;
-      color: #333;
+      background: #ffffff;
+      color: var(--heading-color);
+    }
+
+    .stats-section h2{
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      margin: 1rem 0;
     }
 
     .stats-section .stat-box {
@@ -350,12 +357,17 @@
     }
 
     .stats-section .stat-value {
-      font-size: 3rem;
+  font-size: 3rem;
       font-weight: 700;
-      color: var(--accent-color);
+      /* color: var(--accent-color); */
       text-align: right;
       line-height: 1;
       min-width: 120px;
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      /* line-height: 1.2; */
     }
 
     /* Remove the old row divider usage */
@@ -370,9 +382,6 @@
 
     /* Responsive tweaks */
     @media (max-width: 768px) {
-      .stats-section {
-        padding: 40px 0;
-      }
 
       .stats-section .stat-box {
         flex-direction: column;
@@ -414,27 +423,24 @@
     .services-section {
       padding: 80px 0;
       position: relative;
+      background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
     }
 
     .services-section .services-header {
       text-align: center;
-      max-width: 800px;
+      max-width: 100%;
       margin: 0 auto 60px;
     }
 
     .services-section .services-title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 800;
-      color: var(--heading-color);
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-      line-height: 1.1;
-      font-family: var(--heading-font, 'Inter', sans-serif);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      margin: 1rem 0;
     }
 
     .services-section p {
       font-size: 1.1rem;
-      color: #666;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
       line-height: 1.6;
     }
 
@@ -466,6 +472,10 @@
       flex-direction: column;
       border: 1px solid rgba(0, 0, 0, 0.05);
       height: 100%;
+    }
+
+    .services-section .service-card a .button {
+        width: 100%;
     }
 
     .services-section .service-card img {
@@ -571,7 +581,8 @@
 
     /*========================================= Technologies ======================================= */
     .integration-section {
-      padding: 4rem 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
 
@@ -704,7 +715,7 @@
     }
 
     .section-wrapper .hero-desc {
-      color: #b6b7bd;
+      color: #7f8083;
       font-size: 15px;
       max-width: 420px;
       margin-bottom: 18px;
@@ -864,7 +875,7 @@
 
     .section-wrapper .card-main h6 {
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 900;
       max-width: 160px;
     }
 
@@ -909,7 +920,7 @@
 
     /* ========================== last section =================================*/
     .difference-section {
-      background-color: #f8f9f3;
+      background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
     }
 
     .small-label {
@@ -919,9 +930,10 @@
     }
 
     .main-heading {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 500;
-      line-height: 1.3;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      margin: 1rem 0;
+
     }
 
     .highlight {
@@ -935,7 +947,7 @@
     .icon-box {
       width: 48px;
       height: 48px;
-      background: #e9ece5;
+      background: #0d8bf348;
       border-radius: 8px;
       display: inline-flex;
       align-items: center;
@@ -1135,7 +1147,7 @@
       .section-wrapper .card-hover-content-2 p,
       .section-wrapper .card-hover-content-3 p,
       .section-wrapper .card-hover-content-4 p {
-        color: #444;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
         font-size: 15px;
       }
     }
@@ -1545,10 +1557,10 @@
             <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
 
               <!-- Main Heading -->
-              <h1 class="mb-4 hero-title">Designing Brands That Drive Business Growth</h1>
+              <h1 class="hero-title">Designing Brands That Drive Business Growth</h1>
 
               <!-- Description Paragraph -->
-              <p class="mb-4 mb-md-5">We create strategic brand identities and conversion-focused designs that align
+              <p class="mb-md-5">We create strategic brand identities and conversion-focused designs that align
                 with business goals, strengthen credibility, and improve user engagement across digital platforms,
                 helping companies differentiate clearly, scale confidently, and convert attention into measurable
                 revenue growth outcomes.</p>
@@ -1628,7 +1640,7 @@
     </section>
 
     <!-- Our Services -->
-    <section class="services-section bg-light">
+    <section class="services-section">
       <div class="container">
         <div class="services-header">
           <h2 class="services-title">Dataspans Designing Services Built for Brand Impact</h2>
@@ -1702,7 +1714,7 @@
           <div class="service-card">
             <div class="service-overlay">
               <div class="service-title">Need Custom Branding and Designing Solution</div>
-              <div class="service-text">Get In Touch</div>
+              <a href="../../contact.html"><button class="button btn-outline-primary py-2 text-center">Get In Touch</button></a>
             </div>
           </div>
         </div>
@@ -1736,14 +1748,14 @@
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Figma.png"
                             alt="Figma"></div>Figma
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe Photoshop.png"
                             alt="Adobe Photoshop"></div>Adobe Photoshop
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
@@ -1751,49 +1763,49 @@
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe Illustrator.png"
                             alt="Adobe Illustrator">
                         </div>Adobe Illustrator
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe InDesign.png"
                             alt="Adobe InDesign"></div>Adobe InDesign
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding After Effects.png"
                             alt="Adobe After Effects"></div>Adobe After Effects
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe Premiere Pro.png"
                             alt="Adobe Premiere Pro"></div>Adobe Premiere Pro
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe XD.png"
                             alt="Adobe XD"></div>Adobe XD
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Sketch.png"
                             alt="Sketch"></div>Sketch
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding InVision.png"
                             alt="InVision"></div>InVision
-                      </div>→
+                      </div>
                     </div>
 
 
@@ -1804,14 +1816,14 @@
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Figma.png"
                             alt="Figma"></div>Figma
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe Photoshop.png"
                             alt="Adobe Photoshop"></div>Adobe Photoshop
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
@@ -1819,49 +1831,49 @@
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe Illustrator.png"
                             alt="Adobe Illustrator">
                         </div>Adobe Illustrator
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe InDesign.png"
                             alt="Adobe InDesign"></div>Adobe InDesign
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding After Effects.png"
                             alt="Adobe After Effects"></div>Adobe After Effects
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe Premiere Pro.png"
                             alt="Adobe Premiere Pro"></div>Adobe Premiere Pro
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Adobe XD.png"
                             alt="Adobe XD"></div>Adobe XD
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Sketch.png"
                             alt="Sketch"></div>Sketch
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding InVision.png"
                             alt="InVision"></div>InVision
-                      </div>→
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1877,7 +1889,7 @@
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Zeplin.png"
                             alt="Zeplin"></div>Zeplin
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
@@ -1885,55 +1897,55 @@
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Framer.png"
                             alt="Framer">
                         </div>Framer
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding ProtoPie.png"
                             alt="ProtoPie"></div>ProtoPie
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Canva.png"
                             alt="Canva"></div>Canva
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Blender.png"
                             alt="Blender "></div>Blender
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Cinema 4D.png"
                             alt="Cinema 4D "></div>Cinema 4D
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Miro.png" alt="Miro">
                         </div>Miro
-                      </div>→
+                      </div>
                     </div>
                     <!-- <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img src="https://image.dataspantechnologies.com/dataspan/Design & Branding Notion.png"
                             alt="Notion"></div>Notion
-                      </div>→
+                      </div>
                     </div> -->
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Google Fonts.png"
                             alt="Google Fonts"></div>Google Fonts
-                      </div>→
+                      </div>
                     </div>
 
 
@@ -1943,7 +1955,7 @@
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Zeplin.png"
                             alt="Zeplin"></div>Zeplin
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
@@ -1951,55 +1963,55 @@
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Framer.png"
                             alt="Framer">
                         </div>Framer
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding ProtoPie.png"
                             alt="ProtoPie"></div>ProtoPie
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Canva.png"
                             alt="Canva"></div>Canva
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Blender.png"
                             alt="Blender "></div>Blender
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Cinema 4D.png"
                             alt="Cinema 4D "></div>Cinema 4D
-                      </div>→
+                      </div>
                     </div>
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Miro.png" alt="Miro">
                         </div>Miro
-                      </div>→
+                      </div>
                     </div>
                     <!-- <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img src="https://image.dataspantechnologies.com/dataspan/Design & Branding Notion.png"
                             alt="Notion"></div>Notion
-                      </div>→
+                      </div>
                     </div> -->
                     <div class="app-card">
                       <div class="app-left">
                         <div class="app-icon"><img
                             src="https://image.dataspantechnologies.com/dataspan/Design & Branding Google Fonts.png"
                             alt="Google Fonts"></div>Google Fonts
-                      </div>→
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2087,7 +2099,7 @@
           <!-- Card 1 -->
           <div class="col-12 col-md-4">
             <div class="feature-card h-100">
-              <!-- <div class="icon-box mb-3">💡</div> -->
+              <div class="icon-box mb-3"><i class="bi bi-bullseye"></i></div>
               <p class="feature-label">Strategy</p>
               <h5 class="feature-title">Design with intent</h5>
               <p class="feature-text">Every design decision aligns with business goals, audience psychology, and
@@ -2098,7 +2110,7 @@
           <!-- Card 2 -->
           <div class="col-12 col-md-4">
             <div class="feature-card h-100">
-              <!-- <div class="icon-box mb-3">📋</div> -->
+              <div class="icon-box mb-3"><i class="bi bi-arrow-repeat"></i></div>
               <p class="feature-label">Consistency</p>
               <h5 class="feature-title">One unified brand</h5>
               <p class="feature-text">We enforce visual standards across all assets to eliminate fragmentation and brand
@@ -2109,7 +2121,7 @@
           <!-- Card 3 -->
           <div class="col-12 col-md-4">
             <div class="feature-card h-100">
-              <!-- <div class="icon-box mb-3">⭐</div> -->
+              <div class="icon-box mb-3"><i class="bi bi-play-circle"></i></div>
               <p class="feature-label">Execution</p>
               <h5 class="feature-title">Built to scale</h5>
               <p class="feature-text">High-quality creative delivered fast without sacrificing accuracy, structure, or
