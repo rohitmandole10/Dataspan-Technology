@@ -11,7 +11,7 @@
     <!-- Favicons -->
     <link href="../assets/img/brand.png" rel="icon">
     <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -30,7 +30,7 @@
 
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
-     <style>
+    <style>
         :root {
             --section-padding: clamp(40px, 8vw, 100px);
         }
@@ -169,7 +169,7 @@
         }
 
         .hero-title {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-weight: 800;
             font-size: clamp(2rem, 6vw, 4rem);
             font-family: var(--heading-font);
@@ -177,7 +177,8 @@
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             text-align: center;
             letter-spacing: -0.02em;
         }
@@ -237,7 +238,8 @@
 
         /* Hero section enhancements */
         .hero-content {
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             position: relative;
             z-index: 1;
             width: 80% !important;
@@ -248,7 +250,7 @@
         }
 
         .hero-content p {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: clamp(1.1rem, 2vw, 1.25rem);
             font-family: var(--default-font);
             line-height: 1.6;
@@ -370,7 +372,7 @@
 
         .stat-item {
             font-size: 16px;
-            color: #444;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
         }
 
         .stat-number {
@@ -445,7 +447,7 @@
             padding: 32px;
             border-radius: 20px;
             background: linear-gradient(135deg, #0f766e, #1d4ed8);
-            color: #fff;
+            color: var(--contrast-color);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -479,7 +481,7 @@
             display: flex;
             flex-direction: column;
             background: #000;
-            color: #ffffff;
+            color: var(--contrast-color);
             position: relative;
             overflow: hidden;
             /* border: 5px solid yellow; */
@@ -498,13 +500,13 @@
             font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 800;
             margin-bottom: 15px;
-            color: #fff;
+            color: var(--contrast-color);
             line-height: 1.2;
             letter-spacing: -0.01em;
         }
 
         .case-study-section .case-header p {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: 16px;
         }
 
@@ -540,7 +542,7 @@
         }
 
         .case-study-section .desc {
-            color: #ffffff;
+            color: var(--contrast-color);
             max-width: 400px;
             font-size: 14px;
         }
@@ -557,7 +559,7 @@
         }
 
         .case-study-section .stats span {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: 13px;
         }
 
@@ -857,7 +859,7 @@
         /* ROI Section Styles */
         .roi-section {
             padding: var(--section-padding) 0;
-            background-color: #ffffff;
+            background-color: var(--surface-color);
         }
 
         .roi-badge {
@@ -1004,7 +1006,7 @@
         .section-services .single-service {
             position: relative;
             margin-top: 30px;
-            background-color: #fff;
+            background-color: var(--surface-color);
             border-radius: 10px;
             padding: 40px 30px;
             overflow: hidden;
@@ -1049,13 +1051,13 @@
             border-radius: 5px;
             line-height: 70px;
             text-align: center;
-            color: #fff;
+            color: var(--contrast-color);
             font-size: 30px;
             transition: all .3s;
         }
 
         .section-services .single-service:hover .icon {
-            background-color: #fff;
+            background-color: var(--surface-color);
             color: var(--accent-color);
         }
 
@@ -1067,7 +1069,7 @@
         }
 
         .section-services .single-service:hover .title {
-            color: #fff;
+            color: var(--contrast-color);
         }
 
         .section-services .single-service .description {
@@ -1077,7 +1079,7 @@
         }
 
         .section-services .single-service:hover .description {
-            color: #fff;
+            color: var(--contrast-color);
         }
 
         .section-services .single-service a {
@@ -1090,7 +1092,7 @@
         }
 
         .section-services .single-service:hover a {
-            color: #fff;
+            color: var(--contrast-color);
         }
 
         .section-services .single-service a:after {
@@ -1105,14 +1107,14 @@
         }
 
         .section-services .single-service:hover a:after {
-            background-color: #fff;
+            background-color: var(--surface-color);
         }
 
         /* Data Insights Section Styles */
         .data-insights-section {
             padding: 40px 0;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #ffffff;
+            color: var(--contrast-color);
             border-radius: 24px;
             margin: 40px 10%;
             overflow: hidden;
@@ -1148,7 +1150,7 @@
         .data-insights-section .header-section h2 {
             font-size: clamp(1.4rem, 3vw, 2.2rem);
             font-weight: 800;
-            color: #ffffff;
+            color: var(--contrast-color);
             margin-bottom: 15px;
             letter-spacing: -0.02em;
         }
@@ -1175,12 +1177,12 @@
         }
 
         .insight-tabs button:hover {
-            color: #ffffff;
+            color: var(--contrast-color);
         }
 
         .insight-tabs button.active {
             background: var(--accent-color);
-            color: #ffffff;
+            color: var(--contrast-color);
             box-shadow: 0 10px 20px rgba(13, 131, 253, 0.3);
         }
 
@@ -1211,7 +1213,7 @@
             font-size: 20px;
             font-weight: 800;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: var(--contrast-color);
             letter-spacing: -0.01em;
         }
 
@@ -1244,12 +1246,12 @@
         .insight-text ul li strong {
             display: inline;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--contrast-color);
         }
 
         .discover-more {
             background: var(--accent-color);
-            color: #ffffff;
+            color: var(--contrast-color);
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
@@ -1264,7 +1266,7 @@
         .discover-more:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(13, 131, 253, 0.3);
-            color: #ffffff;
+            color: var(--contrast-color);
         }
 
         .insight-image {
@@ -1483,7 +1485,7 @@
             background: #005d76;
             border-radius: 40px;
             padding: 60px;
-            color: #ffffff;
+            color: var(--contrast-color);
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 93, 118, 0.2);
         }
@@ -1493,7 +1495,7 @@
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 30px;
-            color: #ffffff;
+            color: var(--contrast-color);
         }
 
         .build-smarter-text p {
@@ -1509,7 +1511,7 @@
             background: rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50px;
-            color: #ffffff;
+            color: var(--contrast-color);
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
@@ -1774,329 +1776,727 @@
         }
 
         /* Row and Column Improvements */
+
+        /* =========================================================
+   MOBILE RESPONSIVENESS REFINEMENTS
+   ========================================================= */
+
+        @media (max-width: 768px) {
+
+            /* Global Adjustments */
+            :root {
+                --section-padding: 50px;
+            }
+
+            section {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            /* Container Padding */
+            .container,
+            .container-fluid {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            /* Hero Section */
+            .hero-title {
+                font-size: clamp(2rem, 5vw, 2.5rem) !important;
+            }
+
+            .hero-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .hero-breadcrumbs {
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+
+            /* Stats Section */
+            .ai-stats-title {
+                font-size: 1.75rem !important;
+                text-align: center;
+            }
+
+            /*
+               Services / Tiles Section (.second)
+               Restyled for better mobile card aesthetic
+            */
+            .second {
+                background-color: #fceceb !important;
+                /* Lighter bg for contrast */
+            }
+
+            .products-tile-container {
+                gap: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .products-tile-container.row-2 {
+                margin-top: 20px;
+            }
+
+            /* Card Styling specific for mobile */
+            .tile {
+                min-height: auto !important;
+                height: auto !important;
+                padding: 30px 25px !important;
+                background: #ffffff !important;
+                border-radius: 16px !important;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+                margin-right: 0 !important;
+                border: 1px solid rgba(0, 0, 0, 0.03);
+            }
+
+            .tile-title {
+                font-size: 1.25rem !important;
+                margin-bottom: 10px !important;
+                color: var(--heading-color) !important;
+            }
+
+            .card-text {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+                color: var(--default-color) !important;
+                max-width: 100% !important;
+                /* Ensure text uses width */
+            }
+
+            .icon-popup {
+                position: static !important;
+                /* Bring icon into flow or hide if needed */
+                display: inline-block !important;
+                margin-top: 15px;
+                background: var(--surface-color);
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--accent-color);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .static-service-card {
+                padding: 30px 25px !important;
+                height: auto !important;
+                background: #fff !important;
+                /* Make it pop like other cards */
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+                margin-left: 0 !important;
+                border: 2px solid var(--accent-color) !important;
+                /* Highlight this card */
+            }
+
+            .static-service-card h3 {
+                font-size: 1.4rem !important;
+                text-align: center;
+            }
+
+            /*
+               Technologies Section (.section5)
+               Restyled for scrollable tabs and grid cards
+            */
+            .technologies-title {
+                font-size: 1.8rem !important;
+            }
+
+            /* Horizontal Scrollable Categories */
+            .tech-categories {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
+                justify-content: flex-start !important;
+                padding-bottom: 10px;
+                margin-bottom: 25px !important;
+                gap: 12px !important;
+                scrollbar-width: none;
+                /* Firefox */
+                scroll-behavior: smooth;
+                padding-left: 5px;
+                /* Slight offset */
+            }
+
+            .tech-categories::-webkit-scrollbar {
+                display: none;
+                /* Chrome/Safari */
+            }
+
+            .tech-category-btn {
+                flex: 0 0 auto !important;
+                /* Don't shrink */
+                padding: 10px 20px !important;
+                font-size: 0.9rem !important;
+                border-radius: 50px !important;
+                /* Pill shape */
+            }
+
+            /* 2-Column Grid for Tech Cards */
+            .tech-cards {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
+                justify-content: center;
+            }
+
+            .tech-card {
+                width: 100% !important;
+                max-width: none !important;
+                padding: 20px 15px !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+                /* Square cards */
+            }
+
+            .tech-logo {
+                width: 50px !important;
+                height: 50px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .tech-logo img {
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .tech-name {
+                font-size: 0.9rem !important;
+            }
+
+            /* How It Works Section */
+            .how-it-works-title {
+                font-size: 1.75rem !important;
+            }
+
+            .capability-tabs {
+                flex-wrap: nowrap !important;
+                overflow-x: auto;
+                justify-content: flex-start !important;
+                padding-bottom: 15px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                /* Hide scrollbar for cleaner look */
+            }
+
+            .capability-tabs::-webkit-scrollbar {
+                display: none;
+            }
+
+            .capability-tab {
+                flex-shrink: 0;
+                white-space: nowrap;
+            }
+
+            /* Chat Interface Section */
+            .section6 {
+                padding: 20px 0 !important;
+            }
+
+            .chat-interface {
+                min-height: 450px;
+                /* Ensure enough height for chat */
+                margin-bottom: 50px;
+            }
+
+            .marketing-title {
+                font-size: 1.8rem !important;
+                text-align: center;
+            }
+
+            .marketing-description {
+                text-align: center;
+                font-size: 1rem !important;
+            }
+
+            .product-logos {
+                justify-content: center;
+            }
+
+            /* LLM & Integration Sections */
+            .llm-content h1,
+            .integration-content h2 {
+                font-size: 2rem !important;
+                text-align: center;
+            }
+
+            .llm-content p,
+            .integration-content p {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1rem !important;
+            }
+
+            .llm-actions {
+                justify-content: center;
+            }
+
+            .integration-link {
+                text-align: center;
+                display: block;
+                margin-top: 20px;
+            }
+
+            /* CTA Section */
+            #cta h2 {
+                font-size: 1.8rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.75rem !important;
+            }
+
+            .btn {
+                width: 100%;
+                /* Full width buttons on very small screens */
+                margin-bottom: 10px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .tech-cards {
+                gap: 10px !important;
+            }
+
+            .tech-card {
+                padding: 15px 10px !important;
+            }
+        }
+
+        /* Navigation Improvements */
+        @media (max-width: 991px) {
+            .navbar {
+                padding: 10px 0;
+                width: 100%;
+                background: #ffffff !important;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-container {
+                padding: 0 20px;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                width: 100%;
+            }
+
+            .nav-logo {
+                display: flex;
+                align-items: center;
+                margin-right: auto;
+            }
+
+            .nav-logo .logo-image {
+                max-height: 40px;
+                display: block;
+            }
+
+            .mobile-menu-toggle {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                width: 42px;
+                height: 42px;
+                background: #0d83fd !important;
+                border: none !important;
+                border-radius: 8px;
+                cursor: pointer;
+                padding: 0;
+                margin-left: auto;
+                box-shadow: 0 4px 12px rgba(13, 131, 253, 0.2);
+            }
+
+            .mobile-menu-toggle span {
+                display: block;
+                width: 22px;
+                height: 2px;
+                background: #ffffff !important;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .navbar {
+                padding: 8px 0;
+                width: 100%;
+            }
+
+            .nav-container {
+                padding: 0 15px;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            .nav-logo .logo-image {
+                max-height: 35px;
+            }
+
+            .mobile-menu-toggle {
+                width: 38px;
+                height: 38px;
+                gap: 4px;
+            }
+
+            .mobile-menu-toggle span {
+                width: 18px;
+            }
+        }
+
+        /* Row and Column Improvements */
     </style>
 </head>
 
 <body class="services">
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <!-- Logo -->
-      <div class="nav-logo">
-        <a href="https://dataspantechnologies.com" class="logo">
-          <img src="https://image.dataspantechnologies.com/dataspan/brand3.png" alt="Dataspan Technologies Logo"
-            class="logo-image" />
-        </a>
-      </div>
-
-      <!-- Main Navigation -->
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="../Aboutus.html" class="nav-link">About Us</a>
-        </li>
-        <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
-            Services
-            <!-- <i class="fas fa-chevron-down"></i> -->
-          </a>
-          <!-- Mobile Services Menu -->
-          <div class="mobile-services-menu">
-            <div class="mobile-category-list">
-              <!-- AI & Automation -->
-              <div class="category-item mobile-category-item" data-target="mobile-ai">
-                <span class="category-link">AI & Automation</span>
-                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
-              </div>
-              <div class="mobile-subcategories-container hidden" id="mobile-ai">
-                <div class="subcategory-grid" style="display: grid;">
-                  <a href="../AI/Ai_mechine_learning.html" class="mobile-subcategory-link">Ai mechine learning</a>
-                  <a href="../AI/ocr.html" class="mobile-subcategory-link">OCR</a>
-                  <a href="../AI/Scraper_&_Scripting.html" class="mobile-subcategory-link">Scraper & Scripting</a>
-                  <a href="../AI/Navision_Integration_and_Automation.html" class="mobile-subcategory-link">Navision
-                    Integration & Automation</a>
-                  <a href="../AI/ESL_Integration.html" class="mobile-subcategory-link">ESL Integration</a>
-                </div>
-              </div>
-
-              <!-- Development & Technology -->
-              <div class="category-item mobile-category-item" data-target="mobile-dev">
-                <span class="category-link">Development & Technology</span>
-                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
-              </div>
-              <div class="mobile-subcategories-container hidden" id="mobile-dev">
-                <div class="subcategory-grid" style="display: grid;">
-                  <a href="../Development and Technology/Shopify_Development_&_Services.html"
-                    class="mobile-subcategory-link">Shopify Development & Services</a>
-                  <a href="../Development and Technology/Web_&_Mobile_Development.html" class="mobile-subcategory-link">Web
-                    & Mobile Development</a>
-                  <a href="../Development and Technology/Software_Development_&_Consulting.html"
-                    class="mobile-subcategory-link">Software Development & Consulting</a>
-                  <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
-                    class="mobile-subcategory-link">eCommerce & Marketplace Integration</a>
-                </div>
-              </div>
-
-              <!-- Design & Branding -->
-              <div class="category-item mobile-category-item" data-target="mobile-design">
-                <span class="category-link">Design & Branding</span>
-                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
-              </div>
-              <div class="mobile-subcategories-container hidden" id="mobile-design">
-                <div class="subcategory-grid" style="display: grid;">
-                  <a href="../Design & Branding/UI/UX_Creative_Services.html" class="mobile-subcategory-link">UX Creative
-                    Services</a>
-                  <a href="../Design & Branding/UI/Design_&_Branding.html" class="mobile-subcategory-link">Design &
-                    Branding</a>
-                </div>
-              </div>
-
-              <!-- Cloud & Infrastructure -->
-              <div class="category-item mobile-category-item" data-target="mobile-cloud">
-                <span class="category-link">Cloud & services</span>
-                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
-              </div>
-              <div class="mobile-subcategories-container hidden" id="mobile-cloud">
-                <div class="subcategory-grid" style="display: grid;">
-                  <a href="../Cloud & Services/Hosting_&_Cloud_Services.html" class="mobile-subcategory-link">Hosting &
-                    Cloud Services</a>
-                  <a href="../Cloud & Services/Managed_Cloud_Services.html" class="mobile-subcategory-link">Managed Cloud
-                    Services</a>
-                  <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
-                    class="mobile-subcategory-link">Cloud Setup migration & Optimization</a>
-                  <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
-                    class="mobile-subcategory-link">Server Monitoring Backup & Security Management</a>
-                </div>
-              </div>
-
-              <!-- Data & Operations -->
-              <div class="category-item mobile-category-item" data-target="mobile-data">
-                <span class="category-link">Data & Operations</span>
-                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
-              </div>
-              <div class="mobile-subcategories-container hidden" id="mobile-data">
-                <div class="subcategory-grid" style="display: grid;">
-                  <a href="../Data & Ops/Reporting_&_Analytics.html" class="mobile-subcategory-link">Reporting &
-                    Analytics</a>
-                  <a href="../Data & Ops/Back_Office_&_BPO_Solution.html" class="mobile-subcategory-link">Back Office & BPO
-                    Solution</a>
-                </div>
-              </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="https://dataspantechnologies.com" class="logo">
+                    <img src="https://image.dataspantechnologies.com/dataspan/brand3.png"
+                        alt="Dataspan Technologies Logo" class="logo-image" />
+                </a>
             </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="../Clients.html" class="nav-link">Clients</a>
-        </li>
-        <li class="nav-item">
-          <a href="../gallery.html" class="nav-link">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a href="../contact.html" class="nav-link">Contact Us</a>
-        </li>
-      </ul>
 
-      <!-- Mobile Menu Toggle Button -->
-      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+            <!-- Main Navigation -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
+                        Services
+                        <!-- <i class="fas fa-chevron-down"></i> -->
+                    </a>
+                    <!-- Mobile Services Menu -->
+                    <div class="mobile-services-menu">
+                        <div class="mobile-category-list">
+                            <!-- AI & Automation -->
+                            <div class="category-item mobile-category-item" data-target="mobile-ai">
+                                <span class="category-link">AI & Automation</span>
+                                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="mobile-subcategories-container hidden" id="mobile-ai">
+                                <div class="subcategory-grid" style="display: grid;">
+                                    <a href="../AI/Ai_mechine_learning.html" class="mobile-subcategory-link">Ai mechine
+                                        learning</a>
+                                    <a href="../AI/ocr.html" class="mobile-subcategory-link">OCR</a>
+                                    <a href="../AI/Scraper_&_Scripting.html" class="mobile-subcategory-link">Scraper &
+                                        Scripting</a>
+                                    <a href="../AI/Navision_Integration_and_Automation.html"
+                                        class="mobile-subcategory-link">Navision Integration & Automation</a>
+                                    <a href="../AI/ESL_Integration.html" class="mobile-subcategory-link">ESL
+                                        Integration</a>
+                                </div>
+                            </div>
 
-      <!-- Action Button 
+                            <!-- Development & Technology -->
+                            <div class="category-item mobile-category-item" data-target="mobile-dev">
+                                <span class="category-link">Development & Technology</span>
+                                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="mobile-subcategories-container hidden" id="mobile-dev">
+                                <div class="subcategory-grid" style="display: grid;">
+                                    <a href="../Development and Technology/Shopify_Development_&_Services.html"
+                                        class="mobile-subcategory-link">Shopify Development & Services</a>
+                                    <a href="../Development and Technology/Web_&_Mobile_Development.html"
+                                        class="mobile-subcategory-link">Web & Mobile Development</a>
+                                    <a href="../Development and Technology/Software_Development_&_Consulting.html"
+                                        class="mobile-subcategory-link">Software Development & Consulting</a>
+                                    <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                                        class="mobile-subcategory-link">eCommerce & Marketplace Integration</a>
+                                </div>
+                            </div>
+
+                            <!-- Design & Branding -->
+                            <div class="category-item mobile-category-item" data-target="mobile-design">
+                                <span class="category-link">Design & Branding</span>
+                                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="mobile-subcategories-container hidden" id="mobile-design">
+                                <div class="subcategory-grid" style="display: grid;">
+                                    <a href="../Design & Branding/UI/UX_Creative_Services.html"
+                                        class="mobile-subcategory-link">UX Creative Services</a>
+                                    <a href="../Design & Branding/UI/Design_&_Branding.html"
+                                        class="mobile-subcategory-link">Design & Branding</a>
+                                </div>
+                            </div>
+
+                            <!-- Cloud & Infrastructure -->
+                            <div class="category-item mobile-category-item" data-target="mobile-cloud">
+                                <span class="category-link">Cloud & services</span>
+                                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="mobile-subcategories-container hidden" id="mobile-cloud">
+                                <div class="subcategory-grid" style="display: grid;">
+                                    <a href="../Cloud & Services/Hosting_&_Cloud_Services.html"
+                                        class="mobile-subcategory-link">Hosting & Cloud Services</a>
+                                    <a href="../Cloud & Services/Managed_Cloud_Services.html"
+                                        class="mobile-subcategory-link">Managed Cloud Services</a>
+                                    <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                                        class="mobile-subcategory-link">Cloud Setup migration & Optimization</a>
+                                    <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                                        class="mobile-subcategory-link">Server Monitoring Backup & Security
+                                        Management</a>
+                                </div>
+                            </div>
+
+                            <!-- Data & Operations -->
+                            <div class="category-item mobile-category-item" data-target="mobile-data">
+                                <span class="category-link">Data & Operations</span>
+                                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="mobile-subcategories-container hidden" id="mobile-data">
+                                <div class="subcategory-grid" style="display: grid;">
+                                    <a href="../Data & Ops/Reporting_&_Analytics.html"
+                                        class="mobile-subcategory-link">Reporting & Analytics</a>
+                                    <a href="../Data & Ops/Back_Office_&_BPO_Solution.html"
+                                        class="mobile-subcategory-link">Back Office & BPO Solution</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../Clients.html" class="nav-link">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Action Button 
             <div class="nav-action">
                 <button class="start-project-btn">Start Project</button>
             </div>-->
-    </div>
-
-    <!-- Services Dropdown Menu -->
-    <div class="dropdown-menu" id="services-dropdown">
-      <div class="dropdown-container">
-        <div class="dropdown-content">
-
-          <div class="service-categories">
-            <div class="category-column">
-              <div class="category-item active" data-submenu="ai-automation">
-                <a href="#" class="category-link">AI & Automation</a>
-              </div>
-              <div class="category-item" data-submenu="development-technology">
-                <a href="#" class="category-link">Development & Technology</a>
-              </div>
-              <div class="category-item" data-submenu="design-branding">
-                <a href="#" class="category-link">Design & Branding</a>
-              </div>
-              <div class="category-item" data-submenu="cloud-infrastructure">
-                <a href="#" class="category-link">Cloud & services</a>
-              </div>
-              <div class="category-item" data-submenu="data-operations">
-                <a href="#" class="category-link">Data & Operations</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="ai-automation-submenu">
-              <div class="subcategory-item">
-                <a href="../AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning (ML)</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/ocr.html" class="subcategory-link">OCR (Optical Character Recognition)</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper & Scripting</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/Navision_Integration_and_Automation.html" class="subcategory-link">Navision Integration &
-                  Automation</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf Labels) Integration</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Shopify_Development_&_Services.html"
-                  class="subcategory-link">Shopify Development & Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Web_&_Mobile_Development.html" class="subcategory-link">Web & Mobile
-                  Development</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Software_Development_&_Consulting.html"
-                  class="subcategory-link">Software Development & Consulting</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
-                  class="subcategory-link">E-Commerce & Marketplace Integration</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Design & Branding/UI/UX_Creative_Services.html" class="subcategory-link">UI/UX & Creative
-                  Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design & Branding</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Hosting_&_Cloud_Services.html" class="subcategory-link">Hosting & Cloud
-                  Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Managed_Cloud_Services.html" class="subcategory-link">Managed Hosting
-                  Solutions</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html" class="subcategory-link">Cloud
-                  Setup, Migration & Optimization</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
-                  class="subcategory-link">Server Monitoring, Backup & Security Management</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting & Analytics</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back Office & BPO
-                  Solutions</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Promotional Graphics Section -->
-          <div class="promo-section">
-            <div class="tech-illustration">
-              <!-- Robot/Server Unit -->
-              <div class="robot-unit">
-                <div class="robot-head">
-                  <div class="robot-core"></div>
-                  <div class="circuit-board"></div>
-                </div>
-                <div class="code-screen">
-                  <div class="code-line"></div>
-                  <div class="code-line"></div>
-                  <div class="code-line"></div>
-                </div>
-              </div>
-
-              <!-- Human Figures -->
-              <div class="human-figures">
-                <div class="human-figure male">
-                  <div class="figure-body"></div>
-                  <div class="key blue-key"></div>
-                </div>
-                <div class="human-figure female">
-                  <div class="figure-body"></div>
-                  <div class="key green-key"></div>
-                </div>
-              </div>
-
-              <!-- Brain Icon -->
-              <div class="brain-icon">
-                <div class="brain-shape"></div>
-              </div>
-
-              <!-- Geometric Elements -->
-              <div class="geometric-elements">
-                <div class="cube-stack">
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                </div>
-                <div class="individual-cubes">
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                </div>
-                <div class="shield-icon"></div>
-                <div class="floating-keys">
-                  <div class="key blue-key"></div>
-                  <div class="key green-key"></div>
-                </div>
-              </div>
-
-              <!-- Smartphone -->
-              <div class="smartphone">
-                <div class="phone-body"></div>
-                <div class="network-signals">
-                  <div class="signal"></div>
-                  <div class="signal"></div>
-                  <div class="signal"></div>
-                </div>
-                <div class="data-flow">
-                  <div class="data-cube"></div>
-                  <div class="data-cube"></div>
-                  <div class="data-cube"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
+        <!-- Services Dropdown Menu -->
+        <div class="dropdown-menu" id="services-dropdown">
+            <div class="dropdown-container">
+                <div class="dropdown-content">
+
+                    <div class="service-categories">
+                        <div class="category-column">
+                            <div class="category-item active" data-submenu="ai-automation">
+                                <a href="#" class="category-link">AI & Automation</a>
+                            </div>
+                            <div class="category-item" data-submenu="development-technology">
+                                <a href="#" class="category-link">Development & Technology</a>
+                            </div>
+                            <div class="category-item" data-submenu="design-branding">
+                                <a href="#" class="category-link">Design & Branding</a>
+                            </div>
+                            <div class="category-item" data-submenu="cloud-infrastructure">
+                                <a href="#" class="category-link">Cloud & Infrastructure</a>
+                            </div>
+                            <div class="category-item" data-submenu="data-operations">
+                                <a href="#" class="category-link">Data & Operations</a>
+                            </div>
+                        </div>
 
 
-  
-  
-  
+                        <div class="subcategory-column" id="ai-automation-submenu">
+                            <div class="subcategory-item">
+                                <a href="../AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning
+                                    (ML)</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/ocr.html" class="subcategory-link">OCR (Optical Character
+                                    Recognition)</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper &
+                                    Scripting</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/Navision_Integration_and_Automation.html"
+                                    class="subcategory-link">Navision Integration &
+                                    Automation</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf
+                                    Labels) Integration</a>
+                            </div>
+                        </div>
 
 
-       
+                        <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Shopify_Development_&_Services.html"
+                                    class="subcategory-link">Shopify Development & Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Web_&_Mobile_Development.html"
+                                    class="subcategory-link">Web & Mobile
+                                    Development</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Software_Development_&_Consulting.html"
+                                    class="subcategory-link">Software Development & Consulting</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                                    class="subcategory-link">E-Commerce & Marketplace Integration</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Design & Branding/UI/UX_Creative_Services.html"
+                                    class="subcategory-link">UI/UX & Creative
+                                    Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design
+                                    & Branding</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Hosting_&_Cloud_Services.html"
+                                    class="subcategory-link">Hosting & Cloud
+                                    Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Managed_Cloud_Services.html"
+                                    class="subcategory-link">Managed Hosting
+                                    Solutions</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                                    class="subcategory-link">Cloud
+                                    Setup, Migration & Optimization</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                                    class="subcategory-link">Server Monitoring, Backup & Security Management</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting &
+                                    Analytics</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back
+                                    Office & BPO
+                                    Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promotional Graphics Section -->
+                    <div class="promo-section">
+                        <div class="tech-illustration">
+                            <!-- Robot/Server Unit -->
+                            <div class="robot-unit">
+                                <div class="robot-head">
+                                    <div class="robot-core"></div>
+                                    <div class="circuit-board"></div>
+                                </div>
+                                <div class="code-screen">
+                                    <div class="code-line"></div>
+                                    <div class="code-line"></div>
+                                    <div class="code-line"></div>
+                                </div>
+                            </div>
+
+                            <!-- Human Figures -->
+                            <div class="human-figures">
+                                <div class="human-figure male">
+                                    <div class="figure-body"></div>
+                                    <div class="key blue-key"></div>
+                                </div>
+                                <div class="human-figure female">
+                                    <div class="figure-body"></div>
+                                    <div class="key green-key"></div>
+                                </div>
+                            </div>
+
+                            <!-- Brain Icon -->
+                            <div class="brain-icon">
+                                <div class="brain-shape"></div>
+                            </div>
+
+                            <!-- Geometric Elements -->
+                            <div class="geometric-elements">
+                                <div class="cube-stack">
+                                    <div class="cube"></div>
+                                    <div class="cube"></div>
+                                    <div class="cube"></div>
+                                </div>
+                                <div class="individual-cubes">
+                                    <div class="cube"></div>
+                                    <div class="cube"></div>
+                                </div>
+                                <div class="shield-icon"></div>
+                                <div class="floating-keys">
+                                    <div class="key blue-key"></div>
+                                    <div class="key green-key"></div>
+                                </div>
+                            </div>
+
+                            <!-- Smartphone -->
+                            <div class="smartphone">
+                                <div class="phone-body"></div>
+                                <div class="network-signals">
+                                    <div class="signal"></div>
+                                    <div class="signal"></div>
+                                    <div class="signal"></div>
+                                </div>
+                                <div class="data-flow">
+                                    <div class="data-cube"></div>
+                                    <div class="data-cube"></div>
+                                    <div class="data-cube"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
     <div class="main">
         <!-- hero section -->
         <section id="hero" class="hero section">
@@ -2121,7 +2521,10 @@
                             <h1 class="mb-4 hero-title">Turn Data Into Your Business Decisions</h1>
 
                             <!-- Description Paragraph -->
-                            <p class="mb-4 mb-md-5">We design automated, real-time reporting and analytics solutions that give leaders complete visibility into sales, operations, and performance. From dashboards to custom reports, we transform raw data into clear, actionable business intelligence.</p>
+                            <p class="mb-4 mb-md-5">We design automated, real-time reporting and analytics solutions
+                                that give leaders complete visibility into sales, operations, and performance. From
+                                dashboards to custom reports, we transform raw data into clear, actionable business
+                                intelligence.</p>
 
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
@@ -2144,7 +2547,8 @@
                     <div class="col-lg-5 roi-content">
                         <span class="roi-badge">Proven Analytics Business Impact</span>
                         <h2>Measurable results across data-driven business decisions</h2>
-                        <p>See how structured reporting and analytics improve visibility, accuracy, and decision-making across complex operations teams.</p>
+                        <p>See how structured reporting and analytics improve visibility, accuracy, and decision-making
+                            across complex operations teams.</p>
                     </div>
                     <div class="col-lg-7">
                         <div class="roi-grid">
@@ -2177,7 +2581,8 @@
                     <div class="col-md-10 col-lg-8" data-aos="fade-up">
                         <div class="header-section">
                             <h2 class="title">Reporting Services Built for Business Growth </h2>
-                            <p class="description">Dataspans reporting and analytics services deliver accurate, automated insights that help teams monitor performance, reduce risk, and act faster.</p>
+                            <p class="description">Dataspans reporting and analytics services deliver accurate,
+                                automated insights that help teams monitor performance, reduce risk, and act faster.</p>
                         </div>
                     </div>
                 </div>
@@ -2190,7 +2595,8 @@
                                     <i class="bi bi-bar-chart-line"></i>
                                 </span>
                                 <h3 class="title">Sales Reporting</h3>
-                                <p class="description">Daily, weekly, and monthly sales reports across channels, highlighting revenue trends, order volumes, and performance gaps.</p>
+                                <p class="description">Daily, weekly, and monthly sales reports across channels,
+                                    highlighting revenue trends, order volumes, and performance gaps.</p>
                                 <!-- <a href="#" class="learn-more">Learn More</a> -->
                             </div>
                             <span class="circle-before"></span>
@@ -2205,7 +2611,8 @@
                                     <i class="bi bi-box-seam"></i>
                                 </span>
                                 <h3 class="title"> Inventory Analytics</h3>
-                                <p class="description">Track stock movement, aging inventory, low-stock risks, and replenishment needs across warehouses and sales platforms.</p>
+                                <p class="description">Track stock movement, aging inventory, low-stock risks, and
+                                    replenishment needs across warehouses and sales platforms.</p>
                                 <!-- <a href="#" class="learn-more">Learn More</a> -->
                             </div>
                             <span class="circle-before"></span>
@@ -2220,7 +2627,8 @@
                                     <i class="bi bi-graph-up-arrow"></i>
                                 </span>
                                 <h3 class="title">Profitability Tracking</h3>
-                                <p class="description">SKU-wise and channel-wise profit analysis, including fees, costs, and margins for clear ROI visibility.
+                                <p class="description">SKU-wise and channel-wise profit analysis, including fees, costs,
+                                    and margins for clear ROI visibility.
                                 </p>
                                 <!-- <a href="#" class="learn-more">Learn More</a> -->
                             </div>
@@ -2236,7 +2644,8 @@
                                     <i class="bi bi-shop"></i>
                                 </span>
                                 <h3 class="title">Marketplace Performance</h3>
-                                <p class="description">Detailed dashboards covering marketplace metrics, campaign results, conversion trends, and operational exceptions.</p>
+                                <p class="description">Detailed dashboards covering marketplace metrics, campaign
+                                    results, conversion trends, and operational exceptions.</p>
                                 <!-- <a href="#" class="learn-more">Learn More</a> -->
                             </div>
                             <span class="circle-before"></span>
@@ -2251,7 +2660,8 @@
                                     <i class="bi bi-receipt"></i>
                                 </span>
                                 <h3 class="title">Financial Reconciliation</h3>
-                                <p class="description">Accurate settlement, payout, and fee reconciliation reports aligned with accounting systems to eliminate discrepancies.</p>
+                                <p class="description">Accurate settlement, payout, and fee reconciliation reports
+                                    aligned with accounting systems to eliminate discrepancies.</p>
                                 <!-- <a href="#" class="learn-more">Learn More</a> -->
                             </div>
                             <span class="circle-before"></span>
@@ -2266,7 +2676,8 @@
                                     <i class="bi bi-speedometer2"></i>
                                 </span>
                                 <h3 class="title">Executive Dashboards</h3>
-                                <p class="description">High-level visual dashboards designed for leadership to monitor KPIs, trends, and critical business signals in real time.</p>
+                                <p class="description">High-level visual dashboards designed for leadership to monitor
+                                    KPIs, trends, and critical business signals in real time.</p>
                                 <!-- <a href="#" class="learn-more">Learn More</a> -->
                             </div>
                             <span class="circle-before"></span>
@@ -2276,160 +2687,302 @@
                 </div>
             </div>
         </section>
-       
-          <!-- Technologies  -->
-          <section id="connectivity-track" class="connectivity-section">
+
+        <!-- Enhanced 5th section - Technologies -->
+        <!-- Enhanced 5th section - Technologies (Dual View: Tabs for Desktop, Accordion for Mobile) -->
+        <style>
+            /* Visibility Toggles */
+            @media (min-width: 769px) {
+                .desktop-technologies {
+                    display: block !important;
+                }
+
+                .mobile-technologies {
+                    display: none !important;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .desktop-technologies {
+                    display: none !important;
+                }
+
+                .mobile-technologies {
+                    display: block !important;
+                }
+            }
+
+            /* Accordion Styles (Mobile Only) */
+            .tech-accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .tech-group {
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                background: #fff;
+                overflow: hidden;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+            }
+
+            .tech-group-header {
+                width: 100%;
+                padding: 18px 20px;
+                background: #f8f9fa;
+                border: none;
+                text-align: left;
+                font-size: 1rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                font-family: inherit;
+            }
+
+            .tech-group-header.active {
+                color: var(--accent-color);
+                background: #f0f7ff;
+            }
+
+            .tech-group-header i {
+                transition: transform 0.3s;
+                font-size: 0.8rem;
+            }
+
+            .tech-group-header.active i {
+                transform: rotate(180deg);
+            }
+
+            .tech-group-content {
+                display: none;
+                padding: 20px;
+                border-top: 1px solid #eee;
+            }
+
+            .tech-cards-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        </style>
+
+        
+        <!-- Technologies  -->
+        <section id="connectivity-track" class="connectivity-section">
             <div class="container" data-aos="fade-up">
                 <h2>Seamless Analytics Across Your Data Ecosystem </h2>
-                <p class="description">We integrate leading analytics, database, and visualization technologies to unify data, automate reporting, and deliver consistent business insights.</p>
+                <p class="description">We integrate leading analytics, database, and
+                    visualization technologies to unify data, automate reporting, and
+                    deliver consistent business insights.</p>
 
                 <div class="connectivity-scroll-container">
                     <div class="connectivity-scroll-track">
                         <!-- Icon Set 1 -->
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Power BI.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Power BI.png"
+                                alt="">
                             <!-- Power BI -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Tableau.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Tableau.png"
+                                alt="">
                             <!-- Tableau -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Looker.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Looker.png"
+                                alt="">
                             <!-- Google Looker -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Analytics.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Analytics.png"
+                                alt="">
                             <!-- Google Analytics -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft Excel.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft Excel.png"
+                                alt="">
                             <!-- Microsoft Excel -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft SQL Server.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft SQL Server.png"
+                                alt="">
                             <!-- SQL Server -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics PostgreSQL.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics PostgreSQL.png"
+                                alt="">
                             <!-- PostgreSQL -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics MySQL.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics MySQL.png"
+                                alt="">
                             <!-- MySQL -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Amazon Redshift.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Amazon Redshift.png"
+                                alt="">
                             <!-- Amazon Redshift -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google BigQuery.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google BigQuery.png"
+                                alt="">
                             <!-- Google BigQuery -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Snowflake.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Snowflake.png"
+                                alt="">
                             <!-- Snowflake -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Python.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Python.png"
+                                alt="">
                             <!-- Python -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Apache Airflow.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Apache Airflow.png"
+                                alt="">
                             <!-- Apache Airflow -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics REST API.png" alt="">
-                             <!-- REST API -->
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics REST API.png"
+                                alt="">
+                            <!-- REST API -->
                         </div>
 
                         <!-- Duplicate for Seamless Scroll -->
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Power BI.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Power BI.png"
+                                alt="">
                             <!-- Power BI -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Tableau.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Tableau.png"
+                                alt="">
                             <!-- Tableau -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Looker.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Looker.png"
+                                alt="">
                             <!-- Google Looker -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Analytics.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google Analytics.png"
+                                alt="">
                             <!-- Google Analytics -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft Excel.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft Excel.png"
+                                alt="">
                             <!-- Microsoft Excel -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft SQL Server.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Microsoft SQL Server.png"
+                                alt="">
                             <!-- SQL Server -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics PostgreSQL.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics PostgreSQL.png"
+                                alt="">
                             <!-- PostgreSQL -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics MySQL.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics MySQL.png"
+                                alt="">
                             <!-- MySQL -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Amazon Redshift.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Amazon Redshift.png"
+                                alt="">
                             <!-- Amazon Redshift -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google BigQuery.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Google BigQuery.png"
+                                alt="">
                             <!-- Google BigQuery -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Snowflake.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Snowflake.png"
+                                alt="">
                             <!-- Snowflake -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Python.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Python.png"
+                                alt="">
                             <!-- Python -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Apache Airflow.png" alt="">
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics Apache Airflow.png"
+                                alt="">
                             <!-- Apache Airflow -->
                         </div>
                         <div class="hex-wrapper">
                             <div class="hex-border"></div>
-                            <div class="hex-bg"></div><img src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics REST API.png" alt="">
-                             <!-- REST API -->
+                            <div class="hex-bg"></div><img
+                                src="https://image.dataspantechnologies.com/dataspan/Reporting & Analytics REST API.png"
+                                alt="">
+                            <!-- REST API -->
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -2439,11 +2992,16 @@
             <div class="container" data-aos="fade-up">
                 <div class="header-section">
                     <h2>Transform Data Into Actionable Business Intelligence</h2>
-                    <p>We connect, structure, and automate reporting workflows to deliver accurate insights stakeholders trust for faster decisions across organizations.</p>
+                    <p>We connect, structure, and automate reporting workflows to deliver
+                        accurate insights stakeholders trust for faster decisions across
+                        organizations.</p>
                     <div class="insight-tabs">
-                        <button class="tab-btn" data-target="connectivity">Data Connectivity</button>
-                        <button class="tab-btn" data-target="transformation">Data Transformation</button>
-                        <button class="tab-btn active" data-target="automation">Analytics Automation</button>
+                        <button class="tab-btn" data-target="connectivity">Data
+                            Connectivity</button>
+                        <button class="tab-btn" data-target="transformation">Data
+                            Transformation</button>
+                        <button class="tab-btn active" data-target="automation">Analytics
+                            Automation</button>
                     </div>
                 </div>
 
@@ -2452,16 +3010,21 @@
                     <div class="col-lg-5 insight-text" data-aos="fade-right">
                         <h3>Source Integration</h3>
                         <ul>
-                            <li><strong>API Connections.</strong>Securely pull data from platforms, databases, and files.</li>
-                            <li><strong>Data Sync.</strong>Automate scheduled and real-time data ingestion reliably.</li>
-                            <li><strong>Data Validation. </strong>Ensure completeness, accuracy, and consistency at ingestion.</li>
-                            <li><strong>Scalable Pipelines.</strong>Handle growing volumes without performance degradation issues.</li>                            
+                            <li><strong>API Connections.</strong>Securely pull data from
+                                platforms, databases, and files.</li>
+                            <li><strong>Data Sync.</strong>Automate scheduled and real-time
+                                data ingestion reliably.</li>
+                            <li><strong>Data Validation. </strong>Ensure completeness,
+                                accuracy, and consistency at ingestion.</li>
+                            <li><strong>Scalable Pipelines.</strong>Handle growing volumes
+                                without performance degradation issues.</li>
                         </ul>
                         <!-- <a href="../contact.html" class="discover-more">Get Started Now <i
                                 class="fas fa-arrow-right"></i></a> -->
                     </div>
                     <div class="col-lg-7 insight-image" data-aos="fade-left">
-                        <img src="https://image.dataspantechnologies.com/dataspan/Data Connectivity.png" alt="Pipeline dashboard preview">
+                        <img src="https://image.dataspantechnologies.com/dataspan/Data Connectivity.png"
+                            alt="Pipeline dashboard preview">
                     </div>
                 </div>
 
@@ -2470,15 +3033,20 @@
                     <div class="col-lg-5 insight-text">
                         <h3>Data Modeling</h3>
                         <ul>
-                            <li><strong>Data Cleaning. </strong> Remove duplicates, normalize formats, and correct anomalies.</li>
-                            <li><strong>Metric Logic.</strong>Standardize calculations aligned with business definitions companywide.</li>
-                            <li><strong>Data Enrichment.</strong>Combine sources to create meaningful analytical context.</li>
-                            <li><strong>Secure Access.</strong>Apply role-based controls protecting sensitive information assets.                            </li>
+                            <li><strong>Data Cleaning. </strong> Remove duplicates,
+                                normalize formats, and correct anomalies.</li>
+                            <li><strong>Metric Logic.</strong>Standardize calculations
+                                aligned with business definitions companywide.</li>
+                            <li><strong>Data Enrichment.</strong>Combine sources to create
+                                meaningful analytical context.</li>
+                            <li><strong>Secure Access.</strong>Apply role-based controls
+                                protecting sensitive information assets. </li>
                         </ul>
-                      
+
                     </div>
                     <div class="col-lg-7 insight-image">
-                        <img src="https://image.dataspantechnologies.com/dataspan/Data Transformation.png" alt="Data Connectivity preview">
+                        <img src="https://image.dataspantechnologies.com/dataspan/Data Transformation.png"
+                            alt="Data Connectivity preview">
                     </div>
                 </div>
 
@@ -2487,15 +3055,20 @@
                     <div class="col-lg-5 insight-text">
                         <h3>Insight Delivery</h3>
                         <ul>
-                            <li><strong>Automated Reports. </strong>Generate scheduled reports without manual intervention errors.</li>
-                            <li><strong>Live Dashboards.</strong>Visualize KPIs in real time for teams.</li>
-                            <li><strong>Alert Triggers.</strong>Notify stakeholders when metrics breach thresholds instantly.</li>
-                            <li><strong>Continuous Optimization.</strong>Refine reports based on usage and performance feedback.</li>
+                            <li><strong>Automated Reports. </strong>Generate scheduled
+                                reports without manual intervention errors.</li>
+                            <li><strong>Live Dashboards.</strong>Visualize KPIs in real time
+                                for teams.</li>
+                            <li><strong>Alert Triggers.</strong>Notify stakeholders when
+                                metrics breach thresholds instantly.</li>
+                            <li><strong>Continuous Optimization.</strong>Refine reports
+                                based on usage and performance feedback.</li>
                         </ul>
-                        
+
                     </div>
                     <div class="col-lg-7 insight-image">
-                        <img src="https://image.dataspantechnologies.com/dataspan/Analytics Automation.png" alt="Data Transformation preview">
+                        <img src="https://image.dataspantechnologies.com/dataspan/Analytics Automation.png"
+                            alt="Data Transformation preview">
                     </div>
                 </div>
             </div>
@@ -2512,8 +3085,11 @@
                     <h1 class="hero-title">
                         Reporting expertise built for accuracy, scale, and decisions
                     </h1>
-                    <p class="hero-text">We don’t deliver generic dashboards. We design reporting and analytics systems that mirror real business operations, automate data accuracy, and give leadership reliable visibility across sales, finance, and performance metrics.</p>
-                   
+                    <p class="hero-text">We don’t deliver generic dashboards. We design
+                        reporting and analytics systems that mirror real business
+                        operations, automate data accuracy, and give leadership reliable
+                        visibility across sales, finance, and performance metrics.</p>
+
                     <button class="btn btn-primary btn-primary-custom">
                         Start Reporting
                     </button>
@@ -2530,7 +3106,10 @@
                         </div>
                         <div>
                             <div class="feature-title">Business-First Reporting Design</div>
-                            <div class="feature-text">We build reports around how your teams actually operate, not tool limitations, ensuring metrics, KPIs, and dashboards align directly with operational goals and decision-making needs enterprise.</div>
+                            <div class="feature-text">We build reports around how your teams
+                                actually operate, not tool limitations, ensuring metrics,
+                                KPIs, and dashboards align directly with operational goals
+                                and decision-making needs enterprise.</div>
                         </div>
                     </div>
 
@@ -2541,7 +3120,11 @@
                         </div>
                         <div>
                             <div class="feature-title">Automated Data Accuracy</div>
-                            <div class="feature-text">From ingestion to visualization, we automate validation, reconciliation, and refresh cycles to eliminate manual errors, reduce reporting delays, and ensure stakeholders always work from trusted, up-to-date data.</div>
+                            <div class="feature-text">From ingestion to visualization, we
+                                automate validation, reconciliation, and refresh cycles to
+                                eliminate manual errors, reduce reporting delays, and ensure
+                                stakeholders always work from trusted, up-to-date data.
+                            </div>
                         </div>
                     </div>
 
@@ -2552,7 +3135,11 @@
                         </div>
                         <div>
                             <div class="feature-title">Scalable Analytics Architecture</div>
-                            <div class="feature-text">Our analytics solutions scale seamlessly across channels, data volumes, and business units, supporting growth without rework while maintaining performance, security, and governance standards at enterprise levels.</div>
+                            <div class="feature-text">Our analytics solutions scale
+                                seamlessly across channels, data volumes, and business
+                                units, supporting growth without rework while maintaining
+                                performance, security, and governance standards at
+                                enterprise levels.</div>
                         </div>
                     </div>
 
@@ -2562,7 +3149,11 @@
                         </div>
                         <div>
                             <div class="feature-title">Actionable Executive Insights</div>
-                            <div class="feature-text">We focus on clarity over complexity, delivering dashboards and reports executives can interpret quickly, act on confidently, and use to drive measurable improvements across revenue, cost control, and efficiency.</div>
+                            <div class="feature-text">We focus on clarity over complexity,
+                                delivering dashboards and reports executives can interpret
+                                quickly, act on confidently, and use to drive measurable
+                                improvements across revenue, cost control, and efficiency.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2595,9 +3186,12 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                         <h2>Turn Reporting Into a Business Advantage</h2>
-                        <p class="mb-4">Get accurate, automated insights that eliminate guesswork, improve performance visibility, and support faster, smarter business decisions.</p>
+                        <p class="mb-4">Get accurate, automated insights that eliminate
+                            guesswork, improve performance visibility, and support faster,
+                            smarter business decisions.</p>
                         <div class="cta-buttons">
-                            <a href="../contact.html" class="btn btn-primary me-2 mb-2">Start Smarter Reporting</a>
+                            <a href="../contact.html" class="btn btn-primary me-2 mb-2">Start Smarter
+                                Reporting</a>
                             <!-- <a href="service.html" class="btn btn-outline-primary mb-2">Explore Our Services</a> -->
                         </div>
                     </div>
@@ -2608,78 +3202,88 @@
 
     <footer id="footer" class="footer section light-background">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
-            <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
-          </a>
-          <div class="footer-contact pt-1">
-            <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
+                        <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
+                    </a>
+                    <div class="footer-contact pt-1">
+                        <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
             <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p> -->
-            <p>We work with businesses to simplify digital operations, <br>strengthen eCommerce performance, and build
-              smarter systems that support steady, measurable growth</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span></p>
-            <p><strong>Email:</strong> <span>info@dataspantechnologies.com</span></p>
-          </div>
-          <div class="social-links d-flex my-2">
-            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+                        <p>We work with businesses to simplify digital operations,
+                            <br>strengthen eCommerce performance, and build
+                            smarter systems that support steady, measurable growth
+                        </p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span>
+                        </p>
+                        <p><strong>Email:</strong>
+                            <span>info@dataspantechnologies.com</span>
+                        </p>
+                    </div>
+                    <div class="social-links d-flex my-2">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
 
-            <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
-            <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
-          </div>
-        </div>
+                        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://in.linkedin.com/company/dataspan-technologies"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i
+                                class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
 
 
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            MENU
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <ul class="footer-dropdown-content">
-            <li><a href="https://dataspantechnologies.com">Home</a></li>
-            <li><a href="../Aboutus.html">About us</a></li>
-            <li><a href="../Clients.html">Clients</a></li>
-            <!-- <li><a href="../service.html">Services</a></li> -->
-            <!-- <li><a href="../careers.html">Careers</a></li> -->
-            <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
-            <li><a href="../contact.html">Contact Us</a></li>
-            <!-- <li><a href="#">Privacy Policy</a></li> -->
-            <!-- <li><a href="#">Terms of Service</a></li> -->
-          </ul>
-        </div>
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        MENU
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <ul class="footer-dropdown-content">
+                        <li><a href="https://dataspantechnologies.com">Home</a></li>
+                        <li><a href="../Aboutus.html">About us</a></li>
+                        <li><a href="../Clients.html">Clients</a></li>
+                        <!-- <li><a href="../service.html">Services</a></li> -->
+                        <!-- <li><a href="../careers.html">Careers</a></li> -->
+                        <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Privacy Policy</a></li> -->
+                        <!-- <li><a href="#">Terms of Service</a></li> -->
+                    </ul>
+                </div>
 
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            NASHIK
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <div class="footer-dropdown-content">
-            <div class="footer-contact">
-              <!-- <p><strong>Address:</strong></p> -->
-              <p>Shreeji Pride, Second Floor, Opp.</p>
-              <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
-            </div>
-          </div>
-        </div>
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        NASHIK
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <div class="footer-dropdown-content">
+                        <div class="footer-contact">
+                            <!-- <p><strong>Address:</strong></p> -->
+                            <p>Shreeji Pride, Second Floor, Opp.</p>
+                            <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik,
+                                Maharashtra 422001</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            MALEGAON
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <div class="footer-dropdown-content">
-            <div class="footer-contact">
-              <!-- <p><strong>Address:</strong></p> -->
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        MALEGAON
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <div class="footer-dropdown-content">
+                        <div class="footer-contact">
+                            <!-- <p><strong>Address:</strong></p> -->
 
-              <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon 423203</p>
-            </div>
-          </div>
-        </div>
+                            <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon
+                                423203</p>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- <div class="col-lg-2 col-md-3 footer-links">
+                <!-- <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nobis illum</h4>
           <ul>
             <li><a href="#">Ipsam</a></li>
@@ -2690,24 +3294,24 @@
           </ul>
         </div> -->
 
-      </div>
-    </div>
+            </div>
+        </div>
 
-    <div class="container copyright text-center m-0 p-0">
-      <!-- Social Links for Mobile View -->
-      <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
-        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+        <div class="container copyright text-center m-0 p-0">
+            <!-- Social Links for Mobile View -->
+            <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
+                <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
 
-        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
-        <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
-      </div>
-      <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
-          Technologies</strong> <span>All Rights
-          Reserved</span></p>
-    </div>
+                <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
+                <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+            </div>
+            <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
+                    Technologies</strong> <span>All Rights
+                    Reserved</span></p>
+        </div>
 
-  </footer>
+    </footer>
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short "></i></a>
