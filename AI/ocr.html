@@ -34,10 +34,12 @@
         .ai-highlight-2 {
             /* font-size: 1.75rem; */
             font-weight: 900;
-            color: var(--accent-color);
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             line-height: 1.2;
         }
-
         /* =========================================================
    FIX: Row-2 tiles + static CTA card isolation
    ========================================================= */
@@ -93,6 +95,24 @@
             flex-shrink: 0;
             z-index: 10;
             margin-left: 40px;
+        }
+
+        .mobile-technologies {
+            display: none;
+        }
+
+        .desktop-technologies {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-technologies {
+                display: block !important;
+            }
+
+            .desktop-technologies {
+                display: none !important;
+            }
         }
 
         /* CTA heading */
@@ -327,7 +347,8 @@
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             text-align: center;
             letter-spacing: -0.02em;
         }
@@ -380,13 +401,14 @@
 
         /* Hero section enhancements */
         .hero-content {
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             position: relative;
             z-index: 1;
             width: 80% !important;
             max-width: 80% !important;
             margin: 0 auto;
-            padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+            /* padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px); */
             box-sizing: border-box;
         }
 
@@ -504,7 +526,7 @@
 
         /* Second section - Services Cards from CodePen */
         .second {
-            background-color: #f6f9fc;
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
             padding: var(--section-padding) 0;
         }
 
@@ -526,12 +548,11 @@
             .container-services {
                 padding-inline: 1.5rem;
             }
+        }
 
-
-            .section-title-services p {
-                font-size: 1rem !important;
-                margin-bottom: 2rem !important;
-            }
+        .section-title-services p {
+            font-size: 1rem !important;
+            margin-bottom: 2rem !important;
         }
 
         /* Enhanced 4th section - Beautiful Modern Design */
@@ -760,20 +781,40 @@
         /* Enhanced 5th section - Technologies */
         .section5 {
             background: #ffffff;
-            padding: 50px 0 10px 0px;
+            /* padding: var(--section-padding) 0 10px 0px; */
+            padding: 0px !important;
+            /* border: 2px solid red; */
         }
 
         .technologies-section {
             max-width: 1200px;
+            /* border: 2px solid red; */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 50px 0 0 0;
+            /* border: 2px solid blue; */
         }
 
         .technologies-title {
+            font-size: 2.5rem;
+            font-weight: 700;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            font-family: var(--heading-font);
+            line-height: 1.2;
         }
 
+        .tech-highlight {
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .tech-blue {
+            color: var(--accent-color);
+        }
 
         .technologies-description {
             text-align: center;
@@ -781,7 +822,7 @@
             font-family: var(--default-font);
             font-size: 1.125rem;
             line-height: 1.7;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -835,7 +876,9 @@
             border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
             border-radius: 16px;
             padding: 30px 20px;
-            width: 180px;
+            width: clamp(140px, 20%, 180px);
+            flex-grow: 1;
+            max-width: 250px;
             text-align: center;
             transition: all 0.3s ease;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -848,24 +891,22 @@
         }
 
         .tech-logo {
-            width: clamp(60px, 8vw, 100px);
-            height: clamp(60px, 8vw, 100px);
+            width: 100px;
+            height: 100px;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .logo-placeholder,
-        .tech-logo img {
-            width: 100%;
-            height: 100%;
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
             border-radius: 12px;
             background: color-mix(in srgb, var(--default-color), transparent 96%);
             display: flex;
             align-items: center;
             justify-content: center;
-            object-fit: contain;
         }
 
         /* Logo placeholders - simplified versions */
@@ -893,10 +934,10 @@
 
         .keras-logo::before {
             content: 'K';
-            color: white;
+            color: var(--contrast-color);
             font-weight: bold;
             font-size: 2.5rem;
-            font-family: Arial, sans-serif;
+            font-family: var(--default-font);
         }
 
         .tensorflow-logo {
@@ -939,10 +980,10 @@
 
         .r-logo::before {
             content: 'R';
-            color: white;
+            color: var(--contrast-color);
             font-weight: bold;
             font-size: 2.5rem;
-            font-family: Arial, sans-serif;
+            font-family: var(--default-font);
         }
 
         .python-logo {
@@ -996,112 +1037,234 @@
             margin: 0;
         }
 
-        /* Consolidated Tablet & Mobile Refinement */
-        @media (max-width: 1024px) {
+        /* Visibility Toggles */
+        @media (min-width: 769px) {
+            .desktop-technologies {
+                display: block !important;
+            }
 
+            .mobile-technologies {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-technologies {
+                display: none !important;
+            }
+
+            .mobile-technologies {
+                display: block !important;
+            }
+        }
+
+        /* Accordion Styles (Mobile Only) */
+        .tech-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tech-group {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+
+        .tech-group-header {
+            width: 100%;
+            padding: 18px 20px;
+            background: #f8f9fa;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .tech-group-header.active {
+            color: var(--accent-color);
+            background: #f0f7ff;
+        }
+
+        .tech-group-header i {
+            transition: transform 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .tech-group-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .tech-group-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .tech-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .technologies-title {
+                font-size: 1.8rem !important;
+            }
+
+            /* Horizontal Scrollable Categories */
             .tech-categories {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                justify-content: flex-start;
-                gap: 20px;
-                border-bottom: 1px solid #eee;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
+                justify-content: flex-start !important;
+                padding-bottom: 10px;
+                margin-bottom: 25px !important;
+                gap: 12px !important;
                 scrollbar-width: none;
-                margin-bottom: 2rem;
-                padding-bottom: 0;
-                display: flex;
+                /* Firefox */
+                scroll-behavior: smooth;
+                padding-left: 5px;
+                /* Slight offset */
             }
 
             .tech-categories::-webkit-scrollbar {
                 display: none;
+                /* Chrome/Safari */
             }
 
             .tech-category-btn {
-                background: none !important;
-                border: none !important;
-                padding: 12px 0 !important;
-                font-size: 1.05rem !important;
-                font-weight: 700 !important;
-                color: #888 !important;
-                border-radius: 0 !important;
-                position: relative;
-                box-shadow: none !important;
-                white-space: nowrap;
-                flex-shrink: 0;
+                flex: 0 0 auto !important;
+                /* Don't shrink */
+                padding: 10px 20px !important;
+                font-size: 0.9rem !important;
+                border-radius: 50px !important;
+                /* Pill shape */
             }
 
-            .tech-category-btn.active {
-                color: #333 !important;
-            }
-
-            .tech-category-btn.active::after {
-                content: '';
-                position: absolute;
-                bottom: -1px;
-                left: 0;
-                width: 100%;
-                height: 3px;
-                background: linear-gradient(to right, #ff4d94, #6e56ff);
-            }
-
+            /* 2-Column Grid for Tech Cards */
             .tech-cards {
-                gap: 15px;
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
                 justify-content: center;
-                display: flex;
-                flex-wrap: wrap;
             }
 
             .tech-card {
-                display: flex !important;
-                flex-direction: row !important;
-                align-items: center !important;
-                width: calc(100% - 20px) !important;
-                max-width: 400px !important;
-                padding: 12px 20px !important;
-                border-radius: 50px !important;
-                background: linear-gradient(white, white) padding-box,
-                    linear-gradient(to right, #ff4d94, #6e56ff) border-box !important;
-                border: 1.5px solid transparent !important;
-                box-shadow: none !important;
-                text-align: left !important;
-                flex-grow: 1 !important;
-                transition: none !important;
-            }
-
-            .tech-card:hover {
-                transform: none !important;
+                width: 100% !important;
+                max-width: none !important;
+                padding: 20px 15px !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+                /* Square cards */
             }
 
             .tech-logo {
-                width: 32px !important;
-                height: 32px !important;
-                margin: 0 15px 0 0 !important;
-                flex-shrink: 0 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
+                width: 50px !important;
+                height: 50px !important;
+                margin-bottom: 10px !important;
             }
 
-            .logo-placeholder,
             .tech-logo img {
                 width: 100% !important;
                 height: 100% !important;
-                border-radius: 4px !important;
-                object-fit: contain !important;
-                display: block !important;
             }
 
             .tech-name {
-                font-size: 1.1rem !important;
-                font-weight: 600 !important;
-                color: #444 !important;
-                margin: 0 !important;
+                font-size: 0.9rem !important;
             }
         }
 
-        @media (max-width: 480px) {
-            .tech-card {
-                max-width: 100% !important;
+        /* Visibility Toggles */
+        @media (min-width: 769px) {
+            .desktop-technologies {
+                display: block !important;
             }
+
+            .mobile-technologies {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-technologies {
+                display: none !important;
+            }
+
+            .mobile-technologies {
+                display: block !important;
+            }
+        }
+
+        /* Accordion Styles (Mobile Only) */
+        .tech-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tech-group {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+
+        .tech-group-header {
+            width: 100%;
+            padding: 18px 20px;
+            background: #f8f9fa;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .tech-group-header.active {
+            color: var(--accent-color);
+            background: #f0f7ff;
+        }
+
+        .tech-group-header i {
+            transition: transform 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .tech-group-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .tech-group-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .tech-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
         }
 
         /* Section 6 - Interactive Chat Interface (Unscrambl Style) */
@@ -1541,7 +1704,7 @@
 
         /* How It Works Section Styles */
         .how-it-works-section {
-            background: var(--background-color);
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
             padding: 80px 0;
         }
 
@@ -1552,7 +1715,7 @@
         }
 
         .how-it-works-header {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
@@ -1597,7 +1760,7 @@
         /* OCR Demo Section Styles */
         .ocr-demo-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
             position: relative;
             overflow: hidden;
         }
@@ -1798,7 +1961,6 @@
             display: flex;
             gap: 60px;
             align-items: flex-start;
-            animation: fadeInUp 0.5s ease-out forwards;
         }
 
         /* Content Left */
@@ -2048,20 +2210,22 @@
    =============================== */
 
         .llm-hero {
-            background: #eef0ff;
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
             padding: 120px 0;
         }
 
         .llm-container {
-            max-width: 1200px;
+            max-width: 1350px;
             margin: auto;
             padding: 0 24px;
 
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            grid-template-columns: 1.4fr 1.9fr;
             gap: 60px;
             align-items: center;
+            /* border: 2px solid blue; */
         }
+
 
         /* LEFT CONTENT */
 
@@ -2099,22 +2263,21 @@
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
+            border: none;
         }
 
         /* Primary Button */
 
         .btn-primary {
-            background: #5b63ff;
+            background: #0f7efc;
             color: #ffffff;
         }
 
         .btn-primary:hover {
-            color: #5b63ff;
-            background: #ffffff;
-            /* transform: translateY(-2px); */
-            box-shadow: 0 10px 26px rgba(91, 99, 255, 0.3);
+            background: #021e42;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(91, 99, 255, 0.35);
         }
-
         /* Secondary Button */
 
         .btn-secondary {
@@ -2207,15 +2370,23 @@
             margin-bottom: 28px;
         }
 
-        .integration-link {
+        .integration-link { 
             font-size: 16px;
             font-weight: 600;
-            color: #5b63ff;
+            color: #092d4b;
             text-decoration: none;
             position: relative;
+            border: 1px solid #092d4b;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        .integration-link:hover{
+            /* background-color: #0d83fd; */
+            border:1px solid #0d83fd;
+            color: #0d83fd;
         }
 
-        .integration-link::after {
+        /* .integration-link::after {
             content: "";
             position: absolute;
             left: 0;
@@ -2226,7 +2397,7 @@
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
-        }
+        } */
 
         .integration-link:hover::after {
             transform: scaleX(1);
@@ -2320,36 +2491,375 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .hero-buttons {
-                flex-direction: column;
-                width: 100%;
+        /* Enhanced Responsive Design */
+        @media(max-width: 1200px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media(max-width: 900px) {
+            .hero-title {
+                font-size: 2.5rem;
             }
 
-            .hero-buttons .btn {
-                width: 100%;
-                max-width: none;
+            .section5 h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media(max-width: 768px) {
+
+            /* Global Adjustments */
+            :root {
+                --section-padding: 50px;
             }
 
-            .ai-stat-card {
+            section {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            /* Container Padding */
+            .container,
+            .container-fluid {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            /* Hero Section */
+            .hero-title {
+                font-size: clamp(2rem, 5vw, 2.5rem) !important;
+            }
+
+            .hero-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .hero-breadcrumbs {
+                width: 100% !important;
                 margin-bottom: 20px;
             }
 
+            /* Stats Section */
+            .ai-stats-title {
+                font-size: 1.75rem !important;
+                text-align: center;
+            }
+
+            /*
+               Services / Tiles Section (.second)
+               Restyled for better mobile card aesthetic
+            */
+            .second {
+                background-color: #fceceb !important;
+                /* Lighter bg for contrast */
+            }
+
+            .products-tile-container {
+                gap: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .products-tile-container.row-2 {
+                margin-top: 20px;
+            }
+
+            /* Card Styling specific for mobile */
+            .tile {
+                min-height: auto !important;
+                height: auto !important;
+                padding: 30px 25px !important;
+                background: #ffffff !important;
+                border-radius: 16px !important;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+                margin-right: 0 !important;
+                border: 1px solid rgba(0, 0, 0, 0.03);
+            }
+
+            .tile-title {
+                font-size: 1.25rem !important;
+                margin-bottom: 10px !important;
+                color: var(--heading-color) !important;
+            }
+
+            .card-text {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+                color: var(--default-color) !important;
+                max-width: 100% !important;
+                /* Ensure text uses width */
+            }
+
+            .icon-popup {
+                position: static !important;
+                /* Bring icon into flow or hide if needed */
+                display: inline-block !important;
+                margin-top: 15px;
+                background: var(--surface-color);
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--accent-color);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .static-service-card {
+                padding: 30px 25px !important;
+                height: auto !important;
+                background: #fff !important;
+                /* Make it pop like other cards */
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+                margin-left: 0 !important;
+                border: 2px solid var(--accent-color) !important;
+                /* Highlight this card */
+            }
+
+            .static-service-card h3 {
+                font-size: 1.4rem !important;
+                text-align: center;
+            }
+
+            /* 
+               Technologies Section (.section5)
+               Restyled for scrollable tabs and grid cards
+            */
+            .technologies-title {
+                font-size: 1.8rem !important;
+            }
+
+            /* Horizontal Scrollable Categories */
+            .tech-categories {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
+                justify-content: flex-start !important;
+                padding-bottom: 10px;
+                margin-bottom: 25px !important;
+                gap: 12px !important;
+                scrollbar-width: none;
+                /* Firefox */
+                scroll-behavior: smooth;
+                padding-left: 5px;
+                /* Slight offset */
+            }
+
+            .tech-categories::-webkit-scrollbar {
+                display: none;
+                /* Chrome/Safari */
+            }
+
+            .tech-category-btn {
+                flex: 0 0 auto !important;
+                /* Don't shrink */
+                padding: 10px 20px !important;
+                font-size: 0.9rem !important;
+                border-radius: 50px !important;
+                /* Pill shape */
+            }
+
+            /* 2-Column Grid for Tech Cards */
             .tech-cards {
-                gap: 15px;
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
+                justify-content: center;
             }
 
             .tech-card {
-                width: calc(50% - 15px);
+                width: 100% !important;
+                max-width: none !important;
+                padding: 20px 15px !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+                /* Square cards */
+            }
+
+
+            /* Accordion Styles (Mobile Only) */
+            .tech-accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .tech-group {
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                background: #fff;
+                overflow: hidden;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+            }
+
+            .tech-group-header {
+                width: 100%;
+                padding: 18px 20px;
+                background: #f8f9fa;
+                border: none;
+                text-align: left;
+                font-size: 1rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                font-family: inherit;
+            }
+
+            .tech-group-header.active {
+                color: var(--accent-color);
+                background: #f0f7ff;
+            }
+
+            .tech-group-header i {
+                transition: transform 0.3s;
+                font-size: 0.8rem;
+            }
+
+            .tech-group-header.active i {
+                transform: rotate(180deg);
+            }
+
+            .tech-group-content {
+                display: none;
+                padding: 20px;
+                border-top: 1px solid #eee;
+            }
+
+            .tech-cards-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .tech-logo {
+                width: 50px !important;
+                height: 50px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .tech-logo img {
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .tech-name {
+                font-size: 0.9rem !important;
+            }
+
+            /* How It Works Section */
+            .how-it-works-title {
+                font-size: 1.75rem !important;
+            }
+
+            .capability-tabs {
+                flex-wrap: nowrap !important;
+                overflow-x: auto;
+                justify-content: flex-start !important;
+                padding-bottom: 15px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                /* Hide scrollbar for cleaner look */
+            }
+
+            .capability-tabs::-webkit-scrollbar {
+                display: none;
+            }
+
+            .capability-tab {
+                flex-shrink: 0;
+                white-space: nowrap;
+            }
+
+            /* Chat Interface Section */
+            .section6 {
+                padding: 20px 0 !important;
+            }
+
+            .chat-interface {
+                min-height: 450px;
+                /* Ensure enough height for chat */
+                margin-bottom: 50px;
             }
 
             .marketing-title {
-                font-size: 2rem;
+                font-size: 1.8rem !important;
                 text-align: center;
             }
 
             .marketing-description {
                 text-align: center;
+                font-size: 1rem !important;
+            }
+
+            .product-logos {
+                justify-content: center;
+            }
+
+            /* LLM & Integration Sections */
+            .llm-content h1,
+            .integration-content h2 {
+                font-size: 2rem !important;
+                text-align: center;
+            }
+
+            .llm-content p,
+            .integration-content p {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1rem !important;
+            }
+
+            .llm-actions {
+                justify-content: center;
+            }
+
+            .integration-link {
+                text-align: center;
+                display: block;
+                margin-top: 20px;
+            }
+
+            /* CTA Section */
+            #cta h2 {
+                font-size: 1.8rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.75rem !important;
+            }
+
+            .btn {
+                width: 100%;
+                /* Full width buttons on very small screens */
+                margin-bottom: 10px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .tech-cards {
+                gap: 10px !important;
+            }
+
+            .tech-card {
+                padding: 15px 10px !important;
             }
         }
 
@@ -2792,10 +3302,6 @@
     <div class="mobile-menu-backdrop" aria-hidden="true"></div>
 
 
-
-
-
-
     <div class="main">
         <!-- hero section -->
         <section id="hero" class="hero section">
@@ -2828,7 +3334,7 @@
 
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
-                                <a href="#contact" class="btn btn-primary">Start OCR Automation </a>
+                                <a href="../contact.html" class="btn btn-primary">Start OCR Automation </a>
                                 <!-- <a href="#contact" class="btn btn-outline-primary">Get Free Consultation</a> -->
                             </div>
                         </div>
@@ -2846,7 +3352,7 @@
             <div class="container ai-stats-section">
                 <div class="ai-stats-container">
                     <h3 class="ai-stats-title">
-                        <span class="ai-highlight-2">How OCR</span> Improves Business Data Operations
+                        <span class=".tech-highlight">How OCR</span> Improves Business Data Operations
                     </h3>
                     <p class="text-center">Accelerates workflows, reduces costs, and unlocks scalable growth across core
                         business processes
@@ -2981,7 +3487,7 @@
                         <div class="static-service-card">
                             <h3>Scale document processing without manual intervention.
                             </h3>
-                            <a href="#contact" class="static-btn">Book OCR Demo</a>
+                            <a href="../contact.html" class="static-btn">Book OCR Demo</a>
                         </div>
 
 
@@ -2990,181 +3496,353 @@
             </div>
         </section>
 
-        <!-- Enhanced 5th section - Technologies -->
         <section class="section5">
             <div class="container">
                 <div class="technologies-section">
                     <h3 class="ai-stats-title">
-                        Technologies Behind Our OCR Solutions
+                        Technologies Behind Our <span class="ai-highlight-2">OCR Solutions</span>
                     </h3>
                     <p class="technologies-description">We use proven OCR, data processing, and integration
                         technologies
                         to deliver accurate, scalable, production-ready document automation systems.
                     </p>
 
-                    <div class="tech-categories">
-                        <button class="tech-category-btn active" data-category="languages">Languages &
-                            Frameworks</button>
-                        <button class="tech-category-btn" data-category="cloud">OCR Engines & Libraries</button>
-                        <!-- <button class="tech-category-btn" data-category="data">Data Tools</button> -->
-                        <button class="tech-category-btn" data-category="vision">Document Processing</button>
-                        <button class="tech-category-btn" data-category="nlp">Cloud and Platforms</button>
-                        <button class="tech-category-btn" data-category="security">Workflow Automation</button>
+                    <!-- Desktop View: Tabs (Visible only on Desktop) -->
+                    <div class="desktop-technologies">
+                        <div class="tech-categories">
+                            <button class="tech-category-btn active" data-category="languages">Languages &
+                                Frameworks</button>
+                            <button class="tech-category-btn" data-category="cloud">OCR Engines & Libraries</button>
+                            <button class="tech-category-btn" data-category="vision">Document Processing</button>
+                            <button class="tech-category-btn" data-category="nlp">Cloud and Platforms</button>
+                            <button class="tech-category-btn" data-category="security">Workflow Automation</button>
+                        </div>
+
+                        <div class="tech-cards-container">
+                            <div class="tech-cards" id="languages-cards">
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/python.png"
+                                            alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Python</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/JavaScript.png"
+                                            alt="JavaScript" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">JavaScript</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/NET.png" alt=".NET"
+                                            style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">.NET</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Node.js.png"
+                                            alt="Node.js" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Node.js</p>
+                                </div>
+                            </div>
+                            <div class="tech-cards" id="cloud-cards" style="display: none;">
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Tesseract OCR.png"
+                                            alt="Tesseract OCR" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Tesseract OCR</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/OpenCV.png"
+                                            alt="OpenCV" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">OpenCV</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/PaddleOCR.png"
+                                            alt="PaddleOCR" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">PaddleOCR</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/ABBYY FineReader Engine.png"
+                                            alt="ABBYY FineReader Engine"
+                                            style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">ABBYY FineReader</p>
+                                </div>
+                            </div>
+                            <div class="tech-cards" id="vision-cards" style="display: none;">
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/PDFBox.png"
+                                            alt="PDFBox" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">PDFBox</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Apache Tika.png"
+                                            alt="Apache Tika" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Apache Tika</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/ImageMagick.png"
+                                            alt="ImageMagick" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">ImageMagick</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Ghostscript.png"
+                                            alt="Ghostscript" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Ghostscript</p>
+                                </div>
+                            </div>
+                            <div class="tech-cards" id="nlp-cards" style="display: none;">
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/AWS.png" alt="AWS"
+                                            style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">AWS</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Microsoft Azure.png"
+                                            alt="Azure" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Microsoft Azure</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Google Cloud Platform.png"
+                                            alt="GCP" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">GCP</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Docker.png"
+                                            alt="Docker" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Docker</p>
+                                </div>
+                            </div>
+                            <div class="tech-cards" id="security-cards" style="display: none;">
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/REST APIs.png"
+                                            alt="REST APIs" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">REST APIs</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Webhooks.png"
+                                            alt="Webhooks" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Webhooks</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Apache Airflow.png"
+                                            alt="Apache Airflow"
+                                            style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Apache Airflow</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-logo">
+                                        <img src="https://image.dataspantechnologies.com/dataspan/Zapier.png"
+                                            alt="Zapier" style="width: 60px; height: 60px; object-fit: contain;">
+                                    </div>
+                                    <p class="tech-name">Zapier</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="tech-cards-container">
-                        <div class="tech-cards" id="languages-cards">
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/python.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
+                    <!-- Mobile View: Accordion (Visible only on Mobile) -->
+                    <div class="mobile-technologies">
+                        <div class="tech-accordion">
+                            <!-- Group 1 -->
+                            <div class="tech-group">
+                                <button class="tech-group-header">Languages & Frameworks <i
+                                        class="fas fa-chevron-down"></i></button>
+                                <div class="tech-group-content">
+                                    <div class="tech-cards-grid">
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/python.png"
+                                                    alt="Python"></div>
+                                            <p class="tech-name">Python</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/JavaScript.png"
+                                                    alt="JS"></div>
+                                            <p class="tech-name">JavaScript</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/NET.png"
+                                                    alt=".NET"></div>
+                                            <p class="tech-name">.NET</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Node.js.png"
+                                                    alt="Node.js"></div>
+                                            <p class="tech-name">Node.js</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="tech-name">Python</p>
                             </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/JavaScript.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
+                            <!-- Group 2 -->
+                            <div class="tech-group">
+                                <button class="tech-group-header">OCR Engines & Libraries <i
+                                        class="fas fa-chevron-down"></i></button>
+                                <div class="tech-group-content">
+                                    <div class="tech-cards-grid">
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Tesseract OCR.png"
+                                                    alt="Tesseract"></div>
+                                            <p class="tech-name">Tesseract</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/OpenCV.png"
+                                                    alt="OpenCV"></div>
+                                            <p class="tech-name">OpenCV</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/PaddleOCR.png"
+                                                    alt="Paddle"></div>
+                                            <p class="tech-name">PaddleOCR</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/ABBYY FineReader Engine.png"
+                                                    alt="ABBYY"></div>
+                                            <p class="tech-name">ABBYY</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="tech-name">JavaScript</p>
                             </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/NET.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
+                            <!-- Group 3 -->
+                            <div class="tech-group">
+                                <button class="tech-group-header">Document Processing <i
+                                        class="fas fa-chevron-down"></i></button>
+                                <div class="tech-group-content">
+                                    <div class="tech-cards-grid">
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/PDFBox.png"
+                                                    alt="PDFBox"></div>
+                                            <p class="tech-name">PDFBox</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Apache Tika.png"
+                                                    alt="Tika"></div>
+                                            <p class="tech-name">Apache Tika</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/ImageMagick.png"
+                                                    alt="IM"></div>
+                                            <p class="tech-name">ImageMagick</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Ghostscript.png"
+                                                    alt="Ghost"></div>
+                                            <p class="tech-name">Ghostscript</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="tech-name">.NET</p>
                             </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Node.js.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
+                            <!-- Group 4 -->
+                            <div class="tech-group">
+                                <button class="tech-group-header">Cloud & Platforms <i
+                                        class="fas fa-chevron-down"></i></button>
+                                <div class="tech-group-content">
+                                    <div class="tech-cards-grid">
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/AWS.png"
+                                                    alt="AWS"></div>
+                                            <p class="tech-name">AWS</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Microsoft Azure.png"
+                                                    alt="Azure"></div>
+                                            <p class="tech-name">Azure</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Google Cloud Platform.png"
+                                                    alt="GCP"></div>
+                                            <p class="tech-name">GCP</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Docker.png"
+                                                    alt="Docker"></div>
+                                            <p class="tech-name">Docker</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="tech-name">Node.js</p>
+                            </div>
+                            <!-- Group 5 -->
+                            <div class="tech-group">
+                                <button class="tech-group-header">Workflow Automation <i
+                                        class="fas fa-chevron-down"></i></button>
+                                <div class="tech-group-content">
+                                    <div class="tech-cards-grid">
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/REST APIs.png"
+                                                    alt="APIs"></div>
+                                            <p class="tech-name">REST APIs</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Webhooks.png"
+                                                    alt="Webhooks"></div>
+                                            <p class="tech-name">Webhooks</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Apache Airflow.png"
+                                                    alt="Airflow"></div>
+                                            <p class="tech-name">Airflow</p>
+                                        </div>
+                                        <div class="tech-card">
+                                            <div class="tech-logo"><img
+                                                    src="https://image.dataspantechnologies.com/dataspan/Zapier.png"
+                                                    alt="Zapier"></div>
+                                            <p class="tech-name">Zapier</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="tech-cards" id="cloud-cards" style="display: none;">
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Tesseract OCR.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Tesseract OCR</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/OpenCV.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">OpenCV</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/PaddleOCR.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">PaddleOCR</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/ABBYY FineReader Engine.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">ABBYY FineReader Engine</p>
-                            </div>
-                        </div>
-                        <div class="tech-cards" id="vision-cards" style="display: none;">
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/PDFBox.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">PDFBox</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Apache Tika.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Apache Tika</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/ImageMagick.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">ImageMagick</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Ghostscript.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Ghostscript</p>
-                            </div>
-
-                        </div>
-                        <div class="tech-cards" id="nlp-cards" style="display: none;">
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/AWS.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">AWS</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Microsoft Azure.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Microsoft Azure</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Google Cloud Platform.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Google Cloud Platform</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Docker.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Docker</p>
-                            </div>
-                        </div>
-                        <div class="tech-cards" id="security-cards" style="display: none;">
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/REST APIs.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">REST APIs</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Webhooks.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Webhooks</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Apache Airflow.png"
-                                        alt="Python" style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Apache Airflow</p>
-                            </div>
-                            <div class="tech-card">
-                                <div class="tech-logo">
-                                    <img src="https://image.dataspantechnologies.com/dataspan/Zapier.png" alt="Python"
-                                        style="width: 60px; height: 60px; object-fit: contain;">
-                                </div>
-                                <p class="tech-name">Zapier</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -3194,9 +3872,9 @@
                     <div class="capability-content active" id="Discovery-content">
                         <div class="content-left">
                             <h3 class="content-title">Requirements & Document Analysis</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We evaluate document types, layouts, volumes, data fields,
                                 and business workflows to define OCR scope, accuracy benchmarks, integration needs, and
                                 automation priorities clearly.</p>
@@ -3218,9 +3896,9 @@
                     <div class="capability-content" id="Design-content">
                         <div class="content-left">
                             <h3 class="content-title">OCR Architecture Planning</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We design OCR workflows, extraction rules, validation logic,
                                 and system integrations ensuring accuracy, exception handling, security, and
                                 compatibility with existing ERP or business systems.</p>
@@ -3242,9 +3920,9 @@
                     <div class="capability-content" id="Development-content">
                         <div class="content-left">
                             <h3 class="content-title">OCR Model Configuration</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We configure OCR engines, train templates, fine-tune
                                 recognition logic, and build automated pipelines to handle diverse documents with
                                 consistent accuracy and performance.</p>
@@ -3266,9 +3944,9 @@
                     <div class="capability-content" id="Deployment-content">
                         <div class="content-left">
                             <h3 class="content-title">Production OCR Deployment</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We deploy OCR solutions into live environments with secure
                                 access, monitored performance, system integrations, and minimal disruption to ongoing
                                 business operations.</p>
@@ -3291,9 +3969,9 @@
                     <div class="capability-content" id="Scale-content">
                         <div class="content-left">
                             <h3 class="content-title">High-Volume OCR Expansion</h3>
-                            <div class="content-accordion">
+                            <!-- <div class="content-accordion">
                                 <div class="accordion-icon"><i class="fas fa-chevron-up"></i></div>
-                            </div>
+                            </div> -->
                             <p class="content-description">We scale OCR systems to process growing document volumes, new
                                 formats, additional business units, and multi-location operations without compromising
                                 speed or accuracy.</p>
@@ -3327,7 +4005,7 @@
                     <p>We leverage specialized OCR engines and processing tools to deliver high-accuracy, scalable
                         document extraction solutions.</p>
 
-                    <a href="#" class="integration-link">Build Your OCR Solution</a>
+                    <a href="../contact.html" class="integration-link">Build Your OCR Solution</a>
                 </div>
 
                 <!-- RIGHT IMAGE -->
@@ -3761,11 +4439,11 @@
                         pipelines built for accuracy, scale, and seamless enterprise deployment.</p>
 
                     <div class="llm-actions">
-                        <a href="#" class="btn-primary">
+                        <a href="../contact.html" class="btn-primary">
                             Let’s Connect
                         </a>
-                        <a href="#" class="btn-secondary">
-                            Schedule a Call </a>
+                        <!-- <a href="#" class="btn-secondary">
+                            Schedule a Call </a> -->
                     </div>
                 </div>
 
@@ -3787,7 +4465,7 @@
                         <p class="mb-4">Eliminate manual data entry, reduce errors, and accelerate operations using
                             enterprise-grade OCR solutions built for scale.</p>
                         <div class="cta-buttons justify-content-center">
-                            <a href="contact.html" class="btn btn-primary me-2 mb-2">Start Your Project</a>
+                            <a href="../contact.html" class="btn btn-primary me-2 mb-2">Start Your Project</a>
                             <!-- <a href="service.html" class="btn btn-outline-primary mb-2">Explore Our Services</a> -->
                         </div>
                     </div>
@@ -4100,6 +4778,26 @@
                 });
             });
         })();
+    </script>
+
+    <!-- Technologies Section Accordion Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const headers = document.querySelectorAll('.tech-group-header');
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isActive = header.classList.contains('active');
+                    if (isActive) {
+                        header.classList.remove('active');
+                        content.style.display = 'none';
+                    } else {
+                        header.classList.add('active');
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
     </script>
 
     <!-- How It Works Section Tab Functionality -->
