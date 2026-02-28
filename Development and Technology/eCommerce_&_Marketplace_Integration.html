@@ -8,6 +8,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-RPYT1GBRQT'); </script>
+
     <!-- Favicons -->
     <link href="../assets/img/brand.png" rel="icon">
     <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
@@ -31,6 +33,17 @@
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
     <style>
+          .how-it-works-title {
+            font-size: clamp(2rem, 5vw, 2.5rem) !important;
+            font-weight: 800 !important;
+            color: var(--heading-color);
+            font-family: var(--heading-font) !important;
+            margin-bottom: 10px !important;
+            letter-spacing: -0.01em !important;
+            line-height: 1.2 !important;
+            text-align: center !important;
+        }
+        
         :root {
             --section-padding: clamp(40px, 8vw, 100px);
         }
@@ -174,7 +187,7 @@
         }
 
         .hero-title {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-weight: 800;
             font-size: clamp(2.2rem, 8vw, 4.5rem);
             font-family: var(--heading-font);
@@ -182,7 +195,8 @@
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             text-align: center;
             letter-spacing: -0.02em;
         }
@@ -234,7 +248,8 @@
 
         /* Hero section enhancements */
         .hero-content {
-            animation: fadeInUp 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
             position: relative;
             z-index: 1;
             width: 80% !important;
@@ -245,7 +260,7 @@
         }
 
         .hero-content p {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: clamp(1.1rem, 2vw, 1.25rem);
             font-family: var(--default-font);
             line-height: 1.6;
@@ -367,7 +382,7 @@
 
         .stat-item {
             font-size: 16px;
-            color: #444;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
         }
 
         .stat-number {
@@ -383,7 +398,7 @@
         }
 
         .stat-item p {
-            margin-top: 8px;
+            margin-top: 0px;
             line-height: 1.4;
         }
 
@@ -406,6 +421,13 @@
             }
         }
 
+        /* ********************************************************
+        ***************************************************************** */
+        .Businesses-section{
+            background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
+        }
+/* *****************************************************
+******************************************************************** */
         /* Seldon Helps Businesses section */
         .feature-card {
             background: #ffffff;
@@ -422,7 +444,7 @@
 
         .feature-card .icon {
             font-size: 28px;
-            color: #4f46e5;
+            color: #006eff;
             margin-bottom: 12px;
             display: inline-block;
         }
@@ -442,7 +464,7 @@
             padding: 32px;
             border-radius: 20px;
             background: linear-gradient(135deg, #0f766e, #1d4ed8);
-            color: #fff;
+            color: var(--contrast-color);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -450,7 +472,7 @@
 
         .cta-card h4 {
             font-weight: 600;
-            color: white;
+            color: var(--contrast-color);
         }
 
         .cta-card .btn {
@@ -477,7 +499,7 @@
             display: flex;
             flex-direction: column;
             background: #000;
-            color: #ffffff;
+            color: var(--contrast-color);
             position: relative;
             overflow: hidden;
             /* border: 5px solid yellow; */
@@ -495,13 +517,13 @@
             font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 800;
             margin-bottom: 15px;
-            color: #fff;
+            color: var(--contrast-color);
             line-height: 1.2;
             letter-spacing: -0.01em;
         }
 
         .case-study-section .case-header p {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: 16px;
         }
 
@@ -537,7 +559,7 @@
         }
 
         .case-study-section .desc {
-            color: #ffffff;
+            color: var(--contrast-color);
             max-width: 400px;
             font-size: 14px;
         }
@@ -554,7 +576,7 @@
         }
 
         .case-study-section .stats span {
-            color: #ffffff;
+            color: var(--contrast-color);
             font-size: 13px;
         }
 
@@ -660,6 +682,28 @@
             max-width: 420px;
         }
 
+        /* Left content smooth transition on hover switch */
+        .ai-left {
+            min-height: 200px;
+        }
+        .ai-left #ai-title,
+        .ai-left #ai-desc {
+            transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            will-change: opacity, transform;
+        }
+        .ai-left #ai-desc {
+            transition-delay: 0.05s;
+        }
+        .ai-left.ai-content-changing #ai-title {
+            opacity: 0;
+            transform: translateY(-8px) translateX(4px);
+        }
+        .ai-left.ai-content-changing #ai-desc {
+            opacity: 0;
+            transform: translateY(-6px) translateX(4px);
+            transition-delay: 0s;
+        }
+
         /* RIGHT GRID */
         .ai-grid {
             display: grid;
@@ -674,7 +718,7 @@
             /* border: 5px solid red; */
             height: fit-content;
             width: auto;
-            background-image: url("https://image.dataspantechnologies.com/dataspan/Stack2 our process.png");
+            background-image: url("https://image.dataspantechnologies.com/dataspan/Stack 2 process section.png");
             background-size: cover;
             background-repeat: no-repeat;
             padding: 0;
@@ -688,30 +732,38 @@
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 1px;
-            /* color: #c66a00; */
-            /* background: linear-gradient(135deg, #fde7c6, #f9b356); */
             cursor: pointer;
+            position: relative;
+            transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.4s ease;
         }
 
         .ai-card h2 {
-            font-weight: 700;
+            position: relative;
+            font-weight: 900;
+            font-size: 1.35rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--heading-color, #1a365d);
+            transition: color 0.4s ease;
+        }
+        .ai-card:not(.blank) h2::after {
+            display: none;
+        }
+
+        .ai-card:not(.blank):hover {
+            transform: scale(1.04) translateY(-2px);
+            box-shadow: 0 14px 36px rgba(20, 140, 238, 0.14), 0 0 0 1px rgba(20, 140, 238, 0.06);
+        }
+        .ai-card:not(.blank):hover h2 {
+            color: var(--accent-color);
+        }
+        .ai-card:not(.blank).active h2 {
+            color: var(--accent-color);
         }
 
         /* BLANK CARD */
         .ai-card.blank {
-            /* background: #ffffff; */
             cursor: default;
-        }
-
-        /* ACTIVE STATE ONLY (NO ANIMATION) */
-        /* .ai-card.active {
-        background: linear-gradient(135deg, #fbd28a, #f39c12);
-      } */
-
-        /* REMOVE ALL HOVER EFFECTS */
-        .ai-card:hover {
-            transform: none;
-            box-shadow: none;
         }
 
         /* RESPONSIVE */
@@ -907,6 +959,9 @@
                 margin-bottom: 10px;
                 color: var(--accent-color);
             }
+            .ai-card h2::after {
+                display: none;
+            }
 
             .ai-card::after {
                 content: attr(data-desc);
@@ -1075,7 +1130,7 @@
 
         /* why choose us section*/
         .why-choose-us {
-            background-color: #ffffff;
+            background-color: var(--surface-color);
         }
 
         .why-choose-us .section-subtitle {
@@ -1120,7 +1175,7 @@
 
         .why-choose-us .step-text {
             font-size: 14px;
-            color: #666;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
             line-height: 1.6;
         }
 
@@ -1148,11 +1203,26 @@
         }
 
         .tech-section .tech-title span {
-            color: #2a7fff;
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Override .text-primary in headings to use gradient */
+        h1 .text-primary,
+        h2 .text-primary,
+        h3 .text-primary,
+        h4 .text-primary {
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent !important;
         }
 
         .tech-section .tech-subtitle {
-            max-width: 800px;
+            max-width: 100%;
             margin: 15px auto 30px;
             color: #6c757d;
             font-size: 15px;
@@ -1168,6 +1238,12 @@
             width: 80%;
             flex-wrap: nowrap;
             overflow-x: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .tech-section .nav-pills::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
 
         .tech-section .nav-pills .nav-item {
@@ -1175,8 +1251,31 @@
         }
 
         .tech-section .nav-pills .nav-item .nav-link {
-            color: white !important;
-            padding: 10px 10px !important;
+            color: var(--contrast-color) !important;
+            padding: 12px 24px !important;
+            border-radius: 30px !important;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .tech-section .nav-pills .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-2px);
+        }
+
+        .tech-section .nav-pills .nav-item .nav-link.active {
+            background-color: var(--accent-color) !important;
+            color: var(--contrast-color) !important;
+            box-shadow: 0 4px 12px rgba(13, 131, 253, 0.3);
+            border-bottom: none !important;
+            text-decoration: none !important;
+        }
+
+        .tech-section .nav-pills .nav-item .nav-link.active::after,
+        .tech-section .nav-pills .nav-item .nav-link.active::before {
+            display: none !important;
+            content: none !important;
         }
 
         /* Tech Cards */
@@ -1207,7 +1306,7 @@
 
         .tech-mobile-view .accordion-button {
             background: #082a50;
-            color: white;
+            color: var(--contrast-color);
             border-radius: 12px !important;
             font-weight: 600;
             padding: 15px 20px;
@@ -1216,7 +1315,7 @@
 
         .tech-mobile-view .accordion-button:not(.collapsed) {
             background: var(--accent-color);
-            color: white;
+            color: var(--contrast-color);
             box-shadow: 0 4px 15px rgba(13, 131, 253, 0.3);
         }
 
@@ -1653,72 +1752,12 @@
                     </div>
 
                     <!-- Promotional Graphics Section -->
-                    <div class="promo-section">
-                        <div class="tech-illustration">
-                            <!-- Robot/Server Unit -->
-                            <div class="robot-unit">
-                                <div class="robot-head">
-                                    <div class="robot-core"></div>
-                                    <div class="circuit-board"></div>
-                                </div>
-                                <div class="code-screen">
-                                    <div class="code-line"></div>
-                                    <div class="code-line"></div>
-                                    <div class="code-line"></div>
-                                </div>
-                            </div>
-
-                            <!-- Human Figures -->
-                            <div class="human-figures">
-                                <div class="human-figure male">
-                                    <div class="figure-body"></div>
-                                    <div class="key blue-key"></div>
-                                </div>
-                                <div class="human-figure female">
-                                    <div class="figure-body"></div>
-                                    <div class="key green-key"></div>
-                                </div>
-                            </div>
-
-                            <!-- Brain Icon -->
-                            <div class="brain-icon">
-                                <div class="brain-shape"></div>
-                            </div>
-
-                            <!-- Geometric Elements -->
-                            <div class="geometric-elements">
-                                <div class="cube-stack">
-                                    <div class="cube"></div>
-                                    <div class="cube"></div>
-                                    <div class="cube"></div>
-                                </div>
-                                <div class="individual-cubes">
-                                    <div class="cube"></div>
-                                    <div class="cube"></div>
-                                </div>
-                                <div class="shield-icon"></div>
-                                <div class="floating-keys">
-                                    <div class="key blue-key"></div>
-                                    <div class="key green-key"></div>
-                                </div>
-                            </div>
-
-                            <!-- Smartphone -->
-                            <div class="smartphone">
-                                <div class="phone-body"></div>
-                                <div class="network-signals">
-                                    <div class="signal"></div>
-                                    <div class="signal"></div>
-                                    <div class="signal"></div>
-                                </div>
-                                <div class="data-flow">
-                                    <div class="data-cube"></div>
-                                    <div class="data-cube"></div>
-                                    <div class="data-cube"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                      <div class="promo-section">
+            <div class="tech-illustration d-flex gap-3">
+            <a href="../POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
+            <a href="../Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
+            </div>
+          </div>
                 </div>
             </div>
         </div>
@@ -1731,8 +1770,9 @@
             <!-- Breadcrumbs -->
             <div class="hero-breadcrumbs">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://dataspantechnologies.com">Home</a></li>
                     <li><a href="#">Services</a></li>
+                    <li><a href="#">Development and Technology</a></li>
                     <li><span>eCommerce & Marketplace Integration</span></li>
                 </ol>
             </div>
@@ -1742,11 +1782,11 @@
                     <div class="col-lg-12">
                         <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
                             <!-- Main Heading -->
-                            <h1 class="mb-4 hero-title">
+                            <h1 class=" hero-title">
                                 Unified eCommerce and Marketplace Integration Solutions
                             </h1>
                             <!-- Description Paragraph -->
-                            <p class="mb-4 mb-md-5">
+                            <p class=" mb-md-5">
                                 We integrate marketplaces, stores, ERPs, and fulfillment
                                 systems into one automated ecosystem, enabling real-time
                                 inventory, pricing, and order synchronization, reduced
@@ -1756,7 +1796,7 @@
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
                                 <!-- <a href="#contact" class="btn btn-primary">Start Your AI Project</a> -->
-                                <a href="#contact" class="btn btn-outline-primary">Start Your Integration</a>
+                                <a href="../contact.html" class="btn btn-outline-primary">Start Your Integration</a>
                             </div>
                         </div>
                     </div>
@@ -1803,7 +1843,7 @@
         </section>
 
         <!-- Seldon Helps Businesses section -->
-        <section class="py-5 bg-light">
+        <section class="py-5 Businesses-section">
             <div class="container">
                 <div class="row g-4 align-items-start">
                     <!-- Cards -->
@@ -1811,9 +1851,9 @@
                         <div class="row g-4">
                             <div class="col-lg-3">
                                 <h2 class="fw-bold">
-                                    Our <br /><span class="text-primary">
-                                        eCommerce & Marketplace</span>
-                                    Integration Solutions
+                                   <span class="text-primary"> Our
+                                        eCommerce & Marketplace Integration Solutions</span>
+                                    
                                 </h2>
                                 <p class="text-muted mt-3">
                                     We connect marketplaces, stores, inventory, and operations
@@ -1901,7 +1941,7 @@
                                         Need Custom Integration Solutions For Complex Commerce
                                         Operations
                                     </h4>
-                                    <a href="#" class="btn btn-light mt-3">Lets Talk</a>
+                                    <a href="../contact.html" class="btn btn-light mt-3">Lets Talk</a>
                                 </div>
                             </div>
                         </div>
@@ -1911,7 +1951,7 @@
         </section>
 
         <section class="tech-section container">
-            <h2 class="tech-title">
+            <h2 class="how-it-works-title">
                 Technologies Powering <span>Scalable Commerce Integrations</span>
             </h2>
             <p class="tech-subtitle">
@@ -2940,15 +2980,15 @@
         <section id="cta" class="call-to-action section">
             <div class="container" data-aos="zoom-in">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
+                    <div class="col-lg-8 text-center align-items-center w-100 ">
                         <h2>Unify Your Commerce. Eliminate Operational Chaos.</h2>
-                        <p class="mb-4">
+                        <p class="mb-4 w-75 mx-auto">
                             Connect every sales channel, automate critical workflows, and
                             gain complete visibility across your eCommerce operations
                             without complexity.
                         </p>
                         <div class="cta-buttons">
-                            <a href="contact.html" class="btn btn-primary me-2 mb-2">Start Your Integration</a>
+                            <a href="../contact.html" class="btn btn-primary me-2 mb-2">Start Your Integration</a>
                             <!-- <a href="service.html" class="btn btn-outline-primary mb-2">Explore Our Services</a> -->
                         </div>
                     </div>
@@ -2996,12 +3036,10 @@
                     </h4>
                     <ul class="footer-dropdown-content">
                         <li><a href="https://dataspantechnologies.com">Home</a></li>
-                        <li><a href="../Aboutus.html">About us</a></li>
-                        <li><a href="../Clients.html">Clients</a></li>
-                        <!-- <li><a href="../service.html">Services</a></li> -->
-                        <!-- <li><a href="../careers.html">Careers</a></li> -->
-                        <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
-                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="Aboutus.html">About us</a></li>
+                        <li><a href="Clients.html">Clients</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <!-- <li><a href="#">Privacy Policy</a></li> -->
                         <!-- <li><a href="#">Terms of Service</a></li> -->
                     </ul>
@@ -3163,14 +3201,22 @@
         const cards = document.querySelectorAll(".ai-card:not(.blank)");
         const title = document.getElementById("ai-title");
         const desc = document.getElementById("ai-desc");
+        const leftBlock = document.querySelector(".ai-partnership-section .ai-left");
 
         cards.forEach((card) => {
             card.addEventListener("mouseenter", () => {
                 cards.forEach((c) => c.classList.remove("active"));
                 card.classList.add("active");
-
-                title.textContent = card.dataset.title;
-                desc.textContent = card.dataset.desc;
+                if (leftBlock) leftBlock.classList.add("ai-content-changing");
+                setTimeout(() => {
+                    title.textContent = card.dataset.title;
+                    desc.textContent = card.dataset.desc;
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            if (leftBlock) leftBlock.classList.remove("ai-content-changing");
+                        });
+                    });
+                }, 280);
             });
         });
     </script>
@@ -3206,31 +3252,66 @@
             clearInterval(scrollInterval);
         }
 
-        // Start for default active tab
+        // Pause scroll on hover over scrolling content area (for all tabs)
+        function setupScrollHoverListeners() {
+            // Find ALL scroll boxes in ALL tabs (including hidden ones)
+            document.querySelectorAll('.tech-section .tab-pane .tech-scroll').forEach((scrollBox) => {
+                // Skip if listener already attached (check data attribute)
+                if (scrollBox.dataset.hoverListener === 'true') return;
+                
+                scrollBox.addEventListener("mouseenter", stopAutoScroll);
+                scrollBox.addEventListener("mouseleave", () => {
+                    const activeTab = document.querySelector(".tab-pane.active.show");
+                    if (activeTab) {
+                        startAutoScroll(activeTab);
+                    }
+                });
+                
+                // Mark as having listener attached
+                scrollBox.dataset.hoverListener = 'true';
+            });
+        }
+
+        // Initialize everything on page load
         document.addEventListener("DOMContentLoaded", () => {
+            // Start auto-scroll for default active tab
             const activeTab = document.querySelector(".tab-pane.active.show");
-            startAutoScroll(activeTab);
+            if (activeTab) {
+                startAutoScroll(activeTab);
+            }
+            
+            // Setup hover listeners for ALL tabs
+            setupScrollHoverListeners();
         });
+
+        // Also setup listeners immediately if DOM is already loaded
+        if (document.readyState !== 'loading') {
+            setupScrollHoverListeners();
+        }
 
         // Restart when tab changes
         document.querySelectorAll('[data-bs-toggle="pill"]').forEach((tab) => {
             tab.addEventListener("shown.bs.tab", function (e) {
                 stopAutoScroll();
                 const targetPane = document.querySelector(e.target.dataset.bsTarget);
-                startAutoScroll(targetPane);
+                if (targetPane) {
+                    startAutoScroll(targetPane);
+                }
+                // Ensure hover listeners are set up for the new tab
+                setTimeout(setupScrollHoverListeners, 50);
             });
         });
 
-        // Pause scroll on hover
-        document
-            .querySelector(".tech-section")
-            .addEventListener("mouseenter", stopAutoScroll);
-        document
-            .querySelector(".tech-section")
-            .addEventListener("mouseleave", () => {
+        // Pause scroll on hover over individual tabs
+        document.querySelectorAll('[data-bs-toggle="pill"]').forEach((tab) => {
+            tab.addEventListener("mouseenter", stopAutoScroll);
+            tab.addEventListener("mouseleave", () => {
                 const activeTab = document.querySelector(".tab-pane.active.show");
-                startAutoScroll(activeTab);
+                if (activeTab) {
+                    startAutoScroll(activeTab);
+                }
             });
+        });
     </script>
 </body>
 
