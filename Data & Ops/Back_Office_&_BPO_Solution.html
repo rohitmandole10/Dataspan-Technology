@@ -8,6 +8,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script>
+    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-RPYT1GBRQT'); </script>
+
     <!-- Favicons -->
     <link href="../assets/img/brand.png" rel="icon">
     <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
@@ -31,6 +34,17 @@
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
     <style>
+        .how-it-works-title {
+            font-size: clamp(2rem, 5vw, 2.5rem) !important;
+            font-weight: 800 !important;
+            color: var(--heading-color);
+            font-family: var(--heading-font) !important;
+            margin-bottom: 10px !important;
+            letter-spacing: -0.01em !important;
+            line-height: 1.2 !important;
+            text-align: center !important;
+        }
+
         :root {
             --section-padding: clamp(40px, 8vw, 100px);
         }
@@ -174,7 +188,7 @@
             font-size: clamp(2rem, 6vw, 4rem);
             font-family: var(--heading-font);
             line-height: 1.1;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             position: relative;
             z-index: 1;
             opacity: 1;
@@ -245,7 +259,7 @@
             width: 80% !important;
             max-width: 80% !important;
             margin: 0 auto;
-            padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+            /* padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px); */
             box-sizing: border-box;
         }
 
@@ -254,12 +268,13 @@
             font-size: clamp(1.1rem, 2vw, 1.25rem);
             font-family: var(--default-font);
             line-height: 1.6;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1rem !important;
             text-align: center;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0.9;
+            /* border: 2px solid red; */
         }
 
         .hero-content p strong {
@@ -854,6 +869,10 @@
                 grid-template-columns: 1fr;
                 /* 1 col on very small screens */
             }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
         }
 
         /* ROI Section Styles */
@@ -968,13 +987,13 @@
 
         .section-services .header-section .title {
             position: relative;
-            padding-bottom: 14px;
-            margin-bottom: 25px;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
             font-weight: 700;
             font-size: clamp(1.75rem, 5vw, 2.25rem);
         }
 
-        .section-services .header-section .title:before {
+        /* .section-services .header-section .title:before {
             content: "";
             position: absolute;
             bottom: 0;
@@ -984,9 +1003,9 @@
             height: 3px;
             background-color: var(--accent-color);
             border-radius: 3px;
-        }
+        } */
 
-        .section-services .header-section .title:after {
+        /* .section-services .header-section .title:after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -996,10 +1015,10 @@
             height: 3px;
             background-color: var(--heading-color);
             border-radius: 3px;
-        }
+        } */
 
         .section-services .header-section .description {
-            font-size: 14px;
+            font-size: 17px;
             color: #282828;
         }
 
@@ -1112,7 +1131,7 @@
 
         /* Data Insights Section Styles */
         .data-insights-section {
-            padding: 40px 0;
+            padding: 40px 0 !important;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: var(--contrast-color);
             border-radius: 24px;
@@ -1157,12 +1176,14 @@
 
         .insight-tabs {
             background: rgba(255, 255, 255, 0.05);
-            padding: 4px;
+            padding: 8px 4px;
+            margin: 20px 0px;
             border-radius: 100px;
             display: inline-flex;
             gap: 3px;
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+
         }
 
         .insight-tabs button {
@@ -1172,7 +1193,7 @@
             padding: 8px 18px;
             border-radius: 100px;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 16px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -1187,10 +1208,15 @@
         }
 
         .insight-content {
+            justify-content: start;
             display: none;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.5s ease;
+        }
+
+        .insight-content ul li {
+            margin: 20px 0px;
         }
 
         .insight-content.active {
@@ -1200,7 +1226,7 @@
         }
 
         .insight-text {
-            padding: 20px 40px;
+            padding: 0px 40px;
         }
 
         @media (max-width: 768px) {
@@ -1227,7 +1253,7 @@
             position: relative;
             padding-left: 24px;
             margin-bottom: 8px;
-            font-size: 13px;
+            font-size: 16px;
             line-height: 1.3;
             color: rgba(255, 255, 255, 0.9);
         }
@@ -1329,7 +1355,7 @@
 
         /* Connectivity Section */
         .connectivity-section {
-            padding: 40px 0;
+            padding: 80px 0;
             background: #ffffff;
             text-align: center;
             overflow: hidden;
@@ -1443,6 +1469,7 @@
 
         .hex-wrapper i,
         .hex-wrapper img {
+            width: 60%;
             font-size: 2.8rem;
             z-index: 2;
             color: #1e293b;
@@ -1559,7 +1586,7 @@
             background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
         }
 
-        .why-choose-us .container{
+        .why-choose-us .container {
             max-width: 80% !important;
             width: 80% !important;
             padding: 0 !important;
@@ -1620,9 +1647,13 @@
         .why-choose-us .btn-primary-custom {
             margin-top: 25px;
             padding: 12px 28px;
-            border-radius: 8px;
+            border-radius: 50px;
             background: #1a73e8;
             border: none;
+        }
+
+        .why-choose-us .btn-primary-custom:hover {
+            background: #012657;
         }
 
 
@@ -2045,72 +2076,12 @@
                     </div>
 
                     <!-- Promotional Graphics Section -->
-                    <div class="promo-section">
-                        <div class="tech-illustration">
-                            <!-- Robot/Server Unit -->
-                            <div class="robot-unit">
-                                <div class="robot-head">
-                                    <div class="robot-core"></div>
-                                    <div class="circuit-board"></div>
-                                </div>
-                                <div class="code-screen">
-                                    <div class="code-line"></div>
-                                    <div class="code-line"></div>
-                                    <div class="code-line"></div>
-                                </div>
-                            </div>
-
-                            <!-- Human Figures -->
-                            <div class="human-figures">
-                                <div class="human-figure male">
-                                    <div class="figure-body"></div>
-                                    <div class="key blue-key"></div>
-                                </div>
-                                <div class="human-figure female">
-                                    <div class="figure-body"></div>
-                                    <div class="key green-key"></div>
-                                </div>
-                            </div>
-
-                            <!-- Brain Icon -->
-                            <div class="brain-icon">
-                                <div class="brain-shape"></div>
-                            </div>
-
-                            <!-- Geometric Elements -->
-                            <div class="geometric-elements">
-                                <div class="cube-stack">
-                                    <div class="cube"></div>
-                                    <div class="cube"></div>
-                                    <div class="cube"></div>
-                                </div>
-                                <div class="individual-cubes">
-                                    <div class="cube"></div>
-                                    <div class="cube"></div>
-                                </div>
-                                <div class="shield-icon"></div>
-                                <div class="floating-keys">
-                                    <div class="key blue-key"></div>
-                                    <div class="key green-key"></div>
-                                </div>
-                            </div>
-
-                            <!-- Smartphone -->
-                            <div class="smartphone">
-                                <div class="phone-body"></div>
-                                <div class="network-signals">
-                                    <div class="signal"></div>
-                                    <div class="signal"></div>
-                                    <div class="signal"></div>
-                                </div>
-                                <div class="data-flow">
-                                    <div class="data-cube"></div>
-                                    <div class="data-cube"></div>
-                                    <div class="data-cube"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                      <div class="promo-section">
+            <div class="tech-illustration d-flex gap-3">
+            <a href="../POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
+            <a href="../Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
+            </div>
+          </div>
                 </div>
             </div>
         </div>
@@ -2126,22 +2097,22 @@
                 <ol class="breadcrumb">
                     <li><a href="https://dataspantechnologies.com">Home</a></li>
                     <li><a href="#">Services</a></li>
+                    <li><a href="#">Data & Ops</a></li>
                     <li><span>Back Office & BPO Solution</span></li>
                 </ol>
             </div>
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
                 <div class="row align-items-center">
 
                     <div class="col-lg-12">
                         <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
 
                             <!-- Main Heading -->
-                            <h1 class="mb-4 hero-title">Back Office & BPO Solutions That Scale Operations</h1>
+                            <h1 class="mb-0 hero-title">Back Office & BPO Solutions That Scale Operations</h1>
 
                             <!-- Description Paragraph -->
-                            <p class="mb-4 mb-md-5">We deliver reliable back-office and BPO solutions that eliminate
+                            <p class="mb-0 mb-md-5">We deliver reliable back-office and BPO solutions that eliminate
                                 operational inefficiencies, reduce overhead, and improve accuracy. From data management
                                 to process automation and support operations, we help businesses scale efficiently
                                 without adding internal complexity.
@@ -2149,12 +2120,11 @@
 
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
-                                <a href="#contact" class="btn btn-primary">Optimize Operations Now</a>
-                                <a href="#contact" class="btn btn-outline-primary">Get Expert Consultation</a>
+                                <a href="../contact.html" class="btn btn-outline-primary">Optimize Operations Now</a>
+                                <!-- <a href="#contact" class="btn btn-outline-primary">Get Expert Consultation</a> -->
                             </div>
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -2201,7 +2171,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-md-10 col-lg-8" data-aos="fade-up">
                         <div class="header-section">
-                            <h2 class="title">Our Back Office & BPO Solutions</h2>
+                            <h2 class="how-it-works-title">Our Back Office & BPO Solutions</h2>
                             <p class="description">Dataspan handle your critical operational tasks with precision,
                                 consistency, and scalable processes—so your internal teams stay focused on growth.</p>
                         </div>
@@ -2312,7 +2282,7 @@
         <!-- Technologies  -->
         <section id="connectivity-track" class="connectivity-section">
             <div class="container" data-aos="fade-up">
-                <h2>Seamless Analytics Across Your Data Ecosystem </h2>
+                <h2 class="how-it-works-title">Seamless Analytics Across Your Data Ecosystem </h2>
                 <p class="description">We integrate leading analytics, database, and visualization technologies to unify
                     data, automate reporting, and deliver consistent business insights.</p>
 
@@ -2507,7 +2477,7 @@
         <section id="data-insights" class="data-insights-section">
             <div class="container" data-aos="fade-up">
                 <div class="header-section">
-                    <h2>How Our Back Office Delivery Works</h2>
+                    <h2 class="how-it-works-title text-white">How Our Back Office Delivery Works</h2>
                     <p>A structured, process-driven approach ensures accuracy, accountability, and scalable execution
                         across all back-office and BPO operations.</p>
                     <div class="insight-tabs">
@@ -2518,7 +2488,7 @@
                 </div>
 
                 <!-- Automation & Management Tab -->
-                <div id="connectivity" class="insight-content active row align-items-start">
+                <div id="connectivity" class="insight-content active row align-items-start ">
                     <div class="col-lg-5 insight-text" data-aos="fade-right">
                         <h3>Process Alignment</h3>
                         <ul>
@@ -2614,7 +2584,7 @@
 
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="bi bi-lock"></i>
+                                <i class="bi bi-gear-wide-connected"></i>
                             </div>
                             <div>
                                 <div class="feature-title">Process-Driven Delivery</div>
@@ -2628,7 +2598,7 @@
 
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="bi bi-link-45deg"></i>
+                                <i class="bi bi-person-workspace"></i>
                             </div>
                             <div>
                                 <div class="feature-title">Skilled Operations Teams</div>
@@ -2642,7 +2612,7 @@
 
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="bi bi-gear"></i>
+                                <i class="bi bi-lightning-charge"></i>
                             </div>
                             <div>
                                 <div class="feature-title">Automation-First Approach</div>
@@ -2656,7 +2626,7 @@
 
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="bi bi-gear"></i>
+                                <i class="bi bi-clipboard-data"></i>
                             </div>
                             <div>
                                 <div class="feature-title">Transparent Performance Reporting</div>
@@ -2673,7 +2643,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- Case Studies -->
         <!-- <section id="build-smarter" class="build-smarter-section">
@@ -2701,7 +2670,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                         <h2>Take Control of Your Back Office</h2>
-                        <p class="mb-4">Reduce operational burden, improve accuracy, and scale confidently with
+                        <p class="mb-0">Reduce operational burden, improve accuracy, and scale confidently with
                             back-office and BPO teams built for execution and growth.</p>
                         <div class="cta-buttons">
                             <a href="../contact.html" class="btn btn-primary me-2 mb-2">Start Operations</a>
@@ -2751,12 +2720,10 @@
                     </h4>
                     <ul class="footer-dropdown-content">
                         <li><a href="https://dataspantechnologies.com">Home</a></li>
-                        <li><a href="../Aboutus.html">About us</a></li>
-                        <li><a href="../Clients.html">Clients</a></li>
-                        <!-- <li><a href="../service.html">Services</a></li> -->
-                        <!-- <li><a href="../careers.html">Careers</a></li> -->
-                        <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
-                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="Aboutus.html">About us</a></li>
+                        <li><a href="Clients.html">Clients</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <!-- <li><a href="#">Privacy Policy</a></li> -->
                         <!-- <li><a href="#">Terms of Service</a></li> -->
                     </ul>
@@ -2844,7 +2811,6 @@
             delay: 0 // Base delay (individual delays are set via data-aos-delay)
         });
     </script>
-
 
     <!-- Counter Animation JS -->
     <script>
