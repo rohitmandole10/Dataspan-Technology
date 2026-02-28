@@ -1,0 +1,3468 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Document</title> -->
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DATASPAN Technologies</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-RPYT1GBRQT");
+    </script>
+
+    <!-- Favicons -->
+    <link href="assets/img/brand.png" rel="icon" />
+    <link
+      href="https://image.dataspantechnologies.com/dataspan/brand3.png"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .how-it-works-title {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        font-weight: 800;
+        color: var(--heading-color);
+        font-family: var(--heading-font);
+        margin-bottom: 10px;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .ai-highlight-2 {
+        /* font-size: 1.75rem; */
+        /* font-weight: 900; */
+        background: linear-gradient(
+          135deg,
+          var(--heading-color) 0%,
+          var(--accent-color) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.2;
+      }
+
+      :root {
+        --section-padding: clamp(40px, 8vw, 100px);
+      }
+
+      /* Enhanced Hero Section */
+      #hero.hero.section {
+        background: linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--accent-color), transparent 95%) 0%,
+          color-mix(in srgb, var(--accent-color), transparent 90%) 50%,
+          color-mix(in srgb, var(--accent-color), transparent 98%) 100%
+        );
+        position: relative;
+        overflow: hidden;
+        padding: var(--section-padding) 0;
+        padding-top: clamp(100px, 12vw, 150px) !important;
+      }
+
+      #hero .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+      }
+
+      #hero .row {
+        margin: 0 !important;
+        width: 100%;
+      }
+
+      #hero.hero.section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle at 90% 10%,
+          color-mix(in srgb, var(--accent-color), transparent 92%),
+          transparent 40%
+        );
+        pointer-events: none;
+      }
+
+      #hero.hero.section::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.03) 2px,
+            rgba(255, 255, 255, 0.03) 4px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.03) 2px,
+            rgba(255, 255, 255, 0.03) 4px
+          );
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      /* Breadcrumb */
+      .hero-breadcrumbs {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        pointer-events: auto;
+        border-radius: 10px;
+        /* Optional: adds subtle rounding if background is used later */
+        padding: 0 clamp(20px, 3vw, 40px) clamp(15px, 2vw, 25px);
+      }
+
+      .hero-breadcrumbs .breadcrumb {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 8px;
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        font-weight: 500;
+        /* border: 5px solid blue; */
+      }
+
+      .hero-breadcrumbs .breadcrumb li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-breadcrumbs .breadcrumb li::after {
+        content: "›";
+        font-size: 0.85rem;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+      }
+
+      .hero-breadcrumbs .breadcrumb li:last-child::after {
+        display: none;
+      }
+
+      .hero-breadcrumbs .breadcrumb a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .hero-breadcrumbs .breadcrumb a:hover {
+        color: color-mix(in srgb, var(--accent-color), transparent 20%);
+      }
+
+      .hero-breadcrumbs .breadcrumb span {
+        color: var(--heading-color);
+        font-weight: 600;
+      }
+
+      @media (max-width: 1199px) {
+        .hero-breadcrumbs {
+          width: 85%;
+        }
+
+        .hero-content {
+          width: 85% !important;
+          max-width: 85% !important;
+          padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hero-breadcrumbs {
+          width: 95%;
+          margin-bottom: clamp(15px, 3vw, 22px);
+        }
+
+        .hero-breadcrumbs .breadcrumb {
+          font-size: 0.85rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        #hero .hero-content {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 20px 15px;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+      }
+
+      .hero-title {
+        color: var(--contrast-color);
+        font-weight: 800;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-family: var(--heading-font);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        transform: translateY(0);
+        text-align: center;
+        letter-spacing: -0.02em;
+      }
+
+      /* Enhanced animations */
+      @keyframes blinkCursor {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.05);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Hero section enhancements */
+      .hero-content {
+        opacity: 1;
+        transform: translateY(0);
+        position: relative;
+        z-index: 1;
+        width: 80% !important;
+        max-width: 80% !important;
+        margin: 0 auto;
+        padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+        box-sizing: border-box;
+      }
+
+      .hero-content p {
+        color: var(--contrast-color);
+        font-size: clamp(1.1rem, 2vw, 1.25rem);
+        font-family: var(--default-font);
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.9;
+      }
+
+      .hero-content p strong {
+        font-weight: 700;
+      }
+
+      .hero-image img {
+        animation: float 3s ease-in-out infinite;
+        transition: transform 0.3s ease;
+      }
+
+      .hero-image img:hover {
+        transform: scale(1.05) translateY(-5px);
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-buttons .btn {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        padding: 0.75rem 2.5rem;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 50px;
+        border: 2px solid;
+        font-family: var(--default-font);
+      }
+
+      .hero-buttons .btn-primary {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        border-color: var(--accent-color);
+      }
+
+      .hero-buttons .btn-primary:hover {
+        background-color: color-mix(in srgb, var(--accent-color), black 20%);
+        border-color: color-mix(in srgb, var(--accent-color), black 20%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(13, 131, 253, 0.3);
+      }
+
+      .hero-buttons .btn-secondary {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: var(--contrast-color);
+        border-color: var(--contrast-color);
+        backdrop-filter: blur(10px);
+      }
+
+      .hero-buttons .btn-secondary:hover {
+        background-color: var(--contrast-color);
+        color: var(--accent-color);
+        border-color: var(--contrast-color);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+      }
+
+      /* ====================================================== */
+
+      .btn-metrics:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 242, 195, 0.3);
+        filter: brightness(1.1);
+      }
+
+      .metric-card {
+        transition: transform 0.3s ease;
+      }
+
+      .metric-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Interactive Gallery Styles */
+      .interactive-gallery {
+        padding: 100px 0;
+        background-color: #fdfdfb;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .gallery-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 1100px;
+        height: 580px;
+        margin: 50px auto 0;
+        perspective: 1200px;
+      }
+
+      .gallery-item {
+        position: absolute;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        background: #eee;
+        will-change: transform, width, height, left, top, opacity;
+      }
+
+      /* Default transition for smooth sliding */
+      .gallery-item.smooth {
+        transition: all 0.65s cubic-bezier(0.45, 0.05, 0.25, 1);
+      }
+
+      /* No transition when repositioning instantly */
+      .gallery-item.no-transition {
+        transition: none !important;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Position: LEFT */
+      .gallery-item.pos-left {
+        width: 320px;
+        height: 420px;
+        left: 0;
+        top: 80px;
+        z-index: 2;
+        opacity: 1;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Position: CENTER (active/tallest) */
+      .gallery-item.pos-center {
+        width: 400px;
+        height: 540px;
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+        z-index: 5;
+        opacity: 1;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Position: RIGHT */
+      .gallery-item.pos-right {
+        width: 320px;
+        height: 420px;
+        right: 0;
+        left: auto;
+        top: 80px;
+        z-index: 2;
+        opacity: 1;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Hidden behind (for the wrapping item — goes "behind" the carousel) */
+      .gallery-item.pos-behind {
+        width: 280px;
+        height: 360px;
+        left: 50%;
+        top: 200px;
+        transform: translateX(-50%) scale(0.7);
+        z-index: 0;
+        opacity: 0;
+        box-shadow: none;
+        pointer-events: none;
+      }
+
+      .gallery-item .label-tag {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        background: rgba(220, 255, 100, 0.95);
+        padding: 10px 22px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 15px;
+        color: #1a1a1a;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        z-index: 10;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item .label-tag i {
+        background: #fff;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #000;
+      }
+
+      .gallery-item:not(.pos-center):not(.pos-behind):hover {
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+      }
+
+      .item-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+        pointer-events: none;
+        z-index: 11;
+      }
+
+      .pos-center .item-content {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .item-content h3 {
+        font-size: clamp(24px, 4vw, 32px);
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: #fff;
+        line-height: 1.2;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .item-content p {
+        font-size: clamp(14px, 1.5vw, 17px);
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+        line-height: 1.5;
+        max-width: 320px;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .gallery-controls {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .rotate-btn {
+        background: #1a1a1a;
+        color: #fff;
+        border: none;
+        padding: 16px 40px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .rotate-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        background: #333;
+      }
+
+      .rotate-btn i {
+        font-size: 18px;
+        transition: transform 0.5s ease;
+      }
+
+      .rotate-btn:active i {
+        transform: rotate(360deg);
+      }
+
+      /* Dashboard Features Section */
+      .dashboard-features {
+        padding: 100px 0;
+        background-color: #fff;
+      }
+
+      .dashboard-features .section-title {
+        font-family: var(--heading-font);
+        font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
+        text-align: left;
+      }
+
+      .dashboard-features .section-description {
+        font-family: var(--default-font);
+        font-size: 1.15rem;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        line-height: 1.6;
+        margin-bottom: 40px;
+        max-width: 550px;
+      }
+
+      .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .feature-item {
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .feature-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .feature-header h3 {
+        font-family: var(--heading-font);
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--heading-color);
+        transition: color 0.3s ease;
+      }
+
+      .feature-header i {
+        font-size: 1.2rem;
+        color: #666;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-body {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease,
+          margin-top 0.4s ease;
+      }
+
+      .feature-body p {
+        font-family: var(--default-font);
+        margin: 0;
+        padding-top: 10px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        font-size: 1.05rem;
+        line-height: 1.5;
+      }
+
+      .feature-item.active {
+        border-bottom-color: var(--accent-color);
+      }
+
+      .feature-item.active .feature-header h3 {
+        color: var(--accent-color);
+      }
+
+      .feature-item.active .feature-header i {
+        transform: rotate(180deg);
+        color: var(--accent-color);
+      }
+
+      .feature-item.active .feature-body {
+        max-height: 100px;
+        margin-top: 5px;
+      }
+
+      .features-image-wrapper {
+        position: relative;
+        padding-left: 30px;
+        height: 100%;
+      }
+
+      .features-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+
+      .features-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      @media (max-width: 991px) {
+        .features-image-wrapper {
+          padding-left: 0;
+          margin-top: 50px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .gallery-wrapper {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 25px;
+          padding: 20px;
+          perspective: none;
+        }
+
+        .gallery-item.pos-left,
+        .gallery-item.pos-center,
+        .gallery-item.pos-right {
+          position: relative;
+          width: 100% !important;
+          max-width: 450px;
+          height: 320px !important;
+          left: auto !important;
+          right: auto !important;
+          top: auto !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
+
+        .gallery-item.pos-center {
+          height: 380px !important;
+        }
+
+        .gallery-item.pos-behind {
+          display: none;
+        }
+      }
+
+      /* Partners Alliance Section */
+      .alliance-section {
+        padding: 120px 0;
+        position: relative;
+        overflow: hidden;
+        background-color: #ffffff;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(248, 250, 252, 0.5) 100%
+        );
+      }
+
+      .alliance-content {
+        position: relative;
+        z-index: 20;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 80px;
+      }
+
+      .alliance-title {
+        font-family: var(--heading-font);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 800;
+        color: #2d465e;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        letter-spacing: -0.02em;
+      }
+
+      .alliance-subtitle {
+        font-family: var(--default-font);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        color: #64748b;
+        margin-bottom: 3rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+      }
+
+      .btn-alliance {
+        background-color: #2bbbad;
+        color: white;
+        padding: 16px 45px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.95rem;
+        box-shadow: 0 10px 20px rgba(43, 187, 173, 0.2);
+      }
+
+      .btn-alliance:hover {
+        background-color: #1a9c8f;
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(43, 187, 173, 0.3);
+        color: white;
+      }
+
+      /* Growth Slider Section */
+      .growth-slider {
+        padding: 80px 0;
+        background-color: #ffffff;
+      }
+
+      .growth-card {
+        background: #fff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+      }
+
+      .growth-image-container {
+        height: 100%;
+        min-height: 450px;
+        overflow: hidden;
+      }
+
+      .growth-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      .growth-card:hover .growth-image-container img {
+        transform: scale(1.05);
+      }
+
+      .growth-content-wrapper {
+        padding: 60px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        background: #fff;
+      }
+
+      .growth-slides-container {
+        position: relative;
+        min-height: 280px;
+      }
+
+      .growth-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(30px);
+      }
+
+      .growth-slide.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+
+      .growth-slide.exit {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+
+      .growth-brand-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .growth-brand-name {
+        font-weight: 700;
+        color: #1a1a1a;
+        font-size: 1.1rem;
+        font-family: var(--heading-font);
+      }
+
+      .growth-brand-logo {
+        height: 32px;
+        width: auto;
+        max-width: 120px;
+        object-fit: contain;
+      }
+
+      .growth-header-title {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 800;
+        color: #1a3a5a;
+        line-height: 1.25;
+        margin-bottom: 35px;
+        letter-spacing: -0.01em;
+      }
+
+      .growth-read-more {
+        color: #00aeef;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.05rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .growth-read-more:hover {
+        color: #008cc0;
+        gap: 15px;
+      }
+
+      .growth-pagination {
+        display: flex;
+        gap: 12px;
+        margin-top: 50px;
+        align-items: center;
+      }
+
+      .growth-dot {
+        width: 10px;
+        height: 10px;
+        background: #cbd5e1;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .growth-dot.active {
+        background: #1a3a5a;
+        width: 32px;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 991px) {
+        .growth-content-wrapper {
+          padding: 40px;
+        }
+
+        .growth-image-container {
+          min-height: 350px;
+        }
+
+        .growth-slides-container {
+          min-height: 240px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .growth-header-title {
+          font-size: 1.6rem;
+        }
+
+        .growth-content-wrapper {
+          padding: 30px 20px;
+        }
+      }
+
+      /* .icons-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            border: 1px solid red;
+        } */
+
+      .partner-fly {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: white;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+        padding: 15px;
+        opacity: 1;
+        pointer-events: auto;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+        z-index: 15;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .partner-fly img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .partner-fly:hover {
+        transform: scale(1.1);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+        z-index: 25;
+        border-color: rgba(43, 187, 173, 0.3);
+      }
+
+      /* Fixed arc positions — left side */
+      .logo-omise {
+        top: 38%;
+        left: 5%;
+      }
+
+      .logo-alpha {
+        top: 52%;
+        left: 16%;
+      }
+
+      .logo-a2 {
+        top: 20%;
+        left: 18%;
+      }
+
+      .logo-woo {
+        top: 25%;
+        left: 28%;
+      }
+
+      .logo-shopify {
+        top: 10%;
+        left: 35%;
+      }
+
+      /* Fixed arc positions — center top */
+      .logo-stripe {
+        top: 2%;
+        left: 44%;
+      }
+
+      /* Fixed arc positions — right side */
+      .logo-netsuite {
+        top: 12%;
+        left: 55%;
+      }
+
+      .logo-magento {
+        top: 24%;
+        left: 64%;
+      }
+
+      .logo-lion {
+        top: 10%;
+        left: 73%;
+      }
+
+      .logo-cube {
+        top: 48%;
+        left: 67%;
+      }
+
+      .logo-a-logo {
+        top: 32%;
+        left: 82%;
+      }
+
+      @media (max-width: 1400px) {
+        .logo-omise {
+          left: 2%;
+        }
+
+        .logo-a-logo {
+          left: 80%;
+        }
+
+        .logo-cube {
+          left: 65%;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .alliance-section {
+          min-height: 400px;
+          padding: 80px 0;
+        }
+
+        .icons-layer {
+          display: none;
+        }
+
+        .alliance-content {
+          margin-top: 0;
+        }
+      }
+
+      /* Process Cycle Section */
+      .process-section {
+        /* background-color: #000; */
+        background: linear-gradient(
+          to bottom,
+          color-mix(in srgb, var(--accent-color), transparent 95%),
+          color-mix(in srgb, var(--accent-color), transparent 98%)
+        ) !important;
+        padding: 50px 0;
+        position: relative;
+        overflow: hidden;
+        color: #1b1a1a;
+        font-family: var(--default-font);
+      }
+
+      .process-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .dot-grid {
+        width: 100%;
+        height: 100%;
+        /* background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 80px 80px; */
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.1) 1.5px,
+          transparent 1.5px
+        );
+        background-size: 60px 60px;
+        opacity: 0.6;
+      }
+
+      .process-container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .process-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 350px;
+        margin-bottom: 30px;
+        position: relative;
+        /* border: 1px solid red; */
+      }
+
+      .process-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .process-circle-wrapper {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+      }
+
+      .process-circle {
+        width: 16px;
+        height: 16px;
+        background-color: #37b9f0;
+        border-radius: 50%;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 89, 242, 0.3);
+        z-index: 2;
+      }
+
+      .process-item.active .process-circle {
+        width: 250px;
+        height: 250px;
+        background-color: #37b9f0;
+        box-shadow: 0 0 20px rgba(0, 89, 242, 0.3);
+      }
+
+      .process-content {
+        opacity: 0;
+        transform: translate(-50%, 15px) scale(0.95);
+        transition:
+          opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+          transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 240px;
+        /* Fixed width to prevent wrapping during animation */
+        padding: 20px;
+        pointer-events: none;
+        z-index: 3;
+        transform-origin: center;
+      }
+
+      .process-item.active .process-content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        transition-delay: 0.15s;
+        pointer-events: auto;
+      }
+
+      .process-icon {
+        font-size: 40px;
+        color: #000;
+        margin-bottom: 12px;
+        transition: transform 0.5s ease;
+      }
+
+      .process-item.active .process-icon {
+        transform: scale(1.1);
+      }
+
+      .process-title {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        line-height: 1.2;
+      }
+
+      .process-desc {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 0.9rem;
+        max-width: 180px;
+        margin: 0 auto;
+        line-height: 1.4;
+      }
+
+      .inactive-title {
+        color: #1b1a1a;
+        font-size: 1rem;
+        font-weight: 500;
+        transition:
+          opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: absolute;
+        top: calc(50% + 11px);
+        width: 100%;
+        white-space: nowrap;
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(0);
+      }
+
+      .process-item.active .inactive-title {
+        opacity: 0;
+        transform: translateY(5px);
+        pointer-events: none;
+      }
+
+      .process-cta {
+        margin-top: 40px;
+      }
+
+      .btn-contact-sales {
+        background-color: #2b59ff;
+        color: #ffffff;
+        padding: 14px 35px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        border: none;
+        box-shadow: 0 10px 20px rgba(43, 89, 255, 0.3);
+      }
+
+      .btn-contact-sales:hover {
+        background-color: #1a44cc;
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px rgba(43, 89, 255, 0.4);
+        color: #fff;
+      }
+
+      /* Dots between items (optional, to match screenshot better) */
+      .process-separator {
+        width: 6px;
+        height: 6px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        margin: 0 10px;
+      }
+
+      @media (max-width: 991px) {
+        .process-row {
+          flex-direction: column;
+          min-height: auto;
+          gap: 50px;
+        }
+
+        .process-item {
+          width: 100%;
+        }
+
+        .process-circle-wrapper {
+          height: 200px;
+        }
+
+        .inactive-title {
+          position: relative;
+          bottom: auto;
+          margin-top: 15px;
+        }
+      }
+
+      /* Solution CTA Section */
+      .solution-cta {
+        padding: 80px 0;
+        background-color: #fff;
+      }
+
+      .solution-card {
+        background-color: #0088ff;
+        border-radius: 40px;
+        padding: 60px 80px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        box-shadow: 0 20px 40px rgba(0, 51, 255, 0.15);
+      }
+
+      .solution-content {
+        z-index: 2;
+        max-width: 900px;
+      }
+
+      .solution-title {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 700;
+        margin-bottom: 12px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: floralwhite;
+      }
+
+      .solution-subtitle {
+        font-size: 1.15rem;
+        opacity: 0.9;
+        margin-bottom: 40px;
+        font-weight: 400;
+      }
+
+      .btn-solution {
+        background-color: #f9fffe;
+        color: #000;
+        padding: 14px 45px;
+        border-radius: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: inline-block;
+        border: none;
+        font-size: 1rem;
+      }
+
+      .btn-solution:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(59, 107, 240, 0.4);
+        background-color: #f9fffe;
+        color: #000;
+      }
+
+      .solution-icon-wrapper {
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .solution-icon-svg {
+        width: 120px;
+        height: 120px;
+        fill: #fff;
+      }
+
+      @media (max-width: 991px) {
+        .solution-card {
+          flex-direction: column;
+          text-align: center;
+          padding: 50px 30px;
+          border-radius: 30px;
+        }
+
+        .solution-content {
+          max-width: 100%;
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .solution-title {
+          font-size: 2.2rem;
+        }
+
+        .solution-icon-wrapper {
+          margin-top: 20px;
+        }
+
+        .solution-icon-svg {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      /* Insights Section Styles */
+      .insights {
+        padding: 60px 0;
+        background-color: #ffffff;
+      }
+
+      .insights-title {
+        font-family: var(--heading-font);
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      .insights-subtitle {
+        font-family: var(--default-font);
+        font-size: 1.15rem;
+        color: #666;
+        margin-bottom: 60px;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+
+      .insight-card {
+        background: #f8f9fa;
+        border-radius: 32px;
+        padding: 35px 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+        /* min-height: 350px; */
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        cursor: pointer;
+      }
+
+      .insight-card:hover {
+        transform: translateY(-12px);
+        background: #ffffff;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+        border-color: rgba(0, 0, 0, 0.08);
+      }
+
+      .insight-label {
+        display: inline-block;
+        background: #fff;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #444;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        width: fit-content;
+      }
+
+      .insight-headline {
+        font-family: var(--heading-font);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        line-height: 1.2;
+        margin-bottom: auto;
+        letter-spacing: -0.01em;
+      }
+
+      .insight-bottom {
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        margin-top: 25px;
+        width: 100%;
+        justify-content: right;
+      }
+
+      .read-more-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #0d6efd;
+        text-decoration: none !important;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: gap 0.3s ease;
+      }
+
+      .read-more-icon {
+        width: 32px;
+        height: 32px;
+        background: #0d6efd;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+      }
+
+      .insight-card:hover .read-more-link {
+        gap: 18px;
+      }
+
+      .insight-icon-bi {
+        font-size: 3.5rem;
+        color: #333;
+        opacity: 0.8;
+        line-height: 1;
+      }
+
+      @media (max-width: 1199px) {
+        .insight-headline {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .insights {
+          padding: 60px 0;
+        }
+
+        .insight-card {
+          padding: 40px 30px;
+          min-height: 400px;
+        }
+
+        .insight-headline {
+          font-size: 1.6rem;
+        }
+      }
+
+      /* Shopify POS Section */
+      .shopify-pos-section {
+        padding: 40px 0;
+        background-color: #fdfdfb;
+      }
+
+      .shopify-pos-card {
+        background-color: transparent;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      }
+
+      .shopify-pos-image-col {
+        position: relative;
+        min-height: 300px;
+      }
+
+      .shopify-pos-image-col img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .shopify-pos-content-col {
+        display: flex;
+        align-items: center;
+        background-color: #0086fb;
+        /* Moved from card to fix the bar issue */
+      }
+
+      .shopify-pos-content {
+        padding: 40px 60px;
+        color: #fff;
+      }
+
+      .shopify-pos-title {
+        font-size: clamp(2.5rem, 5vw, 3.8rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 15px;
+        letter-spacing: -0.02em;
+        color: floralwhite;
+      }
+
+      .shopify-pos-description {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        opacity: 0.9;
+        margin-bottom: 20px;
+        max-width: 500px;
+      }
+
+      .btn-shopify-pos {
+        display: inline-block;
+        padding: 14px 38px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-shopify-pos:hover {
+        background-color: #fff;
+        color: #4b6110;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 991px) {
+        .shopify-pos-content {
+          padding: 60px 30px;
+          text-align: center;
+        }
+
+        .shopify-pos-image-col {
+          min-height: 350px;
+        }
+
+        .btn-shopify-pos {
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="contact-page">
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="nav-logo">
+          <a href="https://dataspantechnologies.com" class="logo">
+            <img
+              src="https://image.dataspantechnologies.com/dataspan/brand3.png"
+              alt="Dataspan Technologies Logo"
+              class="logo-image"
+            />
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="Aboutus.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-dropdown="services"
+            >
+              Services
+              <!-- <i class="fas fa-chevron-down"></i> -->
+            </a>
+            <!-- Mobile Services Menu -->
+            <div class="mobile-services-menu">
+              <div class="mobile-category-list">
+                <!-- AI & Automation -->
+                <div
+                  class="category-item mobile-category-item"
+                  data-target="mobile-ai"
+                >
+                  <span class="category-link">AI & Automation</span>
+                  <button class="category-toggle">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+                <div
+                  class="mobile-subcategories-container hidden"
+                  id="mobile-ai"
+                >
+                  <div class="subcategory-grid" style="display: grid">
+                    <a
+                      href="AI/Ai_mechine_learning.html"
+                      class="mobile-subcategory-link"
+                      >Ai mechine learning</a
+                    >
+                    <a href="AI/ocr.html" class="mobile-subcategory-link"
+                      >OCR</a
+                    >
+                    <a
+                      href="AI/Scraper_&_Scripting.html"
+                      class="mobile-subcategory-link"
+                      >Scraper & Scripting</a
+                    >
+                    <a
+                      href="AI/Navision_Integration_and_Automation.html"
+                      class="mobile-subcategory-link"
+                      >Navision Integration & Automation</a
+                    >
+                    <a
+                      href="AI/ESL_Integration.html"
+                      class="mobile-subcategory-link"
+                      >ESL Integration</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Development & Technology -->
+                <div
+                  class="category-item mobile-category-item"
+                  data-target="mobile-dev"
+                >
+                  <span class="category-link">Development & Technology</span>
+                  <button class="category-toggle">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+                <div
+                  class="mobile-subcategories-container hidden"
+                  id="mobile-dev"
+                >
+                  <div class="subcategory-grid" style="display: grid">
+                    <a
+                      href="Development and Technology/Shopify_Development_&_Services.html"
+                      class="mobile-subcategory-link"
+                      >Shopify Development & Services</a
+                    >
+                    <a
+                      href="Development and Technology/Web_&_Mobile_Development.html"
+                      class="mobile-subcategory-link"
+                      >Web & Mobile Development</a
+                    >
+                    <a
+                      href="Development and Technology/Software_Development_&_Consulting.html"
+                      class="mobile-subcategory-link"
+                      >Software Development & Consulting</a
+                    >
+                    <a
+                      href="Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                      class="mobile-subcategory-link"
+                      >eCommerce & Marketplace Integration</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Design & Branding -->
+                <div
+                  class="category-item mobile-category-item"
+                  data-target="mobile-design"
+                >
+                  <span class="category-link">Design & Branding</span>
+                  <button class="category-toggle">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+                <div
+                  class="mobile-subcategories-container hidden"
+                  id="mobile-design"
+                >
+                  <div class="subcategory-grid" style="display: grid">
+                    <a
+                      href="Design & Branding/UI/UX_Creative_Services.html"
+                      class="mobile-subcategory-link"
+                      >UX Creative Services</a
+                    >
+                    <a
+                      href="Design & Branding/UI/Design_&_Branding.html"
+                      class="mobile-subcategory-link"
+                      >Design & Branding</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Cloud & Infrastructure -->
+                <div
+                  class="category-item mobile-category-item"
+                  data-target="mobile-cloud"
+                >
+                  <span class="category-link">Cloud & Infrastructure</span>
+                  <button class="category-toggle">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+                <div
+                  class="mobile-subcategories-container hidden"
+                  id="mobile-cloud"
+                >
+                  <div class="subcategory-grid" style="display: grid">
+                    <a
+                      href="Cloud & Services/Hosting_&_Cloud_Services.html"
+                      class="mobile-subcategory-link"
+                      >Hosting & Cloud Services</a
+                    >
+                    <a
+                      href="Cloud & Services/Managed_Cloud_Services.html"
+                      class="mobile-subcategory-link"
+                      >Managed Cloud Services</a
+                    >
+                    <a
+                      href="Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                      class="mobile-subcategory-link"
+                      >Cloud Setup migration & Optimization</a
+                    >
+                    <a
+                      href="Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                      class="mobile-subcategory-link"
+                      >Server Monitoring Backup & Security Management</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Data & Operations -->
+                <div
+                  class="category-item mobile-category-item"
+                  data-target="mobile-data"
+                >
+                  <span class="category-link">Data & Operations</span>
+                  <button class="category-toggle">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+                <div
+                  class="mobile-subcategories-container hidden"
+                  id="mobile-data"
+                >
+                  <div class="subcategory-grid" style="display: grid">
+                    <a
+                      href="Data & Ops/Reporting_&_Analytics.html"
+                      class="mobile-subcategory-link"
+                      >Reporting & Analytics</a
+                    >
+                    <a
+                      href="Data & Ops/Back_Office_&_BPO_Solution.html"
+                      class="mobile-subcategory-link"
+                      >Back Office & BPO Solution</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="Clients.html" class="nav-link">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Action Button 
+            <div class="nav-action">
+                <button class="start-project-btn">Start Project</button>
+            </div>-->
+      </div>
+
+      <!-- Services Dropdown Menu -->
+      <div class="dropdown-menu" id="services-dropdown">
+        <div class="dropdown-container">
+          <div class="dropdown-content">
+            <div class="service-categories">
+              <div class="category-column">
+                <div class="category-item active" data-submenu="ai-automation">
+                  <a href="#" class="category-link">AI & Automation</a>
+                </div>
+                <div
+                  class="category-item"
+                  data-submenu="development-technology"
+                >
+                  <a href="#" class="category-link">Development & Technology</a>
+                </div>
+                <div class="category-item" data-submenu="design-branding">
+                  <a href="#" class="category-link">Design & Branding</a>
+                </div>
+                <div class="category-item" data-submenu="cloud-infrastructure">
+                  <a href="#" class="category-link">Cloud & services</a>
+                </div>
+                <div class="category-item" data-submenu="data-operations">
+                  <a href="#" class="category-link">Data & Operations</a>
+                </div>
+              </div>
+
+              <div class="subcategory-column" id="ai-automation-submenu">
+                <div class="subcategory-item">
+                  <a href="AI/Ai_mechine_learning.html" class="subcategory-link"
+                    >AI & Machine Learning (ML)</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a href="AI/ocr.html" class="subcategory-link"
+                    >OCR (Optical Character Recognition)</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a href="AI/Scraper_&_Scripting.html" class="subcategory-link"
+                    >Scraper & Scripting</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="AI/Navision_Integration_and_Automation.html"
+                    class="subcategory-link"
+                    >Navision Integration & Automation</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a href="AI/ESL_Integration.html" class="subcategory-link"
+                    >ESL (Electronic Shelf Labels) Integration</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="subcategory-column"
+                id="development-technology-submenu"
+                style="display: none"
+              >
+                <div class="subcategory-item">
+                  <a
+                    href="Development and Technology/Shopify_Development_&_Services.html"
+                    class="subcategory-link"
+                    >Shopify Development & Services</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Development and Technology/Web_&_Mobile_Development.html"
+                    class="subcategory-link"
+                    >Web & Mobile Development</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Development and Technology/Software_Development_&_Consulting.html"
+                    class="subcategory-link"
+                    >Software Development & Consulting</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                    class="subcategory-link"
+                    >E-Commerce & Marketplace Integration</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="subcategory-column"
+                id="design-branding-submenu"
+                style="display: none"
+              >
+                <div class="subcategory-item">
+                  <a
+                    href="Design & Branding/UI/UX_Creative_Services.html"
+                    class="subcategory-link"
+                    >UI/UX & Creative Services</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Design & Branding/UI/Design_&_Branding.html"
+                    class="subcategory-link"
+                    >Design & Branding</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="subcategory-column"
+                id="cloud-infrastructure-submenu"
+                style="display: none"
+              >
+                <div class="subcategory-item">
+                  <a
+                    href="Cloud & Services/Hosting_&_Cloud_Services.html"
+                    class="subcategory-link"
+                    >Hosting & Cloud Services</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Cloud & Services/Managed_Cloud_Services.html"
+                    class="subcategory-link"
+                    >Managed Hosting Solutions</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                    class="subcategory-link"
+                    >Cloud Setup, Migration & Optimization</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                    class="subcategory-link"
+                    >Server Monitoring, Backup & Security Management</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="subcategory-column"
+                id="data-operations-submenu"
+                style="display: none"
+              >
+                <div class="subcategory-item">
+                  <a
+                    href="Data & Ops/Reporting_&_Analytics.html"
+                    class="subcategory-link"
+                    >Reporting & Analytics</a
+                  >
+                </div>
+                <div class="subcategory-item">
+                  <a
+                    href="Data & Ops/Back_Office_&_BPO_Solution.html"
+                    class="subcategory-link"
+                    >Back Office & BPO Solutions</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Promotional Graphics Section -->
+              <div class="promo-section">
+            <div class="tech-illustration d-flex gap-3">
+            <a href="POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
+            <a href="Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
+    <!-- hero section -->
+    <section id="hero" class="hero section">
+      <!-- Breadcrumbs -->
+      <div class="hero-breadcrumbs">
+        <ol class="breadcrumb">
+          <li><a href="https://dataspantechnologies.com">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><span>POS</span></li>
+        </ol>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <!-- Main Heading -->
+              <h1 class="hero-title">Smart POS Software for Modern Retail</h1>
+
+              <!-- Description Paragraph -->
+              <p class="mb-md-5">
+                Streamline billing, inventory, payments, and multi-store
+                operations with our advanced, customizable POS system. Designed
+                for speed, accuracy, and scalability, it empowers retailers and
+                wholesalers to optimize sales, gain real-time insights, and grow
+                with complete operational control.
+              </p>
+
+              <!-- Call to Action Buttons -->
+              <div class="hero-buttons">
+                <a href="../contact.html" class="btn btn-outline-primary"
+                  >Start Free Trial</a
+                >
+                <a href="#contact" class="btn btn-primary">Request Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Metrics Section -->
+    <section
+      id="global-metrics"
+      class="global-metrics section py-5"
+      style="
+        background-color: #ffffff;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+      "
+    >
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-5" data-aos="fade-right">
+            <h2
+              style="
+                font-size: clamp(2rem, 5vw, 2.5rem);
+                font-weight: 700;
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+              "
+            >
+              Businesses That Scale. <br />
+              Growth Backed by Data
+            </h2>
+            <p
+              style="
+                font-size: 1.1rem;
+                opacity: 0.8;
+                margin-bottom: 2.5rem;
+                max-width: 450px;
+                color: #000;
+              "
+            >
+              Modern businesses adopting structured POS systems see stronger
+              revenue control, operational clarity, improved customer retention,
+              and measurable performance growth.
+            </p>
+            <!-- <a href="contact.html" class="btn btn-metrics"
+                        style="background-color: var(--accent-color, #00f2c3); color: #000; border-radius: 50px; padding: 12px 30px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s ease;">Contact
+                        Sales</a> -->
+          </div>
+          <div class="col-lg-7">
+            <div class="row gy-4">
+              <!-- Metric 1 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="metric-card">
+                  <div
+                    class="metric-value"
+                    style="
+                      font-size: clamp(3rem, 6vw, 4.5rem);
+                      font-weight: 700;
+                      color: var(--accent-color, #00f2c3);
+                      line-height: 1;
+                    "
+                  >
+                    <!-- $ -->
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="2"
+                      data-purecounter-duration="1.5"
+                      class="purecounter"
+                      >0</span
+                    >X
+                  </div>
+                  <div
+                    class="metric-label"
+                    style="
+                      font-size: 0.9rem;
+                      opacity: 0.7;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      color: #000;
+                    "
+                  >
+                    Faster Checkout Flow
+                  </div>
+                </div>
+              </div>
+              <!-- Metric 2 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="metric-card">
+                  <div
+                    class="metric-value"
+                    style="
+                      font-size: clamp(3rem, 6vw, 4.5rem);
+                      font-weight: 700;
+                      color: var(--accent-color, #00f2c3);
+                      line-height: 1;
+                    "
+                  >
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="30"
+                      data-purecounter-duration="1.5"
+                      class="purecounter"
+                      >0</span
+                    >%
+                  </div>
+                  <div
+                    class="metric-label"
+                    style="
+                      font-size: 0.9rem;
+                      opacity: 0.7;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      color: #000;
+                    "
+                  >
+                    Higher Inventory Accuracy
+                  </div>
+                </div>
+              </div>
+              <!-- Metric 3 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="metric-card">
+                  <div
+                    class="metric-value"
+                    style="
+                      font-size: clamp(3rem, 6vw, 4.5rem);
+                      font-weight: 700;
+                      color: var(--accent-color, #00f2c3);
+                      line-height: 1;
+                    "
+                  >
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="25"
+                      data-purecounter-duration="1.5"
+                      class="purecounter"
+                      >0</span
+                    >%
+                  </div>
+                  <div
+                    class="metric-label"
+                    style="
+                      font-size: 0.9rem;
+                      opacity: 0.7;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      color: #000;
+                    "
+                  >
+                    Increase Repeat Customers
+                  </div>
+                </div>
+              </div>
+              <!-- Metric 4 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="metric-card">
+                  <div
+                    class="metric-value"
+                    style="
+                      font-size: clamp(3rem, 6vw, 4.5rem);
+                      font-weight: 700;
+                      color: var(--accent-color, #00f2c3);
+                      line-height: 1;
+                    "
+                  >
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="40"
+                      data-purecounter-duration="1.5"
+                      class="purecounter"
+                      >0</span
+                    >%
+                  </div>
+                  <div
+                    class="metric-label"
+                    style="
+                      font-size: 0.9rem;
+                      opacity: 0.7;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      color: #000;
+                    "
+                  >
+                    Fewer Billing Errors
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative glowing dots similar to the image -->
+      <div
+        style="
+          position: absolute;
+          top: 15%;
+          right: 45%;
+          width: 12px;
+          height: 12px;
+          background-color: var(--accent-color, #00f2c3);
+          border-radius: 50%;
+          opacity: 0.4;
+          filter: blur(2px);
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 30%;
+          right: 15%;
+          width: 10px;
+          height: 10px;
+          background-color: var(--accent-color, #00f2c3);
+          border-radius: 50%;
+          opacity: 0.3;
+          filter: blur(3px);
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 20%;
+          right: 5%;
+          width: 8px;
+          height: 8px;
+          background-color: var(--accent-color, #00f2c3);
+          border-radius: 50%;
+          opacity: 0.2;
+          filter: blur(2px);
+        "
+      ></div>
+    </section>
+
+    <!-- Interactive Gallery Section -->
+    <section id="interactive-gallery" class="interactive-gallery section">
+      <div class="container" data-aos="fade-up">
+        <h2 class="how-it-works-title">
+          Complete Control Across Every Sales Channel
+        </h2>
+        <p
+          style="
+            font-size: 1.15rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+          "
+        >
+          Unify billing, inventory, customer data, and multi-location operations
+          into one intelligent retail management ecosystem.
+        </p>
+
+        <div class="gallery-wrapper" id="galleryWrapper">
+          <!-- Item 1: Back Office -->
+          <div class="gallery-item pos-left" data-index="0">
+            <img
+              src="https://image.dataspantechnologies.com/dataspan/POS-Advanced-Sales-Analytics.jpeg"
+              alt="Back Office"
+            />
+            <!-- <div class="label-tag">Back office <i class="bi bi-plus"></i></div> -->
+            <div class="item-content">
+              <h3>Intelligent Billing Engine</h3>
+              <p>
+                Process transactions instantly with automated tax calculation,
+                smart discounts, split payments, and error-free invoice
+                generation.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2: POS Software (center/active) -->
+          <div class="gallery-item pos-center" data-index="1">
+            <img
+              src="https://image.dataspantechnologies.com/dataspan/POS-Centralized-Inventory-Control.jpeg"
+              alt="POS Software"
+            />
+            <!-- <div class="label-tag">POS software <i class="bi bi-plus"></i></div> -->
+            <div class="item-content">
+              <h3>Centralized Inventory Control</h3>
+              <p>
+                Track stock across stores and warehouses in real time with
+                automated deductions and low-stock alerts.
+              </p>
+            </div>
+          </div>
+          <!-- Item 3: Online Sales -->
+          <div class="gallery-item pos-right" data-index="2">
+            <img
+              src="https://image.dataspantechnologies.com/dataspan/POS-Customer-&-Pricing-Management.jpeg"
+              alt="Online Sales"
+            />
+            <!-- <div class="label-tag">Online sales <i class="bi bi-plus"></i></div> -->
+            <div class="item-content">
+              <h3>Advanced Sales Analytics</h3>
+              <p>
+                Monitor performance with detailed sales reports, revenue
+                insights, product trends, and real-time business dashboards.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-controls">
+          <button class="rotate-btn" id="rotatePrevBtn">
+            <i class="bi bi-chevron-left"></i> Prev
+          </button>
+          <button class="rotate-btn" id="rotateNextBtn">
+            Next <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Features Section -->
+    <section id="dashboard-features" class="dashboard-features section">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6">
+            <div
+              class="features-content"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <h2 class="section-title">One POS For Every Business.</h2>
+              <p class="section-description">
+                Driving measurable growth across India’s highest-performing
+                business sectors.
+              </p>
+
+              <div class="features-list">
+                <div
+                  class="feature-item active"
+                  data-img="https://image.dataspantechnologies.com/dataspan/Retail-&-Supermarkets-POS.jpeg"
+                >
+                  <div class="feature-header">
+                    <h3>Retail & Supermarkets</h3>
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                  <div class="feature-body">
+                    <p>
+                      Optimize stock turnover, reduce shrinkage, accelerate
+                      checkout speed, and increase repeat purchases through
+                      smarter inventory and customer data control.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="feature-item"
+                  data-img="https://image.dataspantechnologies.com/dataspan/Restaurants-&-QSR-Chains-POS.jpeg"
+                >
+                  <div class="feature-header">
+                    <h3>Restaurants & QSR Chains</h3>
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                  <div class="feature-body">
+                    <p>
+                      Improve table turnover, control food costs, streamline
+                      billing, and boost daily revenue with faster order
+                      processing and centralized sales tracking.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="feature-item"
+                  data-img="https://image.dataspantechnologies.com/dataspan/Pharma-&-Medical-Stores-POS.jpeg"
+                >
+                  <div class="feature-header">
+                    <h3>Pharma & Medical Stores</h3>
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                  <div class="feature-body">
+                    <p>
+                      Manage batch tracking, expiry alerts, GST compliance, and
+                      prescription billing while minimizing losses and
+                      maximizing operational accuracy.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="feature-item"
+                  data-img="https://image.dataspantechnologies.com/dataspan/Fashion,-Beauty-&-Lifestyle-POS.jpeg"
+                >
+                  <div class="feature-header">
+                    <h3>Fashion, Beauty & Lifestyle</h3>
+                    <i class="bi bi-chevron-down"></i>
+                  </div>
+                  <div class="feature-body">
+                    <p>
+                      Track fast-moving products, manage seasonal inventory,
+                      personalize customer promotions, and improve margins with
+                      intelligent sales insights.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div
+              class="features-image-wrapper"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://image.dataspantechnologies.com/dataspan/Retail-&-Supermarkets-POS.jpeg"
+                alt="Dashboard Features"
+                class="img-fluid"
+                id="featureImage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Alliance Section -->
+    <!-- <section id="partners-alliance" class="alliance-section">
+        <div class="container">
+            <div class="icons-layer">
+                <div class="partner-fly logo-omise" title="Omise">
+                    <img src="https://logo.clearbit.com/omise.co" alt="Omise">
+                </div>
+                <div class="partner-fly logo-a2" title="A2 Hosting">
+                    <img src="https://logo.clearbit.com/a2hosting.com" alt="A2">
+                </div>
+                <div class="partner-fly logo-alpha" title="Alpha">
+                    <img src="https://image.dataspantechnologies.com/dataspan/brand3.png" alt="Alpha"
+                        style="filter: hue-rotate(150deg);">
+                </div>
+                <div class="partner-fly logo-woo" title="WooCommerce">
+                    <img src="https://logo.clearbit.com/woocommerce.com" alt="Woo">
+                </div>
+                <div class="partner-fly logo-shopify" title="Shopify">
+                    <img src="https://logo.clearbit.com/shopify.com" alt="Shopify">
+                </div>
+                <div class="partner-fly logo-stripe" title="Stripe">
+                    <img src="https://logo.clearbit.com/stripe.com" alt="Stripe">
+                </div>
+                <div class="partner-fly logo-netsuite" title="Oracle NetSuite">
+                    <img src="https://logo.clearbit.com/netsuite.com" alt="NetSuite">
+                </div>
+                <div class="partner-fly logo-magento" title="Magento">
+                    <img src="https://logo.clearbit.com/magento.com" alt="Magento">
+                </div>
+                <div class="partner-fly logo-lion" title="Partner">
+                    <img src="https://logo.clearbit.com/brave.com" alt="Partner">
+                </div>
+                <div class="partner-fly logo-cube" title="Partner">
+                    <img src="https://logo.clearbit.com/digitalocean.com" alt="Partner">
+                </div>
+                <div class="partner-fly logo-a-logo" title="Partner">
+                    <img src="https://logo.clearbit.com/asana.com" alt="Partner">
+                </div>
+            </div>
+
+            <div class="alliance-content" data-aos="fade-up">
+                <h2 class="alliance-title">
+                    Seamless Integrations That Power Your Business
+                </h2>
+                <p class="alliance-subtitle">
+                    Connect your POS with leading payment, accounting, ERP, and ecommerce platforms effortlessly.
+                </p>
+                <div class="mt-2">
+                    <a href="contact.html" class="btn btn-alliance">Get Your POS</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Process Cycle Section -->
+    <section id="process-cycle" class="process-section">
+      <div class="process-background">
+        <div class="dot-grid"></div>
+      </div>
+      <div class="container process-container" data-aos="fade-up">
+        <h2 class="how-it-works-title">
+          From Single Store to Scalable Enterprise
+        </h2>
+        <p style="text-align: center">
+          Transform daily operations into a growth engine with structured
+          systems built for expansion and profitability.
+        </p>
+        <div class="process-row" id="processRow">
+          <!-- Item 1 -->
+          <div class="process-item active" data-index="0">
+            <div class="process-circle-wrapper">
+              <div class="process-circle">
+                <div class="process-content">
+                  <div class="process-icon">
+                    <i class="fa-solid fa-cash-register"></i>
+                  </div>
+                  <h3 class="process-title">Store Setup</h3>
+                  <p class="process-desc">Fast launch operations</p>
+                </div>
+              </div>
+            </div>
+            <div class="inactive-title">Store Setup</div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="process-item" data-index="1">
+            <div class="process-circle-wrapper">
+              <div class="process-circle">
+                <div class="process-content">
+                  <div class="process-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </div>
+                  <h3 class="process-title">Process Control</h3>
+                  <p class="process-desc">Structured daily workflows</p>
+                </div>
+              </div>
+            </div>
+            <div class="inactive-title">Process Control</div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="process-item" data-index="2">
+            <div class="process-circle-wrapper">
+              <div class="process-circle">
+                <div class="process-content">
+                  <div class="process-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </div>
+                  <h3 class="process-title">Multi Expansion</h3>
+                  <p class="process-desc">Centralized location management</p>
+                </div>
+              </div>
+            </div>
+            <div class="inactive-title">Multi Expansion</div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="process-item" data-index="3">
+            <div class="process-circle-wrapper">
+              <div class="process-circle">
+                <div class="process-content">
+                  <div class="process-icon">
+                    <i class="fa-solid fa-gears"></i>
+                  </div>
+                  <h3 class="process-title">Revenue Optimization</h3>
+                  <p class="process-desc">Data-driven growth decisions</p>
+                </div>
+              </div>
+            </div>
+            <div class="inactive-title">Revenue Optimization</div>
+          </div>
+        </div>
+
+        <!-- <div class="text-center process-cta" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="btn-contact-sales">Contact Sales</a>
+            </div> -->
+      </div>
+    </section>
+
+    <!-- Solution CTA Section -->
+    <section class="solution-cta section">
+      <div class="container" data-aos="fade-up">
+        <div class="solution-card">
+          <div class="solution-content">
+            <h2 class="solution-title">Take Control of Your Business Growth</h2>
+            <p class="solution-subtitle">
+              Stop guessing. Start managing with clarity and confidence.
+            </p>
+            <a href="contact.html" class="btn-solution">Book Free Demo</a>
+          </div>
+          <!-- <div class="solution-icon-wrapper">
+                    <svg class="solution-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="10" />
+                        <circle cx="75" cy="25" r="10" />
+                        <circle cx="50" cy="50" r="12" />
+                        <path d="M25 45 C 25 65, 40 85, 50 85 C 60 85, 75 65, 75 45" stroke="white" stroke-width="8"
+                            fill="none" stroke-linecap="round" />
+                        <circle cx="50" cy="85" r="8" />
+                    </svg>
+                </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Growth Slider Section -->
+    <section id="growth-slider" class="growth-slider section">
+      <div class="container" data-aos="fade-up">
+        <div class="growth-card">
+          <div class="row g-0">
+            <!-- Left Side: Image -->
+            <div class="col-lg-4">
+              <div class="growth-image-container">
+                <img
+                  src="https://image.dataspantechnologies.com/dataspan/pos-achieve.jpeg"
+                  alt="Modern Retail Business"
+                />
+              </div>
+            </div>
+            <!-- Right Side: Content Slides -->
+            <div class="col-lg-8">
+              <div class="growth-content-wrapper">
+                <div class="growth-slides-container" id="growthSlides">
+                  <!-- Slide 1 -->
+                  <div class="growth-slide active" data-index="0">
+                    <div class="growth-brand-header">
+                      <div class="growth-brand-name">
+                        Real Results After Adopting POS
+                      </div>
+                      <!-- <img src="https://logo.clearbit.com/payroc.com" alt="Payroc"
+                                            class="growth-brand-logo"> -->
+                    </div>
+                    <h2 class="growth-header-title">
+                      Sales Increase 34% Within First Quarter After POS
+                      Implementation
+                    </h2>
+                    <!-- <a href="#" class="growth-read-more">Read more <i class="bi bi-arrow-right"></i></a> -->
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="growth-slide" data-index="0">
+                    <div class="growth-brand-header">
+                      <div class="growth-brand-name">
+                        Real Results After Adopting POS
+                      </div>
+                      <!-- <img src="https://image.dataspantechnologies.com/dataspan/brand3.png"
+                                            alt="Dataspan" class="growth-brand-logo"> -->
+                    </div>
+                    <h2 class="growth-header-title">
+                      Inventory Accuracy Improves 38%, Reducing Monthly Stock
+                      Losses Significantly
+                    </h2>
+                    <!-- <a href="#" class="growth-read-more">Read more <i class="bi bi-arrow-right"></i></a> -->
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="growth-slide" data-index="1">
+                    <div class="growth-brand-header">
+                      <div class="growth-brand-name">
+                        Real Results After Adopting POS
+                      </div>
+                      <!-- <img src="https://logo.clearbit.com/verifone.com" alt="Verifone"
+                                            class="growth-brand-logo"> -->
+                    </div>
+                    <h2 class="growth-header-title">
+                      Checkout Time Drops 45%, Boosting Daily Transaction Volume
+                      Noticeably
+                    </h2>
+                    <!-- <a href="#" class="growth-read-more">Read more <i class="bi bi-arrow-right"></i></a> -->
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="growth-slide" data-index="2">
+                    <div class="growth-brand-header">
+                      <div class="growth-brand-name">
+                        Real Results After Adopting POS
+                      </div>
+                      <!-- <img src="https://logo.clearbit.com/globalpaymentsinc.com" alt="GP"
+                                            class="growth-brand-logo"> -->
+                    </div>
+                    <h2 class="growth-header-title">
+                      Repeat Customer Rate Grows 29% Through Structured Purchase
+                      Tracking
+                    </h2>
+                    <!-- <a href="#" class="growth-read-more">Read more <i class="bi bi-arrow-right"></i></a> -->
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="growth-slide" data-index="3">
+                    <div class="growth-brand-header">
+                      <div class="growth-brand-name">
+                        Real Results After Adopting POS
+                      </div>
+                      <!-- <img src="https://logo.clearbit.com/worldpay.com" alt="Worldpay"
+                                            class="growth-brand-logo"> -->
+                    </div>
+                    <h2 class="growth-header-title">
+                      Operational Costs Reduce 31% After Multi-Store Process
+                      Centralization
+                    </h2>
+                    <!-- <a href="#" class="growth-read-more">Read more <i class="bi bi-arrow-right"></i></a> -->
+                  </div>
+                </div>
+
+                <div class="growth-pagination" id="growthPagination">
+                  <div class="growth-dot active" data-slide="0"></div>
+                  <div class="growth-dot" data-slide="1"></div>
+                  <div class="growth-dot" data-slide="2"></div>
+                  <div class="growth-dot" data-slide="3"></div>
+                  <div class="growth-dot" data-slide="4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="insights section">
+      <div class="container text-center" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="how-it-works-title">Why Businesses Choose Dataspan POS</h2>
+            <p class="insights-subtitle">
+              Built for performance, scalability, and real-world operations, our
+              POS solutions empower businesses to operate smarter, faster, and
+              with complete control.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <!-- Blog Card 1 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="insight-card">
+              <div class="insight-label">
+                Built for Growing Businesses, Not Just Basic Billing
+              </div>
+              <h3 class="insight-headline">
+                From single outlets to multi-store chains, scale operations
+                confidently without changing systems.
+              </h3>
+              <div class="insight-bottom">
+                <!-- <a href="#" class="read-more-link">
+                                <span class="read-more-icon"><i class="bi bi-chevron-right"></i></span>
+                                Read more
+                            </a> -->
+                <div class="insight-icon-wrapper">
+                  <i class="bi bi-lightbulb insight-icon-bi"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="insight-card">
+              <div class="insight-label">
+                Customized Workflows Designed Around Your Business Model
+              </div>
+              <h3 class="insight-headline">
+                Adapt pricing, reporting, and processes to match how your
+                operations actually function.
+              </h3>
+              <div class="insight-bottom">
+                <!-- <a href="#" class="read-more-link">
+                                <span class="read-more-icon"><i class="bi bi-chevron-right"></i></span>
+                                Read more
+                            </a> -->
+                <div class="insight-icon-wrapper">
+                  <i class="bi bi-lightbulb insight-icon-bi"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="insight-card">
+              <div class="insight-label">
+                Reliable Support and Long-Term Technology Partnership
+              </div>
+              <h3 class="insight-headline">
+                Get expert guidance, continuous updates, and dependable
+                assistance whenever your business needs support.
+              </h3>
+              <div class="insight-bottom">
+                <!-- <a href="#" class="read-more-link">
+                                <span class="read-more-icon"><i class="bi bi-chevron-right"></i></span>
+                                Read more
+                            </a> -->
+                <div class="insight-icon-wrapper">
+                  <i class="bi bi-lightbulb insight-icon-bi"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopify POS Section -->
+    <section id="shopify-pos" class="shopify-pos-section section">
+      <div class="container" data-aos="fade-up">
+        <div class="shopify-pos-card">
+          <div class="row g-0">
+            <div class="col-lg-6 shopify-pos-content-col">
+              <div class="shopify-pos-content">
+                <h2 class="shopify-pos-title">Ready to Scale Smarter?</h2>
+                <p class="shopify-pos-description">
+                  Upgrade your operations, increase visibility, and unlock
+                  measurable business growth today.
+                </p>
+                <a href="#" class="btn-shopify-pos">Schedule Strategy Call</a>
+              </div>
+            </div>
+            <div class="col-lg-6 shopify-pos-image-col">
+              <img
+                src="https://image.dataspantechnologies.com/dataspan/pos-cta.jpeg"
+                alt="Shopify POS Terminal"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer section light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a
+              href="https://dataspantechnologies.com"
+              class="logo d-flex align-items-center"
+            >
+              <img
+                src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png"
+                alt=""
+              />
+            </a>
+            <div class="footer-contact pt-1">
+              <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
+            <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p> -->
+              <p>
+                We work with businesses to simplify digital operations,
+                <br />strengthen eCommerce performance, and build smarter
+                systems that support steady, measurable growth
+              </p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+91 8149390967</span>
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <span>info@dataspantechnologies.com</span>
+              </p>
+            </div>
+            <div class="social-links d-flex my-2">
+              <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+
+              <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="https://in.linkedin.com/company/dataspan-technologies"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 class="footer-dropdown-toggle">
+              MENU
+              <i class="bi bi-chevron-down footer-chevron"></i>
+            </h4>
+            <ul class="footer-dropdown-content">
+              <li><a href="https://dataspantechnologies.com">Home</a></li>
+              <li><a href="Aboutus.html">About us</a></li>
+              <li><a href="Clients.html">Clients</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <!-- <li><a href="#">Privacy Policy</a></li> -->
+              <!-- <li><a href="#">Terms of Service</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4 class="footer-dropdown-toggle">
+              NASHIK
+              <i class="bi bi-chevron-down footer-chevron"></i>
+            </h4>
+            <div class="footer-dropdown-content">
+              <div class="footer-contact">
+                <!-- <p><strong>Address:</strong></p> -->
+                <p>Shreeji Pride, Second Floor, Opp.</p>
+                <p>
+                  Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik,
+                  Maharashtra 422001
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4 class="footer-dropdown-toggle">
+              MALEGAON
+              <i class="bi bi-chevron-down footer-chevron"></i>
+            </h4>
+            <div class="footer-dropdown-content">
+              <div class="footer-contact">
+                <!-- <p><strong>Address:</strong></p> -->
+
+                <p>
+                  SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon
+                  423203
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nobis illum</h4>
+          <ul>
+            <li><a href="#">Ipsam</a></li>
+            <li><a href="#">Laudantium dolorum</a></li>
+            <li><a href="#">Dinera</a></li>
+            <li><a href="#">Trodelas</a></li>
+            <li><a href="#">Flexo</a></li>
+          </ul>
+        </div> -->
+        </div>
+      </div>
+
+      <div class="container copyright text-center m-0 p-0">
+        <!-- Social Links for Mobile View -->
+        <div
+          class="social-links social-links-mobile d-flex justify-content-center mt-2"
+        >
+          <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+
+          <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="https://in.linkedin.com/company/dataspan-technologies"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"
+            ><i class="bi bi-facebook"></i
+          ></a>
+        </div>
+        <p class="mt-2">
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Dataspan Technologies</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Interactive Gallery Script -->
+    <script>
+      (function () {
+        const wrapper = document.getElementById("galleryWrapper");
+        if (!wrapper) return;
+
+        const items = Array.from(wrapper.querySelectorAll(".gallery-item"));
+        let isAnimating = false;
+
+        // order[0]=LEFT, order[1]=CENTER, order[2]=RIGHT
+        let order = [0, 1, 2];
+
+        // Add smooth class to all items initially
+        items.forEach((item) => item.classList.add("smooth"));
+
+        function clearPositions(item) {
+          item.classList.remove(
+            "pos-left",
+            "pos-center",
+            "pos-right",
+            "pos-behind",
+          );
+        }
+
+        /**
+         * CLOCKWISE rotation (click LEFT image or Prev button):
+         * Visual: LEFT → CENTER → RIGHT → (behind/below) → LEFT
+         * - LEFT slides to CENTER (grows taller)
+         * - CENTER slides to RIGHT (shrinks)
+         * - RIGHT goes BEHIND (fades/shrinks down), then jumps to LEFT (fades in)
+         */
+        function rotateClockwise() {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          const leftItem = items[order[0]];
+          const centerItem = items[order[1]];
+          const rightItem = items[order[2]]; // this one wraps behind
+
+          // Step 1: RIGHT item animates to BEHIND (fade out + scale down)
+          rightItem.classList.add("smooth");
+          clearPositions(rightItem);
+          rightItem.classList.add("pos-behind");
+
+          // LEFT → CENTER, CENTER → RIGHT (smooth slide)
+          leftItem.classList.add("smooth");
+          centerItem.classList.add("smooth");
+          clearPositions(leftItem);
+          clearPositions(centerItem);
+          leftItem.classList.add("pos-center");
+          centerItem.classList.add("pos-right");
+
+          // Step 2: After the behind animation, instantly jump wrapping item to LEFT
+          setTimeout(() => {
+            rightItem.classList.remove("smooth");
+            rightItem.classList.add("no-transition");
+            clearPositions(rightItem);
+            rightItem.classList.add("pos-left");
+            rightItem.style.opacity = "0";
+
+            // Force reflow so browser applies the instant position
+            void rightItem.offsetWidth;
+
+            // Step 3: Remove no-transition, re-enable smooth, fade in
+            rightItem.classList.remove("no-transition");
+            rightItem.classList.add("smooth");
+
+            requestAnimationFrame(() => {
+              rightItem.style.opacity = "1";
+            });
+          }, 350);
+
+          // Update order
+          order = [order[2], order[0], order[1]];
+
+          setTimeout(() => {
+            isAnimating = false;
+          }, 750);
+        }
+
+        /**
+         * COUNTER-CLOCKWISE rotation (click RIGHT image or Next button):
+         * Visual: RIGHT → CENTER → LEFT → (behind/below) → RIGHT
+         * - RIGHT slides to CENTER (grows taller)
+         * - CENTER slides to LEFT (shrinks)
+         * - LEFT goes BEHIND (fades/shrinks down), then jumps to RIGHT (fades in)
+         */
+        function rotateCounterClockwise() {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          const leftItem = items[order[0]]; // this one wraps behind
+          const centerItem = items[order[1]];
+          const rightItem = items[order[2]];
+
+          // Step 1: LEFT item animates to BEHIND (fade out + scale down)
+          leftItem.classList.add("smooth");
+          clearPositions(leftItem);
+          leftItem.classList.add("pos-behind");
+
+          // CENTER → LEFT, RIGHT → CENTER (smooth slide)
+          centerItem.classList.add("smooth");
+          rightItem.classList.add("smooth");
+          clearPositions(centerItem);
+          clearPositions(rightItem);
+          centerItem.classList.add("pos-left");
+          rightItem.classList.add("pos-center");
+
+          // Step 2: After the behind animation, instantly jump wrapping item to RIGHT
+          setTimeout(() => {
+            leftItem.classList.remove("smooth");
+            leftItem.classList.add("no-transition");
+            clearPositions(leftItem);
+            leftItem.classList.add("pos-right");
+            leftItem.style.opacity = "0";
+
+            // Force reflow
+            void leftItem.offsetWidth;
+
+            // Step 3: fade in
+            leftItem.classList.remove("no-transition");
+            leftItem.classList.add("smooth");
+
+            requestAnimationFrame(() => {
+              leftItem.style.opacity = "1";
+            });
+          }, 350);
+
+          // Update order
+          order = [order[1], order[2], order[0]];
+
+          setTimeout(() => {
+            isAnimating = false;
+          }, 750);
+        }
+
+        // Click on individual gallery items
+        items.forEach((item) => {
+          item.addEventListener("click", function () {
+            if (isAnimating) return;
+            if (this.classList.contains("pos-left")) {
+              rotateClockwise();
+            } else if (this.classList.contains("pos-right")) {
+              rotateCounterClockwise();
+            }
+          });
+        });
+
+        // Button controls
+        const prevBtn = document.getElementById("rotatePrevBtn");
+        const nextBtn = document.getElementById("rotateNextBtn");
+        if (prevBtn) prevBtn.addEventListener("click", rotateClockwise);
+        if (nextBtn) nextBtn.addEventListener("click", rotateCounterClockwise);
+      })();
+    </script>
+
+    <!-- Dashboard Features Script -->
+    <script>
+      (function () {
+        const featureItems = document.querySelectorAll(".feature-item");
+        const featureImage = document.getElementById("featureImage");
+
+        featureItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            // Remove active class from all items
+            featureItems.forEach((i) => i.classList.remove("active"));
+
+            // Add active class to clicked item
+            item.classList.add("active");
+
+            // Update image with a smooth fade
+            const newImgSrc = item.getAttribute("data-img");
+
+            if (featureImage.src !== newImgSrc) {
+              featureImage.style.opacity = "0.4";
+              featureImage.style.transform = "scale(0.98)";
+
+              setTimeout(() => {
+                featureImage.src = newImgSrc;
+                featureImage.style.opacity = "1";
+                featureImage.style.transform = "scale(1)";
+              }, 300);
+            }
+          });
+        });
+      })();
+    </script>
+
+    <!-- Partners Alliance Animation Script -->
+    <script>
+      (function () {
+        const allianceSection = document.getElementById("partners-alliance");
+        const partners = document.querySelectorAll(".partner-fly");
+
+        const updateAllianceProgress = () => {
+          if (!allianceSection) return;
+
+          const rect = allianceSection.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+
+          // Calculate the center of the section relative to the viewport center
+          const sectionCenter = rect.top + rect.height / 2;
+          const viewportCenter = viewportHeight / 2;
+
+          // Distance from viewport center
+          const dist = Math.abs(sectionCenter - viewportCenter);
+
+          // Range over which the animation happens
+          const range = viewportHeight * 0.8;
+
+          let progress = 1 - dist / range;
+          progress = Math.max(0, Math.min(1, progress));
+
+          allianceSection.style.setProperty("--progress", progress);
+
+          partners.forEach((partner, index) => {
+            // Staggered opacity fade in
+            const delay = index * 0.05;
+            const partnerProgress = Math.max(
+              0,
+              Math.min(1, (progress - delay) * 2),
+            );
+            partner.style.opacity = partnerProgress;
+          });
+        };
+
+        window.addEventListener("scroll", updateAllianceProgress, {
+          passive: true,
+        });
+        // Initial check with a small timeout to ensure AOS and other scripts are ready
+        setTimeout(updateAllianceProgress, 100);
+      })();
+    </script>
+
+    <!-- Process Cycle Script -->
+    <script>
+      (function () {
+        const items = document.querySelectorAll(".process-item");
+        let currentIndex = 0;
+        let interval;
+        let isUserInteracting = false;
+
+        const updateActiveItem = (index) => {
+          items.forEach((item) => item.classList.remove("active"));
+          items[index].classList.add("active");
+        };
+
+        const startAutoCycle = () => {
+          if (isUserInteracting) return;
+          clearInterval(interval);
+          interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateActiveItem(currentIndex);
+          }, 3500); // Change every 3.5 seconds
+        };
+
+        const stopAutoCycle = () => {
+          clearInterval(interval);
+        };
+
+        items.forEach((item, index) => {
+          item.addEventListener("mouseenter", () => {
+            isUserInteracting = true;
+            stopAutoCycle();
+            currentIndex = index;
+            updateActiveItem(currentIndex);
+          });
+
+          item.addEventListener("mouseleave", () => {
+            isUserInteracting = false;
+            startAutoCycle();
+          });
+
+          // For mobile touch
+          item.addEventListener(
+            "touchstart",
+            () => {
+              isUserInteracting = true;
+              stopAutoCycle();
+              currentIndex = index;
+              updateActiveItem(currentIndex);
+            },
+            { passive: true },
+          );
+        });
+
+        // Intersection Observer to start animation when section is in view
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                startAutoCycle();
+              } else {
+                stopAutoCycle();
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+
+        const processSection = document.getElementById("process-cycle");
+        if (processSection) observer.observe(processSection);
+
+        // Initial trigger
+        updateActiveItem(0);
+      })();
+    </script>
+
+    <!-- Growth Slider Script -->
+    <script>
+      (function () {
+        const slides = document.querySelectorAll(".growth-slide");
+        const dots = document.querySelectorAll(".growth-dot");
+        let currentIndex = 0;
+        let slideInterval;
+        const intervalTime = 5000;
+
+        const updateSlides = (nextIndex) => {
+          const currentSlide = slides[currentIndex];
+          const nextSlide = slides[nextIndex];
+
+          // Remove active from all dots
+          dots.forEach((dot) => dot.classList.remove("active"));
+          // Add active to current dot
+          if (dots[nextIndex]) dots[nextIndex].classList.add("active");
+
+          // Animation handle
+          currentSlide.classList.add("exit");
+          currentSlide.classList.remove("active");
+
+          setTimeout(() => {
+            currentSlide.classList.remove("exit");
+            nextSlide.classList.add("active");
+            currentIndex = nextIndex;
+          }, 600);
+        };
+
+        const autoPlay = () => {
+          let nextIndex = (currentIndex + 1) % slides.length;
+          updateSlides(nextIndex);
+        };
+
+        const startInterval = () => {
+          clearInterval(slideInterval);
+          slideInterval = setInterval(autoPlay, intervalTime);
+        };
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            if (index === currentIndex || index >= slides.length) return;
+            clearInterval(slideInterval);
+            updateSlides(index);
+            startInterval();
+          });
+        });
+
+        // Pause on hover
+        const sliderCard = document.querySelector(".growth-card");
+        if (sliderCard) {
+          sliderCard.addEventListener("mouseenter", () =>
+            clearInterval(slideInterval),
+          );
+          sliderCard.addEventListener("mouseleave", startInterval);
+        }
+
+        startInterval();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,3139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>Document</title> -->
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>DATASPAN Technologies</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script>
+  <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-RPYT1GBRQT'); </script>
+
+  <!-- Favicons -->
+  <link href="assets/img/brand.png" rel="icon">
+  <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+
+     .how-it-works-title {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        font-weight: 800;
+        color: var(--heading-color);
+        font-family: var(--heading-font);
+        margin-bottom: 10px;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        text-align: center;
+      }
+    .ai-highlight-2 {
+      /* font-size: 1.75rem; */
+      /* font-weight: 900; */
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    :root {
+      --section-padding: clamp(40px, 8vw, 100px);
+    }
+
+    /* Enhanced Hero Section */
+    #hero.hero.section {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, color-mix(in srgb, var(--accent-color), transparent 90%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: var(--section-padding) 0;
+      padding-top: clamp(100px, 12vw, 150px) !important;
+    }
+
+    #hero .container {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 auto !important;
+    }
+
+    #hero .row {
+      margin: 0 !important;
+      width: 100%;
+    }
+
+    #hero.hero.section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--accent-color), transparent 92%), transparent 40%);
+      pointer-events: none;
+    }
+
+    #hero.hero.section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    /* Breadcrumb */
+    .hero-breadcrumbs {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      pointer-events: auto;
+      border-radius: 10px;
+      /* Optional: adds subtle rounding if background is used later */
+      padding: 0 clamp(20px, 3vw, 40px) clamp(15px, 2vw, 25px);
+    }
+
+    .hero-breadcrumbs .breadcrumb {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 8px;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-weight: 500;
+      /* border: 5px solid blue; */
+    }
+
+    .hero-breadcrumbs .breadcrumb li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-breadcrumbs .breadcrumb li::after {
+      content: '›';
+      font-size: 0.85rem;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+    }
+
+    .hero-breadcrumbs .breadcrumb li:last-child::after {
+      display: none;
+    }
+
+    .hero-breadcrumbs .breadcrumb a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .hero-breadcrumbs .breadcrumb a:hover {
+      color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+
+    .hero-breadcrumbs .breadcrumb span {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1199px) {
+      .hero-breadcrumbs {
+        width: 85%;
+      }
+
+      .hero-content {
+        width: 85% !important;
+        max-width: 85% !important;
+        padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-breadcrumbs {
+        width: 95%;
+        margin-bottom: clamp(15px, 3vw, 22px);
+      }
+
+      .hero-breadcrumbs .breadcrumb {
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #hero .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 15px;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    .hero-title {
+      color: var(--contrast-color);
+      font-weight: 800;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-family: var(--heading-font);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      opacity: 1;
+      transform: translateY(0);
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+
+    /* Enhanced animations */
+    @keyframes blinkCursor {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Hero section enhancements */
+    .hero-content {
+      opacity: 1;
+      transform: translateY(0);
+      position: relative;
+      z-index: 1;
+      width: 80% !important;
+      max-width: 80% !important;
+      margin: 0 auto;
+      /* padding: clamp(8px, 1.2vw, 15px) clamp(20px, 3vw, 40px); */
+      box-sizing: border-box;
+    }
+
+    .hero-content p {
+      color: var(--contrast-color);
+      font-size: clamp(1.1rem, 2vw, 1.25rem);
+      font-family: var(--default-font);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9;
+    }
+
+    .hero-content p strong {
+      font-weight: 700;
+    }
+
+    .hero-image img {
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-buttons .btn {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      padding: 0.75rem 2.5rem;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 50px;
+      border: 2px solid;
+      font-family: var(--default-font);
+    }
+
+    .hero-buttons .btn-primary {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      border-color: var(--accent-color);
+    }
+
+    .hero-buttons .btn-primary:hover {
+      background-color: color-mix(in srgb, var(--accent-color), black 20%);
+      border-color: color-mix(in srgb, var(--accent-color), black 20%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(13, 131, 253, 0.3);
+    }
+
+    .hero-buttons .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: var(--contrast-color);
+      border-color: var(--contrast-color);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-buttons .btn-secondary:hover {
+      background-color: var(--contrast-color);
+      color: var(--accent-color);
+      border-color: var(--contrast-color);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Metrics Section Styles */
+    .metrics-section {
+      padding: 60px 0;
+      background: #fff;
+      overflow: visible;
+    }
+
+    .metrics-subhead {
+      color: #3B82F6;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+      display: block;
+      letter-spacing: 0.04em;
+    }
+
+    .metrics-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--heading-color);
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .metrics-desc {
+      color: var(--default-color);
+      opacity: 0.8;
+      line-height: 1.6;
+      font-size: 1rem;
+      max-width: 95%;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .metric-card {
+      background: #f8fafc;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-radius: 12px;
+      padding: 18px 15px;
+      display: flex;
+      position: relative;
+      min-height: 70px;
+      margin-top: 20px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: visible;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      /* border: 2px solid red; */
+    }
+
+    .metric-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-color: rgba(59, 130, 246, 0.2);
+    }
+
+    /* .align-items-stretch {
+      margin-top: 0;
+    } */
+
+    .card-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card-over {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #4B5563;
+      letter-spacing: 0.05em;
+    }
+
+    .card-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1;
+      margin: 3px 0;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: #64748B;
+      margin: 0;
+      line-height: 1.4;
+      font-weight: 500;
+      white-space: pre-line;
+    }
+
+    .card-visual {
+      width: 90px;
+      position: relative;
+    }
+
+    .amazon-icon-wrapper {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      background: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .amazon-icon-wrapper img {
+      width: 18px;
+    }
+
+    .metric-main-img {
+      position: absolute;
+      top: -40px;
+      right: -10px;
+      width: 110px;
+      height: 150px;
+      object-fit: contain;
+      z-index: 5;
+      filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.08));
+      transition: transform 0.4s ease;
+    }
+
+    .metric-card:hover .metric-main-img {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .pill {
+      position: absolute;
+      background: #fff;
+      padding: 3px 7px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #111827;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      white-space: nowrap;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .pill::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #4A90E2;
+      border-radius: 50%;
+      display: none;
+      /* Hide if not needed */
+    }
+
+    .pill-top {
+      top: 15px;
+      right: 5px;
+    }
+
+    .pill-bottom {
+      bottom: 15px;
+      right: 40px;
+    }
+
+    /* Seller Incentives Section Styles */
+    .incentives-section {
+      padding: 100px 0;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    .incentives-header {
+      margin-bottom: 60px;
+    }
+
+    .incentives-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--heading-color);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .incentive-card {
+      background: #ffffff;
+      border: 1px solid #edf2f7;
+      border-radius: 16px;
+      padding: 20px 35px;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .incentive-cta {
+      border: 1px solid #edf2f7;
+      border-radius: 16px;
+      padding: 40px 35px !important;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .incentive-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .incentive-card.border-yellow::before {
+      background: #ffc107;
+    }
+
+    .incentive-card.border-teal::before {
+      background: #0dcaf0;
+    }
+
+    .incentive-card.border-green::before {
+      background: #198754;
+    }
+
+    .incentive-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+      border-color: #e2e8f0;
+    }
+
+    .incentive-card:hover::before {
+      opacity: 1;
+    }
+
+    .incentive-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      font-size: 1.6rem;
+      transition: transform 0.3s ease;
+    }
+
+    .incentive-card:hover .incentive-icon-box {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .bg-soft-yellow {
+      background-color: #fff9e6;
+      color: #ffc107;
+    }
+
+    .bg-soft-teal {
+      background-color: #e6f7f8;
+      color: #0dcaf0;
+    }
+
+    .bg-soft-green {
+      background-color: #eaf8ef;
+      color: #198754;
+    }
+
+    .incentive-card h3 {
+      font-size: 1.5rem;
+      font-weight: 750;
+      color: var(--heading-color);
+      margin-bottom: 18px;
+    }
+
+    .incentive-card p {
+      font-size: 1.05rem;
+      color: #64748B;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      flex-grow: 1;
+    }
+
+    .incentive-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #3182ce;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .incentive-link:hover {
+      gap: 15px;
+      color: #2c5282;
+    }
+
+    .incentive-link i {
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .incentive-link:hover i {
+      transform: translateX(3px);
+    }
+
+    /* Partners Spread Section */
+    .partners-section {
+      padding: 50px 0;
+      position: relative;
+      overflow: hidden;
+      background-color: #ffffff;
+      background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+      background-size: 20px 20px;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .partners-content {
+      position: relative;
+      z-index: 20;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .partners-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--heading-color);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-orange {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+        font-weight: 800;
+        /* color: var(--heading-color); */
+        font-family: var(--heading-font);
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .highlight-blue {
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .partners-subtitle {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .partners-trust-text {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--default-color);
+      opacity: 0.7;
+      margin-bottom: 2rem;
+    }
+
+    .btn-marketing {
+      background-color: #00a2ff;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(3, 62, 110, 0.3);
+    }
+
+    .btn-marketing:hover {
+      background-color: #07305f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(1, 43, 92, 0.4);
+      color: white;
+    }
+
+    /* Animated Icons */
+    .icons-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .partner-icon-fly {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      font-size: 1.8rem;
+      color: #9ca3af;
+      filter: grayscale(100%);
+      transition: opacity 0.4s ease, filter 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      /* Start at bottom center */
+      bottom: 20px;
+      left: 50%;
+      margin-left: -30px;
+      pointer-events: auto;
+      cursor: pointer;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      z-index: 15;
+      /* The transform will be controlled by JS using CSS variables */
+      transform: translate(calc(var(--tx, 0) * var(--progress, 0)), calc(var(--ty, 0) * var(--progress, 0))) rotate(calc(var(--tr, 0) * var(--progress, 0))) scale(calc(0.5 + 0.5 * var(--progress, 0)));
+    }
+
+    /* Define target positions via variables */
+    .icon-meta {
+      --tx: -500px;
+      --ty: -380px;
+      --tr: -25deg;
+    }
+
+    .icon-youtube {
+      --tx: -580px;
+      --ty: -200px;
+      --tr: 10deg;
+    }
+
+    .icon-shopify {
+      --tx: -480px;
+      --ty: -20px;
+      --tr: -25deg;
+    }
+
+    .icon-amazon {
+      --tx: 480px;
+      --ty: -20px;
+      --tr: 25deg;
+    }
+
+    .icon-tiktok {
+      --tx: -620px;
+      --ty: -300px;
+      --tr: -10deg;
+    }
+
+    .icon-instagram {
+      --tx: -420px;
+      --ty: -520px;
+      --tr: 15deg;
+    }
+
+    .icon-linkedin {
+      --tx: -520px;
+      --ty: -120px;
+      --tr: 5deg;
+    }
+
+    .icon-snapchat {
+      --tx: 420px;
+      --ty: -520px;
+      --tr: -15deg;
+    }
+
+    .icon-pinterest {
+      --tx: 620px;
+      --ty: -300px;
+      --tr: 10deg;
+    }
+
+    .icon-ebay {
+      --tx: 520px;
+      --ty: -120px;
+      --tr: -5deg;
+    }
+
+    .icon-walmart {
+      --tx: 500px;
+      --ty: -380px;
+      --tr: 15deg;
+    }
+
+    .icon-google-ads {
+      --tx: 580px;
+      --ty: -200px;
+      --tr: -10deg;
+    }
+
+    /* Show icons when section is in view */
+    .partners-section.active .partner-icon-fly {
+      opacity: var(--progress, 0);
+    }
+
+    /* Responsive adjustments for icons */
+    @media (max-width: 1200px) {
+      .icon-meta {
+        --tx: -280px;
+        --ty: -300px;
+      }
+
+      .icon-youtube {
+        --tx: -330px;
+        --ty: -150px;
+      }
+
+      .icon-shopify {
+        --tx: -250px;
+        --ty: -10px;
+      }
+
+      .icon-walmart {
+        --tx: 280px;
+        --ty: -300px;
+      }
+
+      .icon-google-ads {
+        --tx: 330px;
+        --ty: -180px;
+      }
+
+      .icon-amazon {
+        --tx: 250px;
+        --ty: -10px;
+      }
+
+      .icon-tiktok {
+        --tx: -450px;
+        --ty: -220px;
+      }
+
+      .icon-instagram {
+        --tx: -180px;
+        --ty: -380px;
+      }
+
+      .icon-linkedin {
+        --tx: -120px;
+        --ty: -120px;
+      }
+
+      .icon-snapchat {
+        --tx: 180px;
+        --ty: -380px;
+      }
+
+      .icon-pinterest {
+        --tx: 450px;
+        --ty: -240px;
+      }
+
+      .icon-ebay {
+        --tx: 120px;
+        --ty: -120px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .partners-section {
+        min-height: 500px;
+        padding: 60px 0;
+      }
+
+      .partner-icon-fly {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        margin-left: -22px;
+        bottom: 10px;
+      }
+
+      .icon-meta {
+        --tx: -150px;
+        --ty: -250px;
+      }
+
+      .icon-youtube {
+        --tx: -180px;
+        --ty: -120px;
+      }
+
+      .icon-shopify {
+        --tx: -140px;
+        --ty: 0px;
+      }
+
+      .icon-walmart {
+        --tx: 150px;
+        --ty: -250px;
+      }
+
+      .icon-google-ads {
+        --tx: 180px;
+        --ty: -120px;
+      }
+
+      .icon-amazon {
+        --tx: 140px;
+        --ty: 0px;
+      }
+
+      .icon-walmart {
+        --tx: 150px;
+        --ty: -250px;
+      }
+
+      .icon-google-ads {
+        --tx: 180px;
+        --ty: -120px;
+      }
+
+      .icon-tiktok {
+        --tx: -200px;
+        --ty: -180px;
+      }
+
+      .icon-instagram {
+        --tx: -80px;
+        --ty: -280px;
+      }
+
+      .icon-linkedin {
+        --tx: -70px;
+        --ty: -80px;
+      }
+
+      .icon-snapchat {
+        --tx: 80px;
+        --ty: -280px;
+      }
+
+      .icon-pinterest {
+        --tx: 200px;
+        --ty: -200px;
+      }
+
+      .icon-ebay {
+        --tx: 70px;
+        --ty: -80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .partner-icon-fly {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+        margin-left: -19px;
+      }
+
+      .icon-meta {
+        --tx: -110px;
+        --ty: -220px;
+      }
+
+      .icon-youtube {
+        --tx: -130px;
+        --ty: -100px;
+      }
+
+      .icon-shopify {
+        --tx: -100px;
+        --ty: 0px;
+      }
+
+      .icon-walmart {
+        --tx: 110px;
+        --ty: -220px;
+      }
+
+      .icon-google-ads {
+        --tx: 130px;
+        --ty: -100px;
+      }
+
+      .icon-amazon {
+        --tx: 100px;
+        --ty: 0px;
+      }
+    }
+
+    /* Hover effects */
+    .partner-icon-fly:hover {
+      filter: grayscale(0%);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      z-index: 20;
+    }
+
+    .partner-icon-fly:hover .icon-inner {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .icon-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .icon-meta:hover {
+      color: #0668E1;
+      border-color: rgba(6, 104, 225, 0.2);
+    }
+
+    .icon-youtube:hover {
+      color: #FF0000;
+      border-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .icon-shopify:hover {
+      color: #7AB55C;
+      border-color: rgba(122, 181, 92, 0.2);
+    }
+
+    .icon-walmart:hover {
+      color: #0071CE;
+      border-color: rgba(0, 113, 206, 0.2);
+    }
+
+    .icon-tiktok:hover {
+      color: #000000;
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .icon-instagram:hover {
+      color: #E1306C;
+      border-color: rgba(225, 48, 108, 0.2);
+    }
+
+    .icon-linkedin:hover {
+      color: #0077B5;
+      border-color: rgba(0, 119, 181, 0.2);
+    }
+
+    .icon-snapchat:hover {
+      color: #FFFC00;
+      border-color: rgba(255, 252, 0, 0.2);
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon-pinterest:hover {
+      color: #BD081C;
+      border-color: rgba(189, 8, 28, 0.2);
+    }
+
+    .icon-ebay:hover {
+      color: #F5AF02;
+      border-color: rgba(245, 175, 2, 0.2);
+    }
+
+    .icon-google-ads:hover {
+      color: #4285F4;
+      border-color: rgba(66, 133, 244, 0.2);
+    }
+
+    .icon-amazon:hover {
+      color: #FF9900;
+      border-color: rgba(255, 153, 0, 0.2);
+    }
+
+    /* Reset state when out of view */
+    .partners-section:not(.active) .partner-icon-fly {
+      transform: translate(0, 0) scale(0) rotate(0deg);
+      opacity: 0;
+    }
+
+    .tall-metric-card {
+      background: #f8fafc;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-radius: 12px;
+      padding: 15px 15px;
+      min-height: 152px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: visible;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .tall-metric-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tall-value {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .tall-desc {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-top: 5px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .tall-card-img-container {
+      margin-top: 10px;
+      width: 100%;
+      height: 160px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .dog-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 991px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tall-metric-card {
+        min-height: 400px;
+        margin-top: 20px;
+      }
+
+      .metrics-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* Scrolling Section Styles */
+    .scrolling-section {
+      padding: clamp(60px, 10vw, 100px) 0;
+      background: #ffffff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scrolling-left-content {
+      padding-right: clamp(20px, 4vw, 60px);
+    }
+
+    .scrolling-title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--heading-color);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .scrolling-title span {
+      background: linear-gradient(135deg, #a855f7 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .scrolling-desc {
+      font-size: 1.1rem;
+      color: var(--default-color);
+      opacity: 0.8;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    .testimonial-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-top: 30px;
+      border-top: 1px solid #f3f4f6;
+      position: relative;
+    }
+
+    .testimonial-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent-color);
+      opacity: 0.3;
+    }
+
+    .testimonial-img-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-info h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--heading-color);
+    }
+
+    .testimonial-info p {
+      font-size: 0.95rem;
+      color: var(--default-color);
+      opacity: 0.7;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Right Side Animation */
+    .scrolling-outer-container {
+      position: relative;
+      height: 550px;
+      padding: 20px;
+      background: #f8fafc;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .scrolling-container {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    }
+
+    .scrolling-track {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      animation: scrollUp 25s linear infinite;
+    }
+
+    .scrolling-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollUp {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    .scroll-card {
+      background: white;
+      padding: clamp(20px, 3vw, 35px);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.02);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .scroll-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+    }
+
+    .card-label {
+      font-size: 0.9rem;
+      color: var(--default-color);
+      opacity: 0.6;
+      margin-bottom: 12px;
+      display: block;
+      font-weight: 500;
+    }
+
+    .card-title {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .highlight-blue-text {
+      color: var(--accent-color);
+    }
+
+    .card-footer-design {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .design-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 60%;
+    }
+
+    .design-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: #f1f5f9;
+    }
+
+    .design-bar.short {
+      width: 40%;
+    }
+
+    .design-bar.long {
+      width: 85%;
+    }
+
+    .card-icons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .icon-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+    }
+
+    .icon-circle.active {
+      border-color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+
+    @media (max-width: 991px) {
+      .scrolling-left-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      .scrolling-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .testimonial-box {
+        justify-content: center;
+        border-top: none;
+      }
+
+      .testimonial-box::before {
+        left: 50%;
+        margin-left: -30px;
+        top: 0;
+      }
+
+      .scrolling-outer-container {
+        height: 500px;
+      }
+    }
+
+    /* Expanding Cards Section Styles */
+    .expanding-section {
+      padding: clamp(60px, 10vw, 100px) 0;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .expanding-header {
+      margin-bottom: 50px;
+    }
+
+    .expanding-header h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--heading-color);
+      letter-spacing: -0.01em;
+    }
+
+    .expanding-container {
+      display: flex;
+      width: 100%;
+      height: 500px;
+      gap: 15px;
+      margin: 0 auto;
+    }
+
+    .expanding-card {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      border-radius: 20px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .expanding-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+      z-index: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .expanding-card:hover {
+      flex: 3;
+    }
+
+    .card-content-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px;
+      text-align: left;
+      z-index: 2;
+      color: white;
+    }
+
+    .card-content-overlay h3 {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .card-details {
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    .expanding-card:hover .card-details {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 15px;
+    }
+
+    .card-details p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+    }
+
+    .learn-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .learn-link:hover {
+      color: var(--accent-color);
+    }
+
+    /* Mobile handling for expanding cards */
+    @media (max-width: 768px) {
+      .expanding-container {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .expanding-card {
+        flex: none;
+        height: 300px;
+        width: 100%;
+      }
+
+      .expanding-card:hover {
+        flex: none;
+        height: 400px;
+      }
+
+      .card-details {
+        max-height: none;
+        opacity: 1;
+      }
+    }
+
+    /* Subtext Harmonization */
+    .hero-content p,
+    .metrics-desc,
+    .scrolling-desc,
+    .partners-subtitle,
+    .details-text {
+      font-size: clamp(1rem, 2vw, 1.1rem) !important;
+      line-height: 1.7 !important;
+      color: var(--default-color) !important;
+      opacity: 0.85 !important;
+    }
+
+    /* Heading Harmonization */
+    .metrics-title,
+    .partners-title,
+    .scrolling-title,
+    .expanding-header h2,
+    .details-heading,
+    .settings-title {
+      font-family: var(--heading-font) !important;
+      font-weight: 800 !important;
+      color: var(--heading-color) !important;
+      letter-spacing: -0.02em !important;
+    }
+
+
+    /* Interactive Settings Section Styles Refined */
+    .settings-section {
+      background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 40%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .settings-browser-mockup {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .mockup-header {
+      padding: 12px 20px;
+      background: #f8fafc;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .dot-red {
+      background: #ff5f56;
+    }
+
+    .dot-yellow {
+      background: #ffbd2e;
+    }
+
+    .dot-green {
+      background: #27c93f;
+    }
+
+    .mockup-address-bar {
+      flex: 1;
+      height: 28px;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-family: monospace;
+    }
+
+    .mockup-body {
+      min-height: 400px;
+    }
+
+    .mockup-sidebar {
+      width: 200px;
+      background: #f8fafc;
+      border-right: 1px solid rgba(0, 0, 0, 0.04);
+      padding: 15px 0;
+    }
+
+    .sidebar-menu-item {
+      padding: 18px 25px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #64748b;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1;
+    }
+
+    .sidebar-menu-item i {
+      font-size: 1.15rem;
+      transition: transform 0.3s ease;
+      opacity: 0.7;
+    }
+
+    .sidebar-menu-item:hover {
+      background: rgba(59, 130, 246, 0.03);
+      color: #3b82f6;
+    }
+
+    .sidebar-menu-item:hover i {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    .sidebar-menu-item.active {
+      background: #ffffff;
+      color: #3b82f6;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      transform: scale(1.05) translateX(5px);
+      z-index: 2;
+    }
+
+    .sidebar-menu-item.active i {
+      opacity: 1;
+      color: #3b82f6;
+    }
+
+    .sidebar-menu-item.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #3b82f6;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .mockup-content {
+      flex: 1;
+      padding: 40px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .details-container {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .details-heading {
+      color: var(--heading-color);
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .details-text {
+      margin-bottom: 2rem;
+    }
+
+    .visual-component {
+      margin-top: auto;
+      padding: 20px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .status-badge {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 15px;
+    }
+
+    .status-active {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      background: currentColor;
+      border-radius: 50%;
+      animation: pulse-badge 2s infinite;
+    }
+
+    @keyframes pulse-badge {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .data-label {
+      color: #94a3b8;
+    }
+
+    .data-value {
+      color: #0F172A;
+      font-weight: 600;
+    }
+
+    .progress-minimal {
+      height: 6px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #3b82f6;
+      width: 0;
+      transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @media (max-width: 991px) {
+      .mockup-body {
+        flex-direction: column;
+      }
+
+      .mockup-sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        padding: 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .sidebar-menu-item {
+        padding: 15px 20px;
+        white-space: nowrap;
+      }
+
+      .sidebar-menu-item.active::before {
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        top: auto;
+        left: 0;
+      }
+
+      .metric-main-img {
+        width: 80px;
+        height: 100px;
+        top: -15px;
+      }
+
+      .btn-marketing {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .settings-title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem) !important;
+      line-height: 1.1 !important;
+      margin-bottom: 2rem !important;
+    }
+
+    /* Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar {
+        padding: 10px 0;
+        width: 100%;
+        background: #ffffff !important;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-container {
+        padding: 0 20px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100%;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+      }
+
+      .nav-logo .logo-image {
+        max-height: 40px;
+        display: block;
+      }
+
+      .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        background: #0d83fd !important;
+        border: none !important;
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 0;
+        margin-left: auto;
+        box-shadow: 0 4px 12px rgba(13, 131, 253, 0.2);
+      }
+
+      .mobile-menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #ffffff !important;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .navbar {
+        padding: 8px 0;
+        width: 100%;
+      }
+
+      .nav-container {
+        padding: 0 15px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+
+      .nav-logo .logo-image {
+        max-height: 35px;
+      }
+
+      .mobile-menu-toggle {
+        width: 38px;
+        height: 38px;
+        gap: 4px;
+      }
+
+      .mobile-menu-toggle span {
+        width: 18px;
+      }
+    }
+
+    /* Row and Column Improvements */
+    /* Gradient highlight for highlighted text */
+    .highlight {
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Override .text-primary in headings to use gradient */
+    h1 .text-primary,
+    h2 .text-primary,
+    h3 .text-primary,
+    h4 .text-primary {
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent !important;
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="https://dataspantechnologies.com" class="logo">
+          <img src="https://image.dataspantechnologies.com/dataspan/brand3.png" alt="Dataspan Technologies Logo"
+            class="logo-image" />
+        </a>
+      </div>
+
+      <!-- Main Navigation -->
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="Aboutus.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
+            Services
+            <!-- <i class="fas fa-chevron-down"></i> -->
+          </a>
+          <!-- Mobile Services Menu -->
+          <div class="mobile-services-menu">
+            <div class="mobile-category-list">
+              <!-- AI & Automation -->
+              <div class="category-item mobile-category-item" data-target="mobile-ai">
+                <span class="category-link">AI & Automation</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-ai">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="AI/Ai_mechine_learning.html" class="mobile-subcategory-link">Ai mechine learning</a>
+                  <a href="AI/ocr.html" class="mobile-subcategory-link">OCR</a>
+                  <a href="AI/Scraper_&_Scripting.html" class="mobile-subcategory-link">Scraper & Scripting</a>
+                  <a href="AI/Navision_Integration_and_Automation.html" class="mobile-subcategory-link">Navision
+                    Integration & Automation</a>
+                  <a href="AI/ESL_Integration.html" class="mobile-subcategory-link">ESL Integration</a>
+                </div>
+              </div>
+
+              <!-- Development & Technology -->
+              <div class="category-item mobile-category-item" data-target="mobile-dev">
+                <span class="category-link">Development & Technology</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-dev">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Development and Technology/Shopify_Development_&_Services.html"
+                    class="mobile-subcategory-link">Shopify Development & Services</a>
+                  <a href="Development and Technology/Web_&_Mobile_Development.html" class="mobile-subcategory-link">Web
+                    & Mobile Development</a>
+                  <a href="Development and Technology/Software_Development_&_Consulting.html"
+                    class="mobile-subcategory-link">Software Development & Consulting</a>
+                  <a href="Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                    class="mobile-subcategory-link">eCommerce & Marketplace Integration</a>
+                </div>
+              </div>
+
+              <!-- Design & Branding -->
+              <div class="category-item mobile-category-item" data-target="mobile-design">
+                <span class="category-link">Design & Branding</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-design">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Design & Branding/UI/UX_Creative_Services.html" class="mobile-subcategory-link">UX Creative
+                    Services</a>
+                  <a href="Design & Branding/UI/Design_&_Branding.html" class="mobile-subcategory-link">Design &
+                    Branding</a>
+                </div>
+              </div>
+
+              <!-- Cloud & Infrastructure -->
+              <div class="category-item mobile-category-item" data-target="mobile-cloud">
+                <span class="category-link">Cloud & services</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-cloud">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Cloud & Services/Hosting_&_Cloud_Services.html" class="mobile-subcategory-link">Hosting &
+                    Cloud Services</a>
+                  <a href="Cloud & Services/Managed_Cloud_Services.html" class="mobile-subcategory-link">Managed Cloud
+                    Services</a>
+                  <a href="Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                    class="mobile-subcategory-link">Cloud Setup migration & Optimization</a>
+                  <a href="Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                    class="mobile-subcategory-link">Server Monitoring Backup & Security Management</a>
+                </div>
+              </div>
+
+              <!-- Data & Operations -->
+              <div class="category-item mobile-category-item" data-target="mobile-data">
+                <span class="category-link">Data & Operations</span>
+                <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="mobile-subcategories-container hidden" id="mobile-data">
+                <div class="subcategory-grid" style="display: grid;">
+                  <a href="Data & Ops/Reporting_&_Analytics.html" class="mobile-subcategory-link">Reporting &
+                    Analytics</a>
+                  <a href="Data & Ops/Back_Office_&_BPO_Solution.html" class="mobile-subcategory-link">Back Office & BPO
+                    Solution</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="Clients.html" class="nav-link">Clients</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Action Button 
+            <div class="nav-action">
+                <button class="start-project-btn">Start Project</button>
+            </div>-->
+    </div>
+
+    <!-- Services Dropdown Menu -->
+    <div class="dropdown-menu" id="services-dropdown">
+      <div class="dropdown-container">
+        <div class="dropdown-content">
+
+          <div class="service-categories">
+            <div class="category-column">
+              <div class="category-item active" data-submenu="ai-automation">
+                <a href="#" class="category-link">AI & Automation</a>
+              </div>
+              <div class="category-item" data-submenu="development-technology">
+                <a href="#" class="category-link">Development & Technology</a>
+              </div>
+              <div class="category-item" data-submenu="design-branding">
+                <a href="#" class="category-link">Design & Branding</a>
+              </div>
+              <div class="category-item" data-submenu="cloud-infrastructure">
+                <a href="#" class="category-link">Cloud & Infrastructure</a>
+              </div>
+              <div class="category-item" data-submenu="data-operations">
+                <a href="#" class="category-link">Data & Operations</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="ai-automation-submenu">
+              <div class="subcategory-item">
+                <a href="AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning (ML)</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/ocr.html" class="subcategory-link">OCR (Optical Character Recognition)</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper & Scripting</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/Navision_Integration_and_Automation.html" class="subcategory-link">Navision Integration &
+                  Automation</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf Labels) Integration</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Development and Technology/Shopify_Development_&_Services.html"
+                  class="subcategory-link">Shopify Development & Services</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Development and Technology/Web_&_Mobile_Development.html" class="subcategory-link">Web & Mobile
+                  Development</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Development and Technology/Software_Development_&_Consulting.html"
+                  class="subcategory-link">Software Development & Consulting</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                  class="subcategory-link">E-Commerce & Marketplace Integration</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Design & Branding/UI/UX_Creative_Services.html" class="subcategory-link">UI/UX & Creative
+                  Services</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design & Branding</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Hosting_&_Cloud_Services.html" class="subcategory-link">Hosting & Cloud
+                  Services</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Managed_Cloud_Services.html" class="subcategory-link">Managed Hosting
+                  Solutions</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Cloud_Setup_migration_&_Optimization.html" class="subcategory-link">Cloud
+                  Setup, Migration & Optimization</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                  class="subcategory-link">Server Monitoring, Backup & Security Management</a>
+              </div>
+            </div>
+
+
+            <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
+              <div class="subcategory-item">
+                <a href="Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting & Analytics</a>
+              </div>
+              <div class="subcategory-item">
+                <a href="Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back Office & BPO
+                  Solutions</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Promotional Graphics Section -->
+            <div class="promo-section">
+            <div class="tech-illustration d-flex gap-3">
+            <a href="POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
+            <a href="Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
+  <!-- hero section -->
+  <section id="hero" class="hero section">
+
+    <!-- Breadcrumbs -->
+    <div class="hero-breadcrumbs">
+      <ol class="breadcrumb">
+        <li><a href="https://dataspantechnologies.com">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><span>Helium</span></li>
+      </ol>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row align-items-center">
+
+        <div class="col-lg-12">
+          <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Main Heading -->
+            <h1 class=" hero-title">Unlock Ecommerce Growth with Helium 10</h1>
+
+            <!-- Description Paragraph -->
+            <p class=" mb-md-5">We use Helium 10’s advanced analytics to optimize product research, keyword strategy,
+              competitor intelligence, and performance tracking across Amazon, Walmart Marketplace, Shopify, and
+              emerging ecommerce platforms—turning marketplace data into scalable revenue and smarter growth decisions.
+            </p>
+
+            <!-- Call to Action Buttons -->
+            <div class="hero-buttons">
+              <!-- <a href="#contact" class="btn btn-primary">Start Your AI Project</a> -->
+              <a href="../contact.html" class="btn btn-outline-primary">Scale My Brand</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Metrics Section -->
+  <section id="metrics" class="metrics-section ">
+    <div class="container">
+      <div class="row align-items-stretch">
+        <!-- Left Text Column -->
+        <div class="col-lg-3 col-md-12 mt-4 mb-lg-0">
+          <div class="metrics-left-content" data-aos="fade-right">
+            <span class="metrics-subhead">Performance That Scales</span>
+            <h2 class="metrics-title">Data. Strategy. Growth.</h2>
+            <p class="metrics-desc">We combine Helium 10 intelligence with execution-driven strategy to deliver
+              measurable ecommerce growth across product research, keyword ranking, and multi-platform marketplace
+              performance.</p>
+          </div>
+        </div>
+
+        <!-- Middle Grid Column -->
+        <div class="col-lg-6 col-md-8">
+          <div class="metrics-grid">
+            <!-- Card 1 -->
+            <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="card-text">
+                <span class="card-over">OVER</span>
+                <span class="card-value">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="80"
+                    data-purecounter-duration="1.5">0</span>%
+                </span>
+                <p class="card-desc">Keyword Ranking Gains</p>
+              </div>
+              <div class="card-visual">
+                <!-- <div class="amazon-icon-wrapper">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon">
+                </div> -->
+                <img src="https://image.dataspantechnologies.com/dataspan/Hellium key 1.png" alt="Metric"
+                  class="metric-main-img">
+                <!-- <div class="pill pill-top">+ ROAS</div>
+                <div class="pill pill-bottom">↓ CPU</div> -->
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="card-text">
+                <span class="card-over">OVER</span>
+                <span class="card-value">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="65"
+                    data-purecounter-duration="1.5">0</span>%
+                </span>
+                <p class="card-desc">Higher Conversion Rates</p>
+              </div>
+              <div class="card-visual">
+                <!-- <div class="amazon-icon-wrapper">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon">
+                </div> -->
+                <img src="https://image.dataspantechnologies.com/dataspan/Hellium key 2.png" alt="Metric"
+                  class="metric-main-img">
+                <!-- <div class="pill pill-top">+ ROAS</div>
+                <div class="pill pill-bottom">↓ CPU</div> -->
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="metric-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card-text">
+                <span class="card-over">OVER</span>
+                <span class="card-value">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="40"
+                    data-purecounter-duration="1.5">0</span>%
+                </span>
+                <p class="card-desc">Lower Advertising Costs</p>
+              </div>
+              <div class="card-visual">
+                <!-- <div class="amazon-icon-wrapper">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon">
+                </div> -->
+                <img src="https://image.dataspantechnologies.com/dataspan/Hellium key 3.png" alt="Metric"
+                  class="metric-main-img">
+                <!-- <div class="pill pill-top">+ ROAS</div>
+                <div class="pill pill-bottom">↓ CPU</div> -->
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="metric-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="card-text">
+                <span class="card-over">OVER</span>
+                <span class="card-value">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="3"
+                    data-purecounter-duration="1.5">0</span>x
+                </span>
+                <p class="card-desc">Faster Product Validation</p>
+              </div>
+              <div class="card-visual">
+                <!-- <div class="amazon-icon-wrapper">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon">
+                </div> -->
+                <img src="https://image.dataspantechnologies.com/dataspan/Hellium key 4.png" alt="Metric"
+                  class="metric-main-img">
+                <!-- <div class="pill pill-top">+ ROAS</div>
+                <div class="pill pill-bottom">↓ CPU</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Tall Card Column -->
+        <div class="col-lg-3 col-md-4">
+          <div class="tall-metric-card" data-aos="fade-left">
+            <div class="tall-card-top">
+              <h2 class="tall-value">
+                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="24"
+                  data-purecounter-duration="1.5">0</span>%
+              </h2>
+              <p class="tall-desc">Revenue<br>growth</p>
+            </div>
+            <div class="tall-card-img-container">
+              <img src="https://image.dataspantechnologies.com/dataspan/Hellium key 5.png" alt="Growth" class="dog-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seller Incentives Section -->
+  <section id="seller-incentives" class="incentives-section">
+    <div class="container" data-aos="fade-up">
+      <div class="incentives-header text-center">
+        <h2 class="how-it-works-title">Advanced Helium 10 Growth Solutions</h2>
+        <p>Dataspans Helium 10 services designed to accelerate product discovery, visibility, advertising performance,
+          and marketplace profitability.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1: Inbound Shipping -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="incentive-card border-yellow">
+            <div class="incentive-icon-box bg-soft-yellow">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <h3>Product Research</h3>
+            <p>Data-backed product validation using Black Box, Cerebro, Magnet, and trend analytics to uncover scalable,
+              low-competition opportunities.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Global Logistics -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="incentive-card border-teal">
+            <div class="incentive-icon-box bg-soft-teal">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h3>Listing Optimization</h3>
+            <p>Keyword-rich, conversion-focused listings built with Listing Builder, Scribbles, and Analyzer to improve
+              indexing and sales velocity.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Warehouse Storage -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="incentive-card border-green">
+            <div class="incentive-icon-box bg-soft-green">
+              <i class="bi bi-key"></i>
+            </div>
+            <h3>PPC Management</h3>
+            <p>Strategic Helium 10 Ads optimization to reduce ACoS, scale profitable campaigns, and maximize marketplace
+              advertising ROI</p>
+          </div>
+        </div>
+
+        <!-- Row 2 (Duplicate as per screenshot) -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="incentive-card border-yellow">
+            <div class="incentive-icon-box bg-soft-yellow">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <h3>Keyword Intelligence</h3>
+            <p>Advanced reverse ASIN research, keyword tracking, and search query analysis to dominate organic rankings.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="incentive-card border-teal">
+            <div class="incentive-icon-box bg-soft-teal">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h3>Market Analytics</h3>
+            <p>Deep performance tracking with Market Tracker, Profits, and competitive insights to guide smarter scaling
+              decisions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="incentive-card incentive-cta border-green bg-light">
+            <!-- <div class="incentive-icon-box bg-soft-green">
+              <i class="bi bi-key"></i>
+            </div> -->
+            <h3>Need custom Helium 10 strategy and automation implementation</h3>
+            <p>Optimize With Experts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Spread Section -->
+  <section id="partners-spread" class="partners-section">
+    <div class="icons-layer">
+      <!-- Left Side -->
+      <div class="partner-icon-fly icon-meta" title="Meta">
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 1.png"
+            alt=""></div>
+      </div>
+      <div class="partner-icon-fly icon-youtube" title="YouTube">
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 2.png"
+            alt=""></div>
+      </div>
+      <div class="partner-icon-fly icon-shopify" title="Shopify">
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 3.png"
+            alt=""></div>
+      </div>
+      <!-- <div class="partner-icon-fly icon-tiktok" title="TikTok">
+        <div class="icon-inner"><i class="fa-brands fa-tiktok"></i></div>
+      </div>
+      <div class="partner-icon-fly icon-instagram" title="Instagram">
+        <div class="icon-inner"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="partner-icon-fly icon-linkedin" title="LinkedIn">
+        <div class="icon-inner"><i class="fa-brands fa-linkedin"></i></div>
+      </div> -->
+
+      <!-- Right Side -->
+      <div class="partner-icon-fly icon-walmart" title="Walmart">
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 4.png"
+            alt=""></div>
+      </div>
+      <div class="partner-icon-fly icon-google-ads" title="Google Ads">
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 5.png"
+            alt=""></div>
+      </div>
+      <div class="partner-icon-fly icon-amazon" title="Amazon">
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 6.png"
+            alt=""></div>
+      </div>
+      <!-- <div class="partner-icon-fly icon-snapchat" title="Snapchat">
+        <div class="icon-inner"><i class="fa-brands fa-snapchat"></i></div>
+      </div>
+      <div class="partner-icon-fly icon-pinterest" title="Pinterest">
+        <div class="icon-inner"><i class="fa-brands fa-pinterest"></i></div>
+      </div>
+      <div class="partner-icon-fly icon-ebay" title="eBay">
+        <div class="icon-inner"><i class="fa-brands fa-ebay"></i></div>
+      </div> -->
+    </div>
+
+    <div class="container">
+      <div class="partners-content" data-aos="fade-up">
+        <h2 class="partners-title">
+          <span class="highlight-orange">We Power Your Marketplace Growth with Helium 10</span>
+          <!-- Mid-Sized <span class="highlight-blue">eCommerce</span> Brands -->
+        </h2>
+        <p class="partners-subtitle">
+          We transform marketplace data into scalable growth strategies, aligning product research, visibility, and
+          advertising for measurable ecommerce expansion.
+        </p>
+        <div class="partners-trust-text">
+          Rated <span class="highlight-orange">85%</span> higher keyword visibility, <span
+            class="highlight-orange">60%</span>
+          ower ad spend,<br>2× faster validation
+
+        </div>
+        <div class="mt-2">
+          <a href="contact.html" class="btn btn-marketing">Start Scaling</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Settings Section -->
+  <section id="interactive-settings" class="settings-section py-5">
+    <div class="container py-lg-5">
+      <div class="row align-items-center">
+        <!-- Left Content -->
+        <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+          <span class="sub-title text-primary fw-bold text-uppercase mb-2 d-block"
+            style="font-size: 0.85rem; letter-spacing: 1.5px;">Our Growth Process</span>
+          <h2 class="settings-title">Data. <span class="text-primary">Execute.</span> Scale.</h2>
+          <p class="details-text">Our Helium 10 framework combines advanced product intelligence, keyword dominance,
+            listing precision, advertising optimization, and performance analytics to systematically increase
+            marketplace visibility, reduce wasted spend, and drive predictable ecommerce revenue growth.</p>
+        </div>
+
+        <!-- Right Content: Interactive Card -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="settings-browser-mockup">
+            <div class="mockup-body d-flex">
+              <!-- Sidebar -->
+              <div class="mockup-sidebar">
+                <div class="sidebar-menu-item active" data-target="harvesting">
+                  <i class="bi bi-search"></i>
+                  <span>Research</span>
+                </div>
+                <div class="sidebar-menu-item" data-target="bidding">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span>Optimize</span>
+                </div>
+                <div class="sidebar-menu-item" data-target="budgeting">
+                  <i class="bi bi-wallet2"></i>
+                  <span>Launch</span>
+                </div>
+                <div class="sidebar-menu-item" data-target="reporting">
+                  <i class="bi bi-pie-chart"></i>
+                  <span>Track</span>
+                </div>
+                <div class="sidebar-menu-item" data-target="automation">
+                  <i class="bi bi-cpu"></i>
+                  <span>Scale</span>
+                </div>
+              </div>
+              <!-- Content Area -->
+              <div class="mockup-content">
+                <div id="settings-details" class="details-container">
+                  <div class="status-badge status-active">
+                    <div class="pulse-dot"></div>
+                    <span>System Active</span>
+                  </div>
+                  <h4 class="details-heading fw-bold">Market Opportunity Analysis</h4>
+                  <p class="details-text">
+                    We leverage Black Box, Cerebro, and Magnet to uncover profitable product gaps, analyze competitors,
+                    validate demand trends, and eliminate high-risk opportunities before investment.
+                  </p>
+
+                  <div class="visual-component">
+                    <div class="data-row">
+                      <span class="data-label">Keywords Extracted</span>
+                      <span class="data-value">48,200</span>
+                    </div>
+                    <div class="data-row">
+                      <span class="data-label">Products Analyzed</span>
+                      <span class="data-value">70%</span>
+                    </div>
+                    <div class="progress-minimal">
+                      <div class="progress-fill" style="width: 70%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto Scrolling Cards Section -->
+  <section id="auto-scrolling" class="scrolling-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side Content -->
+        <div class="col-lg-6">
+          <div class="scrolling-left-content" data-aos="fade-right">
+            <h2 class="scrolling-title">Real-Time Growth Optimization Engine
+              <!-- <br><span>superhuman</span> precision</h2> -->
+            </h2>
+            <p class="scrolling-desc">
+              Powered by Helium 10 analytics, our system continuously monitors keyword movement, advertising efficiency,
+              competitor shifts, and revenue signals—triggering immediate data-backed optimizations that maximize
+              visibility, reduce inefficiencies, and accelerate marketplace growth.
+              Activate Growth Engine
+            </p>
+            <!-- <div class="testimonial-box">
+              <div class="testimonial-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150"
+                  alt="Megan Loveland" class="testimonial-img">
+              </div>
+              <div class="testimonial-info">
+                <h4>Megan Loveland</h4>
+                <p>Associate Manager, Etail and <br>Distributors @ Crocs</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Right Side Scrolling Blocks -->
+        <div class="col-lg-6">
+          <div class="scrolling-outer-container" data-aos="fade-left">
+            <div class="scrolling-container">
+              <div class="scrolling-track">
+                <!-- Card 1 -->
+                <div class="scroll-card">
+                  <!-- <span class="card-label">ACoS Down </span> -->
+                  <p class="card-title">ACoS Down <span class="highlight-blue-text">34%</span>— Profit Margin Up!
+                  </p>
+                  <div class="card-footer-design">
+                    <div class="design-bars">
+                      <div class="design-bar long"></div>
+                      <div class="design-bar short"></div>
+                    </div>
+                    <div class="card-icons">
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle active"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scroll-card">
+                  <p class="card-title"> <span class="highlight-blue-text">+27%</span>Organic Ranking Jump; Page 1
+                    Achieved</p>
+                  <div class="card-footer-design">
+                    <div class="design-bars">
+                      <div class="design-bar long"></div>
+                      <div class="design-bar short"></div>
+                    </div>
+                    <div class="card-icons">
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle active"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scroll-card">
+                  <!-- <span class="card-label">Search term with no conversions!</span> -->
+                  <p class="card-title">High-Intent Keywords Converted — <span class="highlight-blue-text">18%</span>CTR
+                    Boost!</p>
+                  <div class="card-footer-design">
+                    <div class="design-bars">
+                      <div class="design-bar long"></div>
+                      <div class="design-bar short"></div>
+                    </div>
+                    <div class="card-icons">
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle active"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Duplicate cards for seamless loop -->
+                <div class="scroll-card">
+                  <!-- <span class="card-label">Organically ranked as #1,</span> -->
+                  <p class="card-title">Ad Waste Cut <span class="highlight-blue-text">41%</span>; Budget Reallocated
+                    Smartly
+                  </p>
+                  <div class="card-footer-design">
+                    <div class="design-bars">
+                      <div class="design-bar long"></div>
+                      <div class="design-bar short"></div>
+                    </div>
+                    <div class="card-icons">
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle active"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="scroll-card">
+                  <p class="card-title">Market Share Up <span class="highlight-blue-text">22% </span>— Competitor
+                    Overtaken!</p>
+                  <div class="card-footer-design">
+                    <div class="design-bars">
+                      <div class="design-bar long"></div>
+                      <div class="design-bar short"></div>
+                    </div>
+                    <div class="card-icons">
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle active"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="scroll-card">
+                  <span class="card-label">Search term with no conversions!</span>
+                  <p class="card-title">Negative match <span class="highlight-blue-text">"comfy socks"</span></p>
+                  <div class="card-footer-design">
+                    <div class="design-bars">
+                      <div class="design-bar long"></div>
+                      <div class="design-bar short"></div>
+                    </div>
+                    <div class="card-icons">
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle"></div>
+                      <div class="icon-circle active"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expanding Cards Section -->
+  <section class="expanding-section">
+    <div class="container">
+      <div class="expanding-header" data-aos="fade-up">
+        <h2 class="how-it-works-title">Helium 10 Expertise. Measurable Marketplace Growth.</h2>
+        <p>We combine deep platform intelligence, strategic execution, and continuous optimization to deliver
+          predictable ecommerce performance improvements.</p>
+      </div>
+      <div class="expanding-container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Card 1 -->
+        <div class="expanding-card"
+          style="background-image: url('https://image.dataspantechnologies.com/dataspan/Helium-why-us-1.jpeg');">
+          <div class="card-content-overlay">
+            <h3>Data-Driven Execution</h3>
+            <div class="card-details">
+              <p>We don’t guess. Every product, keyword, and campaign decision is backed by real marketplace analytics
+                and competitive intelligence.</p>
+              <!-- <a href="#" class="learn-link">Learn more &rarr;</a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="expanding-card"
+          style="background-image: url('https://image.dataspantechnologies.com/dataspan/Helium-why-us-2.jpeg');">
+          <div class="card-content-overlay">
+            <h3>Performance-Focused Strategy</h3>
+            <div class="card-details">
+              <p>Our optimization approach prioritizes profitability, reducing wasted spend while increasing visibility,
+                conversions, and sustainable revenue growth.</p>
+              <!-- <a href="#" class="learn-link">Learn more &rarr;</a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="expanding-card"
+          style="background-image: url('https://image.dataspantechnologies.com/dataspan/Helium-why-us-3.jpeg');">
+          <div class="card-content-overlay">
+            <h3>Advanced Tool Mastery</h3>
+            <div class="card-details">
+              <p>We fully leverage Helium 10’s ecosystem—from product research to analytics—to unlock untapped
+                marketplace opportunities.</p>
+              <!-- <a href="#" class="learn-link">Learn more &rarr;</a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="expanding-card"
+          style="background-image: url('https://image.dataspantechnologies.com/dataspan/Helium-why-us-4.jpeg');">
+          <div class="card-content-overlay">
+            <h3>Scalable Growth Systems</h3>
+            <div class="card-details">
+              <p>We build repeatable optimization frameworks that support multi-product expansion, improved rankings,
+                and long-term competitive advantage.</p>
+              <!-- <a href="#" class="learn-link">Start learning &rarr;</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="call-to-action section">
+    <div class="container" data-aos="zoom-in">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2>Turn Marketplace Data Into Scalable Revenue </h2>
+          <p class="mb-4">Unlock profitable growth with precision keyword strategy, smarter advertising, and data-backed
+            marketplace execution powered by Helium 10.</p>
+          <div class="cta-buttons justify-content-center">
+            <a href="../contact.html" class="btn btn-primary me-2 mb-2">Launch Growth Strategy</a>
+            <!-- <a href="service.html" class="btn btn-outline-primary mb-2">Explore Our Services</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Call to Action Section -->
+
+  <footer id="footer" class="footer section light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
+            <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
+          </a>
+          <div class="footer-contact pt-1">
+            <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
+            <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p> -->
+            <p>We work with businesses to simplify digital operations, <br>strengthen eCommerce performance, and build
+              smarter systems that support steady, measurable growth</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span></p>
+            <p><strong>Email:</strong> <span>info@dataspantechnologies.com</span></p>
+          </div>
+          <div class="social-links d-flex my-2">
+            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+
+            <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
+            <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 class="footer-dropdown-toggle">
+            MENU
+            <i class="bi bi-chevron-down footer-chevron"></i>
+          </h4>
+          <ul class="footer-dropdown-content">
+            <li><a href="https://dataspantechnologies.com">Home</a></li>
+            <li><a href="Aboutus.html">About us</a></li>
+            <li><a href="Clients.html">Clients</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <!-- <li><a href="#">Privacy Policy</a></li> -->
+            <!-- <li><a href="#">Terms of Service</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4 class="footer-dropdown-toggle">
+            NASHIK
+            <i class="bi bi-chevron-down footer-chevron"></i>
+          </h4>
+          <div class="footer-dropdown-content">
+            <div class="footer-contact">
+              <!-- <p><strong>Address:</strong></p> -->
+              <p>Shreeji Pride, Second Floor, Opp.</p>
+              <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4 class="footer-dropdown-toggle">
+            MALEGAON
+            <i class="bi bi-chevron-down footer-chevron"></i>
+          </h4>
+          <div class="footer-dropdown-content">
+            <div class="footer-contact">
+              <!-- <p><strong>Address:</strong></p> -->
+
+              <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon 423203</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nobis illum</h4>
+          <ul>
+            <li><a href="#">Ipsam</a></li>
+            <li><a href="#">Laudantium dolorum</a></li>
+            <li><a href="#">Dinera</a></li>
+            <li><a href="#">Trodelas</a></li>
+            <li><a href="#">Flexo</a></li>
+          </ul>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center m-0 p-0">
+      <!-- Social Links for Mobile View -->
+      <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
+        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+
+        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
+        <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+      </div>
+      <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
+          Technologies</strong> <span>All Rights
+          Reserved</span></p>
+    </div>
+
+  </footer>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const partnersSection = document.getElementById('partners-spread');
+
+      const updateScrollProgress = () => {
+        if (!partnersSection) return;
+
+        const rect = partnersSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        // Calculate the center of the section relative to the viewport center
+        const sectionCenter = rect.top + rect.height / 2;
+        const viewportCenter = viewportHeight / 2;
+
+        // Distance from viewport center
+        const dist = Math.abs(sectionCenter - viewportCenter);
+
+        // Range over which the animation happens (progress 0 -> 1 -> 0)
+        // We want it to be fully expanded (progress=1) when centered
+        // and fully collapsed (progress=0) when section is mostly out of view
+        const range = viewportHeight * 0.7;
+
+        let progress = 1 - (dist / range);
+        progress = Math.max(0, Math.min(1, progress));
+
+        partnersSection.style.setProperty('--progress', progress);
+
+        if (progress > 0.05) {
+          partnersSection.classList.add('active');
+        } else {
+          partnersSection.classList.remove('active');
+        }
+      };
+
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      updateScrollProgress(); // Initial check
+
+      // Interactive Settings Logic
+      const menuItems = document.querySelectorAll('.sidebar-menu-item');
+      const detailsContainer = document.getElementById('settings-details');
+
+      const contentData = {
+        harvesting: {
+          title: "Market Opportunity Analysi",
+          text: "We leverage Black Box, Cerebro, and Magnet to uncover profitable product gaps, analyze competitors, validate demand trends, and eliminate high-risk opportunities before investment.",
+          visual: {
+            badge: "Intelligence Activated",
+            label1: "Keywords Extracted",
+            value1: "48,200",
+            label2: "Products Analyzed",
+            value2: "70%",
+            progress: "70%"
+          }
+        },
+        bidding: {
+          title: "Listing Authority Build",
+          text: "Using Listing Builder, Scribbles, and Analyzer, we structure keyword-rich, conversion-focused listings designed to maximize indexing, improve organic rankings, and increase click-through rates.",
+          visual: {
+            badge: "System Configured",
+            label1: "Listings Optimized",
+            value1: "320+",
+            label2: "Indexing Rate",
+            value2: " 92%",
+            progress: " 92%"
+          }
+        },
+        budgeting: {
+          title: "Strategic PPC Deployment",
+          text: "Through Helium 10 Ads and advanced keyword harvesting, we deploy structured campaigns focused on lowering ACoS, scaling profitable terms, and eliminating wasted advertising spend.",
+          visual: {
+            badge: "Campaign Activated",
+            label1: "Keywords Harvested",
+            value1: "38,400",
+            label2: "ACoS Reduced",
+            value2: "37%",
+            progress: "37%"
+          }
+        },
+        reporting: {
+          title: "Performance Intelligence Tracking",
+          text: "We monitor Keyword Tracker, Market Tracker, Profits, and search query insights to measure ranking movement, market share growth, and overall marketplace profitability in real time.",
+          visual: {
+            badge: "Monitoring Enabled",
+            label1: "Keywords Tracked",
+            value1: "6,800",
+            label2: "Market Share Growth",
+            value2: "28%",
+            progress: "28%"
+          }
+        },
+        automation: {
+          title: "Revenue Acceleration Strategy",
+          text: "We refine data insights, expand profitable keyword clusters, optimize budget allocation, and strengthen competitive positioning to transform validated traction into long-term scalable ecommerce growth.",
+          visual: {
+            badge: "Expansion In Progress",
+            label1: "Revenue Growth",
+            value1: "2.4X",
+            label2: "Ad Waste Reduced",
+            value2: " 55%",
+            progress: "55%"
+          }
+        }
+      };
+
+      menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          if (item.classList.contains('active')) return;
+
+          // Update active class
+          menuItems.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+
+          const target = item.getAttribute('data-target');
+          const data = contentData[target];
+
+          // Animate transition
+          detailsContainer.style.opacity = '0';
+          detailsContainer.style.transform = 'translateY(15px)';
+
+          setTimeout(() => {
+            detailsContainer.innerHTML = `
+              <div class="status-badge status-active" style="background: ${target === 'automation' ? '#fef9c3' : target === 'bidding' ? '#dbeafe' : '#dcfce7'}; color: ${target === 'automation' ? '#854d0e' : target === 'bidding' ? '#1e40af' : '#166534'}">
+                <div class="pulse-dot"></div>
+                <span>${data.visual.badge}</span>
+              </div>
+              <h4 class="details-heading fw-bold">${data.title}</h4>
+              <p class="details-text">${data.text}</p>
+              
+              <div class="visual-component">
+                <div class="data-row">
+                  <span class="data-label">${data.visual.label1}</span>
+                  <span class="data-value">${data.visual.value1}</span>
+                </div>
+                <div class="data-row">
+                  <span class="data-label">${data.visual.label2}</span>
+                  <span class="data-value">${data.visual.value2}</span>
+                </div>
+                <div class="progress-minimal">
+                  <div class="progress-fill" style="width: ${data.visual.progress};"></div>
+                </div>
+              </div>
+            `;
+
+            detailsContainer.style.opacity = '1';
+            detailsContainer.style.transform = 'translateY(0)';
+
+            // Re-trigger progress bar animation
+            setTimeout(() => {
+              const fill = detailsContainer.querySelector('.progress-fill');
+              if (fill) fill.style.width = data.visual.progress;
+            }, 50);
+
+          }, 300);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
