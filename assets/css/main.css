@@ -3593,7 +3593,7 @@ section#why-choose-us {
 .why-choose-us .cards-container .card:nth-child(5),
 #why-choose-us .cards-container .card:nth-child(5),
 .why-choose-us-cards .card:nth-child(5) {
-  background-image: url('https://image.dataspantechnologies.com/dataspan/5.%20partnership.jpg');
+  background-image: url('https://image.dataspantechnologies.com/dataspan/partnership.jpeg');
 }
 
 /* Cloud Services specific background images */
@@ -7048,7 +7048,7 @@ section#why-choose-us {
 
 /* Animated checkmark - pulsing verification */
 .services .service-card .icon-cloud i.bi-cloud::after {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7470,7 +7470,7 @@ section#why-choose-us {
 
 /* Transaction approval checkmark effect */
 .services .service-card .icon-pos::after {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   top: -5px;
   right: -5px;
@@ -8687,17 +8687,6 @@ html body.clients-page .nav-container {
   .nav-container {
     padding: 0 18px !important;
     gap: 20px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    flex-direction: row !important;
-  }
-
-  .nav-logo {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    flex-shrink: 0 !important;
   }
 
   .logo-image {
@@ -8914,17 +8903,6 @@ html body.clients-page .nav-container {
   .nav-container {
     padding: 10px 18px 10px 12px !important;
     gap: 15px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    flex-direction: row !important;
-  }
-
-  .nav-logo {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    flex-shrink: 0 !important;
   }
 
   .logo-image {
@@ -8935,10 +8913,6 @@ html body.clients-page .nav-container {
 
   .mobile-menu-toggle {
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-direction: column !important;
-    flex-shrink: 0 !important;
     width: 38px !important;
     min-width: 38px !important;
     max-width: 38px !important;
@@ -9011,17 +8985,6 @@ html body.clients-page .nav-container {
   .nav-container {
     padding: 10px 15px 10px 10px !important;
     gap: 12px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    flex-direction: row !important;
-  }
-
-  .nav-logo {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    flex-shrink: 0 !important;
   }
 
   .logo-image {
@@ -9032,10 +8995,6 @@ html body.clients-page .nav-container {
 
   .mobile-menu-toggle {
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-direction: column !important;
-    flex-shrink: 0 !important;
     width: 36px !important;
     min-width: 36px !important;
     max-width: 36px !important;
@@ -10020,7 +9979,7 @@ html body.clients-page .nav-container {
   }
 
   .nav-menu .dropdown.active .dropdown-toggle::after {
-    content: '−';
+    content: '\2212';
     transform: rotate(0deg);
     background: rgba(13, 131, 253, 0.2);
   }
@@ -13044,13 +13003,8 @@ html {
     display: block;
   }
 
-  /* Ensure desktop menu is hidden on mobile even if active class is present */
-  #services-dropdown.active {
-    display: none !important;
-  }
-
   .mobile-services-menu {
-    display: none;
+    display: block;
     width: 100%;
     border: 1px solid #e5ecf6;
     border-radius: 20px;
@@ -13145,15 +13099,6 @@ html {
     transition: max-height 0.35s ease, opacity 0.35s ease, padding 0.3s ease, margin 0.3s ease;
     max-height: 560px;
     opacity: 1;
-    overflow: hidden;
-  }
-
-  .category-toggle i {
-    transition: transform 0.3s ease;
-  }
-
-  .category-item.active .category-toggle i {
-    transform: rotate(90deg);
   }
 
   .mobile-subcategories-container.hidden {
@@ -13905,10 +13850,10 @@ a.tile {
    ======================================================== */
 
 .promo-section {
-  min-width: 400px;
+  min-width: 600px;
   max-width: 500px;
   position: relative;
-  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%);
+  /* background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%); */
   border-radius: 16px;
   padding: 30px;
   overflow: hidden;
@@ -14461,10 +14406,12 @@ a.tile {
   .category-toggle i {
     font-size: 14px;
     font-weight: bold;
+    color: #000;
   }
 
   .mobile-category-item.active .category-toggle {
     transform: rotate(90deg);
+
   }
 
   /* Subcategories Container */
@@ -14518,5 +14465,120 @@ a.tile {
 @media (min-width: 1200px) {
   .mobile-services-menu {
     display: none !important;
+  }
+}
+
+/* Navbar Overrides from index.html for Global consistency */
+.dropdown-menu.active {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-item.dropdown.active .dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.dropdown-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu.active .dropdown-container {
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Navigation Improvements */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 10px 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    min-height: 60px !important;
+    max-height: none !important;
+    margin: 0 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .nav-container {
+    padding: 0 20px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .nav-logo {
+    display: flex !important;
+    align-items: center !important;
+    margin-right: auto !important;
+  }
+
+  .nav-logo .logo-image {
+    max-height: 40px !important;
+    height: auto !important;
+    min-width: auto !important;
+    display: block !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 42px !important;
+    height: 42px !important;
+    background: #0d83fd !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+    box-shadow: 0 4px 12px rgba(13, 131, 253, 0.2) !important;
+  }
+
+  .mobile-menu-toggle span {
+    display: block !important;
+    width: 22px !important;
+    height: 2px !important;
+    background: #ffffff !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar {
+    padding: 8px 0 !important;
+  }
+
+  .nav-container {
+    padding: 0 15px !important;
+  }
+
+  .nav-logo .logo-image {
+    max-height: 35px !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 38px !important;
+    height: 38px !important;
+    gap: 4px !important;
+  }
+
+  .mobile-menu-toggle span {
+    width: 18px !important;
   }
 }
