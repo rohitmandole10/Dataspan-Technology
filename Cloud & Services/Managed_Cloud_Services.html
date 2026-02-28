@@ -8,6 +8,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script>
+    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-RPYT1GBRQT'); </script>
+
     <!-- Favicons -->
     <link href="../assets/img/brand.png" rel="icon">
     <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
@@ -31,6 +34,28 @@
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
     <style>
+        
+            .how-it-works-title {
+            font-size: clamp(2rem, 5vw, 2.5rem) !important;
+            font-weight: 800 !important;
+            color: var(--heading-color) !important;
+            font-family: var(--heading-font) !important;
+            margin-bottom: 10px !important;
+            letter-spacing: -0.01em !important;
+            line-height: 1.2 !important;
+            text-align: center !important;
+        }
+
+        .ai-highlight-2 {
+            /* font-size: 1.75rem; */
+            /* font-weight: 900; */
+            background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
         :root {
             --section-padding: clamp(40px, 8vw, 100px);
         }
@@ -342,11 +367,11 @@
 
         .stats-section .stats-title {
             .stats-section .stats-title {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-      font-weight: 700;
-            margin-bottom:0.5rem;
-            line-height: 1.3;
-        }
+                font-size: clamp(1.8rem, 3vw, 2.5rem);
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                line-height: 1.3;
+            }
         }
 
 
@@ -1085,49 +1110,74 @@
 
         /* Right side list */
         .benefits-section .benefit-item {
-            padding: 12px 0;
-            cursor: pointer;
+            padding: 18px 20px;
             display: flex;
-            gap: 12px;
+            gap: 16px;
             align-items: flex-start;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+            /* Prevents layout shift flickering */
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+
+        .benefits-section .benefit-item:hover {
+            background-color: rgba(59, 130, 246, 0.04);
+        }
+
+        .benefits-section .benefit-item>div:last-child {
+            display: grid;
+            grid-template-rows: auto 0fr;
+            transition: grid-template-rows 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: grid-template-rows;
+        }
+
+        .benefits-section .benefit-item:hover>div:last-child {
+            grid-template-rows: auto 1fr;
         }
 
         .benefits-section .benefit-number {
-            font-weight: 600;
+            font-weight: 700;
             color: #64748b;
-            min-width: 30px;
+            min-width: 32px;
+            transition: color 0.4s ease, transform 0.4s ease;
+            will-change: transform;
         }
 
+        .benefits-section .benefit-item:hover .benefit-number {
+            color: #3b82f6;
+            transform: scale(1.1) translateY(-2px);
+        }
 
         .benefits-section .benefit-title {
-            font-weight: 600;
-            transition: color 0.3s ease-in-out;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: color 0.4s ease, transform 0.4s ease;
+            will-change: transform;
         }
 
         .benefits-section .benefit-item:hover .benefit-title {
             color: #3b82f6;
         }
 
-
         .benefits-section .benefit-desc {
-            opacity: 0;
-            max-height: 0;
+            min-height: 0;
             overflow: hidden;
-            margin-top: 0;
+            opacity: 0;
             color: #475569;
             font-size: 0.95rem;
-            max-width: 420px;
-            transform: translateY(-10px);
-            transition: none;
+            max-width: 440px;
+            transform: translateY(-4px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            will-change: opacity, transform;
         }
-
 
         .benefits-section .benefit-item:hover .benefit-desc {
             opacity: 1;
-            max-height: 500px;
-            margin-top: 6px;
+            margin-top: 8px;
             transform: translateY(0);
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, margin-top 0.3s ease-in-out, max-height 0.3s ease-in-out;
+            transition-delay: 0.1s;
         }
 
 
@@ -1325,25 +1375,25 @@
 
 <body class="services">
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <!-- Logo -->
-      <div class="nav-logo">
-        <a href="https://dataspantechnologies.com" class="logo">
-          <img src="https://image.dataspantechnologies.com/dataspan/brand3.png" alt="Dataspan Technologies Logo"
-            class="logo-image" />
-        </a>
-      </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="https://dataspantechnologies.com" class="logo">
+                    <img src="https://image.dataspantechnologies.com/dataspan/brand3.png"
+                        alt="Dataspan Technologies Logo" class="logo-image" />
+                </a>
+            </div>
 
-      <!-- Main Navigation -->
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="../Aboutus.html" class="nav-link">About Us</a>
-        </li>
-        <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
+            <!-- Main Navigation -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://dataspantechnologies.com" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" data-dropdown="services">
                         Services
                         <!-- <i class="fas fa-chevron-down"></i> -->
                     </a>
@@ -1436,209 +1486,162 @@
                         </div>
                     </div>
                 </li>
-        <li class="nav-item">
-          <a href="../Clients.html" class="nav-link">Clients</a>
-        </li>
-        <li class="nav-item">
-          <a href="../gallery.html" class="nav-link">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a href="../contact.html" class="nav-link">Contact Us</a>
-        </li>
-      </ul>
+                <li class="nav-item">
+                    <a href="../Clients.html" class="nav-link">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
 
-      <!-- Mobile Menu Toggle Button -->
-      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-      <!-- Action Button 
+            <!-- Action Button 
             <div class="nav-action">
                 <button class="start-project-btn">Start Project</button>
             </div>-->
-    </div>
-
-    <!-- Services Dropdown Menu -->
-    <div class="dropdown-menu" id="services-dropdown">
-      <div class="dropdown-container">
-        <div class="dropdown-content">
-
-          <div class="service-categories">
-            <div class="category-column">
-              <div class="category-item active" data-submenu="ai-automation">
-                <a href="#" class="category-link">AI & Automation</a>
-              </div>
-              <div class="category-item" data-submenu="development-technology">
-                <a href="#" class="category-link">Development & Technology</a>
-              </div>
-              <div class="category-item" data-submenu="design-branding">
-                <a href="#" class="category-link">Design & Branding</a>
-              </div>
-              <div class="category-item" data-submenu="cloud-infrastructure">
-                <a href="#" class="category-link">Cloud & Infrastructure</a>
-              </div>
-              <div class="category-item" data-submenu="data-operations">
-                <a href="#" class="category-link">Data & Operations</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="ai-automation-submenu">
-              <div class="subcategory-item">
-                <a href="../AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning (ML)</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/ocr.html" class="subcategory-link">OCR (Optical Character Recognition)</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper & Scripting</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/Navision_Integration_and_Automation.html" class="subcategory-link">Navision Integration &
-                  Automation</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf Labels) Integration</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Shopify_Development_&_Services.html"
-                  class="subcategory-link">Shopify Development & Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Web_&_Mobile_Development.html" class="subcategory-link">Web & Mobile
-                  Development</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/Software_Development_&_Consulting.html"
-                  class="subcategory-link">Software Development & Consulting</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
-                  class="subcategory-link">E-Commerce & Marketplace Integration</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Design & Branding/UI/UX_Creative_Services.html" class="subcategory-link">UI/UX & Creative
-                  Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design & Branding</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Hosting_&_Cloud_Services.html" class="subcategory-link">Hosting & Cloud
-                  Services</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Managed_Cloud_Services.html" class="subcategory-link">Managed Hosting
-                  Solutions</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html" class="subcategory-link">Cloud
-                  Setup, Migration & Optimization</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
-                  class="subcategory-link">Server Monitoring, Backup & Security Management</a>
-              </div>
-            </div>
-
-
-            <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
-              <div class="subcategory-item">
-                <a href="../Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting & Analytics</a>
-              </div>
-              <div class="subcategory-item">
-                <a href="../Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back Office & BPO
-                  Solutions</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Promotional Graphics Section -->
-          <div class="promo-section">
-            <div class="tech-illustration">
-              <!-- Robot/Server Unit -->
-              <div class="robot-unit">
-                <div class="robot-head">
-                  <div class="robot-core"></div>
-                  <div class="circuit-board"></div>
-                </div>
-                <div class="code-screen">
-                  <div class="code-line"></div>
-                  <div class="code-line"></div>
-                  <div class="code-line"></div>
-                </div>
-              </div>
-
-              <!-- Human Figures -->
-              <div class="human-figures">
-                <div class="human-figure male">
-                  <div class="figure-body"></div>
-                  <div class="key blue-key"></div>
-                </div>
-                <div class="human-figure female">
-                  <div class="figure-body"></div>
-                  <div class="key green-key"></div>
-                </div>
-              </div>
-
-              <!-- Brain Icon -->
-              <div class="brain-icon">
-                <div class="brain-shape"></div>
-              </div>
-
-              <!-- Geometric Elements -->
-              <div class="geometric-elements">
-                <div class="cube-stack">
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                </div>
-                <div class="individual-cubes">
-                  <div class="cube"></div>
-                  <div class="cube"></div>
-                </div>
-                <div class="shield-icon"></div>
-                <div class="floating-keys">
-                  <div class="key blue-key"></div>
-                  <div class="key green-key"></div>
-                </div>
-              </div>
-
-              <!-- Smartphone -->
-              <div class="smartphone">
-                <div class="phone-body"></div>
-                <div class="network-signals">
-                  <div class="signal"></div>
-                  <div class="signal"></div>
-                  <div class="signal"></div>
-                </div>
-                <div class="data-flow">
-                  <div class="data-cube"></div>
-                  <div class="data-cube"></div>
-                  <div class="data-cube"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu-backdrop" aria-hidden="true"></div> 
+
+        <!-- Services Dropdown Menu -->
+        <div class="dropdown-menu" id="services-dropdown">
+            <div class="dropdown-container">
+                <div class="dropdown-content">
+
+                    <div class="service-categories">
+                        <div class="category-column">
+                            <div class="category-item active" data-submenu="ai-automation">
+                                <a href="#" class="category-link">AI & Automation</a>
+                            </div>
+                            <div class="category-item" data-submenu="development-technology">
+                                <a href="#" class="category-link">Development & Technology</a>
+                            </div>
+                            <div class="category-item" data-submenu="design-branding">
+                                <a href="#" class="category-link">Design & Branding</a>
+                            </div>
+                            <div class="category-item" data-submenu="cloud-infrastructure">
+                                <a href="#" class="category-link">Cloud & Infrastructure</a>
+                            </div>
+                            <div class="category-item" data-submenu="data-operations">
+                                <a href="#" class="category-link">Data & Operations</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="ai-automation-submenu">
+                            <div class="subcategory-item">
+                                <a href="../AI/Ai_mechine_learning.html" class="subcategory-link">AI & Machine Learning
+                                    (ML)</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/ocr.html" class="subcategory-link">OCR (Optical Character
+                                    Recognition)</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/Scraper_&_Scripting.html" class="subcategory-link">Scraper &
+                                    Scripting</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/Navision_Integration_and_Automation.html"
+                                    class="subcategory-link">Navision Integration &
+                                    Automation</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../AI/ESL_Integration.html" class="subcategory-link">ESL (Electronic Shelf
+                                    Labels) Integration</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="development-technology-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Shopify_Development_&_Services.html"
+                                    class="subcategory-link">Shopify Development & Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Web_&_Mobile_Development.html"
+                                    class="subcategory-link">Web & Mobile
+                                    Development</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/Software_Development_&_Consulting.html"
+                                    class="subcategory-link">Software Development & Consulting</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Development and Technology/eCommerce_&_Marketplace_Integration.html"
+                                    class="subcategory-link">E-Commerce & Marketplace Integration</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="design-branding-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Design & Branding/UI/UX_Creative_Services.html"
+                                    class="subcategory-link">UI/UX & Creative
+                                    Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Design & Branding/UI/Design_&_Branding.html" class="subcategory-link">Design
+                                    & Branding</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="cloud-infrastructure-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Hosting_&_Cloud_Services.html"
+                                    class="subcategory-link">Hosting & Cloud
+                                    Services</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Managed_Cloud_Services.html"
+                                    class="subcategory-link">Managed Hosting
+                                    Solutions</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Cloud_Setup_migration_&_Optimization.html"
+                                    class="subcategory-link">Cloud
+                                    Setup, Migration & Optimization</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Cloud & Services/Server Monitoring_Backup_&_Security_Management.html"
+                                    class="subcategory-link">Server Monitoring, Backup & Security Management</a>
+                            </div>
+                        </div>
+
+
+                        <div class="subcategory-column" id="data-operations-submenu" style="display: none;">
+                            <div class="subcategory-item">
+                                <a href="../Data & Ops/Reporting_&_Analytics.html" class="subcategory-link">Reporting &
+                                    Analytics</a>
+                            </div>
+                            <div class="subcategory-item">
+                                <a href="../Data & Ops/Back_Office_&_BPO_Solution.html" class="subcategory-link">Back
+                                    Office & BPO
+                                    Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promotional Graphics Section -->
+                      <div class="promo-section">
+            <div class="tech-illustration d-flex gap-3">
+            <a href="../POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
+            <a href="../Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
+            </div>
+          </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
 
 
     <div class="main">
@@ -1648,8 +1651,9 @@
             <!-- Breadcrumbs -->
             <div class="hero-breadcrumbs">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://dataspantechnologies.com">Home</a></li>
                     <li><a href="#">Services</a></li>
+                    <li><a href="#">Cloud & Services</a></li>
                     <li><span>Managed Cloud Services</span></li>
                 </ol>
             </div>
@@ -1673,7 +1677,7 @@
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
                                 <!-- <a href="#contact" class="btn btn-primary">Start Your AI Project</a> -->
-                                <a href="#contact" class="btn btn-outline-primary">Manage Your Cloud</a>
+                                <a href="../contact.html" class="btn btn-outline-primary">Manage Your Cloud</a>
                             </div>
                         </div>
                     </div>
@@ -1686,10 +1690,11 @@
 
         <!-- Key Metrices -->
         <section class="stats-section">
-            <h2 class="stats-title">
+            <h2 class="how-it-works-title">
                 Cloud Performance That Drives Growth
             </h2>
-            <p class="mb-4">Reliable cloud operations improve uptime security scalability costs and speed across critical business
+            <p class="mb-4">Reliable cloud operations improve uptime security scalability costs and speed across
+                critical business
                 systems globally</p>
 
             <div class="container">
@@ -1730,9 +1735,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="site-heading text-center">
-                            <h2>Managed Cloud Services Built For Scale</h2>
-                            <h4>Dataspans cloud services ensuring performance, security, scalability, reliability, and
-                                cost efficiency across environments.</h4>
+                            <h2 class="how-it-works-title"><span class="ai-highlight-2">Managed Cloud</span> Services Built For Scale</h2>
+                            <h5>Dataspans cloud services ensuring performance, security, scalability, reliability, and
+                                cost efficiency across environments.</h5>
                         </div>
                     </div>
                 </div>
@@ -2070,7 +2075,7 @@
         <section id="why-choose-us" class="why-choose-us section">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Our Proven Managed Cloud Delivery Process</h2>
+                    <h2 class="how-it-works-title">Our Proven Managed Cloud Delivery Process</h2>
                     <p>Structured approach ensuring secure, optimized, scalable cloud services aligned with business
                         goals, compliance requirements, performance expectations, and continuous improvement cycles.</p>
                 </div>
@@ -2286,7 +2291,7 @@
         <section id="cta" class="call-to-action section">
             <div class="container" data-aos="zoom-in">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
+                    <div class="col-lg-8 text-center w-100">
                         <h2>Simplify Cloud Management. Focus On Growth.</h2>
                         <p class="mb-4">Let our expert cloud team handle performance, security, and optimization—so your
                             team can move faster and smarter.</p>
@@ -2302,78 +2307,80 @@
 
     <footer id="footer" class="footer section light-background">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
-            <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
-          </a>
-          <div class="footer-contact pt-1">
-            <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="https://dataspantechnologies.com" class="logo d-flex align-items-center ">
+                        <img src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png" alt="">
+                    </a>
+                    <div class="footer-contact pt-1">
+                        <!-- <p>Shreeji Pride, Dataspan Technologies, Shreeji Pride, Second Floor, Opp.</p>
             <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p> -->
-            <p>We work with businesses to simplify digital operations, <br>strengthen eCommerce performance, and build
-              smarter systems that support steady, measurable growth</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span></p>
-            <p><strong>Email:</strong> <span>info@dataspantechnologies.com</span></p>
-          </div>
-          <div class="social-links d-flex my-2">
-            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+                        <p>We work with businesses to simplify digital operations, <br>strengthen eCommerce performance,
+                            and build
+                            smarter systems that support steady, measurable growth</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+91 8149390967</span></p>
+                        <p><strong>Email:</strong> <span>info@dataspantechnologies.com</span></p>
+                    </div>
+                    <div class="social-links d-flex my-2">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
 
-            <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
-            <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
-          </div>
-        </div>
+                        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://in.linkedin.com/company/dataspan-technologies"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i
+                                class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
 
 
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            MENU
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <ul class="footer-dropdown-content">
-            <li><a href="https://dataspantechnologies.com">Home</a></li>
-            <li><a href="../Aboutus.html">About us</a></li>
-            <li><a href="../Clients.html">Clients</a></li>
-            <!-- <li><a href="../service.html">Services</a></li> -->
-            <!-- <li><a href="../careers.html">Careers</a></li> -->
-            <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
-            <li><a href="../contact.html">Contact Us</a></li>
-            <!-- <li><a href="#">Privacy Policy</a></li> -->
-            <!-- <li><a href="#">Terms of Service</a></li> -->
-          </ul>
-        </div>
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        MENU
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <ul class="footer-dropdown-content">
+                        <li><a href="https://dataspantechnologies.com">Home</a></li>
+                        <li><a href="Aboutus.html">About us</a></li>
+                        <li><a href="Clients.html">Clients</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Privacy Policy</a></li> -->
+                        <!-- <li><a href="#">Terms of Service</a></li> -->
+                    </ul>
+                </div>
 
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            NASHIK
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <div class="footer-dropdown-content">
-            <div class="footer-contact">
-              <!-- <p><strong>Address:</strong></p> -->
-              <p>Shreeji Pride, Second Floor, Opp.</p>
-              <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
-            </div>
-          </div>
-        </div>
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        NASHIK
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <div class="footer-dropdown-content">
+                        <div class="footer-contact">
+                            <!-- <p><strong>Address:</strong></p> -->
+                            <p>Shreeji Pride, Second Floor, Opp.</p>
+                            <p>Euphoria Fitness Club, Manohar Nagar, Govind Nagar, Nashik, Maharashtra 422001</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4 class="footer-dropdown-toggle">
-            MALEGAON
-            <i class="bi bi-chevron-down footer-chevron"></i>
-          </h4>
-          <div class="footer-dropdown-content">
-            <div class="footer-contact">
-              <!-- <p><strong>Address:</strong></p> -->
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="footer-dropdown-toggle">
+                        MALEGAON
+                        <i class="bi bi-chevron-down footer-chevron"></i>
+                    </h4>
+                    <div class="footer-dropdown-content">
+                        <div class="footer-contact">
+                            <!-- <p><strong>Address:</strong></p> -->
 
-              <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon 423203</p>
-            </div>
-          </div>
-        </div>
+                            <p>SNO.98 Gilankar Nagar college stop near SP Classes, Malegaon 423203</p>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- <div class="col-lg-2 col-md-3 footer-links">
+                <!-- <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nobis illum</h4>
           <ul>
             <li><a href="#">Ipsam</a></li>
@@ -2384,24 +2391,24 @@
           </ul>
         </div> -->
 
-      </div>
-    </div>
+            </div>
+        </div>
 
-    <div class="container copyright text-center m-0 p-0">
-      <!-- Social Links for Mobile View -->
-      <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
-        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+        <div class="container copyright text-center m-0 p-0">
+            <!-- Social Links for Mobile View -->
+            <div class="social-links social-links-mobile d-flex justify-content-center mt-2">
+                <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
 
-        <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
-        <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
-      </div>
-      <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
-          Technologies</strong> <span>All Rights
-          Reserved</span></p>
-    </div>
+                <a href="https://www.instagram.com/dataspantechnologies_pvt.ltd/#"><i class="bi bi-instagram"></i></a>
+                <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+            </div>
+            <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
+                    Technologies</strong> <span>All Rights
+                    Reserved</span></p>
+        </div>
 
-  </footer>
+    </footer>
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short "></i></a>
