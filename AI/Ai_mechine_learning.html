@@ -8,6 +8,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script>
+    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-RPYT1GBRQT'); </script>
+
     <!-- Favicons -->
     <link href="../assets/img/brand.png" rel="icon">
     <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
@@ -31,6 +34,18 @@
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
     <style>
+
+        .how-it-works-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 800;
+            color: var(--heading-color);
+            font-family: var(--heading-font);
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            text-align: center;
+        }
+
         .ai-highlight-2 {
             /* font-size: 1.75rem; */
             font-weight: 900;
@@ -262,7 +277,7 @@
             color: var(--heading-color);
             font-weight: 600;
         }
-       
+
         @media (max-width: 1199px) {
             .hero-breadcrumbs {
                 width: 85%;
@@ -477,6 +492,8 @@
         .second {
             background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
             padding-top: 20px;
+            padding-bottom: 0px;
+            /* border: 2px solid red; */
         }
 
         .row-services {
@@ -484,7 +501,8 @@
             max-width: 1320px;
             margin: 0 auto;
             padding-bottom: 0px;
-         /* border: 2px solid red;  */
+            /* border: 2px solid red;  */
+            /* border: 2px solid red; */
         }
 
         .container-services {
@@ -1223,7 +1241,8 @@
         /* How It Works Section Styles */
         .how-it-works-section {
             background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--accent-color), transparent 98%)) !important;
-            padding: var(--section-padding) 0;
+            /* padding: var(--section-padding) 0; */
+            padding-top: 40px;
         }
 
         .how-it-works-section .container {
@@ -1751,7 +1770,7 @@
             margin-bottom: 28px;
         }
 
-        .integration-link { 
+        .integration-link {
             font-size: 16px;
             font-weight: 600;
             color: #092d4b;
@@ -1761,13 +1780,14 @@
             padding: 10px;
             border-radius: 50px;
         }
-        .integration-link:hover{
+
+        .integration-link:hover {
             /* background-color: #0d83fd; */
-            border:1px solid #0d83fd;
+            border: 1px solid #0d83fd;
             color: #0d83fd;
         }
 
-            /* .integration-link::after {
+        /* .integration-link::after {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -2021,7 +2041,7 @@
                Services / Tiles Section (.second)
                Restyled for better mobile card aesthetic
             */
-         
+
 
             .products-tile-container {
                 gap: 20px;
@@ -2529,20 +2549,12 @@
                     </div>
 
                     <!-- Promotional Graphics Section -->
-                    <div class="promo-section">
-              <div class="tech-illustration d-flex gap-3">
-                <a href="POS.html"
-                  ><img
-                    src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg"
-                    alt=""
-                /></a>
-                <a href="Helium.html"
-                  ><img
-                    src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg"
-                    alt=""
-                /></a>
-              </div>
+                      <div class="promo-section">
+            <div class="tech-illustration d-flex gap-3">
+            <a href="../POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
+            <a href="../Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
             </div>
+          </div>
                 </div>
             </div>
         </div>
@@ -2558,6 +2570,7 @@
                 <ol class="breadcrumb">
                     <li><a href="https://dataspantechnologies.com">Home</a></li>
                     <li><a href="#">Services</a></li>
+                    <li><a href="#">AI & Automation</a></li>
                     <li><span>AI & ML</span></li>
                 </ol>
             </div>
@@ -2580,7 +2593,7 @@
 
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
-                                <a href="../contact.html" class="btn btn-primary">Start Your AI Project</a>
+                                <a href="../contact.html" class="btn btn-outline-primary">Start Your AI Project</a>
                                 <!-- <a href="#contact" class="btn btn-outline-primary">Get Free Consultation</a> -->
                             </div>
                         </div>
@@ -2597,9 +2610,11 @@
             <!-- AI Development Statistics Infographic -->
             <div class="container ai-stats-section">
                 <div class="ai-stats-container">
-                    <h3 class="ai-stats-title">
+                    <h3 class="how-it-works-title">
                         <span class="ai-highlight-2">AI Development</span> - Redefining the Business Landscape
                     </h3>
+                    <p class="text-center">Measurable results showcasing the transformative power of AI in driving
+                        efficiency, automation, and enterprise innovation.</p>
                     <div class="row g-4 mt-3">
                         <div class="col-lg-3 col-md-6">
                             <div class="ai-stat-card">
@@ -2652,9 +2667,10 @@
             <div class="row-services ">
                 <div class="container-services">
                     <div class="section-title-services">
-                        <h3 class="ai-stats-title"> AI Solutions Built For Real Impact</h3>
+                        <h3 class="how-it-works-title"> AI Solutions Built For Real Impact</h3>
                         <p class="mb-4 mb-md-5">
-                            Driving automation, intelligence, and efficiency across all modern business operations.
+                            Driving automation, intelligence, and operational efficiency with AI across modern
+                            enterprises to enable faster decisions and scalable growth.
                         </p>
                     </div>
                     <div class="products-tile-container">
@@ -2819,7 +2835,7 @@
         <section class="section5">
             <div class="container">
                 <div class="technologies-section">
-                    <h2 class="technologies-title">
+                    <h2 class="how-it-works-title">
                         Technologies Powering Our <span class="ai-highlight-2">AI
                             Solutions</span>
                     </h2>
@@ -3365,7 +3381,7 @@
                     </p>
 
                     <a href="../contact.html" class="integration-link">
-                        Get AI Consultation 
+                        Get AI Consultation
                     </a>
                 </div>
 
@@ -3403,13 +3419,13 @@
                     <div class="col-lg-6 marketing-content-wrapper">
                         <div class="marketing-content">
                             <h2 class="marketing-title">AI Assistants That Understand Business Questions</h2>
-                            <div class="product-logos">
+                            <!-- <div class="product-logos">
                                 <span class="qbo-logo">Dataspan</span>
                                 <span class="plus-sign">+</span>
                                 <span class="teams-logo "><img
                                         src="https://image.dataspantechnologies.com/dataspan/footer-logo2.png"
                                         alt=""></span>
-                            </div>
+                            </div> -->
                             <p class="marketing-description">Dataspan’s AI-powered analytics assistant helps teams
                                 explore data through natural conversations. Ask questions, uncover insights, predict
                                 outcomes, and visualize results instantly using interactive charts and
@@ -3515,12 +3531,10 @@
                     </h4>
                     <ul class="footer-dropdown-content">
                         <li><a href="https://dataspantechnologies.com">Home</a></li>
-                        <li><a href="../Aboutus.html">About us</a></li>
-                        <li><a href="../Clients.html">Clients</a></li>
-                        <!-- <li><a href="../service.html">Services</a></li> -->
-                        <!-- <li><a href="../careers.html">Careers</a></li> -->
-                        <!-- <li><a href="../Clients.html">Case Studies</a></li> -->
-                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="Aboutus.html">About us</a></li>
+                        <li><a href="Clients.html">Clients</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <!-- <li><a href="#">Privacy Policy</a></li> -->
                         <!-- <li><a href="#">Terms of Service</a></li> -->
                     </ul>
