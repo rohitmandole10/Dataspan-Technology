@@ -8,9 +8,15 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script>
+  <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-RPYT1GBRQT'); </script>
+
   <!-- Favicons -->
   <link href="assets/img/brand.png" rel="icon">
   <link href="https://image.dataspantechnologies.com/dataspan/brand3.png" rel="apple-touch-icon">
+
+  <!-- Preload Hero Image to prevent blinking -->
+  <link rel="preload" as="image" href="https://image.dataspantechnologies.com/dataspan/Home Icon.png">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -305,7 +311,7 @@ Marker
       flex-direction: column;
       justify-content: flex-end;
       padding: 30px;
-      color: white;
+      color: var(--contrast-color);
       will-change: transform;
     }
 
@@ -1080,6 +1086,7 @@ Marker
         font-size: 2rem;
         line-height: 1.3;
         margin-bottom: 1rem;
+        color: white !important;
       }
 
       .call-to-action p {
@@ -1114,6 +1121,7 @@ Marker
       .call-to-action h2 {
         font-size: 1.625rem;
         margin-bottom: 0.75rem;
+        color: white !important;
       }
 
       .call-to-action p {
@@ -1471,7 +1479,7 @@ Marker
         font-size: 1.1rem;
         margin: 0 auto;
         background: linear-gradient(135deg, #b1ddf1, #227faa);
-        color: white;
+        color: var(--contrast-color);
         box-shadow: 0 4px 12px rgba(34, 127, 170, 0.25);
       }
 
@@ -1800,7 +1808,7 @@ Marker
         height: 2.5rem;
         font-size: 1.1rem;
         background: linear-gradient(135deg, #b1ddf1, #227faa);
-        color: white;
+        color: var(--contrast-color);
         box-shadow: 0 4px 15px rgba(34, 127, 170, 0.3);
       }
 
@@ -1863,6 +1871,7 @@ Marker
       .call-to-action h2 {
         font-size: 2rem;
         text-align: center;
+        color: white !important;
       }
 
       .call-to-action p {
@@ -2111,7 +2120,7 @@ Marker
         font-size: 1.1rem;
         margin: 0 auto 1rem auto;
         background: linear-gradient(135deg, #b1ddf1, #227faa);
-        color: white;
+        color: var(--contrast-color);
         box-shadow: 0 4px 15px rgba(34, 127, 170, 0.3);
       }
 
@@ -2159,6 +2168,7 @@ Marker
 
       .call-to-action h2 {
         font-size: 1.875rem;
+        color: white !important;
       }
 
       .call-to-action p {
@@ -2539,7 +2549,7 @@ Marker
         font-size: 1.1rem;
         margin: 0 auto 1rem auto;
         background: linear-gradient(135deg, #b1ddf1, #227faa);
-        color: white;
+        color: var(--contrast-color);
         box-shadow: 0 4px 15px rgba(34, 127, 170, 0.3);
       }
 
@@ -2694,6 +2704,7 @@ Marker
         text-align: center;
         margin-bottom: 0.75rem;
         line-height: 1.3;
+        color: white !important;
       }
 
       .call-to-action p {
@@ -3013,40 +3024,77 @@ Marker
 
     /* Hero Section - Fast Animations (optimized for quick loading and smooth reload) */
     .hero .hero-content {
-      opacity: 0;
-      animation: heroFadeInUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
-      animation-delay: 0s !important;
-      will-change: opacity, transform;
+      opacity: 1;
+      transform: translateY(0);
     }
 
+    /* Prevent hero title blinking - ensure stable state */
     .hero .hero-title {
-      opacity: 0;
-      animation: heroFadeInUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s forwards !important;
-      will-change: opacity, transform;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      visibility: visible !important;
+      transition: none !important;
+      animation: none !important;
+    }
+
+    .hero .hero-title-text {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: none !important;
+      animation: none !important;
     }
 
     .hero .hero-content p {
-      opacity: 0;
-      animation: heroFadeInUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards !important;
-      will-change: opacity, transform;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .hero .hero-buttons {
-      opacity: 0;
-      animation: heroFadeInUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s forwards !important;
-      will-change: opacity, transform;
+      opacity: 1;
+      transform: translateY(0);
     }
 
+    /* Prevent hero image blinking - ensure stable state */
     .hero .hero-image {
-      opacity: 0;
-      animation: heroFadeInRight 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s forwards !important;
-      will-change: opacity, transform;
+      opacity: 1 !important;
+      transform: translateX(0) !important;
+      visibility: visible !important;
+      transition: none !important;
+      animation: none !important;
     }
 
     .hero .hero-image img {
-      opacity: 0;
-      animation: heroScaleIn 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards !important;
-      will-change: opacity, transform;
+      opacity: 1 !important;
+      transform: scale(1) !important;
+      visibility: visible !important;
+      transition: none !important;
+      animation: none !important;
+      display: block !important;
+    }
+
+    /* Disable AOS animation for hero image to prevent blinking */
+    .hero .hero-image[data-aos] {
+      opacity: 1 !important;
+      transform: translateX(0) scale(1) !important;
+    }
+
+    .hero .hero-image[data-aos] img {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+    }
+
+    /* Disable AOS animation for hero title to prevent blinking */
+    .hero .hero-content[data-aos] .hero-title,
+    .hero .hero-title {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      visibility: visible !important;
+    }
+
+    .hero .hero-content[data-aos] .hero-title-text,
+    .hero .hero-title-text {
+      opacity: 1 !important;
+      visibility: visible !important;
     }
 
     /* Ensure smooth display on page load - prevent FOUC */
@@ -3203,6 +3251,25 @@ Marker
     }
 
     /* Row and Column Improvements */
+    /* Gradient highlight for highlighted text */
+    .highlight {
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Override .text-primary in headings to use gradient */
+    h1 .text-primary,
+    h2 .text-primary,
+    h3 .text-primary,
+    h4 .text-primary {
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent !important;
+    }
   </style>
 
   <script src="https://unpkg.com/globe.gl"></script>
@@ -3237,9 +3304,9 @@ Marker
           <!-- Mobile Services Menu -->
           <div class="mobile-services-menu">
             <div class="mobile-category-list">
-              <!-- AI & Automation -->
+              <!-- AI &amp; Automation -->
               <div class="category-item mobile-category-item" data-target="mobile-ai">
-                <span class="category-link">AI & Automation</span>
+                <span class="category-link">AI &amp; Automation</span>
                 <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
               </div>
               <div class="mobile-subcategories-container hidden" id="mobile-ai">
@@ -3287,7 +3354,7 @@ Marker
 
               <!-- Cloud & Infrastructure -->
               <div class="category-item mobile-category-item" data-target="mobile-cloud">
-                <span class="category-link">Cloud & services</span>
+                <span class="category-link">Cloud & Infrastructure</span>
                 <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
               </div>
               <div class="mobile-subcategories-container hidden" id="mobile-cloud">
@@ -3315,6 +3382,15 @@ Marker
                   <a href="Data & Ops/Back_Office_&_BPO_Solution.html" class="mobile-subcategory-link">Back Office & BPO
                     Solution</a>
                 </div>
+              </div>
+            </div>
+            <!-- Promotional Section for Mobile -->
+            <div class="promo-section mt-3">
+              <div class="tech-illustration d-flex gap-3">
+                <a href="Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium-10-Banner.jpeg"
+                    alt="POS Catalog"></a>
+                <a href="POS.html"><img src="https://image.dataspantechnologies.com/dataspan/POS-Banner.jpeg"
+                    alt="Helium 10 Banner"></a>
               </div>
             </div>
           </div>
@@ -3360,7 +3436,7 @@ Marker
                 <a href="#" class="category-link">Design & Branding</a>
               </div>
               <div class="category-item" data-submenu="cloud-infrastructure">
-                <a href="#" class="category-link">Cloud & services</a>
+                <a href="#" class="category-link">Cloud & Infrastructure</a>
               </div>
               <div class="category-item" data-submenu="data-operations">
                 <a href="#" class="category-link">Data & Operations</a>
@@ -3452,19 +3528,13 @@ Marker
 
           <!-- Promotional Graphics Section -->
           <div class="promo-section">
-              <div class="tech-illustration d-flex gap-3">
-                <a href="POS.html"
-                  ><img
-                    src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg"
-                    alt=""
-                /></a>
-                <a href="Helium.html"
-                  ><img
-                    src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg"
-                    alt=""
-                /></a>
-              </div>
+            <div class="tech-illustration d-flex gap-3">
+              <a href="Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium-10-Banner.jpeg"
+                  alt=""></a>
+              <a href="POS.html"><img src="https://image.dataspantechnologies.com/dataspan/POS-Banner.jpeg"
+                  alt=""></a>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -4311,9 +4381,7 @@ Marker
             <li><a href="https://dataspantechnologies.com">Home</a></li>
             <li><a href="Aboutus.html">About us</a></li>
             <li><a href="Clients.html">Clients</a></li>
-            <!-- <li><a href="service.html">Services</a></li> -->
-            <!-- <li><a href="careers.html">Careers</a></li> -->
-            <!-- <li><a href="Clients.html">Case Studies</a></li> -->
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <!-- <li><a href="#">Privacy Policy</a></li> -->
             <!-- <li><a href="#">Terms of Service</a></li> -->
@@ -4371,7 +4439,7 @@ Marker
         <a href="https://in.linkedin.com/company/dataspan-technologies"><i class="bi bi-linkedin"></i></a>
         <a href="https://www.facebook.com/share/17XXofdr8i/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
       </div>
-      <p class="mt-2">© <span>Copyright</span> <strong class="px-1 sitename">Dataspan
+      <p class="mt-2">&copy; <span>Copyright</span> <strong class="px-1 sitename">Dataspan
           Technologies</strong> <span>All Rights
           Reserved</span></p>
     </div>
@@ -4401,6 +4469,47 @@ Marker
       offset: 0, // Trigger immediately when element enters viewport
       delay: 0 // Base delay (individual delays are set via data-aos-delay)
     });
+
+    // Disable AOS for hero image and ensure hero title is stable to prevent blinking
+    document.addEventListener('DOMContentLoaded', function () {
+      // Fix hero image
+      const heroImage = document.querySelector('.hero .hero-image');
+      if (heroImage) {
+        heroImage.removeAttribute('data-aos');
+        heroImage.removeAttribute('data-aos-delay');
+        heroImage.removeAttribute('data-aos-duration');
+        heroImage.removeAttribute('data-aos-offset');
+        heroImage.removeAttribute('data-aos-easing');
+        // Ensure image is immediately visible
+        heroImage.style.opacity = '1';
+        heroImage.style.transform = 'translateX(0)';
+        heroImage.style.visibility = 'visible';
+
+        const heroImageImg = heroImage.querySelector('img');
+        if (heroImageImg) {
+          heroImageImg.style.opacity = '1';
+          heroImageImg.style.transform = 'scale(1)';
+          heroImageImg.style.visibility = 'visible';
+        }
+      }
+
+      // Fix hero title to prevent blinking
+      const heroTitle = document.querySelector('.hero .hero-title');
+      const heroTitleText = document.querySelector('.hero .hero-title-text');
+      if (heroTitle) {
+        heroTitle.style.opacity = '1';
+        heroTitle.style.transform = 'translateY(0)';
+        heroTitle.style.visibility = 'visible';
+        heroTitle.style.transition = 'none';
+        heroTitle.style.animation = 'none';
+      }
+      if (heroTitleText) {
+        heroTitleText.style.opacity = '1';
+        heroTitleText.style.visibility = 'visible';
+        heroTitleText.style.transition = 'none';
+        heroTitleText.style.animation = 'none';
+      }
+    });
   </script>
 
   <!-- Ensure Hero Section Animations Display Smoothly on Reload -->
@@ -4415,14 +4524,45 @@ Marker
           // Add loaded class to ensure animations play
           heroSection.classList.add('loaded');
 
-          // Ensure all hero elements are ready for animation
-          const heroElements = heroSection.querySelectorAll('.hero-content, .hero-title, .hero-content p, .hero-buttons, .hero-image, .hero-image img');
+          // Ensure all hero elements are ready for animation (excluding hero-image and hero-title to prevent blinking)
+          const heroElements = heroSection.querySelectorAll('.hero-content, .hero-content p, .hero-buttons');
           heroElements.forEach(el => {
             // Reset animation to ensure it plays on reload
             el.style.animation = 'none';
             el.offsetHeight; // Trigger reflow
             el.style.animation = null;
           });
+
+          // Ensure hero title is stable and doesn't blink
+          const heroTitle = heroSection.querySelector('.hero-title');
+          const heroTitleText = heroSection.querySelector('.hero-title-text');
+          if (heroTitle) {
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+            heroTitle.style.visibility = 'visible';
+            heroTitle.style.transition = 'none';
+            heroTitle.style.animation = 'none';
+          }
+          if (heroTitleText) {
+            heroTitleText.style.opacity = '1';
+            heroTitleText.style.visibility = 'visible';
+            heroTitleText.style.transition = 'none';
+            heroTitleText.style.animation = 'none';
+          }
+
+          // Ensure hero image is stable and doesn't blink
+          const heroImage = heroSection.querySelector('.hero-image');
+          const heroImageImg = heroSection.querySelector('.hero-image img');
+          if (heroImage) {
+            heroImage.style.opacity = '1';
+            heroImage.style.transform = 'translateX(0)';
+            heroImage.style.visibility = 'visible';
+          }
+          if (heroImageImg) {
+            heroImageImg.style.opacity = '1';
+            heroImageImg.style.transform = 'scale(1)';
+            heroImageImg.style.visibility = 'visible';
+          }
         }
       }
 
