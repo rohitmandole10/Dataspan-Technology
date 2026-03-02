@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-RPYT1GBRQT'); </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPYT1GBRQT"></script>
+    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-RPYT1GBRQT'); </script>
 
     <!-- Favicons -->
     <link href="../assets/img/brand.png" rel="icon">
@@ -33,7 +34,7 @@
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
     <style>
-         .how-it-works-title {
+        .how-it-works-title {
             font-size: clamp(2rem, 5vw, 2.5rem) !important;
             font-weight: 800 !important;
             color: var(--heading-color);
@@ -679,18 +680,22 @@
         .ai-left {
             min-height: 200px;
         }
+
         .ai-left #ai-title,
         .ai-left #ai-desc {
             transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
             will-change: opacity, transform;
         }
+
         .ai-left #ai-desc {
             transition-delay: 0.05s;
         }
+
         .ai-left.ai-content-changing #ai-title {
             opacity: 0;
             transform: translateY(-8px) translateX(4px);
         }
+
         .ai-left.ai-content-changing #ai-desc {
             opacity: 0;
             transform: translateY(-6px) translateX(4px);
@@ -739,6 +744,7 @@
             color: var(--heading-color, #1a365d);
             transition: color 0.4s ease;
         }
+
         .ai-card:not(.blank) h2::after {
             display: none;
         }
@@ -747,9 +753,11 @@
             transform: scale(1.04) translateY(-2px);
             box-shadow: 0 14px 36px rgba(20, 140, 238, 0.14), 0 0 0 1px rgba(20, 140, 238, 0.06);
         }
+
         .ai-card:not(.blank):hover h2 {
             color: var(--accent-color);
         }
+
         .ai-card:not(.blank).active h2 {
             color: var(--accent-color);
         }
@@ -952,6 +960,7 @@
                 margin-bottom: 10px;
                 color: var(--accent-color);
             }
+
             .ai-card h2::after {
                 display: none;
             }
@@ -1213,7 +1222,7 @@
             background-clip: text;
             color: transparent !important;
         }
-        
+
 
         .tech-section .tech-subtitle {
             max-width: 800px;
@@ -1232,12 +1241,15 @@
             width: 80%;
             flex-wrap: nowrap;
             overflow-x: auto;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE and Edge */
         }
 
         .tech-section .nav-pills::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
+            display: none;
+            /* Chrome, Safari, Opera */
         }
 
         .tech-section .nav-pills .nav-item {
@@ -1568,7 +1580,7 @@
 
                             <!-- Cloud & Infrastructure -->
                             <div class="category-item mobile-category-item" data-target="mobile-cloud">
-                                <span class="category-link">Cloud & services</span>
+                                <span class="category-link">Cloud & Infrastructure</span>
                                 <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
                             </div>
                             <div class="mobile-subcategories-container hidden" id="mobile-cloud">
@@ -1598,7 +1610,17 @@
                                         class="mobile-subcategory-link">Back Office & BPO Solution</a>
                                 </div>
                             </div>
+                                    <!-- Promotional Section for Mobile -->
+            <div class="promo-section">
+                        <div class="tech-illustration d-flex gap-3">
+                            <a href="../Helium.html"><img
+                                    src="https://image.dataspantechnologies.com/dataspan/Helium-10-Banner.jpeg"
+                                    alt=""></a>
+                            <a href="../POS.html"><img
+                                    src="https://image.dataspantechnologies.com/dataspan/POS-Banner.jpeg" alt=""></a>
                         </div>
+                    </div>
+</div>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -1746,12 +1768,15 @@
                     </div>
 
                     <!-- Promotional Graphics Section -->
-                      <div class="promo-section">
-            <div class="tech-illustration d-flex gap-3">
-            <a href="../POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
-            <a href="../Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
-            </div>
-          </div>
+                    <div class="promo-section">
+                        <div class="tech-illustration d-flex gap-3">
+                            <a href="../Helium.html"><img
+                                    src="https://image.dataspantechnologies.com/dataspan/Helium-10-Banner.jpeg"
+                                    alt=""></a>
+                            <a href="../POS.html"><img
+                                    src="https://image.dataspantechnologies.com/dataspan/POS-Banner.jpeg" alt=""></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1791,7 +1816,8 @@
                             <!-- Call to Action Buttons -->
                             <div class="hero-buttons">
                                 <!-- <a href="#contact" class="btn btn-primary">Start Your AI Project</a> -->
-                                <a href="../contact.html" class="btn btn-outline-primary">Start Development Discussion</a>
+                                <a href="../contact.html" class="btn btn-outline-primary">Start Development
+                                    Discussion</a>
                             </div>
                         </div>
                     </div>
@@ -1853,7 +1879,7 @@
 
                             <div class="col-lg-3">
                                 <h2 class="fw-bold">
-                                    
+
                                     <span class="text-primary">Our Web & Mobile Development Services</span>
                                 </h2>
                                 <p class="text-muted mt-3">Dataspan deliver reliable, scalable web and mobile
@@ -3198,7 +3224,7 @@
             document.querySelectorAll('.tech-section .tab-pane .tech-scroll').forEach(scrollBox => {
                 // Skip if listener already attached (check data attribute)
                 if (scrollBox.dataset.hoverListener === 'true') return;
-                
+
                 scrollBox.addEventListener('mouseenter', stopAutoScroll);
                 scrollBox.addEventListener('mouseleave', () => {
                     const activeTab = document.querySelector(".tab-pane.active.show");
@@ -3206,7 +3232,7 @@
                         startAutoScroll(activeTab);
                     }
                 });
-                
+
                 // Mark as having listener attached
                 scrollBox.dataset.hoverListener = 'true';
             });
@@ -3219,7 +3245,7 @@
             if (activeTab) {
                 startAutoScroll(activeTab);
             }
-            
+
             // Setup hover listeners for ALL tabs
             setupScrollHoverListeners();
         });
