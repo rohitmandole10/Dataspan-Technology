@@ -38,17 +38,17 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
+    .how-it-works-title {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--heading-color);
+      font-family: var(--heading-font);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      text-align: center;
+    }
 
-     .how-it-works-title {
-        font-size: clamp(2rem, 5vw, 2.5rem);
-        font-weight: 800;
-        color: var(--heading-color);
-        font-family: var(--heading-font);
-        margin-bottom: 10px;
-        letter-spacing: -0.01em;
-        line-height: 1.2;
-        text-align: center;
-      }
     .ai-highlight-2 {
       /* font-size: 1.75rem; */
       /* font-weight: 900; */
@@ -701,9 +701,9 @@
 
     .highlight-orange {
       font-size: clamp(2rem, 5vw, 2.5rem);
-        font-weight: 800;
-        /* color: var(--heading-color); */
-        font-family: var(--heading-font);
+      font-weight: 800;
+      /* color: var(--heading-color); */
+      font-family: var(--heading-font);
       background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -2066,7 +2066,7 @@
 
               <!-- Cloud & Infrastructure -->
               <div class="category-item mobile-category-item" data-target="mobile-cloud">
-                <span class="category-link">Cloud & services</span>
+                <span class="category-link">Cloud & Infrastructure</span>
                 <button class="category-toggle"><i class="bi bi-chevron-right"></i></button>
               </div>
               <div class="mobile-subcategories-container hidden" id="mobile-cloud">
@@ -2095,7 +2095,16 @@
                     Solution</a>
                 </div>
               </div>
+                        <!-- Promotional Section for Mobile -->
+            <div class="promo-section mt-3">
+              <div class="tech-illustration d-flex gap-3">
+                <a href="Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium-10-Banner.jpeg"
+                    alt="POS Catalog"></a>
+                <a href="POS.html"><img src="https://image.dataspantechnologies.com/dataspan/POS-Banner.jpeg"
+                    alt="Helium 10 Banner"></a>
+              </div>
             </div>
+</div>
           </div>
         </li>
         <li class="nav-item">
@@ -2230,12 +2239,15 @@
           </div>
 
           <!-- Promotional Graphics Section -->
-            <div class="promo-section">
-            <div class="tech-illustration d-flex gap-3">
-            <a href="POS.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%201.jpg" alt=""></a>
-            <a href="Helium.html"><img src="https://image.dataspantechnologies.com/dataspan/Helium%2010%20Banner%202.jpg" alt=""></a>              
-            </div>
-          </div>
+          <div class="promo-section">
+                        <div class="tech-illustration d-flex gap-3">
+                            <a href="POS.html"><img
+                                    src="https://image.dataspantechnologies.com/dataspan/Helium-10-Banner.jpeg"
+                                    alt=""></a>
+                            <a href="Helium.html"><img
+                                    src="https://image.dataspantechnologies.com/dataspan/POS-Banner.jpeg" alt=""></a>
+                        </div>
+                    </div>
         </div>
       </div>
     </div>
@@ -2249,7 +2261,7 @@
     <div class="hero-breadcrumbs">
       <ol class="breadcrumb">
         <li><a href="https://dataspantechnologies.com">Home</a></li>
-        <li><a href="#">Services</a></li>
+        <!-- <li><a href="#">Services</a></li> -->
         <li><span>Helium</span></li>
       </ol>
     </div>
@@ -2418,7 +2430,7 @@
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="incentive-card border-yellow">
             <div class="incentive-icon-box bg-soft-yellow">
-              <i class="bi bi-box-seam"></i>
+              <i class="bi bi-search"></i> 
             </div>
             <h3>Product Research</h3>
             <p>Data-backed product validation using Black Box, Cerebro, Magnet, and trend analytics to uncover scalable,
@@ -2430,7 +2442,7 @@
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="incentive-card border-teal">
             <div class="incentive-icon-box bg-soft-teal">
-              <i class="bi bi-globe"></i>
+              <i class="bi bi-card-checklist"></i>
             </div>
             <h3>Listing Optimization</h3>
             <p>Keyword-rich, conversion-focused listings built with Listing Builder, Scribbles, and Analyzer to improve
@@ -2442,7 +2454,7 @@
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="incentive-card border-green">
             <div class="incentive-icon-box bg-soft-green">
-              <i class="bi bi-key"></i>
+            <i class="bi bi-graph-up-arrow"></i>
             </div>
             <h3>PPC Management</h3>
             <p>Strategic Helium 10 Ads optimization to reduce ACoS, scale profitable campaigns, and maximize marketplace
@@ -2454,7 +2466,7 @@
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="incentive-card border-yellow">
             <div class="incentive-icon-box bg-soft-yellow">
-              <i class="bi bi-box-seam"></i>
+            <i class="bi bi-key"></i>
             </div>
             <h3>Keyword Intelligence</h3>
             <p>Advanced reverse ASIN research, keyword tracking, and search query analysis to dominate organic rankings.
@@ -2465,7 +2477,7 @@
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="incentive-card border-teal">
             <div class="incentive-icon-box bg-soft-teal">
-              <i class="bi bi-globe"></i>
+              <i class="bi bi-bar-chart-line"></i>
             </div>
             <h3>Market Analytics</h3>
             <p>Deep performance tracking with Market Tracker, Profits, and competitive insights to guide smarter scaling
@@ -2491,16 +2503,16 @@
     <div class="icons-layer">
       <!-- Left Side -->
       <div class="partner-icon-fly icon-meta" title="Meta">
-        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 1.png"
-            alt=""></div>
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 1.png" alt="">
+        </div>
       </div>
       <div class="partner-icon-fly icon-youtube" title="YouTube">
-        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 2.png"
-            alt=""></div>
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 2.png" alt="">
+        </div>
       </div>
       <div class="partner-icon-fly icon-shopify" title="Shopify">
-        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 3.png"
-            alt=""></div>
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 3.png" alt="">
+        </div>
       </div>
       <!-- <div class="partner-icon-fly icon-tiktok" title="TikTok">
         <div class="icon-inner"><i class="fa-brands fa-tiktok"></i></div>
@@ -2514,16 +2526,16 @@
 
       <!-- Right Side -->
       <div class="partner-icon-fly icon-walmart" title="Walmart">
-        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 4.png"
-            alt=""></div>
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 4.png" alt="">
+        </div>
       </div>
       <div class="partner-icon-fly icon-google-ads" title="Google Ads">
-        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 5.png"
-            alt=""></div>
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 5.png" alt="">
+        </div>
       </div>
       <div class="partner-icon-fly icon-amazon" title="Amazon">
-        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 6.png"
-            alt=""></div>
+        <div class="icon-inner"><img src="https://image.dataspantechnologies.com/dataspan/Helium tech 6.png" alt="">
+        </div>
       </div>
       <!-- <div class="partner-icon-fly icon-snapchat" title="Snapchat">
         <div class="icon-inner"><i class="fa-brands fa-snapchat"></i></div>
