@@ -179,7 +179,7 @@
       </div>
       <div class="wa-body">
         <div class="wa-message">
-          <p>Hi there! ðŸ‘‹ How can we help you today?</p>
+          <p>Hi there! 👋 How can we help you today?</p>
         </div>
         <a href="https://wa.me/8149390967" target="_blank" class="wa-start-btn">
           <i class="fa-brands fa-whatsapp"></i> Start Chat
